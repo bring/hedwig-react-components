@@ -1,6 +1,6 @@
 {
-  "name": "@hedwig-react-components/core",
-  "version": "1.0.0",
+  "name": "@posten/hedwig-core",
+  "version": "0.0.1",
   "description": "Provides base variables for the other components to use.",
   "keywords": [],
   "author": "Viggo Normann <v@iggo.no>",

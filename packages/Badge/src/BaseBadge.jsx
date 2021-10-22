@@ -1,5 +1,5 @@
-import React from "react"
-import PropTypes from 'prop-types'
+import React from 'react'
+import { oneOf } from 'prop-types'
 import Core from '../core/Core'
 
 export default function BaseBadge({variant, size, children}) {
@@ -11,6 +11,6 @@ export default function BaseBadge({variant, size, children}) {
 }
 
 BaseBadge.propTypes = {
-    variant : PropTypes.oneOf(['dark', 'white','warning']),
-    size : PropTypes.oneOf(['smaller', 'small', 'large', 'larger'])
+    variant: oneOf(['dark', 'white','warning']),
+    size: oneOf(['smaller', 'small', 'large', 'larger'])
 }
