@@ -1,9 +1,10 @@
 {
     "name": "@posten/hedwig-badge",
     "version": "0.0.1",
-    "private": true,
+    "private": false,
     "files": [
-        "dist"
+        "dist",
+        "sass"
     ],
     "main": "dist/index.js",
     "scripts": {

@@ -1,7 +1,6 @@
 import React from 'react'
 import { oneOf } from 'prop-types'
-//import Core from '../core/Core'
-import './badge.scss'
+import '../sass/badge.scss'
 
 export default function BaseBadge({variant, size, children}) {
     return (
