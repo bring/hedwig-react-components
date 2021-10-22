@@ -11,6 +11,7 @@ module.exports = function(api) {
             '@babel/react'
         ],
         plugins: [
+            'babel-plugin-transform-scss'
             //'@babel/plugin-proposal-object-rest-spread',
             //'@babel/plugin-proposal-class-properties'
         ]

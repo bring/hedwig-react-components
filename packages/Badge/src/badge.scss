@@ -4,8 +4,8 @@
 
 .hw-badge {
   display: inline-block;
-  background-color: var($color-primary-lighter);
-  border: var(--hw-border-thickness) solid var($color-primary-lighter);
+  background-color: var(--hw-color-primary-lighter);
+  border: var(--hw-border-thickness) solid var(--hw-color-primary-lighter);
   border-radius: var(--hw-border-radius);
   border-left-width: 8px;
   border-right-width: 8px;

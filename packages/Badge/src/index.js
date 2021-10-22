@@ -1,4 +1,4 @@
-export { default as Badge } from './components/Badge/Badge.jsx'
-export { default as DarkBadge } from './components/Badge/DarkBadge.jsx'
-export { default as WarningBadge } from './components/Badge/WarningBadge.jsx'
-export { default as WhiteBadge } from './components/Badge/WhiteBadge.jsx'
+export { default as Badge } from './Badge'
+export { default as DarkBadge } from './DarkBadge'
+export { default as WarningBadge } from './WarningBadge'
+export { default as WhiteBadge } from './WhiteBadge'
