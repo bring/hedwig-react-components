@@ -19,5 +19,8 @@
     "test": "echo \"Error: run tests from root\" && exit 1",
     "prebuild": "rimraf dist",
     "build": "babel src -d dist --root-mode=upward"
+  },
+  "dependencies": {
+    "sanitize.css": "^13.0.0"
   }
 }
