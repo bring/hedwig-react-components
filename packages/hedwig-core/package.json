@@ -1,6 +1,6 @@
 {
   "name": "@posten/hedwig-core",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Provides base variables for the other components to use.",
   "keywords": [],
   "author": "Viggo Normann <v@iggo.no>",
