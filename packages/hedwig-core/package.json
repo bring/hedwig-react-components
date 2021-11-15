@@ -23,5 +23,6 @@
   },
   "dependencies": {
     "sanitize.css": "^13.0.0"
-  }
+  },
+  "gitHead": "4cbaa871785045bc9b57fd8b2d1b2d8b671012b5"
 }
