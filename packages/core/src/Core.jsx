@@ -1,3 +1,7 @@
 import 'sanitize.css'
 import '../sass/sanitize-extra.css'
 import '../sass/variables.scss'
+import '../sass/body.css'
+import '../sass/colors.css'
+import '../sass/display.css'
+import '../sass/typography.scss'
