@@ -1,6 +1,6 @@
 import React from 'react'
 import { oneOf } from 'prop-types'
-import '@posten/hedwig-core'
+import '../../hedwig-core/dist'
 import '../sass/badge.scss'
 
 export default function BaseBadge({variant, size, children}) {
