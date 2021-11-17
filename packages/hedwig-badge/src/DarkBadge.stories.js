@@ -1,12 +1,11 @@
-import React from 'react';
-import DarkBadge from './DarkBadge';
+import React from 'react'
+import DarkBadge from './DarkBadge'
 
 export default {
-  title: 'Components/Badge/Dark',
-  component: DarkBadge
-};
+    title: 'Components/Badge/Dark',
+    component: DarkBadge
+}
 
+const Template = (args) => <DarkBadge {...args}>Badge</DarkBadge>
 
-const Template = (args) => <DarkBadge {...args}>Badge</DarkBadge>;
-
-export const Dark = Template.bind({});
+export const Dark = Template.bind({})
