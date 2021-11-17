@@ -9,7 +9,7 @@
     "main": "dist/index.js",
     "scripts": {
         "prebuild": "rimraf dist",
-        "build": "babel src -d dist --root-mode=upward"
+        "build": "babel src -d dist --root-mode=upward --ignore '**/*.stories.js'"
     },
     "dependencies": {
         "@posten/hedwig-core": "^0.0.1",
