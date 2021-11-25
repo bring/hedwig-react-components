@@ -6,7 +6,8 @@
   "author": "Viggo Normann <v@iggo.no>",
   "license": "ISC",
   "files": [
-    "sass"
+    "sass",
+    "assets"
   ],
   "main": "dist/index.js",
   "directories": {
