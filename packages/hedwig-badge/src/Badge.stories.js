@@ -7,9 +7,12 @@ export default {
 }
 
 const Template = (args) => (
-    <div className='hw-theme-posten'>
-        <Badge {...args}>Badge</Badge>
-    </div>
+    <>
+        Wrapping with theme Bring
+        <div className='hw-theme-bring'>
+            <Badge {...args}>Badge</Badge>
+        </div>
+    </>
 )
 
 export const Default = Template.bind({})

@@ -22,6 +22,9 @@
     "build": "babel src -d dist --root-mode=upward"
   },
   "dependencies": {
+    "css-vars-ponyfill": "^2.4.7",
+    "postcss": "^8.4.1",
+    "postcss-js": "^3.0.3",
     "sanitize.css": "^13.0.0"
   }
 }
