@@ -1,66 +1,68 @@
 /** 
  * Variables - Bring 
  */
-.hw-theme-bring {
-    /**
+:root {
+    .hw-theme-bring {
+        /**
      * Colors
      */
 
-    --hw-color-primary: #7bc144;
-    --hw-color-primary-dark: #00643a;
-    --hw-color-primary-darker: #002f19;
-    --hw-color-primary-light: #c8dc8c;
-    --hw-color-primary-lighter: #f1f7e9;
+        --hw-color-primary: #7bc144;
+        --hw-color-primary-dark: #00643a;
+        --hw-color-primary-darker: #002f19;
+        --hw-color-primary-light: #c8dc8c;
+        --hw-color-primary-lighter: #f1f7e9;
 
-    /**
+        /**
     * Opaque colors
     */
-    --hw-color-opaque-primary: rgba(123, 193, 68, 0.95); /* #7bc144 */
+        --hw-color-opaque-primary: rgba(123, 193, 68, 0.95); /* #7bc144 */
 
-    /**
+        /**
       * Link Colors
       */
 
-    --hw-color-link: var(--hw-color-black);
-    --hw-color-link-underline: var(--hw-color-primary);
-    --hw-color-link-hover: var(--hw-color-primary-dark);
-    --hw-color-link-underline-hover: var(--hw-color-primary-dark);
+        --hw-color-link: var(--hw-color-black);
+        --hw-color-link-underline: var(--hw-color-primary);
+        --hw-color-link-hover: var(--hw-color-primary-dark);
+        --hw-color-link-underline-hover: var(--hw-color-primary-dark);
 
-    /**
+        /**
       * Component colors
       */
-    --hw-color-input-accent: var(--hw-color-primary-dark);
-    --hw-color-checkbox-accent: var(--hw-color-primary-dark);
+        --hw-color-input-accent: var(--hw-color-primary-dark);
+        --hw-color-checkbox-accent: var(--hw-color-primary-dark);
 
-    /**
+        /**
       * Button Colors
       */
-    --hw-color-button-primary-hover: #86cc4a;
-    --hw-color-button-primary-light-hover: #d3e593;
+        --hw-color-button-primary-hover: #86cc4a;
+        --hw-color-button-primary-light-hover: #d3e593;
 
-    /**
+        /**
      * Color mappings
      */
 
-    --hw-color-button-text: var(--hw-color-black);
+        --hw-color-button-text: var(--hw-color-black);
 
-    /**
+        /**
      * Logo width adjusted for Bring logo
      */
-    --hw-logo-width: 128px;
-    --hw-logo-width-mobile: 94.5px;
+        --hw-logo-width: 128px;
+        --hw-logo-width-mobile: 94.5px;
 
-    /**
+        /**
      * Font families
      */
-    --hw-h1-large-font-family: var(--hw-font-primary-light);
-    --hw-h1-font-family: var(--hw-font-primary-light);
-    --hw-h2-font-family: var(--hw-font-primary-light);
-    --hw-h3-font-family: var(--hw-font-primary-regular);
-    --hw-h4-font-family: var(--hw-font-primary-regular);
-    --hw-h5-font-family: var(--hw-font-primary-regular);
-    --hw-h6-font-family: var(--hw-font-primary-regular);
-    --hw-caption-font-family: var(--hw-font-primary-regular);
-    --hw-technical-font-family: var(--hw-font-primary-regular);
-    --hw-card-title-font-family: var(--hw-font-primary-light);
+        --hw-h1-large-font-family: var(--hw-font-primary-light);
+        --hw-h1-font-family: var(--hw-font-primary-light);
+        --hw-h2-font-family: var(--hw-font-primary-light);
+        --hw-h3-font-family: var(--hw-font-primary-regular);
+        --hw-h4-font-family: var(--hw-font-primary-regular);
+        --hw-h5-font-family: var(--hw-font-primary-regular);
+        --hw-h6-font-family: var(--hw-font-primary-regular);
+        --hw-caption-font-family: var(--hw-font-primary-regular);
+        --hw-technical-font-family: var(--hw-font-primary-regular);
+        --hw-card-title-font-family: var(--hw-font-primary-light);
+    }
 }

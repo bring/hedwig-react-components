@@ -245,9 +245,7 @@
     --z-index--hero-search: 100;
     --z-index--modal: 400;
     --z-index--modal-foreground: 500;
-
-    @import 'variables-posten';
-    @import 'variables-bring';
-    
 }
 
+@import 'variables-posten';
+@import 'variables-bring';
