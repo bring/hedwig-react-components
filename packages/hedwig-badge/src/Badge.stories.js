@@ -6,6 +6,13 @@ export default {
     component: Badge
 }
 
-const Template = (args) => <Badge {...args}>Badge</Badge>
+const Template = (args) => (
+    <>
+        Wrapping with theme Bring
+        <div className='hw-theme-bring'>
+            <Badge {...args}>Badge</Badge>
+        </div>
+    </>
+)
 
 export const Default = Template.bind({})
