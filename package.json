@@ -34,5 +34,9 @@
   "scripts": {
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
+  },
+  "engines": {
+      "node": ">= 16.13.0",
+      "npm": ">= 8.1.0"
   }
 }
