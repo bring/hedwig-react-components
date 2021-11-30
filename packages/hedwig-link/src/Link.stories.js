@@ -1,16 +1,16 @@
-import React from 'react';
-import Link from './Link';
+import React from 'react'
+import Link from './Link'
 
 export default {
-  title: 'Components/Link/Default',
-  component: Link,
-};
+    title: 'Components/Link/Default',
+    component: Link
+}
 
-const Template = (args) => <Link {...args}>This is a link</Link>;
+const Template = (args) => <Link {...args}>This is a link</Link>
 
-export const input = Template.bind({});
+export const input = Template.bind({})
 input.args = {
-  href: '#'
-};
+    href: '#'
+}
 
-input.storyName="Default";
+input.storyName = 'Default'
