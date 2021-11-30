@@ -1,0 +1,30 @@
+{
+  "name": "@posten/hedwig-search",
+  "version": "0.0.1",
+  "description": "Search module for hedwig",
+  "keywords": [
+    "Search",
+    "hedwig"
+  ],
+  "author": "Helle Hiorth-Schøyen <helle@solidsquare.no>",
+  "homepage": "https://github.com/bring/hedwig-react-components#readme",
+  "license": "ISC",
+  "main": "dist/index.js",
+  "files": [
+    "dist",
+    "sass"
+],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bring/hedwig-react-components.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "dependencies": {
+    "@posten/hedwig-core": "^0.0.1",
+    "prop-types": "^15.7.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+}
+}
