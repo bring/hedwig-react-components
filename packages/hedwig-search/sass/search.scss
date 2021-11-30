@@ -1,11 +1,3 @@
-.hw-search__suggestions {
-    display: none;
-}
-
-.hw-search:focus-within .hw-search__suggestions {
-    display: block;
-}
-
 .hw-search {
     position: relative;
     width: 100%;
@@ -120,6 +112,7 @@
         border-radius: var(--hw-border-radius);
         overflow-y: auto;
         max-height: 580px;
+        display: none;
     }
 
     &__suggestion {
@@ -133,6 +126,9 @@
             margin-bottom: var(--hw-spacing-small-2);
         }
     }
+    &:focus-within .hw-search__suggestions {
+      display: block;
+  }
 
     &__suggestion-link {
         display: inline-block;
