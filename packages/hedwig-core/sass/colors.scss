@@ -126,7 +126,10 @@
     }
 }
 .hw-background-color-opaque-primary-mobile {
-    @media (--max-medium), @media(--high-res-mobile) {
+    @media (--max-medium) {
+        background-color: var(--hw-color-opaque-primary);
+    }
+    @media (--high-res-mobile) {
         background-color: var(--hw-color-opaque-primary);
     }
 }
@@ -136,7 +139,10 @@
     }
 }
 .hw-background-color-opaque-black-mobile {
-    @media (--mobile), @media(--high-res-mobile) {
+    @media (--mobile) {
+        background-color: var(--hw-color-opaque-black-20);
+    }
+    @media (--high-res-mobile) {
         background-color: var(--hw-color-opaque-black-20);
     }
 }
