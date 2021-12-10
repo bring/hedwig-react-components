@@ -1,0 +1,12 @@
+{
+    "name": "@posten/hedwig-typography",
+    "version": "0.0.1",
+    "private": false,
+    "files": [
+        "sass"
+    ],
+    "main": "sass/typography.scss",
+    "dependencies": {
+        "@posten/hedwig-core": "^0.0.1"
+    }
+}
