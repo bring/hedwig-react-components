@@ -1,54 +1,53 @@
-
 /* apply a natural box layout model to all elements, but allowing components to change */
 html {
-  box-sizing: border-box;
-  font-family: var(--hw-font-primary-regular);
-  font-size: var(--hw-font-size-p);
-  font-weight: 400;
-  fill: var(--hw-color-black);
-  color: var(--hw-color-black);
-  line-height: 1.4;
-  cursor: auto;
+    box-sizing: border-box;
+    font-family: var(--hw-font-primary-regular);
+    font-size: var(--hw-font-size-p);
+    font-weight: 400;
+    fill: var(--hw-color-black);
+    color: var(--hw-color-black);
+    line-height: 1.4;
+    cursor: auto;
 }
 
 *,
 *::before,
 *::after {
-  box-sizing: inherit;
+    box-sizing: inherit;
 }
 
 body {
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  font-family: var(--hw-font-primary-regular);
-  background: var(--hw-color-white);
-  fill: var(--hw-color-black);
-  color: var(--hw-color-black);
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-family: var(--hw-font-primary-regular);
+    background: var(--hw-color-white);
+    fill: var(--hw-color-black);
+    color: var(--hw-color-black);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 
-  /* For sticky footer */
-  & main {
-    flex: 1 0 auto;
-  }
+    /* For sticky footer */
+    & main {
+        flex: 1 0 auto;
+    }
 }
 
 body,
 .smooth-container {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 img,
 svg {
-  max-width: 100%;
-  max-height: 100%;
+    max-width: 100%;
+    max-height: 100%;
 }
 
 input::-webkit-contacts-auto-fill-button {
-  visibility: hidden;
-  display: none !important;
-  pointer-events: none;
-  position: absolute;
-  right: 0;
+    visibility: hidden;
+    display: none !important;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
 }
