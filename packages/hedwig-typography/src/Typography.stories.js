@@ -1,5 +1,4 @@
 import React from 'react'
-import '../sass/body.scss'
 import '../sass/typography.scss'
 
 export default {
