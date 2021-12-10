@@ -42,13 +42,17 @@ const Template = (args) => (
             Text with a <span className='hw-text-light'>light</span> word
         </p>
         <p>
-            Text with a <span className='hw-text-technical'>technical</span> word
+            Text with a <span className='hw-text-technical'>technical</span>{' '}
+            word
         </p>
         <p>
-            Text with a <span className='hw-text-technical-title'>technical-title</span> word
+            Text with a{' '}
+            <span className='hw-text-technical-title'>technical-title</span>{' '}
+            word
         </p>
         <p>
-            Text with a <span className='hw-text-caption-title'>caption-title</span> word
+            Text with a{' '}
+            <span className='hw-text-caption-title'>caption-title</span> word
         </p>
         <p>
             Text with a <span className='hw-text-caption'>caption</span> word
