@@ -4,7 +4,7 @@ import BaseLink from './BaseLink'
 
 export default function Link({ href, title, size, children }) {
     return (
-        <BaseLink href={href} size={size}>
+        <BaseLink href={href} size={size} title={title}>
             {children}
         </BaseLink>
     )
