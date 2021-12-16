@@ -19,10 +19,11 @@
   },
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1",
-    "prebuild": "rimraf dist",
+    "prebuild": "rimraf dist && npm run sass-variables && npm run sass-colors && npm run sass-fonts",
     "sass-variables": "sass sass/variables.scss:dist/variables.scss --style compressed --no-source-map",
     "sass-colors": "sass sass/colors.scss:dist/colors.scss --style compressed --no-source-map",
-    "build": "npm run sass-variables && npm run sass-colors && babel src -d dist --root-mode=upward"
+    "sass-fonts": "sass sass/fonts.css:dist/fonts.css --style compressed --no-source-map",
+    "build": "babel src -d dist --root-mode=upward"
   },
   "dependencies": {
     "css-vars-ponyfill": "^2.4.7",

@@ -1,6 +1,6 @@
 import '../dist/variables.scss'
 import variables from '../sass/variables.scss'
-import '../assets/fonts.css'
+import '../dist/fonts.css'
 import '@posten/hedwig-base'
 import '../dist/colors.scss'
 import cssVars from 'css-vars-ponyfill'
