@@ -5,7 +5,7 @@
 ## Usage
 
 ```
-const hedwigButton = require('hedwig-button');
+import { PrimaryButton } from '@posten/hedwig-button'
 
-// TODO: DEMONSTRATE API
+<PrimaryButton>I am a button</PrimaryButton>
 ```
