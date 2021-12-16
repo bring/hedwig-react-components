@@ -3,12 +3,12 @@
     "version": "0.0.1",
     "private": false,
     "files": [
-        "dist",
-        "sass"
+        "dist"
     ],
     "main": "dist/index.js",
     "scripts": {
-        "prebuild": "rimraf dist",
+        "prebuild": "rimraf dist && npm run sass",
+        "sass": "sass sass/badge.scss:dist/badge.scss --style compressed --no-source-map",
         "build": "babel src -d dist --root-mode=upward --ignore '**/*.stories.js'"
     },
     "dependencies": {
