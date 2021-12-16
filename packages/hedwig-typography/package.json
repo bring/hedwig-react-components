@@ -3,10 +3,14 @@
     "version": "0.0.1",
     "private": false,
     "files": [
-        "sass"
+        "dist"
     ],
-    "main": "sass/typography.scss",
+    "main": "dist/typography.css",
     "dependencies": {
         "@posten/hedwig-core": "^0.0.1"
+    },
+    "scripts": {
+        "prebuild": "rimraf dist",
+        "build": "sass sass/typography.scss:dist/typography.scss --style compressed --no-source-map"
     }
 }

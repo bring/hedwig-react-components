@@ -1,8 +1,8 @@
-import '../sass/variables.scss'
+import '../dist/variables.scss'
 import variables from '../sass/variables.scss'
-import '../assets/fonts.css'
+import '../dist/fonts.css'
 import '@posten/hedwig-base'
-import '../sass/colors.scss'
+import '../dist/colors.scss'
 import cssVars from 'css-vars-ponyfill'
 import { objectify } from 'postcss-js'
 import { parse } from 'postcss'
@@ -25,7 +25,7 @@ window.addEventListener('DOMContentLoaded', () => {
         cssVars({
             onlyLegacy: true,
             include: 'style[data-sass-component]',
-            exclude: 'style[data-sass-component="Core_variables"',
+            exclude: 'style[data-sass-component="Core_variables"]',
             variables: getVars(variables)
         })
     }
