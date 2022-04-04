@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import '@posten/hedwig-core'
+import '@posten-hedwig/core'
 import '../sass/link.scss'
 
 export default function BaseLink({ href, title, size, type, children }) {
