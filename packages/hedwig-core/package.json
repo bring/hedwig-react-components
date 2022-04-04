@@ -29,6 +29,6 @@
     "css-vars-ponyfill": "^2.4.7",
     "postcss": "^8.4.1",
     "postcss-js": "^3.0.3",
-    "@posten/hedwig-base": "^0.0.1"
+    "@posten-hedwig/base": "^0.0.1"
   }
 }

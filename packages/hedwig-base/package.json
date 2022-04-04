@@ -1,5 +1,5 @@
 {
-    "name": "@posten/hedwig-base",
+    "name": "@posten-hedwig/base",
     "description": "Provides sanitize and some general styling for <html> and <body>",
     "version": "0.0.1",
     "private": false,
