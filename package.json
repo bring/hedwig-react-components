@@ -1,5 +1,5 @@
 {
-  "name": "learning-lerna",
+  "name": "hedwig-react-components",
   "private": true,
   "devDependencies": {
     "@storybook/addon-actions": "^6.3.12",

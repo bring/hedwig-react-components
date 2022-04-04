@@ -1,7 +1,7 @@
 import '../dist/variables.scss'
 import variables from '../sass/variables.scss'
 import '../dist/fonts.css'
-import '@posten/hedwig-base'
+import '@posten-hedwig/base'
 import '../dist/colors.scss'
 import cssVars from 'css-vars-ponyfill'
 import { objectify } from 'postcss-js'
