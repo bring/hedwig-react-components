@@ -1,5 +1,5 @@
 {
-    "name": "@posten/hedwig-typography",
+    "name": "@posten-hedwig/typography",
     "version": "0.0.1",
     "private": false,
     "files": [
@@ -7,7 +7,7 @@
     ],
     "main": "dist/typography.css",
     "dependencies": {
-        "@posten/hedwig-core": "^0.0.1"
+        "@posten-hedwig/core": "^0.0.1"
     },
     "scripts": {
         "prebuild": "rimraf dist",
