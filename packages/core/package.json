@@ -1,5 +1,5 @@
 {
-  "name": "@posten/hedwig-core",
+  "name": "@posten-hedwig/core",
   "version": "0.0.1",
   "description": "Provides base variables and fonts for the other components to use.",
   "keywords": [],
