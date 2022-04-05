@@ -1,0 +1,34 @@
+{
+  "name": "@posten-hedwig/block",
+  "version": "1.0.0",
+  "description": "Provides block layout",
+  "keywords": [
+    "block",
+    "layout"
+  ],
+  "author": "Viggo Normann <v@iggo.no>",
+  "homepage": "https://github.com/bring/hedwig-react-components#readme",
+  "license": "ISC",
+  "main": "dist/Block.js",
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bring/hedwig-react-components.git"
+  },
+  "scripts": {
+    "prebuild": "rimraf dist && npm run sass",
+    "sass": "sass sass/block.scss:dist/block.scss --style compressed --no-source-map",
+    "build": "babel src -d dist --root-mode=upward --ignore '**/*.stories.js'"
+  },
+  "bugs": {
+    "url": "https://github.com/bring/hedwig-react-components/issues"
+  },
+  "dependencies": {
+    "@posten-hedwig/core": "^0.0.1",
+    "prop-types": "^15.7.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
+}
