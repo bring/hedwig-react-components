@@ -9,7 +9,7 @@
   "author": "Viggo Normann <v@iggo.no>",
   "homepage": "https://github.com/bring/hedwig-react-components#readme",
   "license": "ISC",
-  "main": "dist/flex.js",
+  "main": "dist/Flex.js",
   "files": [
     "dist"
   ],

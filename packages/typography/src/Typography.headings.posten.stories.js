@@ -2,7 +2,7 @@ import React from 'react'
 import '../dist/typography.scss'
 
 export default {
-    title: 'Base/Typography/Headings'
+    title: 'Base/Typography/HeadingsPosten'
 }
 
 const Template = (args) => (
