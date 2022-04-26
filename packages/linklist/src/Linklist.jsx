@@ -17,10 +17,20 @@ export default function Linklist({ links, small }) {
 Linklist.propTypes = {
     links: PropTypes.arrayOf(
         PropTypes.shape({
-            props: PropTypes.shape({
-                href: PropTypes.string.isRequired,
-                children: PropTypes.node.isRequired
-            })
+            props: PropTypes.oneOfType([
+                PropTypes.shape({
+                    href: PropTypes.string.isRequired,
+                    children: PropTypes.node.isRequired
+                }),
+                PropTypes.shape({
+                    to: PropTypes.oneOfType([
+                        PropTypes.string,
+                        PropTypes.object,
+                        PropTypes.func
+                    ]),
+                    children: PropTypes.node.isRequired
+                })
+            ]).isRequired
         })
     ),
     small: PropTypes.bool
