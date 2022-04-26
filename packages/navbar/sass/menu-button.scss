@@ -1,0 +1,52 @@
+@use '../node_modules/@posten-hedwig/core/sass/mixins';
+.hw-navbar__menu-button {
+  z-index: var(--z-index--navbar-drawer-foreground);
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  padding-left: var(--hw-spacing-medium-2);
+  padding-right: var(--hw-spacing-medium-2);
+  border: 0;
+  font-size: var(--hw-font-size-small);
+  transition: color 0.1s ease;
+  height: 44px;
+
+  &-label-menu, &-label-close {
+    display: none;
+  }
+
+  @include mixins.large {
+    position: relative;
+    height: 72px;
+    padding-right: 0;
+
+    &-label-menu, &-label-close {
+      padding-right: var(--hw-spacing-small-4);
+      word-break: normal;
+    }
+  }
+
+  .hw-navbar__icon {
+    transform: scale(0.9, 0.9);
+  }
+
+  .hw-navbar__times {
+    transform: scale(0.8, 0.8) translateY(1px);
+  }
+}
+
+@include mixins.large {
+  .hw-navbar .hw-navbar__menu-button-label-menu {
+    display: inline;
+  }
+  .hw-navbar--active {
+    & .hw-navbar__menu-button-label-close {
+      display: inline;
+    }
+    & .hw-navbar__menu-button-label-menu {
+      display: none;
+    }
+  }
+}
