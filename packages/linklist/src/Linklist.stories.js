@@ -12,7 +12,8 @@ const Template = (args) => <Linklist {...args} />
 const links = [
     <Link href='https://www.bring.no'>Bring</Link>,
     <Link href='https://www.posten.no'>Posten</Link>,
-    <Link href='https://www.mybring.no'>Mybring</Link>
+    <Link href='https://www.mybring.no'>Mybring</Link>,
+    <a href='https://www.bring.se'>Bring Sverige</a>
 ]
 
 export const input = Template.bind({})
