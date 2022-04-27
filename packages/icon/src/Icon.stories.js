@@ -1,6 +1,5 @@
 import React from 'react'
-import Icon from './Icon'
-import { adresser } from './index'
+import { Icon, adresser } from './index'
 import Usage from './Usage.mdx'
 import List from './List.mdx'
 
