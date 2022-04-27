@@ -18,7 +18,7 @@ export default function Navbar({
     skipToMainTitle,
     selectorItems,
     menu,
-    menuName,
+    menuOpenName,
     menuFeaturedLinks,
     children
 }) {
@@ -74,7 +74,7 @@ export default function Navbar({
                                     menu={menu}
                                     selectorItems={selectorItems}
                                     featuredLinks={menuFeaturedLinks}
-                                    name={menuName}
+                                    openName={menuOpenName}
                                 />
                             )}
                         </nav>
@@ -129,7 +129,7 @@ Navbar.propTypes = {
     /**
      * Name showing on the menu button on desktop. When the menu is open the menuCloseName will show instead. Required when any items are to be shown in the menu
      */
-    menuName: PropTypes.string,
+    menuOpenName: PropTypes.string,
     /**
      * Specify menu details. An object with various properties for showing the menu.
      */

@@ -7,7 +7,7 @@ import { faTimes } from '@fortawesome/pro-light-svg-icons'
 import '../dist/menu-button.scss'
 
 export default function MenuButton({
-    menuName,
+    openName,
     menuTitle,
     closeName,
     closeTitle
@@ -54,7 +54,7 @@ export default function MenuButton({
                             ref={openLabel}
                             style={{ width: labelWidth }}
                         >
-                            {menuName}
+                            {openName}
                         </span>
                     )}
                     <Icon icon={faBars} title={menuTitle} />
@@ -82,7 +82,7 @@ export default function MenuButton({
 }
 
 MenuButton.propTypes = {
-    menuName: PropTypes.string.isRequired,
+    openName: PropTypes.string.isRequired,
     menuTitle: PropTypes.string.isRequired,
     closeName: PropTypes.string.isRequired,
     closeTitle: PropTypes.string.isRequired

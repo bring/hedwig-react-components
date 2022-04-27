@@ -71,7 +71,7 @@ navbarMenu.args = {
     logoAriaLabel: 'Go to homepage',
     skipToMainHref: '#content',
     skipToMainTitle: 'Go to main content',
-    menuName: 'Menu',
+    menuOpenName: 'Menu',
     menu: {
         title: 'Open menu',
         closeName: 'Lukk',

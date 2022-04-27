@@ -5,14 +5,14 @@ import MenuDrawer from './MenuDrawer'
 
 export default function Menu({
     menu: { title, closeName, closeTitle, sections },
-    name,
+    openName,
     featuredLinks,
     selectorItems
 }) {
     return (
         <>
             <MenuButton
-                menuName={name}
+                openName={openName}
                 menuTitle={title}
                 closeName={closeName}
                 closeTitle={closeTitle}
