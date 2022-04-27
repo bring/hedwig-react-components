@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, createRef } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import MenuButton from './MenuButton'
 import MenuDrawer from './MenuDrawer'
