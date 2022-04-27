@@ -4,7 +4,8 @@ import MenuButton from './MenuButton'
 import MenuDrawer from './MenuDrawer'
 
 export default function Menu({
-    menu: { name, title, closeName, closeTitle, featured, sections },
+    menu: { name, title, closeName, closeTitle, sections },
+    featuredLinks,
     selectorItems
 }) {
     return (
@@ -16,7 +17,7 @@ export default function Menu({
                 closeTitle={closeTitle}
             />
             <MenuDrawer
-                featured={featured}
+                featuredLinks={featuredLinks}
                 sections={sections}
                 selectorItems={selectorItems}
             />

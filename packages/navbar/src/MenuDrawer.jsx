@@ -7,10 +7,8 @@ import Selector from './Selector'
 import { Accordion, AccordionItem } from '@posten-hedwig/accordion'
 import { Linklist } from '@posten-hedwig/linklist'
 
-//import ServiceIcon from '../ServiceIcon/ServiceIcon'
-
 export default function MenuDrawer({
-    featured,
+    featuredLinks,
     loginLink,
     sections,
     selectorItems
@@ -24,21 +22,12 @@ export default function MenuDrawer({
         visibility: 'visible'
     }
 
-    function FeaturedItem({ link }) {
-        return (
-            <a href={link.href} key={link.text}>
-                <ServiceIcon icon={link.icon} title={link.text} size='medium' />
-                {link.text}
-            </a>
-        )
-    }
-
     function Desktop() {
         return (
             <div className='hw-navbar__drawer-desktop'>
-                {featured && (
+                {featuredLinks && (
                     <Flex wrap='fourths' gutterDesktop='large' elementType='ul'>
-                        {featured.map((link) => (
+                        {featuredLinks.map((link) => (
                             <li key={link.props.children}>{link}</li>
                         ))}
                     </Flex>
@@ -63,14 +52,7 @@ export default function MenuDrawer({
                 )}
                 {(featuredLinks || loginLink) && (
                     <Block mt='medium-2'>
-                        <Linklist
-                            links={[
-                                loginLink && { ...loginLink, icon: 'person' },
-                                ...featuredLinks
-                            ].map((link) => (
-                                <FeaturedItem link={link} />
-                            ))}
-                        />
+                        <Linklist links={featuredLinks} />
                     </Block>
                 )}
                 <Accordion menu>

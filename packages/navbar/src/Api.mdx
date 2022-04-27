@@ -33,3 +33,36 @@ This prop specifies the Flagship name. Will show to the right of the logo
 ### Navbar `selectorItems`
 
 This prop is two or more links to different sections on the app/website. For example this could be a switch between private and business sections.
+
+### Navbar `menuFeaturedLinks`
+
+Specify items that are featured in the menu. This is an array of links with icons. Can be either links with href, React Router Links or Hedwig Links.
+
+#### Example Navbar with `menuFeaturedLinks`
+```jsx
+import { Link } from '@posten-hedwig/link'
+import { Icon, sporing, leverttilbedrift, avis, kundeservice } from '@posten-hedwig/icon'
+…
+<Navbar
+    …
+    menuFeaturedLinks={
+    [
+        <Link href='#'>
+            <Icon icon={sporing} size='medium' title='Track a shipment' />
+            Track a shipment
+        </Link>,
+        <Link href='#'>
+            <Icon icon={leverttilbedrift} size='medium' title='Mybring' />
+            Mybring
+        </Link>,
+        <Link href='#'>
+            <Icon icon={avis} size='medium' title='Magazine' />
+            Magazine
+        </Link>,
+        <Link href='#'>
+            <Icon icon={kundeservice} size='medium' title='Contact us' />
+            Contact us
+        </Link>
+    ]
+} />
+```

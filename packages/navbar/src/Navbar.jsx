@@ -18,6 +18,7 @@ export default function Navbar({
     skipToMainTitle,
     selectorItems,
     menu,
+    menuFeaturedLinks,
     children
 }) {
     const [desktop, setDesktop] = useState()
@@ -71,6 +72,7 @@ export default function Navbar({
                                 <Menu
                                     menu={menu}
                                     selectorItems={selectorItems}
+                                    featuredLinks={menuFeaturedLinks}
                                 />
                             )}
                         </nav>
@@ -130,12 +132,32 @@ Navbar.propTypes = {
         title: PropTypes.string.isRequired,
         closeName: PropTypes.string.isRequired,
         closeTitle: PropTypes.string.isRequired,
-        featured: PropTypes.arrayOf(PropTypes.object),
         sections: PropTypes.arrayOf(
             PropTypes.exact({
                 title: PropTypes.string.isRequired,
                 links: PropTypes.arrayOf(PropTypes.object)
             })
         )
-    })
+    }),
+    /**
+     * Specify items that are featured in the menu. This is an array of links. Can be either links with href, React Router Links or Hedwig Links
+     */
+    menuFeaturedLinks: PropTypes.arrayOf(
+        PropTypes.shape({
+            props: PropTypes.oneOfType([
+                PropTypes.shape({
+                    href: PropTypes.string.isRequired,
+                    children: PropTypes.node.isRequired
+                }),
+                PropTypes.shape({
+                    to: PropTypes.oneOfType([
+                        PropTypes.string,
+                        PropTypes.object,
+                        PropTypes.func
+                    ]),
+                    children: PropTypes.node.isRequired
+                })
+            ]).isRequired
+        })
+    )
 }

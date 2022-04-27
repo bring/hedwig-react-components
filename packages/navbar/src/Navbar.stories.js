@@ -76,24 +76,6 @@ navbarMenu.args = {
         title: 'Open menu',
         closeName: 'Lukk',
         closeTitle: 'Close menu',
-        featured: [
-            <Link href='#'>
-                <Icon icon={sporing} size='medium' title='Track a shipment' />
-                Track a shipment
-            </Link>,
-            <Link href='#'>
-                <Icon icon={leverttilbedrift} size='medium' title='Mybring' />
-                Mybring
-            </Link>,
-            <Link href='#'>
-                <Icon icon={avis} size='medium' title='Magazine' />
-                Magazine
-            </Link>,
-            <Link href='#'>
-                <Icon icon={kundeservice} size='medium' title='Contact us' />
-                Contact us
-            </Link>
-        ],
         sections: [
             {
                 title: 'Send',
@@ -117,7 +99,25 @@ navbarMenu.args = {
                 ]
             }
         ]
-    }
+    },
+    menuFeaturedLinks: [
+        <Link href='#'>
+            <Icon icon={sporing} size='medium' title='Track a shipment' />
+            Track a shipment
+        </Link>,
+        <Link href='#'>
+            <Icon icon={leverttilbedrift} size='medium' title='Mybring' />
+            Mybring
+        </Link>,
+        <Link href='#'>
+            <Icon icon={avis} size='medium' title='Magazine' />
+            Magazine
+        </Link>,
+        <Link href='#'>
+            <Icon icon={kundeservice} size='medium' title='Contact us' />
+            Contact us
+        </Link>
+    ]
 }
 
 // Navbar with Search button and Selector items
