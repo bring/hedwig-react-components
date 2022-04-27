@@ -1,5 +1,7 @@
 import React from 'react'
 import Navbar from './Navbar'
+import Usage from './Usage.mdx'
+import Api from './Api.mdx'
 import { Link } from '@posten-hedwig/link'
 import {
     Icon,
@@ -9,16 +11,43 @@ import {
     kundeservice
 } from '@posten-hedwig/icon'
 
+import {
+    Title,
+    Subtitle,
+    Description,
+    Primary,
+    ArgsTable,
+    Stories,
+    PRIMARY_STORY
+} from '@storybook/addon-docs'
+
 export default {
     title: 'Components/Navbar',
-    component: Navbar
+    subtitle: 'Provides navigation to your Posten/Bring application',
+    component: Navbar,
+    parameters: {
+        docs: {
+            page: () => (
+                <>
+                    <Title />
+                    <Subtitle />
+                    <Usage />
+                    <Description />
+                    <Primary />
+                    <ArgsTable story={PRIMARY_STORY} />
+                    <Api />
+                    <Stories />
+                </>
+            )
+        }
+    }
 }
 
 // Bare bone Navbar with only the logo
-const TemplateStripped = (args) => <Navbar {...args} />
+const Default = (args) => <Navbar {...args} />
 
-export const navbarStripped = TemplateStripped.bind({})
-navbarStripped.args = {
+export const navbarDefault = Default.bind({})
+navbarDefault.args = {
     logoTitle: 'Posten Logo',
     logo: 'posten',
     logoHref: '#',
