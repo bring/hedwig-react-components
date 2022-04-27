@@ -82,11 +82,30 @@ export default function Navbar({
 }
 
 Navbar.propTypes = {
-    logoHref: PropTypes.string.isRequired,
+    /**
+     * Which logo to show in the navbar
+     */
     logo: PropTypes.oneOf(['bring', 'posten']).isRequired,
+    /**
+     * Specify the href for clicking on the logo
+     */
+    logoHref: PropTypes.string.isRequired,
+    /**
+     * Title for logo
+     */
     logoTitle: PropTypes.string.isRequired,
+    /**
+     * Aria label for logo
+     */
     logoAriaLabel: PropTypes.string.isRequired,
+    /**
+     * Specify the flagship name. This will be shown to the right of the logo
+     */
     flagship: PropTypes.string,
+    /**
+     * Specify what happens when clicking on the  Private / Business selector
+     * This can be either links with href, React Router Links or Hedwig Links
+     */
     selectorItems: PropTypes.arrayOf(
         PropTypes.exact({
             title: PropTypes.string.isRequired,
@@ -95,8 +114,17 @@ Navbar.propTypes = {
             ariaLabel: PropTypes.string.isRequired
         })
     ),
+    /**
+     * Href for skipping to main content
+     */
     skipToMainHref: PropTypes.string.isRequired,
+    /**
+     * Title for skipping to main content
+     */
     skipToMainTitle: PropTypes.string.isRequired,
+    /**
+     * Specify menu details. An object with various properties for showing the menu.
+     */
     menu: PropTypes.exact({
         name: PropTypes.string.isRequired,
         title: PropTypes.string.isRequired,
