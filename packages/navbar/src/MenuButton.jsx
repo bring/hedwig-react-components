@@ -8,7 +8,7 @@ import '../dist/menu-button.scss'
 
 export default function MenuButton({
     openName,
-    menuTitle,
+    openTitle,
     closeName,
     closeTitle
 }) {
@@ -44,7 +44,7 @@ export default function MenuButton({
         <button
             className='hw-navbar__menu-button'
             onClick={handleClick}
-            aria-label={menuOpen ? closeTitle : menuTitle}
+            aria-label={menuOpen ? closeTitle : openTitle}
         >
             {!menuOpen && (
                 <>
@@ -57,7 +57,7 @@ export default function MenuButton({
                             {openName}
                         </span>
                     )}
-                    <Icon icon={faBars} title={menuTitle} />
+                    <Icon icon={faBars} title={openTitle} />
                 </>
             )}
             {menuOpen && (
@@ -83,7 +83,7 @@ export default function MenuButton({
 
 MenuButton.propTypes = {
     openName: PropTypes.string.isRequired,
-    menuTitle: PropTypes.string.isRequired,
+    openTitle: PropTypes.string.isRequired,
     closeName: PropTypes.string.isRequired,
     closeTitle: PropTypes.string.isRequired
 }
