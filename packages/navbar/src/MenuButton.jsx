@@ -23,7 +23,12 @@ export default function MenuButton({
     const closeLabel = createRef()
 
     useEffect(() => {
-        if (desktop) {
+        if (
+            desktop &&
+            openLabel &&
+            openLabel.current &&
+            openLabel.current.offsetWidth
+        ) {
             setLabelWidth(openLabel.current.offsetWidth)
         }
     }, [desktop])
