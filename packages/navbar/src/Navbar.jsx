@@ -20,6 +20,8 @@ export default function Navbar({
     menu,
     menuOpenName,
     menuOpenTitle,
+    menuCloseName,
+    menuCloseTitle,
     menuFeaturedLinks,
     children
 }) {
@@ -77,6 +79,8 @@ export default function Navbar({
                                     featuredLinks={menuFeaturedLinks}
                                     openName={menuOpenName}
                                     openTitle={menuOpenTitle}
+                                    closeName={menuCloseName}
+                                    closeTitle={menuCloseTitle}
                                 />
                             )}
                         </nav>
@@ -92,22 +96,27 @@ Navbar.propTypes = {
      * Which logo to show in the navbar
      */
     logo: PropTypes.oneOf(['bring', 'posten']).isRequired,
+
     /**
      * Specify the href for clicking on the logo
      */
     logoHref: PropTypes.string.isRequired,
+
     /**
      * Title for logo
      */
     logoTitle: PropTypes.string.isRequired,
+
     /**
      * Aria label for logo
      */
     logoAriaLabel: PropTypes.string.isRequired,
+
     /**
      * Specify the flagship name. This will be shown to the right of the logo
      */
     flagship: PropTypes.string,
+
     /**
      * Specify what happens when clicking on the  Private / Business selector
      * This can be either links with href, React Router Links or Hedwig Links
@@ -120,28 +129,41 @@ Navbar.propTypes = {
             ariaLabel: PropTypes.string.isRequired
         })
     ),
+
     /**
      * Href for skipping to main content
      */
     skipToMainHref: PropTypes.string.isRequired,
+
     /**
      * Title for skipping to main content
      */
     skipToMainTitle: PropTypes.string.isRequired,
+
     /**
-     * Name showing on the menu button on desktop. When the menu is open the menuCloseName will show instead. Required when any items are to be shown in the menu
+     * Name showing on the menu button on desktop. When the menu is open menuCloseName will show instead. Required when any items are to be shown in the menu
      */
     menuOpenName: PropTypes.string,
+
     /**
-     * Title for menu button for mouse over When the menu is open, menuCloseTitle will show instead. Required when any items are to be shown in the menu
+     * Title for menu button for mouse over when the menu is closed. When the menu is open menuCloseTitle will show instead. Required when any items are to be shown in the menu
      */
     menuOpenTitle: PropTypes.string,
+
+    /**
+     * Name showing on the menu button on desktop when the menu is open. When the menu is closed menuOpenName will show instead. Required when any items are to be shown in the menu
+     */
+    menuCloseName: PropTypes.string,
+
+    /**
+     * Title for menu button for mouse over when the menu is open. When the menu is open menuOpenTitle will show instead. Required when any items are to be shown in the menu
+     */
+    menuCloseTitle: PropTypes.string,
+
     /**
      * Specify menu details. An object with various properties for showing the menu
      */
     menu: PropTypes.exact({
-        closeName: PropTypes.string.isRequired,
-        closeTitle: PropTypes.string.isRequired,
         sections: PropTypes.arrayOf(
             PropTypes.exact({
                 title: PropTypes.string.isRequired,
@@ -149,6 +171,7 @@ Navbar.propTypes = {
             })
         )
     }),
+
     /**
      * Specify items that are featured in the menu. This is an array of links. Can be either links with href, React Router Links or Hedwig Links
      */

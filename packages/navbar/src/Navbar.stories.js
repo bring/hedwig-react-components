@@ -73,9 +73,9 @@ navbarMenu.args = {
     skipToMainTitle: 'Go to main content',
     menuOpenName: 'Menu',
     menuOpenTitle: 'Open menu',
+    menuCloseName: 'Close',
+    menuCloseTitle: 'Close menu',
     menu: {
-        closeName: 'Lukk',
-        closeTitle: 'Close menu',
         sections: [
             {
                 title: 'Send',
