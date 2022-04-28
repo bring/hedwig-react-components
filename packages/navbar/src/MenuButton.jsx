@@ -1,4 +1,5 @@
 import React, { useContext, useEffect, createRef, useState } from 'react'
+import ReactDOM from 'react-dom'
 import PropTypes from 'prop-types'
 import { NavbarContext } from './NavbarContext'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -15,23 +16,51 @@ export default function MenuButton({
     const { menuOpen, setMenuOpen, desktop } = useContext(NavbarContext)
     const [labelWidth, setLabelWidth] = useState()
 
-    function handleClick() {
-        setMenuOpen(!menuOpen)
+    const buttonRef = createRef()
+
+    const measureLabel = (element, callback) => {
+        const container = document.createElement('div')
+        container.style.cssText =
+            'display:inline-block;position:absolute;visibility:hidden;'
+        buttonRef.current.appendChild(container)
+        ReactDOM.render(element, container, () => {
+            callback(container.offsetWidth)
+            ReactDOM.unmountComponentAtNode(container)
+            container.parentNode.removeChild(container)
+        })
     }
 
-    const openLabel = createRef()
-    const closeLabel = createRef()
+    function CloseLabel() {
+        return (
+            <span
+                className='hw-navbar__menu-button-label-close'
+                style={{ width: labelWidth }}
+            >
+                {closeName}
+            </span>
+        )
+    }
+
+    function OpenLabel() {
+        return (
+            <span
+                className='hw-navbar__menu-button-label-menu'
+                style={{ width: labelWidth }}
+            >
+                {openName}
+            </span>
+        )
+    }
 
     useEffect(() => {
-        if (
-            desktop &&
-            openLabel &&
-            openLabel.current &&
-            openLabel.current.offsetWidth
-        ) {
-            setLabelWidth(openLabel.current.offsetWidth)
+        if (desktop && !labelWidth) {
+            measureLabel(<OpenLabel />, (openLabelWidth) => {
+                measureLabel(<CloseLabel />, (closeLabelWidth) => {
+                    setLabelWidth(Math.max(openLabelWidth, closeLabelWidth) + 1)
+                })
+            })
         }
-    }, [desktop])
+    }, [desktop, labelWidth])
 
     function Icon({ icon, title }) {
         return (
@@ -48,37 +77,19 @@ export default function MenuButton({
     return (
         <button
             className='hw-navbar__menu-button'
-            onClick={handleClick}
+            onClick={() => setMenuOpen(!menuOpen)}
             aria-label={menuOpen ? closeTitle : openTitle}
+            ref={buttonRef}
         >
             {!menuOpen && (
                 <>
-                    {desktop && (
-                        <span
-                            className='hw-navbar__menu-button-label-menu'
-                            ref={openLabel}
-                            style={{ width: labelWidth }}
-                        >
-                            {openName}
-                        </span>
-                    )}
+                    {desktop && <OpenLabel />}
                     <Icon icon={faBars} title={openTitle} />
                 </>
             )}
             {menuOpen && (
                 <>
-                    {desktop && (
-                        <span
-                            className='hw-navbar__menu-button-label-close'
-                            style={{
-                                display: 'inline',
-                                width: labelWidth
-                            }}
-                            ref={closeLabel}
-                        >
-                            {closeName}
-                        </span>
-                    )}
+                    {desktop && <CloseLabel />}
                     <Icon icon={faTimes} title={closeTitle} />
                 </>
             )}
