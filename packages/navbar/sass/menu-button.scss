@@ -14,7 +14,7 @@
   height: 44px;
 
   &-label-menu, &-label-close {
-    display: none;
+    display: inline;
   }
 
   @include mixins.large {
