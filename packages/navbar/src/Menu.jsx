@@ -4,7 +4,7 @@ import MenuButton from './MenuButton'
 import MenuDrawer from './MenuDrawer'
 
 export default function Menu({
-    menu: { sections },
+    sections,
     openName,
     openTitle,
     closeName,

@@ -17,7 +17,7 @@ export default function Navbar({
     skipToMainHref,
     skipToMainTitle,
     selectorItems,
-    menu,
+    menuSections,
     menuOpenName,
     menuOpenTitle,
     menuCloseName,
@@ -72,17 +72,20 @@ export default function Navbar({
                         )}
                         <nav className='hw-navbar__menu'>
                             {children}
-                            {menu && (
-                                <Menu
-                                    menu={menu}
-                                    selectorItems={selectorItems}
-                                    featuredLinks={menuFeaturedLinks}
-                                    openName={menuOpenName}
-                                    openTitle={menuOpenTitle}
-                                    closeName={menuCloseName}
-                                    closeTitle={menuCloseTitle}
-                                />
-                            )}
+                            {menuOpenName &&
+                                menuOpenTitle &&
+                                menuCloseName &&
+                                menuCloseTitle && (
+                                    <Menu
+                                        sections={menuSections}
+                                        selectorItems={selectorItems}
+                                        featuredLinks={menuFeaturedLinks}
+                                        openName={menuOpenName}
+                                        openTitle={menuOpenTitle}
+                                        closeName={menuCloseName}
+                                        closeTitle={menuCloseTitle}
+                                    />
+                                )}
                         </nav>
                     </NavbarProvider>
                 </div>
@@ -161,16 +164,31 @@ Navbar.propTypes = {
     menuCloseTitle: PropTypes.string,
 
     /**
-     * Specify menu details. An object with various properties for showing the menu
+     * Specify the main sections including items that are in the menu. Each section consists of a title and an array of links. Can be either links with href, React Router Links or Hedwig Links
      */
-    menu: PropTypes.exact({
-        sections: PropTypes.arrayOf(
-            PropTypes.exact({
-                title: PropTypes.string.isRequired,
-                links: PropTypes.arrayOf(PropTypes.object)
-            })
-        )
-    }),
+    menuSections: PropTypes.arrayOf(
+        PropTypes.exact({
+            title: PropTypes.string.isRequired,
+            links: PropTypes.arrayOf(
+                PropTypes.shape({
+                    props: PropTypes.oneOfType([
+                        PropTypes.shape({
+                            href: PropTypes.string.isRequired,
+                            children: PropTypes.node.isRequired
+                        }),
+                        PropTypes.shape({
+                            to: PropTypes.oneOfType([
+                                PropTypes.string,
+                                PropTypes.object,
+                                PropTypes.func
+                            ]),
+                            children: PropTypes.node.isRequired
+                        })
+                    ]).isRequired
+                })
+            )
+        })
+    ),
 
     /**
      * Specify items that are featured in the menu. This is an array of links. Can be either links with href, React Router Links or Hedwig Links

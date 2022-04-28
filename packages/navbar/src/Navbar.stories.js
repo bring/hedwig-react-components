@@ -75,31 +75,29 @@ navbarMenu.args = {
     menuOpenTitle: 'Open menu',
     menuCloseName: 'Close',
     menuCloseTitle: 'Close menu',
-    menu: {
-        sections: [
-            {
-                title: 'Send',
-                links: [
-                    <Link href='#'>Parcels abroad</Link>,
-                    <Link href='#'>Parcels in Norway</Link>,
-                    <Link href='#'>Letters in Norway</Link>,
-                    <Link href='#'>Return</Link>,
-                    <Link href='#'>Letters abroad</Link>,
-                    <Link href='#'>Addressing and wrapping</Link>,
-                    <Link href='#'>Customs when sending abroad</Link>
-                ]
-            },
-            {
-                title: 'Receive',
-                links: [
-                    <Link href='#'>On what days does my mail arrive?</Link>,
-                    <Link href='#'>Home delivery</Link>,
-                    <Link href='#'>Pick up yourself</Link>,
-                    <Link href='#'>Customs when receiving</Link>
-                ]
-            }
-        ]
-    },
+    menuSections: [
+        {
+            title: 'Send',
+            links: [
+                <Link href='#'>Parcels abroad</Link>,
+                <Link href='#'>Parcels in Norway</Link>,
+                <Link href='#'>Letters in Norway</Link>,
+                <Link href='#'>Return</Link>,
+                <Link href='#'>Letters abroad</Link>,
+                <Link href='#'>Addressing and wrapping</Link>,
+                <Link href='#'>Customs when sending abroad</Link>
+            ]
+        },
+        {
+            title: 'Receive',
+            links: [
+                <Link href='#'>On what days does my mail arrive?</Link>,
+                <Link href='#'>Home delivery</Link>,
+                <Link href='#'>Pick up yourself</Link>,
+                <Link href='#'>Customs when receiving</Link>
+            ]
+        }
+    ],
     menuFeaturedLinks: [
         <Link href='#'>
             <Icon icon={sporing} size='medium' title='Track a shipment' />
