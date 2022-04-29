@@ -135,15 +135,11 @@ navbarSelector.args = {
     skipToMainTitle: 'Go to main content',
     selectorItems: [
         {
-            title: 'Företag',
-            href: '#',
-            ariaLabel: 'Business section'
+            link: <Link href='#'>Business</Link>
         },
         {
-            title: 'Privat',
-            href: '#',
-            selected: true,
-            ariaLabel: 'Private section'
+            link: <a href='#'>Private</a>,
+            selected: true
         }
     ]
 }

@@ -126,10 +126,8 @@ Navbar.propTypes = {
      */
     selectorItems: PropTypes.arrayOf(
         PropTypes.exact({
-            title: PropTypes.string.isRequired,
-            href: PropTypes.string.isRequired,
-            selected: PropTypes.bool,
-            ariaLabel: PropTypes.string.isRequired
+            link: PropTypes.object.isRequired,
+            selected: PropTypes.bool
         })
     ),
 

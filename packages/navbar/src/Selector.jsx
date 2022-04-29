@@ -9,13 +9,12 @@ export default function Selector({ items, desktop }) {
                 !desktop ? ' hw-navbar__selector__mobile' : ''
             }`}
         >
-            {items.map(({ title, href, selected, ariaLabel }) => (
+            {items.map(({ link, selected }) => (
                 <SelectorItem
-                    title={title}
-                    href={href}
+                    link={link}
                     selected={selected}
-                    ariaLabel={ariaLabel}
-                    key={title}
+                    key={link.props.children}
+                    className='hmmm'
                 />
             ))}
         </div>
@@ -25,10 +24,8 @@ export default function Selector({ items, desktop }) {
 Selector.propTypes = {
     items: PropTypes.arrayOf(
         PropTypes.exact({
-            title: PropTypes.string.isRequired,
-            href: PropTypes.string.isRequired,
-            selected: PropTypes.bool,
-            ariaLabel: PropTypes.string
+            link: PropTypes.object.isRequired,
+            selected: PropTypes.bool
         })
     ),
     desktop: PropTypes.bool

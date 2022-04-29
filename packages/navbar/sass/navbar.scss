@@ -99,18 +99,20 @@
     transition: color 0.1s ease;
 
     .hw-navbar__selector-item {
-      border: none;
-      background: transparent;
-      padding: var(--hw-spacing-small-4) var(--hw-spacing-small-2);
-      font-size: var(--hw-font-size-small);
-      margin-right: var(--hw-spacing-small-2);
-      color: var(--hw-color-black);
+      a {
+        border: none;
+        background: transparent;
+        padding: var(--hw-spacing-small-4) var(--hw-spacing-small-2);
+        font-size: var(--hw-font-size-small);
+        margin-right: var(--hw-spacing-small-2);
+        color: var(--hw-color-black);
 
-      &:hover {
-        color: var(--hw-color-link-hover);
+        &:hover {
+          color: var(--hw-color-link-hover);
+        }
       }
 
-      &.hw-navbar__selector-item__selected {
+      &.hw-navbar__selector-item__selected a {
         border-bottom: var(--hw-border-thickness-thick) solid var(--hw-color-primary) !important;
       }
     }
@@ -132,7 +134,7 @@
       padding-bottom: var(--hw-spacing-small-4);
       line-height: 1;
 
-      .hw-navbar__selector-item:first-of-type {
+      .hw-navbar__selector-item:first-of-type a {
         margin-left: calc(var(--hw-spacing-small-3) + var(--hw-spacing-small-4));
       }
       @include mixins.medium {

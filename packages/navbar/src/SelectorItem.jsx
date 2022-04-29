@@ -1,25 +1,17 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-export default function SelectorItem({ href, title, selected, ariaLabel }) {
-    return (
-        <a
-            href={href}
-            className={`hw-navbar__selector-item${
-                selected ? ' hw-navbar__selector-item__selected' : ''
-            }`}
-            aria-label={ariaLabel || title}
-        >
-            {title}
-        </a>
-    )
+export default function SelectorItem({ link, selected }) {
+    let classes = ['hw-navbar__selector-item']
+    if (selected) {
+        classes.push(classes[0] + '__selected')
+    }
+    return <span className={classes.join(' ')}>{link}</span>
 }
 
 SelectorItem.propTypes = {
-    href: PropTypes.string.isRequired,
-    title: PropTypes.string.isRequired,
-    selected: PropTypes.bool,
-    ariaLabel: PropTypes.string
+    link: PropTypes.object.isRequired,
+    selected: PropTypes.bool
 }
 
 SelectorItem.defaultProps = {
