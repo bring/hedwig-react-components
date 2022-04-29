@@ -162,7 +162,7 @@ Navbar.propTypes = {
     menuCloseTitle: PropTypes.string,
 
     /**
-     * Specify the main sections including items that are in the menu. Each section consists of a title and an array of links. Can be either links with href, React Router Links or Hedwig Links
+     * Specify the main sections including items that are in the menu. Each section consists of a title and an array of links. Can be either links with href, React Router Links or Hedwig Links. [More details](#navbar-menusections)
      */
     menuSections: PropTypes.arrayOf(
         PropTypes.exact({
@@ -189,7 +189,7 @@ Navbar.propTypes = {
     ),
 
     /**
-     * Specify items that are featured in the menu. This is an array of links. Can be either links with href, React Router Links or Hedwig Links
+     * Specify items that are featured in the menu. This is an array of links with icons. Can be either links with href, React Router Links or Hedwig Links
      */
     menuFeaturedLinks: PropTypes.arrayOf(
         PropTypes.shape({
