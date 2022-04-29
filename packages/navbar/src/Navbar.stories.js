@@ -40,6 +40,29 @@ export default {
                 </>
             )
         }
+    },
+    argTypes: {
+        menuSections: {
+            table: {
+                type: {
+                    summary: 'object[]',
+                    detail: `
+[{
+    title: string,
+    links: [{
+        props: {
+            href: string,
+            children: node
+        } | {
+            to: string | object | func,
+            children: node
+        }
+    }]
+}]
+`
+                }
+            }
+        }
     }
 }
 
