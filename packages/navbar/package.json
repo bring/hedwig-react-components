@@ -19,7 +19,7 @@
   },
   "scripts": {
     "prebuild": "rimraf dist && npm run sass",
-    "sass": "sass sass/navbar.scss:dist/navbar.scss sass/menu-button.scss:dist/menu-button.scss sass/search-button.scss:dist/search-button.scss sass/menu-drawer.scss:dist/menu-drawer.scss --style compressed --no-source-map",
+    "sass": "sass sass/navbar.scss:dist/navbar.scss sass/menu-button.scss:dist/menu-button.scss sass/search-button.scss:dist/search-button.scss sass/menu-drawer.scss:dist/menu-drawer.scss sass/selector.scss:dist/selector.scss --style compressed --no-source-map",
     "build": "babel src -d dist --root-mode=upward --ignore '**/*.stories.js'"
   },
   "bugs": {

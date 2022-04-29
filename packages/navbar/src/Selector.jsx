@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import SelectorItem from './SelectorItem'
+import '../dist/selector.scss'
 
 export default function Selector({ items, desktop }) {
     return (
