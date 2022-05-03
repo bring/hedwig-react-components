@@ -1,6 +1,6 @@
 {
   "name": "hedwig-react-components",
-  "private": true,
+  "private": false,
   "devDependencies": {
     "@storybook/addon-actions": "^6.3.12",
     "@storybook/addon-essentials": "^6.3.12",
