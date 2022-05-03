@@ -1,171 +1,84 @@
-import Icon from './Icon'
-import adresser from '../icons/adresser.svg'
-import adresseendringogoppbevaring from '../icons/adresseendringogoppbevaring.svg'
-import adressevask from '../icons/adressevask.svg'
-import alfakroell from '../icons/alfakroell.svg'
-import apiedi from '../icons/apiedi.svg'
-import avemballering from '../icons/avemballering.svg'
-import avis from '../icons/avis.svg'
-import bankkort from '../icons/bankkort.svg'
-import bankogfinans from '../icons/bankogfinans.svg'
-import billetter from '../icons/billetter.svg'
-import blandedeformater from '../icons/blandedeformater.svg'
-import brev from '../icons/brev.svg'
-import bud from '../icons/bud.svg'
-import budirute from '../icons/budirute.svg'
-import chatbot from '../icons/chatbot.svg'
-import digipost from '../icons/digipost.svg'
-import digitaltfrimerke from '../icons/digitaltfrimerke.svg'
-import ekspress from '../icons/ekspress.svg'
-import ekspressfly from '../icons/ekspressfly.svg'
-import faktura from '../icons/faktura.svg'
-import farliggods from '../icons/farliggods.svg'
-import flytransport from '../icons/flytransport.svg'
-import foer07 from '../icons/foer07.svg'
-import frimerker from '../icons/frimerker.svg'
-import frimerkertilsamling from '../icons/frimerkertilsamling.svg'
-import godstransport from '../icons/godstransport.svg'
-import handlekurv from '../icons/handlekurv.svg'
-import henteselvlager from '../icons/henteselvlager.svg'
-import henteipostkassen from '../icons/henteipostkassen.svg'
-import hentested from '../icons/hentested.svg'
-import hvordanmottapost from '../icons/hvordanmottapost.svg'
-import innenfordoeren from '../icons/innenfordoeren.svg'
-import internasjonalt from '../icons/internasjonalt.svg'
-import internett from '../icons/internett.svg'
-import jul from '../icons/jul.svg'
-import kalender from '../icons/kalender.svg'
-import klargjoering from '../icons/klargjoering.svg'
-import kundeservice from '../icons/kundeservice.svg'
-import laas from '../icons/laas.svg'
-import lager from '../icons/lager.svg'
-import legitimasjon from '../icons/legitimasjon.svg'
-import leverthjem from '../icons/leverthjem.svg'
-import leverttilbedrift from '../icons/leverttilbedrift.svg'
-import merker from '../icons/merker.svg'
-import olje from '../icons/olje.svg'
-import paadoeren from '../icons/paadoeren.svg'
-import paaske from '../icons/paaske.svg'
-import pakke from '../icons/pakke.svg'
-import pakkerstykkgodsogdellast from '../icons/pakkerstykkgodsogdellast.svg'
-import palltilbedrift from '../icons/palltilbedrift.svg'
-import partigods from '../icons/partigods.svg'
-import person from '../icons/person.svg'
-import personer from '../icons/personer.svg'
-import pickupcargopartial from '../icons/pickupcargopartial.svg'
-import pickupcargo from '../icons/pickupcargo.svg'
-import pickuphome from '../icons/pickuphome.svg'
-import postkasse from '../icons/postkasse.svg'
-import reklamasjon from '../icons/reklamasjon.svg'
-import retur from '../icons/retur.svg'
-import returnb2bpartial from '../icons/returnb2bpartial.svg'
-import returnb2b from '../icons/returnb2b.svg'
-import returncargopartial from '../icons/returncargopartial.svg'
-import returncargo from '../icons/returncargo.svg'
-import returndeliveryhome from '../icons/returndeliveryhome.svg'
-import returndeliverymailbox from '../icons/returndeliverymailbox.svg'
-import returnexpress from '../icons/returnexpress.svg'
-import returnpallet from '../icons/returnpallet.svg'
-import returnparcel from '../icons/returnparcel.svg'
-import returnpickup from '../icons/returnpickup.svg'
-import signatur from '../icons/signatur.svg'
-import sjoetransport from '../icons/sjoetransport.svg'
-import skreddersoem from '../icons/skreddersoem.svg'
-import smarttelefon from '../icons/smarttelefon.svg'
-import sporing from '../icons/sporing.svg'
-import sporsmalogsvar from '../icons/sporsmalogsvar.svg'
-import stykkgods from '../icons/stykkgods.svg'
-import sykkelbud from '../icons/sykkelbud.svg'
-import temperaturregulert from '../icons/temperaturregulert.svg'
-import terminal from '../icons/terminal.svg'
-import toll from '../icons/toll.svg'
-import utenforhuset from '../icons/utenforhuset.svg'
-import verdi from '../icons/verdi.svg'
-import verksted from '../icons/verksted.svg'
-
-export {
-    Icon,
-    adresser,
-    adresseendringogoppbevaring,
-    adressevask,
-    alfakroell,
-    apiedi,
-    avemballering,
-    avis,
-    bankkort,
-    bankogfinans,
-    billetter,
-    blandedeformater,
-    brev,
-    bud,
-    budirute,
-    chatbot,
-    digipost,
-    digitaltfrimerke,
-    ekspress,
-    ekspressfly,
-    faktura,
-    farliggods,
-    flytransport,
-    foer07,
-    frimerker,
-    frimerkertilsamling,
-    godstransport,
-    handlekurv,
-    henteselvlager,
-    henteipostkassen,
-    hentested,
-    hvordanmottapost,
-    innenfordoeren,
-    internasjonalt,
-    internett,
-    jul,
-    kalender,
-    klargjoering,
-    kundeservice,
-    laas,
-    lager,
-    legitimasjon,
-    leverthjem,
-    leverttilbedrift,
-    merker,
-    olje,
-    paadoeren,
-    paaske,
-    pakke,
-    pakkerstykkgodsogdellast,
-    palltilbedrift,
-    partigods,
-    person,
-    personer,
-    pickupcargo,
-    pickupcargopartial,
-    pickuphome,
-    postkasse,
-    reklamasjon,
-    retur,
-    returnb2b,
-    returnb2bpartial,
-    returncargo,
-    returncargopartial,
-    returndeliveryhome,
-    returndeliverymailbox,
-    returnexpress,
-    returnpallet,
-    returnparcel,
-    returnpickup,
-    signatur,
-    sjoetransport,
-    skreddersoem,
-    smarttelefon,
-    sporing,
-    sporsmalogsvar,
-    stykkgods,
-    sykkelbud,
-    temperaturregulert,
-    terminal,
-    toll,
-    utenforhuset,
-    verdi,
-    verksted
-}
+export { default as Icon } from './Icon'
+export { default as adresser } from '../icons/adresser.svg'
+export { default as adresseendringogoppbevaring } from '../icons/adresseendringogoppbevaring.svg'
+export { default as adressevask } from '../icons/adressevask.svg'
+export { default as alfakroell } from '../icons/alfakroell.svg'
+export { default as apiedi } from '../icons/apiedi.svg'
+export { default as avemballering } from '../icons/avemballering.svg'
+export { default as avis } from '../icons/avis.svg'
+export { default as bankkort } from '../icons/bankkort.svg'
+export { default as bankogfinans } from '../icons/bankogfinans.svg'
+export { default as billetter } from '../icons/billetter.svg'
+export { default as blandedeformater } from '../icons/blandedeformater.svg'
+export { default as brev } from '../icons/brev.svg'
+export { default as bud } from '../icons/bud.svg'
+export { default as budirute } from '../icons/budirute.svg'
+export { default as chatbot } from '../icons/chatbot.svg'
+export { default as digipost } from '../icons/digipost.svg'
+export { default as digitaltfrimerke } from '../icons/digitaltfrimerke.svg'
+export { default as ekspress } from '../icons/ekspress.svg'
+export { default as ekspressfly } from '../icons/ekspressfly.svg'
+export { default as faktura } from '../icons/faktura.svg'
+export { default as farliggods } from '../icons/farliggods.svg'
+export { default as flytransport } from '../icons/flytransport.svg'
+export { default as foer07 } from '../icons/foer07.svg'
+export { default as frimerker } from '../icons/frimerker.svg'
+export { default as frimerkertilsamling } from '../icons/frimerkertilsamling.svg'
+export { default as godstransport } from '../icons/godstransport.svg'
+export { default as handlekurv } from '../icons/handlekurv.svg'
+export { default as henteselvlager } from '../icons/henteselvlager.svg'
+export { default as henteipostkassen } from '../icons/henteipostkassen.svg'
+export { default as hentested } from '../icons/hentested.svg'
+export { default as hvordanmottapost } from '../icons/hvordanmottapost.svg'
+export { default as innenfordoeren } from '../icons/innenfordoeren.svg'
+export { default as internasjonalt } from '../icons/internasjonalt.svg'
+export { default as internett } from '../icons/internett.svg'
+export { default as jul } from '../icons/jul.svg'
+export { default as kalender } from '../icons/kalender.svg'
+export { default as klargjoering } from '../icons/klargjoering.svg'
+export { default as kundeservice } from '../icons/kundeservice.svg'
+export { default as laas } from '../icons/laas.svg'
+export { default as lager } from '../icons/lager.svg'
+export { default as legitimasjon } from '../icons/legitimasjon.svg'
+export { default as leverthjem } from '../icons/leverthjem.svg'
+export { default as leverttilbedrift } from '../icons/leverttilbedrift.svg'
+export { default as merker } from '../icons/merker.svg'
+export { default as olje } from '../icons/olje.svg'
+export { default as paadoeren } from '../icons/paadoeren.svg'
+export { default as paaske } from '../icons/paaske.svg'
+export { default as pakke } from '../icons/pakke.svg'
+export { default as pakkerstykkgodsogdellast } from '../icons/pakkerstykkgodsogdellast.svg'
+export { default as palltilbedrift } from '../icons/palltilbedrift.svg'
+export { default as partigods } from '../icons/partigods.svg'
+export { default as person } from '../icons/person.svg'
+export { default as personer } from '../icons/personer.svg'
+export { default as pickupcargopartial } from '../icons/pickupcargopartial.svg'
+export { default as pickupcargo } from '../icons/pickupcargo.svg'
+export { default as pickuphome } from '../icons/pickuphome.svg'
+export { default as postkasse } from '../icons/postkasse.svg'
+export { default as reklamasjon } from '../icons/reklamasjon.svg'
+export { default as retur } from '../icons/retur.svg'
+export { default as returnb2bpartial } from '../icons/returnb2bpartial.svg'
+export { default as returnb2b } from '../icons/returnb2b.svg'
+export { default as returncargopartial } from '../icons/returncargopartial.svg'
+export { default as returncargo } from '../icons/returncargo.svg'
+export { default as returndeliveryhome } from '../icons/returndeliveryhome.svg'
+export { default as returndeliverymailbox } from '../icons/returndeliverymailbox.svg'
+export { default as returnexpress } from '../icons/returnexpress.svg'
+export { default as returnpallet } from '../icons/returnpallet.svg'
+export { default as returnparcel } from '../icons/returnparcel.svg'
+export { default as returnpickup } from '../icons/returnpickup.svg'
+export { default as signatur } from '../icons/signatur.svg'
+export { default as sjoetransport } from '../icons/sjoetransport.svg'
+export { default as skreddersoem } from '../icons/skreddersoem.svg'
+export { default as smarttelefon } from '../icons/smarttelefon.svg'
+export { default as sporing } from '../icons/sporing.svg'
+export { default as sporsmalogsvar } from '../icons/sporsmalogsvar.svg'
+export { default as stykkgods } from '../icons/stykkgods.svg'
+export { default as sykkelbud } from '../icons/sykkelbud.svg'
+export { default as temperaturregulert } from '../icons/temperaturregulert.svg'
+export { default as terminal } from '../icons/terminal.svg'
+export { default as toll } from '../icons/toll.svg'
+export { default as utenforhuset } from '../icons/utenforhuset.svg'
+export { default as verdi } from '../icons/verdi.svg'
+export { default as verksted } from '../icons/verksted.svg'
