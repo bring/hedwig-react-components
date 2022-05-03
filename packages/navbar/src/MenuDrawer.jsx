@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { NavbarContext } from './NavbarContext'
 import { Flex } from '@posten-hedwig/flex'
-import Block from '@posten-hedwig/block'
+import { Block } from '@posten-hedwig/block'
 import '../dist/menu-drawer.scss'
 import Selector from './Selector'
 import { Accordion, AccordionItem } from '@posten-hedwig/accordion'
