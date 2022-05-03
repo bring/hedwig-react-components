@@ -2,6 +2,9 @@
     "name": "@posten-hedwig/badge",
     "version": "0.0.2",
     "private": false,
+    "publishConfig": {
+        "access": "public"
+    },
     "files": [
         "dist"
     ],
