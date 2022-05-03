@@ -1,6 +1,6 @@
 {
   "name": "@posten-hedwig/link",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Hedwigstyle links",
   "keywords": [
     "Hedwig",
@@ -17,7 +17,7 @@
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "babel src -d dist --root-mode=upward --ignore '**/*.stories.js'"
-},
+  },
   "publishConfig": {
     "access": "public"
   },
@@ -26,7 +26,7 @@
     "url": "git+https://github.com/bring/hedwig-react-components.git"
   },
   "dependencies": {
-    "@posten-hedwig/core": "^0.0.1",
+    "@posten-hedwig/core": "^0.0.2",
     "prop-types": "^15.7.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"

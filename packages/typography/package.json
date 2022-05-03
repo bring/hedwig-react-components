@@ -1,13 +1,13 @@
 {
     "name": "@posten-hedwig/typography",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "private": false,
     "files": [
         "dist"
     ],
     "main": "dist/typography.css",
     "dependencies": {
-        "@posten-hedwig/core": "^0.0.1"
+        "@posten-hedwig/core": "^0.0.2"
     },
     "scripts": {
         "prebuild": "rimraf dist",

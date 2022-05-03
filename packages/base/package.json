@@ -1,7 +1,7 @@
 {
     "name": "@posten-hedwig/base",
     "description": "Provides sanitize and some general styling for <html> and <body>",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "private": false,
     "files": [
         "dist",
@@ -13,7 +13,7 @@
         "sass-base": "sass sass/base.scss:dist/base.css --style compressed --no-source-map",
         "sass-body": "sass sass/body.scss:dist/body.scss --style compressed --no-source-map",
         "build": "babel src -d dist --root-mode=upward"
-    },    
+    },
     "dependencies": {
         "sanitize.css": "^13.0.0"
     }
