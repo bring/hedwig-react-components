@@ -1,40 +1,43 @@
 {
-  "name": "@posten-hedwig/navbar",
-  "version": "1.0.1",
-  "description": "Provides navbar and menu",
-  "keywords": [
-    "navbar",
-    "menu"
-  ],
-  "author": "Viggo Normann <v@iggo.no>",
-  "homepage": "https://github.com/bring/hedwig-react-components#readme",
-  "license": "ISC",
-  "main": "dist/index.js",
-  "files": [
-    "dist"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/bring/hedwig-react-components.git"
-  },
-  "scripts": {
-    "prebuild": "rimraf dist && npm run sass",
-    "sass": "sass sass/navbar.scss:dist/navbar.scss sass/menu-button.scss:dist/menu-button.scss sass/search-button.scss:dist/search-button.scss sass/menu-drawer.scss:dist/menu-drawer.scss sass/selector.scss:dist/selector.scss --style compressed --no-source-map",
-    "build": "babel src -d dist --root-mode=upward --ignore '**/*.stories.js'"
-  },
-  "bugs": {
-    "url": "https://github.com/bring/hedwig-react-components/issues"
-  },
-  "dependencies": {
-    "@posten-hedwig/accordion": "^1.0.1",
-    "@posten-hedwig/block": "^1.0.1",
-    "@posten-hedwig/core": "^0.0.2",
-    "@posten-hedwig/flex": "^1.0.1",
-    "@posten-hedwig/icon": "^1.0.1",
-    "@posten-hedwig/link": "^0.0.2",
-    "@posten-hedwig/linklist": "^1.0.1",
-    "prop-types": "^15.7.2",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2"
-  }
+    "name": "@posten-hedwig/navbar",
+    "version": "1.0.1",
+    "publishConfig": {
+        "access": "public"
+    },
+    "description": "Provides navbar and menu",
+    "keywords": [
+        "navbar",
+        "menu"
+    ],
+    "author": "Viggo Normann <v@iggo.no>",
+    "homepage": "https://github.com/bring/hedwig-react-components#readme",
+    "license": "ISC",
+    "main": "dist/index.js",
+    "files": [
+        "dist"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/bring/hedwig-react-components.git"
+    },
+    "scripts": {
+        "prebuild": "rimraf dist && npm run sass",
+        "sass": "sass sass/navbar.scss:dist/navbar.scss sass/menu-button.scss:dist/menu-button.scss sass/search-button.scss:dist/search-button.scss sass/menu-drawer.scss:dist/menu-drawer.scss sass/selector.scss:dist/selector.scss --style compressed --no-source-map",
+        "build": "babel src -d dist --root-mode=upward --ignore '**/*.stories.js'"
+    },
+    "bugs": {
+        "url": "https://github.com/bring/hedwig-react-components/issues"
+    },
+    "dependencies": {
+        "@posten-hedwig/accordion": "^1.0.1",
+        "@posten-hedwig/block": "^1.0.1",
+        "@posten-hedwig/core": "^0.0.2",
+        "@posten-hedwig/flex": "^1.0.1",
+        "@posten-hedwig/icon": "^1.0.1",
+        "@posten-hedwig/link": "^0.0.2",
+        "@posten-hedwig/linklist": "^1.0.1",
+        "prop-types": "^15.7.2",
+        "react": "^17.0.2",
+        "react-dom": "^17.0.2"
+    }
 }
