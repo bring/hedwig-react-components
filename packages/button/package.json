@@ -1,6 +1,9 @@
 {
     "name": "@posten-hedwig/button",
     "version": "1.0.1",
+    "publishConfig": {
+        "access": "public"
+    },
     "description": "Hedwig styled buttons",
     "keywords": [
         "hedwig",
