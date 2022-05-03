@@ -10,7 +10,7 @@
         "menu"
     ],
     "author": "Viggo Normann <v@iggo.no>",
-    "homepage": "https://github.com/bring/hedwig-react-components#readme",
+    "homepage": "https://github.com/bring/hedwig-react-components/tree/master/packages/navbar#readme",
     "license": "ISC",
     "main": "dist/index.js",
     "files": [
@@ -18,7 +18,7 @@
     ],
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/bring/hedwig-react-components.git"
+        "url": "git+https://github.com/bring/hedwig-react-components/tree/master/packages/navbar"
     },
     "scripts": {
         "prebuild": "rimraf dist && npm run sass",
