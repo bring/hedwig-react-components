@@ -35,5 +35,6 @@
         "react": "^17.0.2",
         "react-dom": "^17.0.2",
         "react-router-dom": "^6.3.0"
-    }
+    },
+    "gitHead": "c6c503b48a69b8ecc180ca28f84791cc9cc6277b"
 }
