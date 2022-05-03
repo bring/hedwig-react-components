@@ -2,12 +2,19 @@
 
 Hedwig Badge provides various style badges
 
-## Different styles
+## Styles
 
 - Badge
 - DarkBadge
 - WarningBadge
 - WhiteBadge
+
+## Sizes
+
+- smaller
+- small
+- large
+- larger
 
 ## Usage
 
@@ -16,7 +23,10 @@ npm install @hedwig-posten/badge
 ```
 
 ```jsx
-import { Badge } from '@posten-hedwig/badge'
+import { Badge, WarningBadge } from '@posten-hedwig/badge'
 …
-<Badge>Updated</Badge>
+<>
+    <Badge size='small'>Updated</Badge>
+    <WarningBadge size='large'>File too large</WarningBadge>
+</>
 ```
