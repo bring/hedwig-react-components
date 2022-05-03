@@ -1,3 +1,1 @@
-import Linklist from './Linklist'
-
-export { Linklist }
+export { default as Linklist } from './Linklist'
