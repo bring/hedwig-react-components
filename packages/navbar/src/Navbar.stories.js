@@ -12,7 +12,6 @@ import {
 } from '@posten-hedwig/icon'
 
 import {
-    Title,
     Subtitle,
     Description,
     Primary,
@@ -23,14 +22,11 @@ import {
 
 export default {
     title: 'Components/Navbar',
-    subtitle: 'Provides navigation to your Posten/Bring application',
     component: Navbar,
     parameters: {
         docs: {
             page: () => (
                 <>
-                    <Title />
-                    <Subtitle />
                     <Usage />
                     <Description />
                     <Primary />

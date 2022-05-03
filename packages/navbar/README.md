@@ -1,3 +1,5 @@
+# Navbar
+
 ## Usage
 
 ### Install
