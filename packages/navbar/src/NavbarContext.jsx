@@ -3,7 +3,6 @@ import React, { createContext, useState, useEffect } from 'react'
 const NavbarContext = createContext([{}, () => {}])
 
 const NavbarProvider = ({ children }) => {
-    //const [state, setState] = useState({ isSearching: false, menuOpen: false })
     const [desktop, setDesktop] = useState()
     const [menuOpen, setMenuOpen] = useState(false)
 
