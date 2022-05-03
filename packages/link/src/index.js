@@ -1,6 +1,4 @@
-import Link from './Link'
-import SolidLink from './SolidLink'
-import InvertedLink from './InvertedLink'
-import SimpleLink from './SimpleLink'
-
-export { Link, SolidLink, InvertedLink, SimpleLink }
+export { default as Link } from './Link'
+export { default as SolidLink } from './SolidLink'
+export { default as InvertedLink } from './InvertedLink'
+export { default as SimpleLink } from './SimpleLink'
