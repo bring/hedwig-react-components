@@ -1,34 +1,34 @@
 {
-  "name": "@posten-hedwig/core",
-  "version": "0.0.2",
-  "description": "Provides base variables and fonts for the other components to use.",
-  "keywords": [],
-  "author": "Viggo Normann <v@iggo.no>",
-  "license": "ISC",
-  "files": [
-    "dist",
-    "sass",
-    "assets"
-  ],
-  "main": "dist/index.js",
-  "directories": {
-    "test": "__tests__"
-  },
-  "publishConfig": {
-    "access": "public"
-  },
-  "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1",
-    "prebuild": "rimraf dist && npm run sass-variables && npm run sass-colors && npm run sass-fonts",
-    "sass-variables": "sass sass/variables.scss:dist/variables.scss --style compressed --no-source-map",
-    "sass-colors": "sass sass/colors.scss:dist/colors.scss --style compressed --no-source-map",
-    "sass-fonts": "sass sass/fonts.css:dist/fonts.css --style compressed --no-source-map",
-    "build": "babel src -d dist --root-mode=upward"
-  },
-  "dependencies": {
-    "@posten-hedwig/base": "^0.0.2",
-    "css-vars-ponyfill": "^2.4.7",
-    "postcss": "^8.4.1",
-    "postcss-js": "^3.0.3"
-  }
+    "name": "@posten-hedwig/core",
+    "version": "0.0.2",
+    "publishConfig": {
+        "access": "public"
+    },
+    "description": "Provides base variables and fonts for the other components to use.",
+    "keywords": [],
+    "author": "Viggo Normann <v@iggo.no>",
+    "license": "ISC",
+    "files": [
+        "dist",
+        "sass",
+        "assets"
+    ],
+    "main": "dist/index.js",
+    "directories": {
+        "test": "__tests__"
+    },
+    "scripts": {
+        "test": "echo \"Error: run tests from root\" && exit 1",
+        "prebuild": "rimraf dist && npm run sass-variables && npm run sass-colors && npm run sass-fonts",
+        "sass-variables": "sass sass/variables.scss:dist/variables.scss --style compressed --no-source-map",
+        "sass-colors": "sass sass/colors.scss:dist/colors.scss --style compressed --no-source-map",
+        "sass-fonts": "sass sass/fonts.css:dist/fonts.css --style compressed --no-source-map",
+        "build": "babel src -d dist --root-mode=upward"
+    },
+    "dependencies": {
+        "@posten-hedwig/base": "^0.0.2",
+        "css-vars-ponyfill": "^2.4.7",
+        "postcss": "^8.4.1",
+        "postcss-js": "^3.0.3"
+    }
 }
