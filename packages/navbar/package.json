@@ -1,6 +1,6 @@
 {
     "name": "@posten-hedwig/navbar",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "publishConfig": {
         "access": "public"
     },
@@ -33,13 +33,13 @@
         "@fortawesome/pro-light-svg-icons": "^6.1.1",
         "@fortawesome/pro-regular-svg-icons": "^6.1.1",
         "@fortawesome/react-fontawesome": "^0.1.18",
-        "@posten-hedwig/accordion": "^1.0.3",
-        "@posten-hedwig/block": "^1.0.3",
-        "@posten-hedwig/core": "^0.0.4",
-        "@posten-hedwig/flex": "^1.0.3",
-        "@posten-hedwig/icon": "^1.0.3",
-        "@posten-hedwig/link": "^0.0.4",
-        "@posten-hedwig/linklist": "^1.0.3",
+        "@posten-hedwig/accordion": "^1.0.5",
+        "@posten-hedwig/block": "^1.0.4",
+        "@posten-hedwig/core": "^0.0.5",
+        "@posten-hedwig/flex": "^1.0.4",
+        "@posten-hedwig/icon": "^1.0.4",
+        "@posten-hedwig/link": "^0.0.5",
+        "@posten-hedwig/linklist": "^1.0.4",
         "prop-types": "^15.7.2",
         "react": "^17.0.2",
         "react-dom": "^17.0.2"

@@ -1,6 +1,6 @@
 {
     "name": "@posten-hedwig/core",
-    "version": "0.0.4",
+    "version": "0.0.5",
     "publishConfig": {
         "access": "public"
     },
@@ -26,7 +26,7 @@
         "build": "babel src -d dist --root-mode=upward"
     },
     "dependencies": {
-        "@posten-hedwig/base": "^0.0.4",
+        "@posten-hedwig/base": "^0.0.5",
         "css-vars-ponyfill": "^2.4.7",
         "postcss": "^8.4.1",
         "postcss-js": "^3.0.3"

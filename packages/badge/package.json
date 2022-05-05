@@ -1,6 +1,6 @@
 {
     "name": "@posten-hedwig/badge",
-    "version": "0.0.4",
+    "version": "0.0.5",
     "private": false,
     "publishConfig": {
         "access": "public"
@@ -15,7 +15,7 @@
         "build": "babel src -d dist --root-mode=upward --ignore '**/*.stories.js'"
     },
     "dependencies": {
-        "@posten-hedwig/core": "^0.0.4",
+        "@posten-hedwig/core": "^0.0.5",
         "prop-types": "^15.7.2",
         "react": "^17.0.2",
         "react-dom": "^17.0.2"
