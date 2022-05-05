@@ -30,6 +30,9 @@
         "url": "https://github.com/bring/hedwig-react-components/issues"
     },
     "dependencies": {
+        "@fortawesome/pro-light-svg-icons": "^6.1.1",
+        "@fortawesome/pro-regular-svg-icons": "^6.1.1",
+        "@fortawesome/react-fontawesome": "^0.1.18",
         "@posten-hedwig/accordion": "^1.0.3",
         "@posten-hedwig/block": "^1.0.3",
         "@posten-hedwig/core": "^0.0.4",
