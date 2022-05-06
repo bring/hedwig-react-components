@@ -1,6 +1,6 @@
 {
     "name": "@posten-hedwig/accordion",
-    "version": "1.0.7",
+    "version": "1.0.8",
     "publishConfig": {
         "access": "public"
     },
@@ -29,7 +29,7 @@
         "url": "https://github.com/bring/hedwig-react-components/issues"
     },
     "dependencies": {
-        "@posten-hedwig/core": "^0.0.7"
+        "@posten-hedwig/core": "^0.0.8"
     },
     "peerDependencies": {
         "react": ">=16.14.x"
