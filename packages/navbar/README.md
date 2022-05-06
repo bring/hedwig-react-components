@@ -1,5 +1,7 @@
 # Navbar
 
+The navbar is the container for primary navigation on the Posten and Bring websites and applications. It is placed at the top of every page.
+
 ## Usage
 
 ### Install
