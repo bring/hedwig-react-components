@@ -1,6 +1,6 @@
 {
     "name": "@posten-hedwig/typography",
-    "version": "0.0.6",
+    "version": "0.0.7",
     "publishConfig": {
         "access": "public"
     },
@@ -10,7 +10,7 @@
     ],
     "main": "dist/typography.css",
     "dependencies": {
-        "@posten-hedwig/core": "^0.0.6"
+        "@posten-hedwig/core": "^0.0.7"
     },
     "scripts": {
         "prebuild": "rimraf dist",
