@@ -8,6 +8,10 @@
 npm install @posten-hedwig/navbar
 ```
 
+### Icons
+
+Hedwig is using icons from Font Awesome Pro wich requires a licence. The auth token from your licence will need to be added to an environment variable. For Posten and Bring developers, please contact the Hedwig contributors for this token. For other users, a licence can be obtained [here](https://fontawesome.com/plans)
+
 ### Import
 
 ```js
