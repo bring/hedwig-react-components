@@ -1,7 +1,6 @@
 import React from 'react'
 import Navbar from './Navbar'
-import Usage from './Usage.mdx'
-import Api from './Api.mdx'
+import Readme from './Readme.mdx'
 import { Link } from '@posten-hedwig/link'
 import {
     Icon,
@@ -12,7 +11,6 @@ import {
 } from '@posten-hedwig/icon'
 
 import {
-    Subtitle,
     Description,
     Primary,
     ArgsTable,
@@ -27,11 +25,10 @@ export default {
         docs: {
             page: () => (
                 <>
-                    <Usage />
+                    <Readme />
                     <Description />
                     <Primary />
                     <ArgsTable story={PRIMARY_STORY} />
-                    <Api />
                     <Stories />
                 </>
             )
