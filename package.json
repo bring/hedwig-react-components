@@ -1,6 +1,6 @@
 {
   "name": "hedwig-react-components",
-  "private": false,
+  "private": true,
   "devDependencies": {
     "@storybook/addon-actions": "^6.3.12",
     "@storybook/addon-essentials": "^6.3.12",
@@ -30,7 +30,7 @@
     "@fortawesome/pro-regular-svg-icons": "^6.1.1",
     "@fortawesome/react-fontawesome": "^0.1.18",
     "babel-plugin-transform-scss": "^1.1.0",
-    "react": "^16.14.0",
+    "prop-types": "^15.8.1",
     "rimraf": "^3.0.2",
     "sass": "^1.43.3"
   },
