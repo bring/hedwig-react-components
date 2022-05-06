@@ -30,11 +30,10 @@
     },
     "dependencies": {
         "@posten-hedwig/core": "^0.0.6",
-        "@posten-hedwig/link": "^0.0.6",
-        "prop-types": "^15.7.2",
-        "react": "^17.0.2",
-        "react-dom": "^17.0.2",
-        "react-router-dom": "^6.3.0"
+        "@posten-hedwig/link": "^0.0.6"
+    },
+    "peerDependencies": {
+        "react": ">=16.14.x"
     },
     "gitHead": "c6c503b48a69b8ecc180ca28f84791cc9cc6277b"
 }
