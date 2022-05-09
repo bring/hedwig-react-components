@@ -1,0 +1,108 @@
+@use '../node_modules/@posten-hedwig/core/sass/mixins';
+
+/**
+ * Container
+ */
+
+.hw-container {
+    display: block;
+    margin: 0 auto;
+    padding: 0 var(--hw-spacing-small-4);
+}
+
+/* 720px - max-width: 590px */
+@include mixins.medium {
+    .hw-container {
+        max-width: var(--hw-width-slim);
+        padding: 0;
+    }
+}
+
+/* 940px - max-width: 1200px 36px gutters */
+@include mixins.large {
+    .hw-container {
+        max-width: var(--hw-width-wide);
+        padding: 0 var(--hw-spacing-medium-3);
+    }
+}
+
+/**
+    * Modifiers
+    */
+
+.hw-container--slim {
+    display: block;
+}
+
+/* 720px - max-width: 590px */
+@include mixins.medium {
+    .hw-container--slim {
+        max-width: var(--hw-width-slim);
+        padding: 0;
+    }
+}
+
+/* 940px - max-width: 762px 36px gutters */
+@include mixins.large {
+    .hw-container--slim {
+        max-width: 762px;
+        padding: 0 var(--hw-spacing-medium-3);
+    }
+}
+
+.hw-container--pt {
+    padding-top: var(--hw-spacing-small-3);
+}
+
+.hw-container--pb {
+    padding-bottom: var(--hw-spacing-small-3);
+}
+
+.hw-container--mt {
+    margin-top: var(--hw-spacing-small-3);
+}
+
+.hw-container--mb {
+    margin-bottom: var(--hw-spacing-small-3);
+}
+
+/* 720px - max-width: 590px */
+@include mixins.medium {
+    .hw-container--pt {
+        padding-top: var(--hw-spacing-medium-3);
+    }
+
+    .hw-container--pb {
+        padding-bottom: var(--hw-spacing-medium-3);
+    }
+
+    .hw-container--mt {
+        margin-top: var(--hw-spacing-medium-3);
+    }
+
+    .hw-container--mb {
+        margin-bottom: var(--hw-spacing-medium-3);
+    }
+}
+
+/* 940px - max-width: 762px 36px gutters */
+@include mixins.large {
+    .hw-container--mt {
+        margin-top: var(--hw-spacing-large-1);
+    }
+
+    .hw-container--mb {
+        margin-bottom: var(--hw-spacing-large-1);
+    }
+}
+
+/* 1200px - max-width: 762px 36px gutters */
+@include mixins.xlarge {
+    .hw-container--pt {
+        padding-top: var(--hw-spacing-medium-4);
+    }
+
+    .hw-container--pb {
+        padding-bottom: var(--hw-spacing-medium-4);
+    }
+}
