@@ -19,14 +19,14 @@ import { Container } from '@posten-hedwig/container'
 ### Render
 
 ```jsx
-<Container>This is a normal container</Container>
+<Container>This is a default container</Container>
 ```
 
 ## API
 
 ### Container `slim`
 
-This prop tells container that it should be slim. Boolean. Default: `false`
+This prop tells the container that it should be slim. Boolean. Default: `false`
 
 ```jsx
 <Container slim>This is a slim container. Has wider side gutters on desktop. On mobile, the gutters are the same.</Container>

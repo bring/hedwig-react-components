@@ -50,7 +50,7 @@ const TemplateSlim = (args) => (
         <div className='hw-helpers-margin-highlighter'>
             <Container {...args}>
                 <p className='hw-helpers-margin-highlighter-content'>
-                    Default container
+                    Slim container
                 </p>
             </Container>
         </div>
@@ -62,13 +62,23 @@ containerSlim.args = {
     slim: true
 }
 
+containerSlim.parameters = {
+    docs: {
+        source: {
+            code: '<Container slim>Slim container</Container>',
+            language: 'jsx',
+            type: 'auto'
+        }
+    }
+}
+
 const TemplatePt = (args) => (
     <>
         Colors are for illustration purposes. Padding is green, margin is orange
         <div className='hw-helpers-margin-highlighter'>
             <Container {...args}>
                 <p className='hw-helpers-margin-highlighter-content'>
-                    Default container
+                    Container with padding top
                 </p>
             </Container>
         </div>
@@ -80,13 +90,23 @@ containerPt.args = {
     pt: true
 }
 
+containerPt.parameters = {
+    docs: {
+        source: {
+            code: '<Container pt>Container with padding top</Container>',
+            language: 'jsx',
+            type: 'auto'
+        }
+    }
+}
+
 const TemplatePb = (args) => (
     <>
         Colors are for illustration purposes. Padding is green, margin is orange
         <div className='hw-helpers-margin-highlighter'>
             <Container {...args}>
                 <p className='hw-helpers-margin-highlighter-content'>
-                    Default container
+                    Container with padding bottom
                 </p>
             </Container>
         </div>
@@ -96,4 +116,14 @@ const TemplatePb = (args) => (
 export const containerPb = TemplatePb.bind({})
 containerPb.args = {
     pb: true
+}
+
+containerPb.parameters = {
+    docs: {
+        source: {
+            code: '<Container pb>Container with padding bottom</Container>',
+            language: 'jsx',
+            type: 'auto'
+        }
+    }
 }

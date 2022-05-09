@@ -1,5 +1,5 @@
 {
-    "name": "container",
+    "name": "@posten-hedwig/container",
     "version": "1.0.0",
     "publishConfig": {
         "access": "public"
