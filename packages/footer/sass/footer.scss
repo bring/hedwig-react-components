@@ -51,6 +51,11 @@
                 margin-left: var(--hw-spacing-medium-3);
             }
         }
+        &:hover {
+            color: var(--hw-color-primary-light);
+            border-bottom-color: var(--hw-color-primary-light);
+            text-decoration-color: var(--hw-color-primary-light);
+        }
     }
 
     p {

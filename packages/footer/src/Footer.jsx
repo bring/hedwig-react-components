@@ -135,8 +135,8 @@ Footer.propTypes = {
                     children: PropTypes.node.isRequired
                 })
             ]).isRequired
-        })
-    )
+        }).isRequired
+    ).isRequired
 }
 
 Footer.defaultProps = {
