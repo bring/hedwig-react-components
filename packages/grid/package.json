@@ -1,0 +1,38 @@
+{
+    "name": "@posten-hedwig/grid",
+    "version": "1.0.0",
+    "publishConfig": {
+        "access": "public"
+    },
+    "description": "Provides grid layout",
+    "keywords": [
+        "grid",
+        "layout"
+    ],
+    "author": "Viggo Normann <v@iggo.no>",
+    "homepage": "https://github.com/bring/hedwig-react-components#readme",
+    "license": "ISC",
+    "main": "dist/index.js",
+    "files": [
+        "dist"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/bring/hedwig-react-components.git"
+    },
+    "scripts": {
+        "prebuild": "rimraf dist && npm run sass",
+        "sass": "sass sass/grid.scss:dist/grid.scss --style compressed --no-source-map",
+        "build": "babel src -d dist --root-mode=upward --ignore '**/*.stories.js'"
+    },
+    "bugs": {
+        "url": "https://github.com/bring/hedwig-react-components/issues"
+    },
+    "dependencies": {
+        "@posten-hedwig/core": "^0.0.8"
+    },
+    "peerDependencies": {
+        "react": ">=16.14.x"
+    },
+    "gitHead": "c6c503b48a69b8ecc180ca28f84791cc9cc6277b"
+}

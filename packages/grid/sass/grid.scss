@@ -1,0 +1,754 @@
+@use '../node_modules/@posten-hedwig/core/sass/mixins';
+
+.hw-grid {
+    padding: 0;
+    margin: 0;
+    margin-left: calc(var(--hw-spacing-small-4) * -1);
+    list-style: none;
+}
+
+@include mixins.medium {
+    .hw-grid {
+        margin-left: calc(var(--hw-spacing-medium-2) * -1);
+    }
+}
+
+/**
+   * Gutterless grids have all the properties of regular grids, minus any spacing.
+   * Extends '.hw-grid'.
+   */
+.hw-grid--full {
+    margin-left: 0;
+}
+
+.hw-grid--full > .hw-grid__item {
+    padding-left: 0 !important;
+}
+
+/**
+   * Align the entire grid to the right. Extends '.hw-grid'.
+   */
+.hw-grid--right {
+    text-align: right;
+}
+
+.hw-grid--right > .hw-grid__item {
+    text-align: left !important;
+}
+
+/**
+   * Centered grids align grid items centrally without needing to use push or pull
+   * classes. Extends '.hw-grid'.
+   */
+.hw-grid--center {
+    text-align: center;
+}
+
+.hw-grid--center > .hw-grid__item {
+    text-align: left !important;
+}
+
+/**
+   * Align grid cells vertically ('.hw-grid--middle' or '.hw-grid--bottom'). Extends
+   * '.hw-grid'.
+   */
+.hw-grid--middle > .hw-grid__item {
+    vertical-align: middle !important;
+}
+
+.hw-grid--bottom > .hw-grid__item {
+    vertical-align: bottom !important;
+}
+
+/**
+   * Create grids with narrower gutters. Extends '.hw-grid'.
+   */
+.hw-grid--narrow {
+    margin-left: calc(var(--hw-spacing-small-3) * -1);
+}
+
+.hw-grid--narrow > .hw-grid__item {
+    padding-left: var(--hw-spacing-small-3);
+}
+
+/**
+   * Create grids with wider gutters. Extends '.hw-grid'.
+   */
+.hw-grid--wide {
+    margin-left: calc(var(--hw-spacing-small-4) * -1);
+}
+
+@include mixins.medium {
+    .hw-grid--wide {
+        margin-left: calc(var(--hw-spacing-medium-2) * -1);
+    }
+}
+
+@include mixins.xlarge {
+    .hw-grid--wide {
+        margin-left: calc(var(--hw-spacing-medium-3) * -1);
+    }
+}
+
+.hw-grid--wide > .hw-grid__item {
+    padding-left: var(--hw-spacing-small-4);
+}
+
+@include mixins.medium {
+    .hw-grid--wide > .hw-grid__item {
+        padding-left: var(--hw-spacing-medium-2);
+    }
+}
+
+@include mixins.xlarge {
+    .hw-grid--wide > .hw-grid__item {
+        padding-left: var(--hw-spacing-medium-3);
+    }
+}
+
+/*
+   * Grid item styles
+   */
+
+.hw-grid__item {
+    display: inline-block;
+    width: 100%;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding-left: var(--hw-spacing-small-4);
+    vertical-align: top;
+}
+
+@include mixins.medium {
+    .hw-grid__item {
+        padding-left: var(--hw-spacing-medium-2);
+    }
+}
+
+/**
+  * Whole
+  */
+.hw-one-whole {
+    width: 100%;
+}
+
+/**
+  * Halves
+  */
+.hw-one-half {
+    width: 50%;
+}
+
+/**
+  * Thirds
+  */
+.hw-one-third {
+    width: 33.333%;
+}
+
+.hw-two-thirds {
+    width: 66.666%;
+}
+
+/**
+  * Quarters
+  */
+.hw-one-quarter {
+    width: 25%;
+}
+
+.hw-three-quarters {
+    width: 75%;
+}
+
+/**
+  * Fifths
+  */
+.hw-one-fifth {
+    width: 20%;
+}
+
+.hw-two-fifths {
+    width: 40%;
+}
+
+.hw-three-fifths {
+    width: 60%;
+}
+
+.hw-four-fifths {
+    width: 80%;
+}
+
+/**
+  * Sixths
+  */
+.hw-one-sixth {
+    width: 16.666%;
+}
+
+.hw-five-sixths {
+    width: 83.333%;
+}
+
+/**
+  * Eighths
+  */
+.hw-one-eighth {
+    width: 12.5%;
+}
+
+.hw-three-eighths {
+    width: 37.5%;
+}
+
+.hw-five-eighths {
+    width: 62.5%;
+}
+
+.hw-seven-eighths {
+    width: 87.5%;
+}
+
+/**
+  * Tenths
+  */
+.hw-one-tenth {
+    width: 10%;
+}
+
+.hw-three-tenths {
+    width: 30%;
+}
+
+.hw-seven-tenths {
+    width: 70%;
+}
+
+.hw-nine-tenths {
+    width: 90%;
+}
+
+/**
+  * Twelfths
+  */
+.hw-one-twelfth {
+    width: 8.333%;
+}
+
+.hw-five-twelfths {
+    width: 41.666%;
+}
+
+.hw-seven-twelfths {
+    width: 58.333%;
+}
+
+.hw-eleven-twelfths {
+    width: 91.666%;
+}
+
+/**
+   * Our responsive classes, if we have enabled them.
+   */
+@media only screen {
+    @include mixins.small {
+        /**
+         * Whole
+         */
+        .hw-small--one-whole {
+            width: 100%;
+        }
+        /**
+         * Halves
+         */
+        .hw-small--one-half {
+            width: 50%;
+        }
+
+        /**
+         * Thirds
+         */
+        .hw-small--one-third {
+            width: 33.333%;
+        }
+
+        .hw-small--two-thirds {
+            width: 66.666%;
+        }
+
+        /**
+         * Quarters
+         */
+        .hw-small--one-quarter {
+            width: 25%;
+        }
+
+        .hw-small--three-quarters {
+            width: 75%;
+        }
+
+        /**
+         * Fifths
+         */
+        .hw-small--one-fifth {
+            width: 20%;
+        }
+
+        .hw-small--two-fifths {
+            width: 40%;
+        }
+
+        .hw-small--three-fifths {
+            width: 60%;
+        }
+
+        .hw-small--four-fifths {
+            width: 80%;
+        }
+
+        /**
+         * Sixths
+         */
+        .hw-small--one-sixth {
+            width: 16.666%;
+        }
+
+        .hw-small--five-sixths {
+            width: 83.333%;
+        }
+
+        /**
+         * Eighths
+         */
+        .hw-small--one-eighth {
+            width: 12.5%;
+        }
+
+        .hw-small--three-eighths {
+            width: 37.5%;
+        }
+
+        .hw-small--five-eighths {
+            width: 62.5%;
+        }
+
+        .hw-small--seven-eighths {
+            width: 87.5%;
+        }
+
+        /**
+         * Tenths
+         */
+        .hw-small--one-tenth {
+            width: 10%;
+        }
+
+        .hw-small--three-tenths {
+            width: 30%;
+        }
+
+        .hw-small--seven-tenths {
+            width: 70%;
+        }
+
+        .hw-small--nine-tenths {
+            width: 90%;
+        }
+
+        /**
+         * Twelfths
+         */
+        .hw-small--one-twelfth {
+            width: 8.333%;
+        }
+
+        .hw-small--five-twelfths {
+            width: 41.666%;
+        }
+
+        .hw-small--seven-twelfths {
+            width: 58.333%;
+        }
+
+        .hw-small--eleven-twelfths {
+            width: 91.666%;
+        }
+    }
+
+    @include mixins.medium {
+        /**
+         * Whole
+         */
+        .hw-medium--one-whole {
+            width: 100%;
+        }
+
+        /**
+         * Halves
+         */
+        .hw-medium--one-half {
+            width: 50%;
+        }
+
+        /**
+         * Thirds
+         */
+        .hw-medium--one-third {
+            width: 33.333%;
+        }
+
+        .hw-medium--two-thirds {
+            width: 66.666%;
+        }
+
+        /**
+         * Quarters
+         */
+        .hw-medium--one-quarter {
+            width: 25%;
+        }
+
+        .hw-medium--three-quarters {
+            width: 75%;
+        }
+
+        /**
+         * Fifths
+         */
+        .hw-medium--one-fifth {
+            width: 20%;
+        }
+
+        .hw-medium--two-fifths {
+            width: 40%;
+        }
+
+        .hw-medium--three-fifths {
+            width: 60%;
+        }
+
+        .hw-medium--four-fifths {
+            width: 80%;
+        }
+
+        /**
+         * Sixths
+         */
+        .hw-medium--one-sixth {
+            width: 16.666%;
+        }
+
+        .hw-medium--five-sixths {
+            width: 83.333%;
+        }
+
+        /**
+         * Eighths
+         */
+        .hw-medium--one-eighth {
+            width: 12.5%;
+        }
+
+        .hw-medium--three-eighths {
+            width: 37.5%;
+        }
+
+        .hw-medium--five-eighths {
+            width: 62.5%;
+        }
+
+        .hw-medium--seven-eighths {
+            width: 87.5%;
+        }
+
+        /**
+         * Tenths
+         */
+        .hw-medium--one-tenth {
+            width: 10%;
+        }
+
+        .hw-medium--three-tenths {
+            width: 30%;
+        }
+
+        .hw-medium--seven-tenths {
+            width: 70%;
+        }
+
+        .hw-medium--nine-tenths {
+            width: 90%;
+        }
+
+        /**
+         * Twelfths
+         */
+        .hw-medium--one-twelfth {
+            width: 8.333%;
+        }
+
+        .hw-medium--five-twelfths {
+            width: 41.666%;
+        }
+
+        .hw-medium--seven-twelfths {
+            width: 58.333%;
+        }
+
+        .hw-medium--eleven-twelfths {
+            width: 91.666%;
+        }
+    }
+
+    @include mixins.large {
+        /**
+         * Whole
+         */
+        .hw-large--one-whole {
+            width: 100%;
+        }
+
+        /**
+         * Halves
+         */
+        .hw-large--one-half {
+            width: 50%;
+        }
+
+        /**
+         * Thirds
+         */
+        .hw-large--one-third {
+            width: 33.333%;
+        }
+
+        .hw-large--two-thirds {
+            width: 66.666%;
+        }
+
+        /**
+         * Quarters
+         */
+        .hw-large--one-quarter {
+            width: 25%;
+        }
+
+        .hw-large--three-quarters {
+            width: 75%;
+        }
+
+        /**
+         * Fifths
+         */
+        .hw-large--one-fifth {
+            width: 20%;
+        }
+
+        .hw-large--two-fifths {
+            width: 40%;
+        }
+
+        .hw-large--three-fifths {
+            width: 60%;
+        }
+
+        .hw-large--four-fifths {
+            width: 80%;
+        }
+
+        /**
+         * Sixths
+         */
+        .hw-large--one-sixth {
+            width: 16.666%;
+        }
+
+        .hw-large--five-sixths {
+            width: 83.333%;
+        }
+
+        /**
+         * Eighths
+         */
+        .hw-large--one-eighth {
+            width: 12.5%;
+        }
+
+        .hw-large--three-eighths {
+            width: 37.5%;
+        }
+
+        .hw-large--five-eighths {
+            width: 62.5%;
+        }
+
+        .hw-large--seven-eighths {
+            width: 87.5%;
+        }
+
+        /**
+         * Tenths
+         */
+        .hw-large--one-tenth {
+            width: 10%;
+        }
+
+        .hw-large--three-tenths {
+            width: 30%;
+        }
+
+        .hw-large--seven-tenths {
+            width: 70%;
+        }
+
+        .hw-large--nine-tenths {
+            width: 90%;
+        }
+
+        /**
+         * Twelfths
+         */
+        .hw-large--one-twelfth {
+            width: 8.333%;
+        }
+
+        .hw-large--five-twelfths {
+            width: 41.666%;
+        }
+
+        .hw-large--seven-twelfths {
+            width: 58.333%;
+        }
+
+        .hw-large--eleven-twelfths {
+            width: 91.666%;
+        }
+    }
+
+    @include mixins.xlarge {
+        /**
+         * Whole
+         */
+        .hw-xlarge--one-whole {
+            width: 100%;
+        }
+
+        /**
+         * Halves
+         */
+        .hw-xlarge--one-half {
+            width: 50%;
+        }
+
+        /**
+         * Thirds
+         */
+        .hw-xlarge--one-third {
+            width: 33.333%;
+        }
+
+        .hw-xlarge--two-thirds {
+            width: 66.666%;
+        }
+
+        /**
+         * Quarters
+         */
+        .hw-xlarge--one-quarter {
+            width: 25%;
+        }
+
+        .hw-xlarge--three-quarters {
+            width: 75%;
+        }
+
+        /**
+         * Fifths
+         */
+        .hw-xlarge--one-fifth {
+            width: 20%;
+        }
+
+        .hw-xlarge--two-fifths {
+            width: 40%;
+        }
+
+        .hw-xlarge--three-fifths {
+            width: 60%;
+        }
+
+        .hw-xlarge--four-fifths {
+            width: 80%;
+        }
+
+        /**
+         * Sixths
+         */
+        .hw-xlarge--one-sixth {
+            width: 16.666%;
+        }
+
+        .hw-xlarge--five-sixths {
+            width: 83.333%;
+        }
+
+        /**
+         * Eighths
+         */
+        .hw-xlarge--one-eighth {
+            width: 12.5%;
+        }
+
+        .hw-xlarge--three-eighths {
+            width: 37.5%;
+        }
+
+        .hw-xlarge--five-eighths {
+            width: 62.5%;
+        }
+
+        .hw-xlarge--seven-eighths {
+            width: 87.5%;
+        }
+
+        /**
+         * Tenths
+         */
+        .hw-xlarge--one-tenth {
+            width: 10%;
+        }
+
+        .hw-xlarge--three-tenths {
+            width: 30%;
+        }
+
+        .hw-xlarge--seven-tenths {
+            width: 70%;
+        }
+
+        .hw-xlarge--nine-tenths {
+            width: 90%;
+        }
+
+        /**
+         * Twelfths
+         */
+        .hw-xlarge--one-twelfth {
+            width: 8.333%;
+        }
+
+        .hw-xlarge--five-twelfths {
+            width: 41.666%;
+        }
+
+        .hw-xlarge--seven-twelfths {
+            width: 58.333%;
+        }
+
+        .hw-xlarge--eleven-twelfths {
+            width: 91.666%;
+        }
+    }
+}
