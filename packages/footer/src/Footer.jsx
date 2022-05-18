@@ -4,11 +4,20 @@ import '@posten-hedwig/core'
 import { Container } from '@posten-hedwig/container'
 import { Block } from '@posten-hedwig/block'
 import { Grid, GridItem } from '@posten-hedwig/grid'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import '../dist/footer.scss'
 import logoBring from '../logos/logo-bring.svg'
 import logoPosten from '../logos/logo-posten.svg'
 
-export default function Footer({ slim, logo, logoHref, logoTitle, otherLinks, copyright }) {
+export default function Footer({
+    slim,
+    logo,
+    logoHref,
+    logoTitle,
+    otherLinks,
+    copyright,
+    some
+}) {
     let classes = ['hw-footer']
     if (slim) {
         classes.push('hw-footer--slim')
@@ -44,18 +53,43 @@ export default function Footer({ slim, logo, logoHref, logoTitle, otherLinks, co
     }
 
     function OtherLinks() {
-        return <span className='hw-footer__otherlinks'>{otherLinks.map((link) => link)}</span>
-    }
-
-    function Navigation() {
         return (
-            <nav className='hw-footer__navigation'>
-
-            </nav>
+            <span className='hw-footer__otherlinks'>
+                {otherLinks.map((link, i) => (
+                    <React.Fragment key={i}>{link}</React.Fragment>
+                ))}
+            </span>
         )
     }
 
-    function Mobile() {
+    function Navigation() {
+        return <nav className='hw-footer__navigation'></nav>
+    }
+
+    function Hr() {
+        return <div className='hw-footer__hr' />
+    }
+
+    function SoMe() {
+        if (!some) return null
+        return (
+            <div className='hw-some'>
+                {some.map((item, i) => (
+                    <a
+                        className='hw-some__button'
+                        href={item.href || '#'}
+                        aria-label={item.ariaLabel}
+                        onClick={item.onclick}
+                        key={i}
+                    >
+                        <FontAwesomeIcon icon={item.faIcon} />
+                    </a>
+                ))}
+            </div>
+        )
+    }
+
+    function SlimMobile() {
         return (
             <>
                 <Logo />
@@ -69,7 +103,24 @@ export default function Footer({ slim, logo, logoHref, logoTitle, otherLinks, co
         )
     }
 
-    function Desktop() {
+    function FullMobile() {
+        return (
+            <>
+                <nav>Navigation goes here</nav>
+                <Logo />
+                <SoMe />
+                <Hr />
+                <Block mt='on'>
+                    <Copyright />
+                </Block>
+                <Block mt='on'>
+                    <OtherLinks />
+                </Block>
+            </>
+        )
+    }
+
+    function SlimDesktop() {
         return (
             <Grid>
                 <GridItem size='one-quarter'>
@@ -81,8 +132,20 @@ export default function Footer({ slim, logo, logoHref, logoTitle, otherLinks, co
                         <OtherLinks />
                     </div>
                 </GridItem>
-            </Grid>            
+            </Grid>
         )
+    }
+
+    function FullDesktop() {
+        return <div></div>
+    }
+
+    function Mobile() {
+        return slim ? <SlimMobile /> : <FullMobile />
+    }
+
+    function Desktop() {
+        return slim ? <SlimDesktop /> : <FullDesktop />
     }
 
     return (
@@ -136,7 +199,15 @@ Footer.propTypes = {
                 })
             ]).isRequired
         }).isRequired
-    ).isRequired
+    ).isRequired,
+    some: PropTypes.arrayOf(
+        PropTypes.exact({
+            faIcon: PropTypes.object.isRequired,
+            href: PropTypes.string,
+            onclick: PropTypes.func,
+            ariaLabel: PropTypes.string.isRequired
+        })
+    )
 }
 
 Footer.defaultProps = {

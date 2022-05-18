@@ -6,8 +6,8 @@
 
 .hw-footer {
     background: var(--hw-color-primary-darker);
-    padding-top: calc(var(--hw-spacing-large-1) + var(--hw-spacing-medium-2));
-    padding-bottom: var(--hw-spacing-large-3);
+    padding-top: var(--hw-spacing-large-1);
+    padding-bottom: calc(var(--hw-spacing-large-1) + var(--hw-spacing-medium-2));
     margin: 0 auto;
 
     &__logo-link {
@@ -83,22 +83,10 @@
         }
     }
 
-    .hw-copyright,
-    .hw-link {
+    .hw-copyright {
         color: var(--hw-color-primary-lighter);
         text-decoration-color: var(--hw-color-primary);
         font-size: var(--hw-font-size-smaller);
-    }
-
-    .hw-link {
-        margin-left: var(--hw-spacing-medium-3);
-        padding-bottom: var(--hw-spacing-small-1);
-
-        &:hover {
-            color: var(--hw-color-primary-light);
-            border-bottom-color: var(--hw-color-primary-light);
-            text-decoration-color: var(--hw-color-primary-light);
-        }
     }
 
     .hw-button {
@@ -111,20 +99,26 @@
         }
     }
 
-    .hw-hr {
+    &__hr {
         background: var(--hw-color-primary-dark);
+        margin-top: var(--hw-spacing-small-2);
+        height: var(--hw-border-thickness);
+        width: 100%;
     }
 
     .hw-some {
-        float: right;
-        margin-top: 30px;
+        margin-top: var(--hw-spacing-small-4);
 
         .hw-some__button {
             color: var(--hw-color-white);
             fill: var(--hw-color-white);
-            border: none;
-            background: transparent;
+            width: var(--hw-spacing-medium-3);
+            height: var(--hw-spacing-medium-3);
+            padding: 6px;
+            margin-right: 4px;
+            margin-bottom: 3px;
             font-size: 90%;
+            display: inline-flex;
         }
     }
 
@@ -158,12 +152,6 @@
             margin-top: var(--hw-spacing-small-4);
             margin-left: -6px;
         }
-
-        .hw-link {
-            margin-left: 0;
-            margin-right: var(--hw-spacing-medium-2);
-            padding-bottom: var(--hw-spacing-small-1);
-        }
     }
 
     /**
@@ -171,6 +159,9 @@
      */
 
     &--slim {
+        padding-top: calc(var(--hw-spacing-large-1) + var(--hw-spacing-medium-2));
+        padding-bottom: var(--hw-spacing-large-3);
+
         .hw-footer__element-float-right {
             margin-top: var(--hw-spacing-medium-2);
             float: right;
