@@ -137,7 +137,24 @@ export default function Footer({
     }
 
     function FullDesktop() {
-        return <div></div>
+        return (
+            <>
+                Navigation goes here
+                <Grid>
+                    <GridItem size='one-half'>
+                        <Logo />
+                    </GridItem>
+                    <GridItem size='one-half'>
+                        <SoMe />
+                    </GridItem>
+                </Grid>
+                <Hr />
+                <Block mt='on'>
+                    <Copyright />
+                    <OtherLinks />
+                </Block>
+            </>
+        )
     }
 
     function Mobile() {

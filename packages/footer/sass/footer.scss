@@ -109,6 +109,14 @@
     .hw-some {
         margin-top: var(--hw-spacing-small-4);
 
+        @include mixins.large {
+            margin-top: 30px;
+            float: right;
+            .hw-some__button:last-of-type {
+                margin-right: 0;
+            }
+        }
+
         .hw-some__button {
             color: var(--hw-color-white);
             fill: var(--hw-color-white);
@@ -143,14 +151,6 @@
 
         .hw-accordion__trigger:hover {
             color: var(--hw-color-primary-lighter);
-        }
-    }
-
-    &__mobile {
-        .hw-some {
-            float: none;
-            margin-top: var(--hw-spacing-small-4);
-            margin-left: -6px;
         }
     }
 
