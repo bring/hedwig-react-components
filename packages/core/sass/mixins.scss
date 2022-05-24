@@ -23,5 +23,5 @@
 }
 
 @mixin medium-max {
-    @media (max-width: 720px) { @content }
+    @media (max-width: 720px) { @content; }
 }
