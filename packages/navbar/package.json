@@ -37,9 +37,11 @@
         "@posten-hedwig/block": "^1.0.7",
         "@posten-hedwig/core": "^0.0.8",
         "@posten-hedwig/flex": "^1.0.7",
-        "@posten-hedwig/icon": "^1.0.7",
-        "@posten-hedwig/link": "^0.0.8",
         "@posten-hedwig/linklist": "^1.0.7"
+    },
+    "devDependencies": {
+        "@posten-hedwig/icon": "^1.0.7",
+        "@posten-hedwig/link": "^0.0.8"
     },
     "peerDependencies": {
         "react": ">=16.14.x",
