@@ -10,11 +10,10 @@ export default function AccordionItem({ title, children, expanded }) {
     const [triggerHeight, setTriggerHeight] = useState()
     const [contentHeight, setContentHeight] = useState()
     const [isExpanded, setIsExpanded] = useState(expanded)
+    const [id] = useState('item-' + Math.floor(Math.random() * 10000))
 
     const trigger = createRef()
     const contentRef = createRef()
-
-    const id = 'item-' + Math.floor(Math.random() * 10000)
 
     useEffect(() => {
         if (
@@ -29,8 +28,10 @@ export default function AccordionItem({ title, children, expanded }) {
             }))
         }
         setTriggerHeight(trigger.current.offsetHeight)
-        setContentHeight(contentRef.current.offsetHeight)
-    }, [])
+        if (showExpanded()) {
+            setContentHeight(contentRef.current.offsetHeight)
+        }
+    }, [isExpanded, expandedState.open])
 
     function toggleItem() {
         if (expandedState.allowMultiple) {
@@ -42,22 +43,25 @@ export default function AccordionItem({ title, children, expanded }) {
             }))
         }
     }
+
     /**
      * if allowMultiple, each AccordionItem keeps track of their own expanded status in isExpanded
      * otherwise expandedState keeps track of which item is expanded
      */
-    const showExpanded = expandedState.allowMultiple
-        ? isExpanded
-        : expandedState.open === title
+    function showExpanded() {
+        return expandedState.allowMultiple
+            ? isExpanded
+            : expandedState === title
+    }
 
     return (
         <li
             className={
                 'hw-accordion__item' +
-                (showExpanded ? ' hw-accordion__item--expanded' : '')
+                (showExpanded() ? ' hw-accordion__item--expanded' : '')
             }
             style={{
-                height: showExpanded
+                height: showExpanded()
                     ? triggerHeight + contentHeight + 'px'
                     : triggerHeight + 'px'
             }}
@@ -67,13 +71,13 @@ export default function AccordionItem({ title, children, expanded }) {
                 onClick={toggleItem}
                 ref={trigger}
                 aria-controls={id}
-                aria-expanded={isExpanded}
+                aria-expanded={showExpanded()}
             >
                 {title}
                 <div className='hw-accordion__icon' />
             </button>
             <div id={id} className='hw-accordion__contents' ref={contentRef}>
-                {children}
+                {showExpanded() && children}
             </div>
         </li>
     )
