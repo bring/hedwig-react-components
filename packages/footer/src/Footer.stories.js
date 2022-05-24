@@ -8,22 +8,9 @@ export default {
     component: Footer
 }
 
-const args = {
-    logo: 'posten',
+const commonArgs = {
     logoHref: '#',
     logoTitle: 'Bring logo',
-    otherLinks: [<a href='#'>Cookies</a>, <a href='#'>Privacy and security</a>]
-}
-
-const TemplateDefault = (args) => (
-    <div className='hw-theme-posten'>
-        <Footer {...args} />
-    </div>
-)
-export const FooterDefault = TemplateDefault.bind({})
-
-FooterDefault.args = {
-    ...args,
     sections: [
         {
             title: 'Send',
@@ -60,17 +47,28 @@ FooterDefault.args = {
             },
             ariaLabel: 'Check out our Instagram page'
         }
+    ],
+    importantLinks: [
+        <a href='#'>Cookies</a>,
+        <a href='#'>Privacy and security</a>
     ]
 }
 
-const TemplateSlim = (args) => (
-    <div className='hw-theme-posten'>
+const TemplatePosten = (args) => <Footer {...args} />
+export const FullPosten = TemplatePosten.bind({})
+
+FullPosten.args = {
+    ...commonArgs
+}
+
+const TemplateBring = (args) => (
+    <div className='hw-theme-bring'>
         <Footer {...args} />
     </div>
 )
-export const FooterSlim = TemplateSlim.bind({})
+export const FullBring = TemplateBring.bind({})
 
-FooterSlim.args = {
-    ...args,
-    slim: true
+FullBring.args = {
+    ...commonArgs,
+    logo: 'bring'
 }

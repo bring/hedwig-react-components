@@ -1,10 +1,10 @@
 # Footer
 
-The footer is placed at the bottom of every page of the website.
+The footer is placed at the bottom of every page of the website and comes in two varieties: `Footer` and `SlimFooter`
 
 The footer contains the logo, links and button links to often used services, as well as links to our social media platforms.
 
-## Usage
+## Footer usage
 
 ### Install
 
@@ -16,7 +16,7 @@ npm install @posten-hedwig/footer
 
 Hedwig is using icons from Font Awesome Pro wich requires a licence. The auth token from your licence will need to be added to an environment variable. For Posten and Bring developers, please contact the Hedwig contributors for this token. For other users, a licence can be obtained [here](https://fontawesome.com/plans)
 
-### Import
+### Footer Import
 
 ```js
 import { Footer } from '@posten-hedwig/footer'
@@ -27,18 +27,16 @@ import { Footer } from '@posten-hedwig/footer'
 ```jsx
 <Footer
     logo='posten'
-    logoAriaLabel='Go to homepage'
     logoHref='#'
     logoTitle='Posten Logo'
-    skipToMainHref='#content'
-    skipToMainTitle='Main content' />
+    sections={...}
+    importantLinks={...}
+    copyright='Posten Norge AS'
+    some={...}
+/>
 ```
 
-## API
-
-### Footer `logoTitle`
-
-This prop specifies the alt text for the logo.
+## Footer API
 
 ### Footer `logo`
 
@@ -48,18 +46,18 @@ This prop specifies which logo to use for the navbar. 'posten' and 'bring' are a
 
 This prop is the link to where the logo is leading to
 
-### Footer `logoAriaLabel`
+### Footer `logoTitle`
 
-This prop specifies the Aria Label for the logo
+This prop specifies the alt text for the logo.
 
 ### Footer `sections`
 
 This prop specifies the sections for the Footer. Each section consists of a title and an array of links. Can be either links with href, React Router Links or Hedwig Links.
 
 ```jsx
-import { Footer } from '@posten-hedwig/navbar'
+import { Footer } from '@posten-hedwig/footer'
 import { Link } from '@posten-hedwig/link'
-…
+/*…*/
 <Footer
     /*…*/
     sections={[
@@ -87,3 +85,134 @@ import { Link } from '@posten-hedwig/link'
     ]}
 />
 ```
+
+### Footer `importantLinks`
+
+This prop specifies important links in the Footer. The links can be for cookie information and privacy policy for example
+
+```jsx
+import { Footer } from '@posten-hedwig/footer'
+import { Link } from '@posten-hedwig/link'
+/*…*/
+<Footer
+    /*…*/
+    importantLinks={
+        [
+            <Link href='#'>Cookies</Link>,
+            <Link href='#'>Privacy policy</Link>
+        ]
+    }
+/>
+```
+
+### Footer `copyright`
+
+This prop specifies the name for copyright on this site.
+Default value "Posten Norge AS"
+
+### Footer `some`
+
+This prop specifies links and icons for social media.
+Specification:
+An array of objects looking like this:
+
+```jsx
+{
+    faIcon: FontAwesomeIcon,
+    href: String,
+    ariaLabel: String,
+}
+```
+
+or
+
+```jsx
+{
+    faIcon: FontAwesomeIcon,
+    onclick: function,
+    ariaLabel: String,
+}
+```
+
+#### Example
+
+```jsx
+import { Footer } from '@posten-hedwig/footer'
+import { faFacebookF, faInstagram } from '@fortawesome/free-brands-svg-icons'
+/*…*/
+<Footer
+    /*…*/
+    some: [
+        {
+            faIcon: faFacebookF,
+            href: '#',
+            ariaLabel: 'Check out our Facebook page'
+        },
+        {
+            faIcon: faInstagram,
+            onclick: () => {
+                alert('You clicked Instagram')
+            },
+            ariaLabel: 'Check out our Instagram page'
+        }
+    ]
+/>
+```
+
+## SlimFooter Usage
+
+### SlimFooter Import
+
+```js
+import { SlimFooter } from '@posten-hedwig/footer'
+```
+
+### SlimFooter Render
+
+```jsx
+<SlimFooter
+    logo='posten'
+    logoHref='#'
+    logoTitle='Posten Logo'
+    importantLinks={...}
+    copyright='Posten Norge AS'
+/>
+```
+
+## SlimFooter API
+
+### SlimFooter `logo`
+
+This prop specifies which logo to use for the navbar. 'posten' and 'bring' are available
+
+### SlimFooter `logoHref`
+
+This prop is the link to where the logo is leading to
+
+### SlimFooter `logoTitle`
+
+This prop specifies the alt text for the logo.
+
+### SlimFooter `importantLinks`
+
+This prop specifies important links in the Footer. The links can be for cookie information and privacy policy for example
+
+```jsx
+import { SlimFooter } from '@posten-hedwig/footer'
+import { Link } from '@posten-hedwig/link'
+/*…*/
+<SlimFooter
+    /*…*/
+    importantLinks={
+        [
+            <Link href='#'>Cookies</Link>,
+            <Link href='#'>Privacy policy</Link>
+        ]
+    }
+/>
+```
+
+### SlimFooter `copyright`
+
+This prop specifies the name for copyright on this site.
+Default value "Posten Norge AS"

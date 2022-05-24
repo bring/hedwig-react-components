@@ -1,31 +1,25 @@
 import React, { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
-import '@posten-hedwig/core'
 import { Container } from '@posten-hedwig/container'
 import { Block } from '@posten-hedwig/block'
 import { Linklist } from '@posten-hedwig/linklist'
 import { Grid, GridItem } from '@posten-hedwig/grid'
 import { Accordion, AccordionItem } from '@posten-hedwig/accordion'
+import Logo from './Logo'
+import Copyright from './Copyright'
+import ImportantLinks from './ImportantLinks'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import '../dist/footer.scss'
-import logoBring from '../logos/logo-bring.svg'
-import logoPosten from '../logos/logo-posten.svg'
 
 export default function Footer({
-    slim,
     logo,
     logoHref,
     logoTitle,
     sections,
-    otherLinks,
+    importantLinks,
     copyright,
     some
 }) {
-    let classes = ['hw-footer']
-    if (slim) {
-        classes.push('hw-footer--slim')
-    }
-
     const [desktop, setDesktop] = useState()
 
     function handleWindowSizeChange() {
@@ -38,32 +32,6 @@ export default function Footer({
         return () =>
             window.removeEventListener('resize', handleWindowSizeChange)
     }, [])
-
-    function Logo() {
-        return (
-            <a href={logoHref} className='hw-footer__logo-link'>
-                <img
-                    src={logo === 'posten' ? logoPosten : logoBring}
-                    className='hw-footer__logo-link-standard'
-                    alt={logoTitle}
-                />
-            </a>
-        )
-    }
-
-    function Copyright() {
-        return <span className='hw-copyright'>© {copyright}</span>
-    }
-
-    function OtherLinks() {
-        return (
-            <span className='hw-footer__otherlinks'>
-                {otherLinks.map((link, i) => (
-                    <React.Fragment key={i}>{link}</React.Fragment>
-                ))}
-            </span>
-        )
-    }
 
     function NavigationMobile() {
         return (
@@ -105,60 +73,30 @@ export default function Footer({
         )
     }
 
-    function SlimMobile() {
-        return (
-            <>
-                <Logo />
-                <Block mt='on'>
-                    <Copyright />
-                </Block>
-                <Block mt='on'>
-                    <OtherLinks />
-                </Block>
-            </>
-        )
-    }
-
-    function FullMobile() {
+    function Mobile() {
         return (
             <>
                 <NavigationMobile />
-                <Logo />
+                <Logo logo={logo} title={logoTitle} href={logoHref} />
                 <SoMe />
                 <Hr />
                 <Block mt='on'>
-                    <Copyright />
+                    <Copyright text={copyright} />
                 </Block>
                 <Block mt='on'>
-                    <OtherLinks />
+                    <ImportantLinks links={importantLinks} />
                 </Block>
             </>
         )
     }
 
-    function SlimDesktop() {
-        return (
-            <Grid>
-                <GridItem size='one-quarter'>
-                    <Logo />
-                </GridItem>
-                <GridItem size='three-quarters'>
-                    <div className='hw-footer__element-float-right'>
-                        <Copyright />
-                        <OtherLinks />
-                    </div>
-                </GridItem>
-            </Grid>
-        )
-    }
-
-    function FullDesktop() {
+    function Desktop() {
         return (
             <>
                 Navigation goes here
                 <Grid>
                     <GridItem size='one-half'>
-                        <Logo />
+                        <Logo logo={logo} title={logoTitle} href={logoHref} />
                     </GridItem>
                     <GridItem size='one-half'>
                         <SoMe />
@@ -166,34 +104,21 @@ export default function Footer({
                 </Grid>
                 <Hr />
                 <Block mt='on'>
-                    <Copyright />
-                    <OtherLinks />
+                    <Copyright text={copyright} />
+                    <ImportantLinks links={importantLinks} />
                 </Block>
             </>
         )
     }
 
-    function Mobile() {
-        return slim ? <SlimMobile /> : <FullMobile />
-    }
-
-    function Desktop() {
-        return slim ? <SlimDesktop /> : <FullDesktop />
-    }
-
     return (
-        <footer className={classes.join(' ')}>
+        <footer className='hw-footer'>
             <Container>{desktop ? <Desktop /> : <Mobile />}</Container>
         </footer>
     )
 }
 
 Footer.propTypes = {
-    /**
-     * Show footer as slim
-     */
-    slim: PropTypes.bool,
-
     /**
      * Which logo to show in the footer
      */
@@ -242,7 +167,7 @@ Footer.propTypes = {
     copyright: PropTypes.string.isRequired,
 
     /** Links for other important pages. For example 'Cookies' and 'Privacy and security' */
-    otherLinks: PropTypes.arrayOf(
+    importantLinks: PropTypes.arrayOf(
         PropTypes.shape({
             props: PropTypes.oneOfType([
                 PropTypes.shape({
@@ -271,7 +196,6 @@ Footer.propTypes = {
 }
 
 Footer.defaultProps = {
-    slim: false,
-    default: 'posten',
+    logo: 'posten',
     copyright: 'Posten Norge AS'
 }
