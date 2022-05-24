@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { ExpandedProvider } from './ExpandedContext'
 import '../dist/accordion.scss'
 
-export default function Accordion({ children, allowMultiple, menu }) {
+export default function Accordion({ children, allowMultiple }) {
     return (
         <ul className='hw-accordion'>
             <ExpandedProvider allowMultiple={allowMultiple}>
@@ -30,6 +30,5 @@ Accordion.propTypes = {
 }
 
 Accordion.defaultProps = {
-    allowMultiple: true,
-    menu: false
+    allowMultiple: true
 }
