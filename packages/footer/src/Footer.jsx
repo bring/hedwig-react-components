@@ -3,7 +3,9 @@ import PropTypes from 'prop-types'
 import '@posten-hedwig/core'
 import { Container } from '@posten-hedwig/container'
 import { Block } from '@posten-hedwig/block'
+import { Linklist } from '@posten-hedwig/linklist'
 import { Grid, GridItem } from '@posten-hedwig/grid'
+import { Accordion, AccordionItem } from '@posten-hedwig/accordion'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import '../dist/footer.scss'
 import logoBring from '../logos/logo-bring.svg'
@@ -14,6 +16,7 @@ export default function Footer({
     logo,
     logoHref,
     logoTitle,
+    sections,
     otherLinks,
     copyright,
     some
@@ -62,8 +65,21 @@ export default function Footer({
         )
     }
 
-    function Navigation() {
-        return <nav className='hw-footer__navigation'></nav>
+    function NavigationMobile() {
+        return (
+            <nav>
+                Buttons
+                <Block mt='larger'>
+                    <Accordion>
+                        {sections.map((section) => (
+                            <AccordionItem title={section.title}>
+                                <Linklist links={section.links} />
+                            </AccordionItem>
+                        ))}
+                    </Accordion>
+                </Block>
+            </nav>
+        )
     }
 
     function Hr() {
@@ -106,7 +122,7 @@ export default function Footer({
     function FullMobile() {
         return (
             <>
-                <nav>Navigation goes here</nav>
+                <NavigationMobile />
                 <Logo />
                 <SoMe />
                 <Hr />
@@ -189,6 +205,33 @@ Footer.propTypes = {
     logoHref: PropTypes.string.isRequired,
 
     /**
+     * Specify sections with links in footer
+     */
+    sections: PropTypes.arrayOf(
+        PropTypes.exact({
+            title: PropTypes.string.isRequired,
+            links: PropTypes.arrayOf(
+                PropTypes.shape({
+                    props: PropTypes.oneOfType([
+                        PropTypes.shape({
+                            href: PropTypes.string.isRequired,
+                            children: PropTypes.node.isRequired
+                        }),
+                        PropTypes.shape({
+                            to: PropTypes.oneOfType([
+                                PropTypes.string,
+                                PropTypes.object,
+                                PropTypes.func
+                            ]),
+                            children: PropTypes.node.isRequired
+                        })
+                    ]).isRequired
+                })
+            )
+        })
+    ),
+
+    /**
      * Title for logo
      */
     logoTitle: PropTypes.string.isRequired,
@@ -230,5 +273,5 @@ Footer.propTypes = {
 Footer.defaultProps = {
     slim: false,
     default: 'posten',
-    copyRightName: 'Posten Norge AS'
+    copyright: 'Posten Norge AS'
 }

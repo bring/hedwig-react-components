@@ -50,4 +50,40 @@ This prop is the link to where the logo is leading to
 
 ### Footer `logoAriaLabel`
 
-Specifies the Aria Label for the logo
+This prop specifies the Aria Label for the logo
+
+### Footer `sections`
+
+This prop specifies the sections for the Footer. Each section consists of a title and an array of links. Can be either links with href, React Router Links or Hedwig Links.
+
+```jsx
+import { Footer } from '@posten-hedwig/navbar'
+import { Link } from '@posten-hedwig/link'
+…
+<Footer
+    /*…*/
+    sections={[
+        {
+            title: 'Send',
+            links: [
+                <Link href='#'>Parcels abroad</Link>,
+                <Link href='#'>Parcels in Norway</Link>,
+                <Link href='#'>Letters in Norway</Link>,
+                <Link href='#'>Return</Link>,
+                <Link href='#'>Letters abroad</Link>,
+                <Link href='#'>Addressing and wrapping</Link>,
+                <Link href='#'>Customs when sending abroad</Link>
+            ]
+        },
+        {
+            title: 'Receive',
+            links: [
+                <Link href='#'>On what days does my mail arrive?</Link>,
+                <Link href='#'>Home delivery</Link>,
+                <Link href='#'>Pick up yourself</Link>,
+                <Link href='#'>Customs when receiving</Link>
+            ]
+        }
+    ]}
+/>
+```
