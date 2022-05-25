@@ -175,18 +175,4 @@
         }
 
     }
-
-    /**
-     * Modifiers
-     */
-
-    &--slim {
-        padding-top: calc(var(--hw-spacing-large-1) + var(--hw-spacing-medium-2));
-        padding-bottom: var(--hw-spacing-large-3);
-
-        .hw-footer__element-float-right {
-            margin-top: var(--hw-spacing-medium-2);
-            float: right;
-        }
-    }
 }

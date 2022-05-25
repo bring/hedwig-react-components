@@ -6,7 +6,7 @@ import { Grid, GridItem } from '@posten-hedwig/grid'
 import Logo from './Logo'
 import ImportantLinks from './ImportantLinks'
 import Copyright from './Copyright'
-import '../dist/footer.scss'
+import '../dist/slimfooter.scss'
 
 export default function SlimFooter({
     logo,
@@ -59,7 +59,7 @@ export default function SlimFooter({
     }
 
     return (
-        <footer className='hw-footer hw-footer--slim'>
+        <footer className='hw-slim-footer'>
             <Container>{desktop ? <Desktop /> : <Mobile />}</Container>
         </footer>
     )

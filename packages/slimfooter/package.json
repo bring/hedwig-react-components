@@ -1,0 +1,44 @@
+{
+    "name": "@posten-hedwig/slimfooter",
+    "version": "1.0.0",
+    "publishConfig": {
+        "access": "public"
+    },
+    "description": "Provides slim footer in Posten and Bring style",
+    "keywords": [
+        "footer",
+        "navigation",
+        "slim"
+    ],
+    "author": "Viggo Normann <v@iggo.no>",
+    "homepage": "https://github.com/bring/hedwig-react-components#readme",
+    "license": "ISC",
+    "main": "dist/index.js",
+    "files": [
+        "dist"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/bring/hedwig-react-components.git"
+    },
+    "scripts": {
+        "prebuild": "rimraf dist && npm run sass",
+        "sass": "sass sass/slimfooter.scss:dist/slimfooter.scss --style compressed --no-source-map",
+        "build": "babel src -d dist --root-mode=upward --ignore '**/*.stories.js'"
+    },
+    "bugs": {
+        "url": "https://github.com/bring/hedwig-react-components/issues"
+    },
+    "dependencies": {
+        "@posten-hedwig/block": "^1.0.7",
+        "@posten-hedwig/container": "^1.0.0",
+        "@posten-hedwig/core": "^0.0.8",
+        "@posten-hedwig/grid": "^1.0.0"
+    },
+    "devDependencies": {
+        "@posten-hedwig/link": "^0.0.8"
+    },
+    "peerDependencies": {
+        "react": ">=16.14.x"
+    }
+}

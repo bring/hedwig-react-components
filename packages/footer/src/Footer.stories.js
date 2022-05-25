@@ -1,11 +1,32 @@
 import React from 'react'
+import Readme from './Readme.mdx'
 import { Footer } from './index'
 import { faFacebookF, faInstagram } from '@fortawesome/free-brands-svg-icons'
 import { Link } from '@posten-hedwig/link'
+import {
+    Description,
+    Primary,
+    ArgsTable,
+    Stories,
+    PRIMARY_STORY
+} from '@storybook/addon-docs'
 
 export default {
     title: 'Components/Footer',
-    component: Footer
+    component: Footer,
+    parameters: {
+        docs: {
+            page: () => (
+                <>
+                    <Readme />
+                    <Description />
+                    <Primary />
+                    <ArgsTable story={PRIMARY_STORY} />
+                    <Stories />
+                </>
+            )
+        }
+    }
 }
 
 const commonArgs = {
@@ -55,9 +76,9 @@ const commonArgs = {
 }
 
 const TemplatePosten = (args) => <Footer {...args} />
-export const FullPosten = TemplatePosten.bind({})
+export const Posten = TemplatePosten.bind({})
 
-FullPosten.args = {
+Posten.args = {
     ...commonArgs
 }
 
@@ -66,9 +87,9 @@ const TemplateBring = (args) => (
         <Footer {...args} />
     </div>
 )
-export const FullBring = TemplateBring.bind({})
+export const Bring = TemplateBring.bind({})
 
-FullBring.args = {
+Bring.args = {
     ...commonArgs,
     logo: 'bring'
 }
