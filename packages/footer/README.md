@@ -22,7 +22,7 @@ Hedwig is using icons from Font Awesome Pro wich requires a licence. The auth to
 import { Footer } from '@posten-hedwig/footer'
 ```
 
-### Render
+### 4 Render
 
 ```jsx
 <Footer

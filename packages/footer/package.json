@@ -36,7 +36,8 @@
         "@posten-hedwig/container": "^1.0.0",
         "@posten-hedwig/core": "^0.0.8",
         "@posten-hedwig/grid": "^1.0.0",
-        "@posten-hedwig/linklist": "^1.0.7"
+        "@posten-hedwig/linklist": "^1.0.7",
+        "@posten-hedwig/logo": "^1.0.0"
     },
     "devDependencies": {
         "@posten-hedwig/link": "^0.0.8"

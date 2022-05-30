@@ -5,7 +5,7 @@ import { Block } from '@posten-hedwig/block'
 import { Linklist } from '@posten-hedwig/linklist'
 import { Grid, GridItem } from '@posten-hedwig/grid'
 import { Accordion, AccordionItem } from '@posten-hedwig/accordion'
-import Logo from './Logo'
+import { Logo } from '@posten-hedwig/logo'
 import Copyright from './Copyright'
 import ImportantLinks from './ImportantLinks'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -77,7 +77,9 @@ export default function Footer({
         return (
             <>
                 <NavigationMobile />
-                <Logo logo={logo} title={logoTitle} href={logoHref} />
+                <a href={logoHref} className='hw-footer__logo-link'>
+                    <Logo logo={logo} title={logoTitle} />
+                </a>
                 <SoMe />
                 <Hr />
                 <Block mt='on'>
@@ -96,7 +98,9 @@ export default function Footer({
                 Navigation goes here
                 <Grid>
                     <GridItem size='one-half'>
-                        <Logo logo={logo} title={logoTitle} href={logoHref} />
+                        <a href={logoHref} className='hw-footer__logo-link'>
+                            <Logo logo={logo} title={logoTitle} />
+                        </a>
                     </GridItem>
                     <GridItem size='one-half'>
                         <SoMe />
