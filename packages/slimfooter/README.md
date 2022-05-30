@@ -18,7 +18,7 @@ npm install @posten-hedwig/slimfooter
 import { SlimFooter } from '@posten-hedwig/slimfooter'
 ```
 
-### Render
+### 3 Render
 
 ```jsx
 <SlimFooter

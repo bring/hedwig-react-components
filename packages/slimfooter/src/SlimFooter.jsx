@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { Container } from '@posten-hedwig/container'
 import { Block } from '@posten-hedwig/block'
 import { Grid, GridItem } from '@posten-hedwig/grid'
-import Logo from './Logo'
+import { Logo } from '@posten-hedwig/logo'
 import ImportantLinks from './ImportantLinks'
 import Copyright from './Copyright'
 import '../dist/slimfooter.scss'
@@ -31,7 +31,9 @@ export default function SlimFooter({
     function Mobile() {
         return (
             <>
-                <Logo logo={logo} title={logoTitle} href={logoHref} />
+                <a href={logoHref} className='hw-slim-footer__logo-link'>
+                    <Logo logo={logo} title={logoTitle} />
+                </a>
                 <Block mt='on'>
                     <Copyright text={copyright} />
                 </Block>
@@ -46,10 +48,12 @@ export default function SlimFooter({
         return (
             <Grid>
                 <GridItem size='one-quarter'>
-                    <Logo logo={logo} title={logoTitle} href={logoHref} />
+                    <a href={logoHref} className='hw-slim-footer__logo-link'>
+                        <Logo logo={logo} title={logoTitle} />
+                    </a>
                 </GridItem>
                 <GridItem size='three-quarters'>
-                    <div className='hw-footer__element-float-right'>
+                    <div className='hw-slim-footer__element-float-right'>
                         <Copyright text={copyright} />
                         <ImportantLinks links={importantLinks} />
                     </div>

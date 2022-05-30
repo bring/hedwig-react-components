@@ -1,9 +1,5 @@
 @use '../node_modules/@posten-hedwig/core/sass/mixins';
 
-/**
- * Block
- */
-
 .hw-slim-footer {
     background: var(--hw-color-primary-darker);
     padding-top: calc(var(--hw-spacing-large-1) + var(--hw-spacing-medium-2));
@@ -16,18 +12,12 @@
             width: var(--hw-logo-width);
             display: inline-block;
 
-            &-standard {
+            img {
                 visibility: visible;
                 opacity: 1;
                 display: block;
-                height: 75px;
-                width: var(--hw-logo-width);
             }
     }
-
-    /**
-     * Modifications to other components
-     */
 
     .hw-footer__importantlinks a {
         text-decoration: none;
@@ -64,7 +54,7 @@
         font-size: var(--hw-font-size-smaller);
     }
 
-    .hw-footer__element-float-right {
+    .hw-slim-footer__element-float-right {
         margin-top: var(--hw-spacing-medium-2);
         float: right;
     }
