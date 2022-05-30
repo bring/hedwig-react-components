@@ -33,6 +33,7 @@
         "@fortawesome/react-fontawesome": "^0.1.18",
         "@posten-hedwig/accordion": "^1.0.8",
         "@posten-hedwig/block": "^1.0.7",
+        "@posten-hedwig/button": "^1.0.7",
         "@posten-hedwig/container": "^1.0.0",
         "@posten-hedwig/core": "^0.0.8",
         "@posten-hedwig/grid": "^1.0.0",

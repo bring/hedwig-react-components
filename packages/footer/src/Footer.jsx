@@ -18,6 +18,7 @@ export default function Footer({
     sections,
     importantLinks,
     copyright,
+    buttons,
     some
 }) {
     const [desktop, setDesktop] = useState()
@@ -36,8 +37,12 @@ export default function Footer({
     function NavigationMobile() {
         return (
             <nav>
-                Buttons
-                <Block mt='larger'>
+                {buttons.map((button, index) => (
+                    <Block mb='small-2' classList='hw-footer__button'>
+                        <React.Fragment key={index}>{button}</React.Fragment>
+                    </Block>
+                ))}
+                <Block mt='medium-4'>
                     <Accordion>
                         {sections.map((section) => (
                             <AccordionItem title={section.title}>
@@ -170,7 +175,9 @@ Footer.propTypes = {
      */
     copyright: PropTypes.string.isRequired,
 
-    /** Links for other important pages. For example 'Cookies' and 'Privacy and security' */
+    /**
+     * Links for other important pages. For example 'Cookies' and 'Privacy and security'
+     */
     importantLinks: PropTypes.arrayOf(
         PropTypes.shape({
             props: PropTypes.oneOfType([
@@ -189,6 +196,27 @@ Footer.propTypes = {
             ]).isRequired
         }).isRequired
     ).isRequired,
+    /**
+     * Links or buttons for special items in the footer. Will be styled as buttons
+     */
+    buttons: PropTypes.arrayOf(
+        PropTypes.shape({
+            props: PropTypes.oneOfType([
+                PropTypes.shape({
+                    href: PropTypes.string.isRequired,
+                    children: PropTypes.node.isRequired
+                }),
+                PropTypes.shape({
+                    to: PropTypes.oneOfType([
+                        PropTypes.string,
+                        PropTypes.object,
+                        PropTypes.func
+                    ]),
+                    children: PropTypes.node.isRequired
+                })
+            ]).isRequired
+        }).isRequired
+    ),
     some: PropTypes.arrayOf(
         PropTypes.exact({
             faIcon: PropTypes.object.isRequired,

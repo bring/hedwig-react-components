@@ -69,6 +69,20 @@ const commonArgs = {
             ariaLabel: 'Check out our Instagram page'
         }
     ],
+    buttons: [
+        <a href='#'>For bedrifter</a>,
+        <a
+            href='#'
+            onClick={() => {
+                alert('You wanted the English site')
+            }}
+        >
+            English site
+        </a>,
+        <button onClick={() => alert('You clicked an actual button')}>
+            An actual button
+        </button>
+    ],
     importantLinks: [
         <a href='#'>Cookies</a>,
         <a href='#'>Privacy and security</a>

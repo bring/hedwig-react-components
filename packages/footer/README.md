@@ -105,6 +105,25 @@ import { Link } from '@posten-hedwig/link'
 />
 ```
 
+### Footer `buttons`
+
+This prop specifies Links or buttons for special items in the footer. Will be styled as buttons.
+
+```jsx
+import { Footer } from '@posten-hedwig/footer'
+import { Link } from '@posten-hedwig/link'
+/*…*/
+<Footer
+    /*…*/
+    buttons={
+        [
+            <button onClick={() => alert('You clicked Cookies')}>Cookies</button>,
+            <Link href='#'>Privacy policy</Link>
+        ]
+    }
+/>
+```
+
 ### Footer `copyright`
 
 This prop specifies the name for copyright on this site.
