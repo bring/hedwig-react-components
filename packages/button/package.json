@@ -1,6 +1,6 @@
 {
     "name": "@posten-hedwig/button",
-    "version": "1.0.7",
+    "version": "1.0.8",
     "publishConfig": {
         "access": "public"
     },
@@ -17,7 +17,7 @@
     "dependencies": {
         "@fortawesome/pro-solid-svg-icons": "^6.1.1",
         "@fortawesome/react-fontawesome": "^0.1.18",
-        "@posten-hedwig/core": "^0.0.8"
+        "@posten-hedwig/core": "^0.0.9"
     },
     "peerDependencies": {
         "react": ">=16.14.x"

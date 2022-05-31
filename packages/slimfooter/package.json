@@ -1,6 +1,6 @@
 {
     "name": "@posten-hedwig/slimfooter",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "publishConfig": {
         "access": "public"
     },
@@ -30,14 +30,14 @@
         "url": "https://github.com/bring/hedwig-react-components/issues"
     },
     "dependencies": {
-        "@posten-hedwig/block": "^1.0.7",
-        "@posten-hedwig/container": "^1.0.0",
-        "@posten-hedwig/core": "^0.0.8",
-        "@posten-hedwig/grid": "^1.0.0",
-        "@posten-hedwig/logo": "^1.0.0"
+        "@posten-hedwig/block": "^1.0.8",
+        "@posten-hedwig/container": "^1.0.1",
+        "@posten-hedwig/core": "^0.0.9",
+        "@posten-hedwig/grid": "^1.0.1",
+        "@posten-hedwig/logo": "^1.0.1"
     },
     "devDependencies": {
-        "@posten-hedwig/link": "^0.0.8"
+        "@posten-hedwig/link": "^0.0.9"
     },
     "peerDependencies": {
         "react": ">=16.14.x"

@@ -1,6 +1,6 @@
 {
     "name": "@posten-hedwig/container",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "publishConfig": {
         "access": "public"
     },
@@ -30,7 +30,7 @@
         "url": "https://github.com/bring/hedwig-react-components/issues"
     },
     "dependencies": {
-        "@posten-hedwig/core": "^0.0.8"
+        "@posten-hedwig/core": "^0.0.9"
     },
     "peerDependencies": {
         "react": ">=16.14.x"
