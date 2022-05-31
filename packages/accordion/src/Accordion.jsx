@@ -18,10 +18,10 @@ Accordion.propTypes = {
     menu: PropTypes.bool,
     children: PropTypes.arrayOf(
         PropTypes.objectOf((child) => {
-            if (child.type.displayName !== 'AccordionItem') {
+            if (child.type.name !== 'AccordionItem') {
                 return new Error(
                     'Invalid child `' +
-                        child.type.displayName +
+                        child.type.name +
                         '` supplied to `Accordion`. Validation failed'
                 )
             }
