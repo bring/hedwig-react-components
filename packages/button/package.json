@@ -15,8 +15,8 @@
         "build": "babel src -d dist --root-mode=upward --ignore '**/*.stories.js'"
     },
     "dependencies": {
-        "@fortawesome/pro-solid-svg-icons": "^5.15.4",
-        "@fortawesome/react-fontawesome": "^0.1.16",
+        "@fortawesome/pro-solid-svg-icons": "^6.1.1",
+        "@fortawesome/react-fontawesome": "^0.1.18",
         "@posten-hedwig/core": "^0.0.8"
     },
     "peerDependencies": {
