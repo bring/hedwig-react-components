@@ -3,7 +3,7 @@
     "packages/*"
   ],
   "version": "independent",
-  "commands": {
+  "command": {
     "version": {
       "ignoreChanges": ["package-lock.json"]
     }
