@@ -6,9 +6,9 @@ import { Linklist } from '@posten-hedwig/linklist'
 import { Grid, GridItem } from '@posten-hedwig/grid'
 import { Accordion, AccordionItem } from '@posten-hedwig/accordion'
 import { Logo } from '@posten-hedwig/logo'
+import SoMe from './SoMe'
 import Copyright from './Copyright'
 import ImportantLinks from './ImportantLinks'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import '../dist/footer.scss'
 
 export default function Footer({
@@ -63,8 +63,8 @@ export default function Footer({
         return (
             <nav>
                 <Grid>
-                    {sections.map((section) => (
-                        <GridItem size='one-quarter'>
+                    {sections.map((section, index) => (
+                        <GridItem size='one-quarter' key={index}>
                             <h4>{section.title}</h4>
                             <Linklist links={section.links} />
                         </GridItem>
@@ -83,25 +83,6 @@ export default function Footer({
         return <div className='hw-footer__hr' />
     }
 
-    function SoMe() {
-        if (!some) return null
-        return (
-            <div className='hw-some'>
-                {some.map((item, i) => (
-                    <a
-                        className='hw-some__button'
-                        href={item.href || '#'}
-                        aria-label={item.ariaLabel}
-                        onClick={item.onclick}
-                        key={i}
-                    >
-                        <FontAwesomeIcon icon={item.faIcon} />
-                    </a>
-                ))}
-            </div>
-        )
-    }
-
     function Mobile() {
         return (
             <>
@@ -109,7 +90,7 @@ export default function Footer({
                 <a href={logoHref} className='hw-footer__logo-link'>
                     <Logo logo={logo} title={logoTitle} />
                 </a>
-                <SoMe />
+                <SoMe some={some} />
                 <Hr />
                 <Block mt='on'>
                     <Copyright text={copyright} />
@@ -133,7 +114,7 @@ export default function Footer({
                             </a>
                         </GridItem>
                         <GridItem size='one-half'>
-                            <SoMe />
+                            <SoMe some={some} />
                         </GridItem>
                     </Grid>
                 </Block>
@@ -243,9 +224,19 @@ Footer.propTypes = {
             ]).isRequired
         }).isRequired
     ),
+    /**
+     * Array of social media to show in footer
+     */
     some: PropTypes.arrayOf(
         PropTypes.exact({
-            faIcon: PropTypes.object.isRequired,
+            brand: PropTypes.oneOf([
+                'facebook',
+                'twitter',
+                'linkedin',
+                'mail',
+                'google',
+                'instagram'
+            ]),
             href: PropTypes.string,
             onclick: PropTypes.func,
             ariaLabel: PropTypes.string.isRequired

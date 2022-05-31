@@ -131,13 +131,13 @@ Default value "Posten Norge AS"
 
 ### Footer `some`
 
-This prop specifies links and icons for social media.
+This prop specifies links and brands for social media.
 Specification:
 An array of objects looking like this:
 
 ```jsx
 {
-    faIcon: FontAwesomeIcon,
+    brand: String,
     href: String,
     ariaLabel: String,
 }
@@ -147,7 +147,7 @@ or
 
 ```jsx
 {
-    faIcon: FontAwesomeIcon,
+    brand: String,
     onclick: function,
     ariaLabel: String,
 }
@@ -157,23 +157,36 @@ or
 
 ```jsx
 import { Footer } from '@posten-hedwig/footer'
-import { faFacebookF, faInstagram } from '@fortawesome/free-brands-svg-icons'
 /*…*/
 <Footer
     /*…*/
     some: [
         {
-            faIcon: faFacebookF,
+            brand: 'facebook',
             href: '#',
             ariaLabel: 'Check out our Facebook page'
         },
         {
-            faIcon: faInstagram,
+            brand: 'instagram',
             onclick: () => {
                 alert('You clicked Instagram')
             },
             ariaLabel: 'Check out our Instagram page'
+        },
+        {
+            brand: 'mail',
+            href: 'mailto:hedwig@posten.no'
+            ariaLabel: 'Send us email'
         }
     ]
 />
 ```
+
+#### List of Social Media Brands supported
+
+- facebook
+- mail
+- instagram
+- twitter
+- linkedin
+- google

@@ -1,7 +1,6 @@
 import React from 'react'
 import Readme from './Readme.mdx'
 import { Footer } from './index'
-import { faFacebookF, faInstagram } from '@fortawesome/free-brands-svg-icons'
 import { Link } from '@posten-hedwig/link'
 import {
     Description,
@@ -57,16 +56,21 @@ const commonArgs = {
     ],
     some: [
         {
-            faIcon: faFacebookF,
+            brand: 'facebook',
             href: '#',
             ariaLabel: 'Check out our Facebook page'
         },
         {
-            faIcon: faInstagram,
+            brand: 'mail',
+            href: 'mailto:hedwig@posten.no',
+            ariaLabel: 'email us'
+        },
+        {
+            brand: 'instagram',
             onclick: () => {
                 alert('You clicked Instagram')
             },
-            ariaLabel: 'Check out our Instagram page'
+            ariaLabel: 'Check out our Instagram'
         }
     ],
     buttons: [
@@ -79,9 +83,7 @@ const commonArgs = {
         >
             English site
         </a>,
-        <button onClick={() => alert('You clicked an actual button')}>
-            An actual button
-        </button>
+        <button onClick={() => alert('You clicked a button')}>A button</button>
     ],
     importantLinks: [
         <a href='#'>Cookies</a>,
