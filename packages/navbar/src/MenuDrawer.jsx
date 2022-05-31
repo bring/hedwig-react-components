@@ -61,21 +61,7 @@ export default function MenuDrawer({
                             title={section.title}
                             key={section.title}
                         >
-                            <ul className='hw-accordion__link-items'>
-                                {section.links.map((link) => (
-                                    <li
-                                        className='hw-accordion__link-item'
-                                        key={link.props.children}
-                                    >
-                                        <a
-                                            className='hw-accordion__link'
-                                            href={link.props.href}
-                                        >
-                                            {link.props.children}
-                                        </a>
-                                    </li>
-                                ))}
-                            </ul>
+                            <Linklist links={section.links} />
                         </AccordionItem>
                     ))}
                 </Accordion>
