@@ -34,14 +34,18 @@ export default function Footer({
             window.removeEventListener('resize', handleWindowSizeChange)
     }, [])
 
+    function Buttons() {
+        return buttons.map((button, index) => (
+            <Block mb='small-2' classList='hw-footer__button'>
+                <React.Fragment key={index}>{button}</React.Fragment>
+            </Block>
+        ))
+    }
+
     function NavigationMobile() {
         return (
             <nav>
-                {buttons.map((button, index) => (
-                    <Block mb='small-2' classList='hw-footer__button'>
-                        <React.Fragment key={index}>{button}</React.Fragment>
-                    </Block>
-                ))}
+                <Buttons />
                 <Block mt='medium-4'>
                     <Accordion>
                         {sections.map((section) => (
@@ -51,6 +55,26 @@ export default function Footer({
                         ))}
                     </Accordion>
                 </Block>
+            </nav>
+        )
+    }
+
+    function NavigationDesktop() {
+        return (
+            <nav>
+                <Grid>
+                    {sections.map((section) => (
+                        <GridItem size='one-quarter'>
+                            <h4>{section.title}</h4>
+                            <Linklist links={section.links} />
+                        </GridItem>
+                    ))}
+                    {buttons && (
+                        <GridItem size='one-quarter'>
+                            <Buttons />
+                        </GridItem>
+                    )}
+                </Grid>
             </nav>
         )
     }
@@ -100,17 +124,19 @@ export default function Footer({
     function Desktop() {
         return (
             <>
-                Navigation goes here
-                <Grid>
-                    <GridItem size='one-half'>
-                        <a href={logoHref} className='hw-footer__logo-link'>
-                            <Logo logo={logo} title={logoTitle} />
-                        </a>
-                    </GridItem>
-                    <GridItem size='one-half'>
-                        <SoMe />
-                    </GridItem>
-                </Grid>
+                <NavigationDesktop />
+                <Block mt='medium-4'>
+                    <Grid>
+                        <GridItem size='one-half'>
+                            <a href={logoHref} className='hw-footer__logo-link'>
+                                <Logo logo={logo} title={logoTitle} />
+                            </a>
+                        </GridItem>
+                        <GridItem size='one-half'>
+                            <SoMe />
+                        </GridItem>
+                    </Grid>
+                </Block>
                 <Hr />
                 <Block mt='on'>
                     <Copyright text={copyright} />
