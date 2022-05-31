@@ -36,8 +36,8 @@ export default function Footer({
 
     function Buttons() {
         return buttons.map((button, index) => (
-            <Block mb='small-2' classList='hw-footer__button'>
-                <React.Fragment key={index}>{button}</React.Fragment>
+            <Block mb='small-2' classList='hw-footer__button' key={index}>
+                {button}
             </Block>
         ))
     }
@@ -48,8 +48,8 @@ export default function Footer({
                 <Buttons />
                 <Block mt='medium-4'>
                     <Accordion>
-                        {sections.map((section) => (
-                            <AccordionItem title={section.title}>
+                        {sections.map((section, index) => (
+                            <AccordionItem title={section.title} key={index}>
                                 <Linklist links={section.links} />
                             </AccordionItem>
                         ))}
