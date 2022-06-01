@@ -40,3 +40,23 @@ Add package-3 to all packages
 ´´´
 lerna add package-3
 ´´´
+
+## Available NPM modules
+
+- [Accordion](https://www.npmjs.com/package/@posten-hedwig/accordion)
+- [Badge](https://www.npmjs.com/package/@posten-hedwig/badge)
+- [Base](https://www.npmjs.com/package/@posten-hedwig/base)
+- [Block](https://www.npmjs.com/package/@posten-hedwig/block)
+- [Button](https://www.npmjs.com/package/@posten-hedwig/button)
+- [Container](https://www.npmjs.com/package/@posten-hedwig/container)
+- [Core](https://www.npmjs.com/package/@posten-hedwig/core)
+- [Flex](https://www.npmjs.com/package/@posten-hedwig/flex)
+- [Footer](https://www.npmjs.com/package/@posten-hedwig/footer)
+- [Grid](https://www.npmjs.com/package/@posten-hedwig/grid)
+- [Icon](https://www.npmjs.com/package/@posten-hedwig/icon)
+- [Link](https://www.npmjs.com/package/@posten-hedwig/link)
+- [Linklist](https://www.npmjs.com/package/@posten-hedwig/linklist)
+- [Logo](https://www.npmjs.com/package/@posten-hedwig/logo)
+- [Navbar](https://www.npmjs.com/package/@posten-hedwig/navbar)
+- [Slimfooter](https://www.npmjs.com/package/@posten-hedwig/slimfooter)
+- [Typography](https://www.npmjs.com/package/@posten-hedwig/typography)
