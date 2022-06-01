@@ -59,6 +59,22 @@ export default function Footer({
         )
     }
 
+    /**
+     * Add an extra grid item to push buttons to the right
+     * if less than three sections are present
+     */
+    function ExtraGridItem({ missing }) {
+        if ([1, 2, 3].includes(missing)) {
+            const sizes = {
+                1: 'one-quarter',
+                2: 'one-half',
+                3: 'three-quarters'
+            }
+            return <GridItem size={sizes[missing]} />
+        }
+        return null
+    }
+
     function NavigationDesktop() {
         return (
             <nav>
@@ -70,9 +86,12 @@ export default function Footer({
                         </GridItem>
                     ))}
                     {buttons && (
-                        <GridItem size='one-quarter'>
-                            <Buttons />
-                        </GridItem>
+                        <>
+                            <ExtraGridItem missing={3 - sections.length} />
+                            <GridItem size='one-quarter'>
+                                <Buttons />
+                            </GridItem>
+                        </>
                     )}
                 </Grid>
             </nav>
