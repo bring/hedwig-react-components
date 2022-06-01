@@ -184,9 +184,9 @@ import { Footer } from '@posten-hedwig/footer'
 
 #### List of Social Media Brands supported
 
-- facebook
-- mail
-- instagram
-- twitter
-- linkedin
-- google
+- [facebook](https://fontawesome.com/icons/facebook-f?s=brands)
+- [mail](https://fontawesome.com/icons/at?s=solid)
+- [instagram](https://fontawesome.com/icons/instagram?s=brands)
+- [twitter](https://fontawesome.com/icons/twitter?s=brands)
+- [linkedin](https://fontawesome.com/icons/linkedin?s=brands)
+- [google](https://fontawesome.com/icons/google-plus-g?s=brands)
