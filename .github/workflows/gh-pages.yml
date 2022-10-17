@@ -1,9 +1,9 @@
-name: Build and deploy to Github Pages
+name: Build and deploy Storybook to Github Pages
 
 on:
   push:
     branches:
-      - test-gh-pages
+      - master
 
 jobs:
   build-and-deploy:
