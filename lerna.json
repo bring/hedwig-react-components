@@ -5,7 +5,11 @@
   "version": "independent",
   "command": {
     "version": {
-      "ignoreChanges": ["package-lock.json"]
+      "ignoreChanges": [
+        "package-lock.json"
+      ]
     }
-  }
+  },
+  "$schema": "node_modules/lerna/schemas/lerna-schema.json",
+  "useWorkspaces": false
 }
