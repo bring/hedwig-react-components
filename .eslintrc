@@ -19,13 +19,23 @@
         "version": "16"
       }
     },
+    "plugins": ["prefer-arrow-functions"],
     "rules": {
       "space-before-function-paren": 0,
       "react/prop-types": 0,
       "react/jsx-handler-names": 0,
       "react/jsx-fragments": 0,
       "react/no-unused-prop-types": 0,
-      "import/export": 0
+      "import/export": 0,
+      "prefer-arrow-functions/prefer-arrow-functions": [
+        "warn",
+        {
+          "classPropertiesAllowed": true,
+          "disallowPrototype": true,
+          "returnStyle": "implicit",
+          "singleReturnOnly": false
+        }
+      ]
     }
   }
   
