@@ -1,0 +1,24 @@
+{
+  "name": "@posten-hedwig/dropdown",
+  "version": "1.0.0",
+  "description": "Hedwig styled dropdowns",
+  "keywords": [
+    "Hedwig",
+    "Dropdown"
+  ],
+  "author": "Helle Hiorth-Schøyen <helle@solidsquare.no>",
+  "homepage": "https://github.com/bring/hedwig-react-components#readme",
+  "license": "ISC",
+  "main": "dist/dropdown.js",
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "prebuild": "rimraf dist && npm run sass",
+    "sass": "sass sass/dropdown.scss:dist/dropdown.scss --style compressed --no-source-map",
+    "build": "babel src -d dist --root-mode=upward --ignore '**/*.stories.js'"
+  },
+  "dependencies": {
+    "@posten-hedwig/core": "^0.0.9"
+  }
+}
