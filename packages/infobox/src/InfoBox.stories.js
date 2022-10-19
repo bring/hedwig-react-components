@@ -1,21 +1,20 @@
-import React from 'react';
-import InfoBox from './InfoBox';
-import Link from './../../link/src/Link';
-
+import React from 'react'
+import InfoBox from './InfoBox'
+import Link from './../../link/src/Link'
 
 export default {
-  title: 'Components/InfoBox',
-  component: InfoBox,
-};
+    title: 'Components/InfoBox',
+    component: InfoBox
+}
 
-const Template = (args) => 
-    <InfoBox {...args} >
+const Template = (args) => (
+    <InfoBox {...args}>
         <p>The body text is here. Should not be very long</p>
-        <Link>This is a link</Link>
-    </InfoBox>;
+        <Link href='#'>This is a link</Link>
+    </InfoBox>
+)
 
-
-export const Default = Template.bind({});
+export const Default = Template.bind({})
 Default.args = {
-  title: 'So, an Info Box'
-};
+    title: 'So, an Info Box'
+}

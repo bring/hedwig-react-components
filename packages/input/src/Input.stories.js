@@ -15,7 +15,7 @@ import {
 } from '@storybook/addon-docs'
 
 export default {
-    title: 'Components/InputA',
+    title: 'Components/Input',
     component: BaseInput,
     parameters: {
         docs: {
