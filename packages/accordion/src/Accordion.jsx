@@ -3,15 +3,13 @@ import PropTypes from 'prop-types'
 import { ExpandedProvider } from './ExpandedContext'
 import '../dist/accordion.scss'
 
-export default function Accordion({ children, allowMultiple }) {
-    return (
-        <ul className='hw-accordion'>
-            <ExpandedProvider allowMultiple={allowMultiple}>
-                {children}
-            </ExpandedProvider>
-        </ul>
-    )
-}
+const Accordion = ({ children, allowMultiple }) => (
+    <ul className='hw-accordion'>
+        <ExpandedProvider allowMultiple={allowMultiple}>
+            {children}
+        </ExpandedProvider>
+    </ul>
+)
 
 Accordion.propTypes = {
     allowMultiple: PropTypes.bool,
@@ -32,3 +30,5 @@ Accordion.propTypes = {
 Accordion.defaultProps = {
     allowMultiple: true
 }
+
+export default Accordion

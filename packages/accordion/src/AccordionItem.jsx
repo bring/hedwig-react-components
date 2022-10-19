@@ -2,7 +2,7 @@ import React, { createRef, useContext, useEffect, useState } from 'react'
 import PropTypes from 'prop-types'
 import { ExpandedContext } from './ExpandedContext'
 
-export default function AccordionItem({ title, children, expanded }) {
+const AccordionItem = ({ title, children, expanded }) => {
     // State coming from the surrounding Accordion
     const [expandedState, setExpandedState] = useContext(ExpandedContext)
 
@@ -33,7 +33,7 @@ export default function AccordionItem({ title, children, expanded }) {
         }
     }, [isExpanded, expandedState.open])
 
-    function toggleItem() {
+    const toggleItem = () => {
         if (expandedState.allowMultiple) {
             setIsExpanded(!isExpanded)
         } else {
@@ -48,11 +48,8 @@ export default function AccordionItem({ title, children, expanded }) {
      * if allowMultiple, each AccordionItem keeps track of their own expanded status in isExpanded
      * otherwise expandedState keeps track of which item is expanded
      */
-    function showExpanded() {
-        return expandedState.allowMultiple
-            ? isExpanded
-            : expandedState === title
-    }
+    const showExpanded = () =>
+        expandedState.allowMultiple ? isExpanded : expandedState === title
 
     return (
         <li
@@ -91,3 +88,5 @@ AccordionItem.propTypes = {
 AccordionItem.defaultProps = {
     expanded: false
 }
+
+export default AccordionItem
