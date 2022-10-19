@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import BaseDropdown from './BaseDropdown'
 
-export default function Dropdown({
+const Dropdown = ({
     label,
     name,
     variant,
@@ -12,21 +12,19 @@ export default function Dropdown({
     options,
     errorMessage,
     ariaControls
-}) {
-    return (
-        <BaseDropdown
-            variant={variant}
-            label={label}
-            name={name}
-            id={id}
-            selected={selected}
-            onChange={onChange}
-            options={options}
-            errorMessage={errorMessage}
-            ariaControls={ariaControls}
-        />
-    )
-}
+}) => (
+    <BaseDropdown
+        variant={variant}
+        label={label}
+        name={name}
+        id={id}
+        selected={selected}
+        onChange={onChange}
+        options={options}
+        errorMessage={errorMessage}
+        ariaControls={ariaControls}
+    />
+)
 
 Dropdown.propTypes = {
     name: PropTypes.string,
@@ -37,3 +35,5 @@ Dropdown.propTypes = {
     errorMessage: PropTypes.string,
     ariaControls: PropTypes.string
 }
+
+export default Dropdown

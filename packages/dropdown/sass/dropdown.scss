@@ -354,26 +354,3 @@
     }
 }
 
-.hw-label--error {
-    select {
-        position: relative;
-        border-bottom: var(--hw-border-thickness-thick) solid
-            var(--hw-color-alert-yellow) !important;
-        margin-bottom: calc(
-            var(--hw-border-thickness) - var(--hw-border-thickness-thick)
-        ); /* Subtract difference in border height to avoid jumping */
-        transition: border var(--hw-transition-time-normal)
-            var(--hw-transition-easing-normal);
-    }
-
-    select + .hw-error:before {
-        right: 40px;
-    }
-}
-
-
-.hw-label--line {
-    .hw-dropdown, .hw-dropdown--native {
-        @extend .hw-dropdown--line;
-      }
-}

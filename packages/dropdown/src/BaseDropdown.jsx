@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import '@posten-hedwig/core'
+import '@posten-hedwig/label'
 import '../sass/dropdown.scss'
 
 const BaseDropdown = ({
