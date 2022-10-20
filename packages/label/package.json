@@ -1,6 +1,9 @@
 {
     "name": "@posten-hedwig/label",
     "version": "1.0.1",
+    "publishConfig": {
+      "access": "public"
+  },
     "description": "Hedwig styling for label",
     "keywords": [
         "Hedwig",
