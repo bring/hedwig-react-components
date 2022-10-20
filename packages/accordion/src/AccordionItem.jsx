@@ -1,6 +1,8 @@
 import React, { createRef, useContext, useEffect, useState } from 'react'
 import PropTypes from 'prop-types'
 import { ExpandedContext } from './ExpandedContext'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faChevronRight } from '@fortawesome/pro-solid-svg-icons'
 
 const AccordionItem = ({ title, children, expanded }) => {
     // State coming from the surrounding Accordion
@@ -71,6 +73,11 @@ const AccordionItem = ({ title, children, expanded }) => {
                 aria-expanded={showExpanded()}
             >
                 {title}
+                <FontAwesomeIcon
+                    icon={faChevronRight}
+                    className='hw-accordion__icon'
+                    rotation={showExpanded() ? 90 : 0}
+                />
                 <div className='hw-accordion__icon' />
             </button>
             <div id={id} className='hw-accordion__contents' ref={contentRef}>

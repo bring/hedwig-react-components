@@ -46,24 +46,10 @@
   }
 
   &__icon {
-    &::before,
-    &::after {
-      position: absolute;
-      top: 38px;
-      right: 0;
-      display: block;
-      width: 14px;
-      height: 2px;
-      content: '';
-      background-color: var(--hw-color-primary-dark);
-      transform: rotate(0deg);
-      transition: transform 0.2s ease;
-    }
-
-    &::after {
-      right: 0px;
-      transform: rotate(90deg);
-    }
+    position: absolute;
+    top: 38px;
+    right: 2px;
+    transition: transform 0.2s ease;
   }
 
 
@@ -80,10 +66,6 @@
 
   &__contents[aria-hidden=true] a {
     visibility: hidden;
-  }
-
-  &__item--expanded .hw-accordion__icon::after {
-    transform: rotate(90deg) scale(0.0, 1.0);
   }
 
   &__item--expanded .hw-accordion__trigger {
