@@ -1,28 +1,28 @@
 {
-  "name": "@posten-hedwig/infobox",
-  "version": "1.0.0",
-  "description": "> TODO: description",
-  "author": "Helle Hiorth-Schøyen <helle@solidsquare.no>",
-  "homepage": "https://github.com/bring/hedwig-react-components#readme",
-  "license": "ISC",
-  "main": "dist/infobox.js",
-  "files": [
-    "dist"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/bring/hedwig-react-components.git"
-  },
-  "scripts": {
-    "prebuild": "rimraf dist && npm run sass",
-    "sass": "sass sass/infobox.scss:dist/infobox.scss --style compressed --no-source-map",
-    "build": "babel src -d dist --root-mode=upward --ignore '**/*.stories.js'"
-  },
-  "bugs": {
-    "url": "https://github.com/bring/hedwig-react-components/issues"
-  },
-  "dependencies": {
-    "@fortawesome/pro-solid-svg-icons": "^6.2.0",
-    "@fortawesome/react-fontawesome": "^0.2.0"
-  }
+    "name": "@posten-hedwig/infobox",
+    "version": "1.0.1",
+    "description": "> TODO: description",
+    "author": "Helle Hiorth-Schøyen <helle@solidsquare.no>",
+    "homepage": "https://github.com/bring/hedwig-react-components#readme",
+    "license": "ISC",
+    "main": "dist/infobox.js",
+    "files": [
+        "dist"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/bring/hedwig-react-components.git"
+    },
+    "scripts": {
+        "prebuild": "rimraf dist && npm run sass",
+        "sass": "sass sass/infobox.scss:dist/infobox.scss --style compressed --no-source-map",
+        "build": "babel src -d dist --root-mode=upward --ignore '**/*.stories.js'"
+    },
+    "bugs": {
+        "url": "https://github.com/bring/hedwig-react-components/issues"
+    },
+    "dependencies": {
+        "@fortawesome/pro-solid-svg-icons": "^6.2.0",
+        "@fortawesome/react-fontawesome": "^0.2.0"
+    }
 }
