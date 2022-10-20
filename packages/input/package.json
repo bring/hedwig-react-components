@@ -1,9 +1,9 @@
 {
     "name": "@posten-hedwig/input",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "publishConfig": {
-      "access": "public"
-  },
+        "access": "public"
+    },
     "description": "Hedwig input fields",
     "keywords": [
         "Hedwig",
@@ -30,6 +30,6 @@
     },
     "dependencies": {
         "@posten-hedwig/core": "^0.0.9",
-        "@posten-hedwig/label": "^1.0.1"
+        "@posten-hedwig/label": "^1.0.2"
     }
 }

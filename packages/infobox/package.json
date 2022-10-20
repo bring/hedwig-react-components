@@ -1,9 +1,9 @@
 {
     "name": "@posten-hedwig/infobox",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "publishConfig": {
-      "access": "public"
-  },
+        "access": "public"
+    },
     "description": "> TODO: description",
     "author": "Helle Hiorth-Schøyen <helle@solidsquare.no>",
     "homepage": "https://github.com/bring/hedwig-react-components#readme",
