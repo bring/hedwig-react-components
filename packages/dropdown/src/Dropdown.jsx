@@ -15,7 +15,6 @@ const Dropdown = ({
     errorMessage,
     ariaControls
 }) => {
-    //  let variation = variant == 'white' ? 'hw-dropdown--white' : ''
     let variation = variant ? 'hw-dropdown--' + variant : ''
     let labelVariation = variant === 'line' ? 'hw-label--line' : ''
     if (errorMessage !== '') {
