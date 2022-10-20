@@ -51,7 +51,7 @@ Possible values: `default`, `narrow`, `wide`, `none` Default: `default`
 ```jsx
 <Grid gutter='narrow'>
     /* Grid items goes here*/
-</Container>
+</Grid>
 ```
 
 ### Grid `valign`

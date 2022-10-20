@@ -13,7 +13,6 @@ const Accordion = ({ children, allowMultiple }) => (
 
 Accordion.propTypes = {
     allowMultiple: PropTypes.bool,
-    menu: PropTypes.bool,
     children: PropTypes.arrayOf(
         PropTypes.objectOf((child) => {
             if (child.type.name !== 'AccordionItem') {

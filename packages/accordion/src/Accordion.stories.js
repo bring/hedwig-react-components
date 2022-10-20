@@ -1,10 +1,31 @@
 import React from 'react'
-import Accordion from './Accordion'
-import AccordionItem from './AccordionItem'
+import Readme from './Readme.mdx'
+import { Accordion, AccordionItem } from './index'
+import {
+    Description,
+    Primary,
+    ArgsTable,
+    Stories,
+    PRIMARY_STORY
+} from '@storybook/addon-docs'
 
 export default {
     title: 'Components/Accordion',
-    component: Accordion
+    component: Accordion,
+    subcomponents: { AccordionItem },
+    parameters: {
+        docs: {
+            page: () => (
+                <>
+                    <Readme />
+                    <Description />
+                    <Primary />
+                    <ArgsTable story={PRIMARY_STORY} />
+                    <Stories />
+                </>
+            )
+        }
+    }
 }
 
 const item1 = () => (
