@@ -55,7 +55,7 @@ export default function MenuDrawer({
                         <Linklist links={featuredLinks} />
                     </Block>
                 )}
-                <Accordion menu>
+                <Accordion>
                     {sections.map((section) => (
                         <AccordionItem
                             title={section.title}
