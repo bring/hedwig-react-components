@@ -1,6 +1,6 @@
 {
     "name": "@posten-hedwig/accordion",
-    "version": "1.0.10",
+    "version": "1.0.9",
     "publishConfig": {
         "access": "public"
     },

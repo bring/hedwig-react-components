@@ -1,22 +1,22 @@
 {
-    "name": "@posten-hedwig/label",
-    "version": "1.0.1",
-    "description": "Hedwig styling for label",
-    "keywords": [
-        "Hedwig",
-        "Lable"
-    ],
-    "author": "Helle Hiorth-Schøyen <helle@solidsquare.no>",
-    "homepage": "https://github.com/bring/hedwig-react-components#readme",
-    "license": "ISC",
-    "main": "dist/index.js",
-    "files": [
-        "dist",
-        "sass"
-    ],
-    "scripts": {
-        "prebuild": "rimraf dist && npm run sass",
-        "sass": "sass sass/label.scss:dist/label.scss --style compressed --no-source-map",
-        "build": "babel src -d dist --root-mode=upward"
-    }
+  "name": "@posten-hedwig/label",
+  "version": "1.0.0",
+  "description": "Hedwig styling for label",
+  "keywords": [
+    "Hedwig",
+    "Lable"
+  ],
+  "author": "Helle Hiorth-Schøyen <helle@solidsquare.no>",
+  "homepage": "https://github.com/bring/hedwig-react-components#readme",
+  "license": "ISC",
+  "main": "dist/index.js",
+  "files": [
+    "dist",
+    "sass"
+  ],
+  "scripts": {
+    "prebuild": "rimraf dist && npm run sass",
+    "sass": "sass sass/label.scss:dist/label.scss --style compressed --no-source-map",
+    "build": "babel src -d dist --root-mode=upward"
+}
 }
