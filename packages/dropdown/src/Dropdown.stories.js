@@ -45,7 +45,7 @@ const TemplateWhite = (args) => <Dropdown {...args} />
 
 export const whiteDropdown = TemplateWhite.bind({})
 whiteDropdown.args = {
-    label: 'Label',
+    label: 'White dropdown',
     variant: 'white',
     options: [
         { label: 'Option 1', value: '1' },

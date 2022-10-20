@@ -9,9 +9,9 @@
   "author": "Helle Hiorth-Schøyen <helle@solidsquare.no>",
   "homepage": "https://github.com/bring/hedwig-react-components#readme",
   "license": "ISC",
-  "main": "dist/dropdown.js",
+  "main": "dist/index.js",
   "files": [
-    "lib"
+    "dist"
   ],
   "scripts": {
     "prebuild": "rimraf dist && npm run sass",
