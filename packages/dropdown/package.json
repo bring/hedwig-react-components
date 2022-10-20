@@ -1,28 +1,28 @@
 {
-  "name": "@posten-hedwig/dropdown",
-  "version": "1.0.0",
-  "publishConfig": {
-    "access": "public"
-},
-  "description": "Hedwig styled dropdowns",
-  "keywords": [
-    "Hedwig",
-    "Dropdown"
-  ],
-  "author": "Helle Hiorth-Schøyen <helle@solidsquare.no>",
-  "homepage": "https://github.com/bring/hedwig-react-components#readme",
-  "license": "ISC",
-  "main": "dist/index.js",
-  "files": [
-    "dist"
-  ],
-  "scripts": {
-    "prebuild": "rimraf dist && npm run sass",
-    "sass": "sass sass/dropdown.scss:dist/dropdown.scss --style compressed --no-source-map",
-    "build": "babel src -d dist --root-mode=upward --ignore '**/*.stories.js'"
-  },
-  "dependencies": {
-    "@posten-hedwig/core": "^0.0.9",
-    "@posten-hedwig/label": "^1.0.0"
-  }
+    "name": "@posten-hedwig/dropdown",
+    "version": "1.0.1",
+    "publishConfig": {
+        "access": "public"
+    },
+    "description": "Hedwig styled dropdowns",
+    "keywords": [
+        "Hedwig",
+        "Dropdown"
+    ],
+    "author": "Helle Hiorth-Schøyen <helle@solidsquare.no>",
+    "homepage": "https://github.com/bring/hedwig-react-components#readme",
+    "license": "ISC",
+    "main": "dist/index.js",
+    "files": [
+        "dist"
+    ],
+    "scripts": {
+        "prebuild": "rimraf dist && npm run sass",
+        "sass": "sass sass/dropdown.scss:dist/dropdown.scss --style compressed --no-source-map",
+        "build": "babel src -d dist --root-mode=upward --ignore '**/*.stories.js'"
+    },
+    "dependencies": {
+        "@posten-hedwig/core": "^0.0.9",
+        "@posten-hedwig/label": "^1.0.1"
+    }
 }
