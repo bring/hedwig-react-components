@@ -1,10 +1,4 @@
 # `label`
 
-> TODO: description
+This is a supporting package for hedwig inputs/dropdowns etc
 
-## Usage
-
-```
-
-// TODO: DEMONSTRATE API
-```
