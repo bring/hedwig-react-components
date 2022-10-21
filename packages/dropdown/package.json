@@ -1,6 +1,6 @@
 {
     "name": "@posten-hedwig/dropdown",
-    "version": "1.0.5",
+    "version": "1.0.6",
     "publishConfig": {
         "access": "public"
     },
@@ -23,6 +23,6 @@
     },
     "dependencies": {
         "@posten-hedwig/core": "^0.0.9",
-        "@posten-hedwig/label": "^1.0.2"
+        "@posten-hedwig/label": "^1.0.3"
     }
 }
