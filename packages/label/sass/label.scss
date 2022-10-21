@@ -2,13 +2,14 @@
  * Block
  */
 
- .hw-label {
+ label.hw-label {
     color: var(--hw-color-black);
     font-size: var(--hw-font-size-caption);
     font-family: var(--hw-font-primary-regular);
     margin-bottom: 0;
     line-height: 2;
     display: block;
+    text-align: left;
   
     transition: color var(--hw-transition-time-normal) var(--hw-transition-easing-normal);
   
