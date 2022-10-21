@@ -2,7 +2,7 @@
 
 Hedwig styled input fields
 
-# Usage
+## Usage
 
 ### 1 Install
 
