@@ -7,7 +7,7 @@ Hedwig styled input fields
 ### 1 Install
 
 ```sh
-npm install @posten-hedwig/dropdown
+npm install @posten-hedwig/input
 ```
 
 ### 2 Import
