@@ -19,7 +19,7 @@
     transition: border var(--hw-transition-time-normal) var(--hw-transition-easing-normal);
   }
   
-  .hw-input {
+  input.hw-input {
     @extend .hw-input-basic;
   
     &::placeholder,
