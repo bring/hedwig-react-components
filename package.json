@@ -37,6 +37,7 @@
   },
   "scripts": {
     "storybook": "start-storybook -p 6006",
+    "postinstall": "npx lerna bootstrap && npx lerna run build",
     "build-storybook": "build-storybook"
   },
   "engines": {

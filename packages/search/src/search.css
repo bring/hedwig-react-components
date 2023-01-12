@@ -1,0 +1,7 @@
+.hw-search__suggestions {
+    display: none;
+}
+
+.hw-search:focus-within .hw-search__suggestions {
+    display: block;
+}
