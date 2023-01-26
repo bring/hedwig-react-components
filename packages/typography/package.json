@@ -14,7 +14,8 @@
     },
     "scripts": {
         "prebuild": "rimraf dist",
-        "build": "sass sass/typography.scss:dist/typography.scss --style compressed --no-source-map"
+        "build": "sass sass/typography.scss:dist/typography.css --style compressed --no-source-map",
+        "build:parcel": "npm run prebuild && npm run build"
     },
     "gitHead": "c6c503b48a69b8ecc180ca28f84791cc9cc6277b"
 }
