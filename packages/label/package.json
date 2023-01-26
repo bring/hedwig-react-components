@@ -12,7 +12,9 @@
     "author": "Helle Hiorth-Schøyen <helle@solidsquare.no>",
     "homepage": "https://github.com/bring/hedwig-react-components#readme",
     "license": "ISC",
+    "source": "src/index.js",
     "main": "dist/index.js",
+    "module": "dist/module.js",
     "files": [
         "dist",
         "sass"

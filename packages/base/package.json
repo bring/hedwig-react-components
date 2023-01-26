@@ -10,7 +10,9 @@
         "dist",
         "sass"
     ],
+    "source": "src/index.js",
     "main": "dist/index.js",
+    "module": "dist/module.js",
     "scripts": {
         "prebuild": "rimraf dist && npm run sass-base && npm run sass-body",
         "sass-base": "sass sass/base.scss:dist/base.css --style compressed --no-source-map",

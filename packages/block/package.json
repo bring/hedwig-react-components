@@ -12,7 +12,9 @@
     "author": "Viggo Normann <v@iggo.no>",
     "homepage": "https://github.com/bring/hedwig-react-components#readme",
     "license": "ISC",
+    "source": "src/index.js",
     "main": "dist/index.js",
+    "module": "dist/module.js",
     "files": [
         "dist"
     ],
@@ -23,13 +25,15 @@
     "scripts": {
         "prebuild": "rimraf dist && npm run sass",
         "sass": "sass sass/block.scss:dist/block.scss --style compressed --no-source-map",
-        "build": "babel src -d dist --root-mode=upward --ignore '**/*.stories.js'"
+        "build": "babel src -d dist --root-mode=upward --ignore '**/*.stories.js'",
+        "build:parcel": "npm run prebuild && parcel build"
     },
     "bugs": {
         "url": "https://github.com/bring/hedwig-react-components/issues"
     },
     "dependencies": {
-        "@posten-hedwig/core": "^0.0.9"
+        "@posten-hedwig/core": "^0.0.9",
+        "prop-types": "^15.8.1"
     },
     "peerDependencies": {
         "react": ">=16.14.x"
