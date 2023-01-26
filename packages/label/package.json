@@ -22,6 +22,7 @@
     "scripts": {
         "prebuild": "rimraf dist && npm run sass",
         "sass": "sass sass/label.scss:dist/label.scss --style compressed --no-source-map",
-        "build": "babel src -d dist --root-mode=upward"
+        "build": "babel src -d dist --root-mode=upward",
+        "build:parcel": "npm run prebuild && parcel build"
     }
 }

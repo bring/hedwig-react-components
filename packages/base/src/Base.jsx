@@ -1,2 +1,4 @@
-import '../dist/base.css'
+import '../dist/base.scss'
 import '../dist/body.scss'
+
+export default {}
