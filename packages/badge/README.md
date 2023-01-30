@@ -23,10 +23,12 @@ npm install @hedwig-posten/badge
 ```
 
 ```jsx
-import { Badge, WarningBadge } from '@posten-hedwig/badge'
+import { Badge, WarningBadge, DarkBadge, WhiteBadge } from '@posten-hedwig/badge'
 …
 <>
     <Badge size='small'>Updated</Badge>
     <WarningBadge size='large'>File too large</WarningBadge>
+    <DargkBadge>Dark badge</DarkBadge>
+    <WhiteBadge>WhiteBadge</WhiteBadge>
 </>
 ```
