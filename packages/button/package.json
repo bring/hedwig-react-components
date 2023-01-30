@@ -9,13 +9,12 @@
         "hedwig",
         "button"
     ],
-    "source": "src/index.js",
+    "source": "src/index.ts",
     "main": "dist/index.js",
     "module": "dist/module.js",
     "scripts": {
         "prebuild": "rimraf dist",
-        "build": "babel src -d dist --root-mode=upward --ignore '**/*.stories.js'",
-        "build:parcel": "npm run prebuild && parcel build"
+        "build": "parcel build"
     },
     "dependencies": {
         "@fortawesome/pro-solid-svg-icons": "^6.1.1",

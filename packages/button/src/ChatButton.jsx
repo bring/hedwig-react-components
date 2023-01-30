@@ -4,7 +4,7 @@ import BaseButton from './BaseButton'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCommentsAlt } from '@fortawesome/pro-solid-svg-icons'
 
-export default function ChatButton({ fixed, onClick, disabled, ariaControls }) {
+const ChatButton = ({ fixed, onClick, disabled, ariaControls }) => {
     const chatVariant = fixed ? 'chat-fixed' : 'chat'
     return (
         <BaseButton
@@ -30,3 +30,5 @@ ChatButton.propTypes = {
     disabled: PropTypes.bool,
     ariaControls: PropTypes.string
 }
+
+export default ChatButton

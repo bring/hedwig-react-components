@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import BaseButton from './BaseButton'
 
-export default function SecondaryOutlineButton({
+const SecondaryOutlineButton = ({
     type,
     size,
     onClick,
@@ -10,21 +10,19 @@ export default function SecondaryOutlineButton({
     disabled,
     ariaControls,
     children
-}) {
-    return (
-        <BaseButton
-            variant='outline-secondary'
-            type={type}
-            size={size}
-            disabled={disabled}
-            ariaControls={ariaControls}
-            onClick={onClick}
-            href={href}
-        >
-            {children}
-        </BaseButton>
-    )
-}
+}) => (
+    <BaseButton
+        variant='outline-secondary'
+        type={type}
+        size={size}
+        disabled={disabled}
+        ariaControls={ariaControls}
+        onClick={onClick}
+        href={href}
+    >
+        {children}
+    </BaseButton>
+)
 
 SecondaryOutlineButton.defaultProps = {
     disabled: false,
@@ -39,3 +37,5 @@ SecondaryOutlineButton.propTypes = {
     ariaControls: PropTypes.string,
     href: PropTypes.string
 }
+
+export default SecondaryOutlineButton
