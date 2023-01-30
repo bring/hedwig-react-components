@@ -1,9 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import '@posten-hedwig/core'
-import '../dist/container.scss'
+import '../sass/container.scss'
 
-export default function Container({ slim, pt, pb, children }) {
+const Container = ({ slim, pt, pb, children }) => {
     let classes = ['hw-container']
     if (slim) {
         classes.push('hw-container--slim')
@@ -38,3 +38,5 @@ Container.defaultProps = {
     pt: false,
     pb: false
 }
+
+export default Container
