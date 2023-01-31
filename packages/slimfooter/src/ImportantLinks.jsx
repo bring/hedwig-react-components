@@ -1,15 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-export default function ImportantLinks({ links }) {
-    return (
-        <span className='hw-footer__importantlinks'>
-            {links.map((link, index) => (
-                <React.Fragment key={index}>{link}</React.Fragment>
-            ))}
-        </span>
-    )
-}
+const ImportantLinks = ({ links }) => (
+    <span className='hw-footer__importantlinks'>
+        {links.map((link, index) => (
+            <React.Fragment key={index}>{link}</React.Fragment>
+        ))}
+    </span>
+)
 
 ImportantLinks.propTypes = {
     /**
@@ -34,3 +32,5 @@ ImportantLinks.propTypes = {
         }).isRequired
     ).isRequired
 }
+
+export default ImportantLinks

@@ -1,26 +1,23 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import SelectorItem from './SelectorItem'
-import '../dist/selector.scss'
+import '../sass/selector.scss'
 
-export default function Selector({ items, desktop }) {
-    return (
-        <div
-            className={`hw-navbar__selector${
-                !desktop ? ' hw-navbar__selector__mobile' : ''
-            }`}
-        >
-            {items.map(({ link, selected }) => (
-                <SelectorItem
-                    link={link}
-                    selected={selected}
-                    key={link.props.children}
-                    className='hmmm'
-                />
-            ))}
-        </div>
-    )
-}
+const Selector = ({ items, desktop }) => (
+    <div
+        className={`hw-navbar__selector${
+            !desktop ? ' hw-navbar__selector__mobile' : ''
+        }`}
+    >
+        {items.map(({ link, selected }) => (
+            <SelectorItem
+                link={link}
+                selected={selected}
+                key={link.props.children}
+            />
+        ))}
+    </div>
+)
 
 Selector.propTypes = {
     items: PropTypes.arrayOf(
@@ -31,3 +28,5 @@ Selector.propTypes = {
     ),
     desktop: PropTypes.bool
 }
+
+export default Selector

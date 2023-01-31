@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-export default function SelectorItem({ link, selected }) {
+const SelectorItem = ({ link, selected }) => {
     let classes = ['hw-navbar__selector-item']
     if (selected) {
         classes.push(classes[0] + '__selected')
@@ -17,3 +17,5 @@ SelectorItem.propTypes = {
 SelectorItem.defaultProps = {
     selected: false
 }
+
+export default SelectorItem

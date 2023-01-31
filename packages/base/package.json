@@ -10,12 +10,12 @@
         "dist",
         "sass"
     ],
+    "source": "src/index.ts",
     "main": "dist/index.js",
+    "module": "dist/module.js",
     "scripts": {
-        "prebuild": "rimraf dist && npm run sass-base && npm run sass-body",
-        "sass-base": "sass sass/base.scss:dist/base.css --style compressed --no-source-map",
-        "sass-body": "sass sass/body.scss:dist/body.scss --style compressed --no-source-map",
-        "build": "babel src -d dist --root-mode=upward"
+        "prebuild": "rimraf dist",
+        "build": "parcel build"
     },
     "dependencies": {
         "sanitize.css": "^13.0.0"

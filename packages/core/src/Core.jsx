@@ -1,17 +1,16 @@
-import '../dist/variables.scss'
+import '../sass/variables.scss'
 import variables from '../sass/variables.scss'
-import '../dist/fonts.css'
+import '../sass/fonts.css'
 import '@posten-hedwig/base'
-import '../dist/colors.scss'
+import '../sass/colors.scss'
 import cssVars from 'css-vars-ponyfill'
 import { objectify } from 'postcss-js'
 import { parse } from 'postcss'
 
-function bringTheme() {
-    return document.getElementsByClassName('hw-theme-bring').length > 0
-}
+const bringTheme = () =>
+    document.getElementsByClassName('hw-theme-bring').length > 0
 
-function getVars(css) {
+const getVars = (css) => {
     const allVars = objectify(parse(css)) // Turn css string into an object
     return {
         ...allVars[':root'], // Use the root vars, including Posten
@@ -30,3 +29,5 @@ window.addEventListener('DOMContentLoaded', () => {
         })
     }
 })
+
+export default {}

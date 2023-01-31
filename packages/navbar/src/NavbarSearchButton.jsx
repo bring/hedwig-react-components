@@ -3,12 +3,12 @@ import PropTypes from 'prop-types'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/pro-regular-svg-icons'
 import { NavbarContext } from './NavbarContext'
-import '../dist/search-button.scss'
+import '../sass/search-button.scss'
 
-export default function NavbarSearchButton({ text, ariaLabel }) {
+const NavbarSearchButton = ({ text, ariaLabel }) => {
     const [state, setState] = useContext(NavbarContext)
 
-    function handleClick() {
+    const handleClick = () => {
         setState((state) => ({ ...state, isSearching: true }))
     }
 
@@ -32,3 +32,5 @@ NavbarSearchButton.propTypes = {
     text: PropTypes.string.isRequired,
     ariaLabel: PropTypes.string
 }
+
+export default NavbarSearchButton

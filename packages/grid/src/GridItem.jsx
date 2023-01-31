@@ -1,14 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-export default function GridItem({
+const GridItem = ({
     size,
     smallSize,
     mediumSize,
     largeSize,
     xlargeSize,
     children
-}) {
+}) => {
     const classes = ['hw-grid__item']
 
     if (size) {
@@ -68,3 +68,5 @@ GridItem.propTypes = {
     largeSize: PropTypes.oneOf(sizes),
     xlargeSize: PropTypes.oneOf(sizes)
 }
+
+export default GridItem

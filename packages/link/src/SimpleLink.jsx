@@ -2,13 +2,11 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import BaseLink from './BaseLink'
 
-export default function SimpleLink({ href, title, size, children }) {
-    return (
-        <BaseLink href={href} title={title} type='no-underline' size={size}>
-            {children}
-        </BaseLink>
-    )
-}
+const SimpleLink = ({ href, title, size, children }) => (
+    <BaseLink href={href} title={title} type='no-underline' size={size}>
+        {children}
+    </BaseLink>
+)
 
 SimpleLink.defaultProps = {
     size: ''
@@ -19,3 +17,5 @@ SimpleLink.propTypes = {
     title: PropTypes.string,
     size: PropTypes.oneOf(['small', 'big', ''])
 }
+
+export default SimpleLink

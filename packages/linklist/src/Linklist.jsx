@@ -1,8 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import '../dist/linklist.scss'
+import '../sass/linklist.scss'
 
-export default function Linklist({ links, small }) {
+const Linklist = ({ links, small }) => {
     let classes = ['hw-linklist']
     if (small) classes.push('hw-linklist--small')
     return (
@@ -39,3 +39,5 @@ Linklist.propTypes = {
 Linklist.defaultProps = {
     small: false
 }
+
+export default Linklist

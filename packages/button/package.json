@@ -9,15 +9,18 @@
         "hedwig",
         "button"
     ],
+    "source": "src/index.ts",
     "main": "dist/index.js",
+    "module": "dist/module.js",
     "scripts": {
         "prebuild": "rimraf dist",
-        "build": "babel src -d dist --root-mode=upward --ignore '**/*.stories.js'"
+        "build": "parcel build"
     },
     "dependencies": {
         "@fortawesome/pro-solid-svg-icons": "^6.1.1",
         "@fortawesome/react-fontawesome": "^0.1.18",
-        "@posten-hedwig/core": "^0.0.9"
+        "@posten-hedwig/core": "^0.0.9",
+        "prop-types": "^15.8.1"
     },
     "peerDependencies": {
         "react": ">=16.14.x"

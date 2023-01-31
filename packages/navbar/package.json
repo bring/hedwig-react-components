@@ -12,7 +12,10 @@
     "author": "Viggo Normann <v@iggo.no>",
     "homepage": "https://github.com/bring/hedwig-react-components/tree/master/packages/navbar#readme",
     "license": "ISC",
+    "source": "src/index.ts",
     "main": "dist/index.js",
+    "types": "dist/types.d.ts",
+    "module": "dist/module.js",
     "files": [
         "dist",
         "icons"
@@ -22,9 +25,8 @@
         "url": "git+https://github.com/bring/hedwig-react-components/tree/master/packages/navbar"
     },
     "scripts": {
-        "prebuild": "rimraf dist && npm run sass",
-        "sass": "sass sass/navbar.scss:dist/navbar.scss sass/menu-button.scss:dist/menu-button.scss sass/search-button.scss:dist/search-button.scss sass/menu-drawer.scss:dist/menu-drawer.scss sass/selector.scss:dist/selector.scss --style compressed --no-source-map",
-        "build": "babel src -d dist --root-mode=upward --ignore '**/*.stories.js'"
+        "prebuild": "rimraf dist",
+        "build": "parcel build"
     },
     "bugs": {
         "url": "https://github.com/bring/hedwig-react-components/issues"
@@ -37,7 +39,8 @@
         "@posten-hedwig/block": "^1.0.8",
         "@posten-hedwig/core": "^0.0.9",
         "@posten-hedwig/flex": "^1.0.8",
-        "@posten-hedwig/linklist": "^1.0.8"
+        "@posten-hedwig/linklist": "^1.0.8",
+        "prop-types": "15.8.1"
     },
     "devDependencies": {
         "@posten-hedwig/icon": "^1.0.8",

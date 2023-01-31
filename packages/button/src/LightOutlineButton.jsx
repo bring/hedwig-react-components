@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import BaseButton from './BaseButton'
 
-export default function LightOutlineButton({
+const LightOutlineButton = ({
     type,
     size,
     onClick,
@@ -10,21 +10,19 @@ export default function LightOutlineButton({
     disabled,
     ariaControls,
     children
-}) {
-    return (
-        <BaseButton
-            variant='outline-white'
-            type={type}
-            size={size}
-            disabled={disabled}
-            ariaControls={ariaControls}
-            onClick={onClick}
-            href={href}
-        >
-            {children}
-        </BaseButton>
-    )
-}
+}) => (
+    <BaseButton
+        variant='outline-white'
+        type={type}
+        size={size}
+        disabled={disabled}
+        ariaControls={ariaControls}
+        onClick={onClick}
+        href={href}
+    >
+        {children}
+    </BaseButton>
+)
 
 LightOutlineButton.defaultProps = {
     disabled: false,
@@ -39,3 +37,5 @@ LightOutlineButton.propTypes = {
     ariaControls: PropTypes.string,
     href: PropTypes.string
 }
+
+export default LightOutlineButton

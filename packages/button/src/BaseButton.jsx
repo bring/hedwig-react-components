@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import '../sass/button.scss'
 
-export default function BaseButton({
+const BaseButton = ({
     variant,
     type,
     size,
@@ -11,7 +11,7 @@ export default function BaseButton({
     disabled,
     ariaControls,
     children
-}) {
+}) => {
     const buttonVariant = variant !== '' ? 'hw-button--' + variant : ''
     const buttonSize = size ? 'hw-button--' + size : ''
 
@@ -65,3 +65,5 @@ BaseButton.propTypes = {
     ariaControls: PropTypes.string,
     href: PropTypes.string
 }
+
+export default BaseButton

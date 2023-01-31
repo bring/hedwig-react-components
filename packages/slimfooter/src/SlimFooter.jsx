@@ -6,18 +6,18 @@ import { Grid, GridItem } from '@posten-hedwig/grid'
 import { Logo } from '@posten-hedwig/logo'
 import ImportantLinks from './ImportantLinks'
 import Copyright from './Copyright'
-import '../dist/slimfooter.scss'
+import '../sass/slimfooter.scss'
 
-export default function SlimFooter({
+const SlimFooter = ({
     logo,
     logoHref,
     logoTitle,
     importantLinks,
     copyright
-}) {
+}) => {
     const [desktop, setDesktop] = useState()
 
-    function handleWindowSizeChange() {
+    const handleWindowSizeChange = () => {
         setDesktop(window.innerWidth >= 940)
     }
 
@@ -28,39 +28,35 @@ export default function SlimFooter({
             window.removeEventListener('resize', handleWindowSizeChange)
     }, [])
 
-    function Mobile() {
-        return (
-            <>
+    const Mobile = () => (
+        <>
+            <a href={logoHref} className='hw-slim-footer__logo-link'>
+                <Logo logo={logo} title={logoTitle} />
+            </a>
+            <Block mt='on'>
+                <Copyright text={copyright} />
+            </Block>
+            <Block mt='on'>
+                <ImportantLinks links={importantLinks} />
+            </Block>
+        </>
+    )
+
+    const Desktop = () => (
+        <Grid>
+            <GridItem size='one-quarter'>
                 <a href={logoHref} className='hw-slim-footer__logo-link'>
                     <Logo logo={logo} title={logoTitle} />
                 </a>
-                <Block mt='on'>
+            </GridItem>
+            <GridItem size='three-quarters'>
+                <div className='hw-slim-footer__element-float-right'>
                     <Copyright text={copyright} />
-                </Block>
-                <Block mt='on'>
                     <ImportantLinks links={importantLinks} />
-                </Block>
-            </>
-        )
-    }
-
-    function Desktop() {
-        return (
-            <Grid>
-                <GridItem size='one-quarter'>
-                    <a href={logoHref} className='hw-slim-footer__logo-link'>
-                        <Logo logo={logo} title={logoTitle} />
-                    </a>
-                </GridItem>
-                <GridItem size='three-quarters'>
-                    <div className='hw-slim-footer__element-float-right'>
-                        <Copyright text={copyright} />
-                        <ImportantLinks links={importantLinks} />
-                    </div>
-                </GridItem>
-            </Grid>
-        )
-    }
+                </div>
+            </GridItem>
+        </Grid>
+    )
 
     return (
         <footer className='hw-slim-footer'>
@@ -115,3 +111,5 @@ SlimFooter.defaultProps = {
     logo: 'posten',
     copyright: 'Posten Norge AS'
 }
+
+export default SlimFooter

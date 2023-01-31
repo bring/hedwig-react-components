@@ -6,9 +6,9 @@ import NavbarLogoFlagship from './NavbarLogoFlagship'
 import Selector from './Selector'
 import Menu from './Menu'
 import '@posten-hedwig/core'
-import '../dist/navbar.scss'
+import '../sass/navbar.scss'
 
-export default function Navbar({
+const Navbar = ({
     logoHref,
     logo,
     logoTitle,
@@ -24,10 +24,10 @@ export default function Navbar({
     menuCloseTitle,
     menuFeaturedLinks,
     children
-}) {
+}) => {
     const [desktop, setDesktop] = useState()
 
-    function handleWindowSizeChange() {
+    const handleWindowSizeChange = () => {
         setDesktop(window.innerWidth >= 940)
     }
 
@@ -38,13 +38,11 @@ export default function Navbar({
             window.removeEventListener('resize', handleWindowSizeChange)
     }, [])
 
-    function SkipToMain() {
-        return (
-            <a href={skipToMainHref} className='hw-navbar__skip-to-content'>
-                {skipToMainTitle}
-            </a>
-        )
-    }
+    const SkipToMain = () => (
+        <a href={skipToMainHref} className='hw-navbar__skip-to-content'>
+            {skipToMainTitle}
+        </a>
+    )
     return (
         <header className='hw-navbar'>
             <div className='hw-navbar__content'>
@@ -210,3 +208,5 @@ Navbar.propTypes = {
         })
     )
 }
+
+export default Navbar

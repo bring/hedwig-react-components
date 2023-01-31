@@ -1,8 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import '../dist/icon.scss'
+import '../sass/icon.scss'
 
-export default function Icon({ icon, title, size }) {
+const Icon = ({ icon, title, size }) => {
     let classes = ['hw-icon']
     if (size) {
         classes.push('hw-icon--size-' + size)
@@ -32,3 +32,5 @@ Icon.propTypes = {
 Icon.defaultProps = {
     size: null
 }
+
+export default Icon

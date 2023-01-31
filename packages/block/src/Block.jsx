@@ -1,16 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import '../dist/block.scss'
+import '../sass/block.scss'
 
-export default function Block({
-    px,
-    py,
-    mt,
-    mb,
-    elementType,
-    classList,
-    children
-}) {
+const Block = ({ px, py, mt, mb, elementType, classList, children }) => {
     const classes = ['hw-block']
     if (px) classes.push(px === 'on' ? 'hw-block--px' : 'hw-block--px-' + px)
     if (py) classes.push(py === 'on' ? 'hw-block--py' : 'hw-block--py-' + py)
@@ -68,3 +60,5 @@ Block.propTypes = {
     elementType: PropTypes.oneOf(['article', 'div', 'p']),
     classList: PropTypes.string
 }
+
+export default Block

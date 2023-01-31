@@ -10,7 +10,7 @@ import {
 } from '@fortawesome/free-brands-svg-icons'
 import { faAt } from '@fortawesome/free-solid-svg-icons'
 
-export default function SoMe({ some }) {
+const SoMe = ({ some }) => {
     if (!some) return null
 
     const iconMap = {
@@ -59,3 +59,5 @@ SoMe.propTypes = {
         })
     )
 }
+
+export default SoMe

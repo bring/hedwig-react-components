@@ -1,5 +1,5 @@
 import React from 'react'
-import '../dist/typography.scss'
+import '../dist/typography.css'
 
 export default {
     title: 'Base/Typography/HeadingsPosten'

@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { ExpandedProvider } from './ExpandedContext'
-import '../dist/accordion.scss'
+import '../sass/accordion.scss'
 
 const Accordion = ({ children, allowMultiple }) => (
     <ul className='hw-accordion'>

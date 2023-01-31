@@ -9,9 +9,9 @@ import { Logo } from '@posten-hedwig/logo'
 import SoMe from './SoMe'
 import Copyright from './Copyright'
 import ImportantLinks from './ImportantLinks'
-import '../dist/footer.scss'
+import '../sass/footer.scss'
 
-export default function Footer({
+const Footer = ({
     logo,
     logoHref,
     logoTitle,
@@ -20,10 +20,10 @@ export default function Footer({
     copyright,
     buttons,
     some
-}) {
+}) => {
     const [desktop, setDesktop] = useState()
 
-    function handleWindowSizeChange() {
+    const handleWindowSizeChange = () => {
         setDesktop(window.innerWidth >= 940)
     }
 
@@ -34,36 +34,33 @@ export default function Footer({
             window.removeEventListener('resize', handleWindowSizeChange)
     }, [])
 
-    function Buttons() {
-        return buttons.map((button, index) => (
+    const Buttons = () =>
+        buttons.map((button, index) => (
             <Block mb='small-2' classList='hw-footer__button' key={index}>
                 {button}
             </Block>
         ))
-    }
 
-    function NavigationMobile() {
-        return (
-            <nav>
-                <Buttons />
-                <Block mt='medium-4'>
-                    <Accordion>
-                        {sections.map((section, index) => (
-                            <AccordionItem title={section.title} key={index}>
-                                <Linklist links={section.links} />
-                            </AccordionItem>
-                        ))}
-                    </Accordion>
-                </Block>
-            </nav>
-        )
-    }
+    const NavigationMobile = () => (
+        <nav>
+            <Buttons />
+            <Block mt='medium-4'>
+                <Accordion>
+                    {sections.map((section, index) => (
+                        <AccordionItem title={section.title} key={index}>
+                            <Linklist links={section.links} />
+                        </AccordionItem>
+                    ))}
+                </Accordion>
+            </Block>
+        </nav>
+    )
 
     /**
      * Add an extra grid item to push buttons to the right
      * if less than three sections are present
      */
-    function ExtraGridItem({ missing }) {
+    const ExtraGridItem = ({ missing }) => {
         if ([1, 2, 3].includes(missing)) {
             const sizes = {
                 1: 'one-quarter',
@@ -75,76 +72,68 @@ export default function Footer({
         return null
     }
 
-    function NavigationDesktop() {
-        return (
-            <nav>
+    const NavigationDesktop = () => (
+        <nav>
+            <Grid>
+                {sections.map((section, index) => (
+                    <GridItem size='one-quarter' key={index}>
+                        <h4>{section.title}</h4>
+                        <Linklist links={section.links} />
+                    </GridItem>
+                ))}
+                {buttons && (
+                    <>
+                        <ExtraGridItem missing={3 - sections.length} />
+                        <GridItem size='one-quarter'>
+                            <Buttons />
+                        </GridItem>
+                    </>
+                )}
+            </Grid>
+        </nav>
+    )
+
+    const Hr = () => <div className='hw-footer__hr' />
+
+    const Mobile = () => (
+        <>
+            <NavigationMobile />
+            <a href={logoHref} className='hw-footer__logo-link'>
+                <Logo logo={logo} title={logoTitle} />
+            </a>
+            <SoMe some={some} />
+            <Hr />
+            <Block mt='on'>
+                <Copyright text={copyright} />
+            </Block>
+            <Block mt='on'>
+                <ImportantLinks links={importantLinks} />
+            </Block>
+        </>
+    )
+
+    const Desktop = () => (
+        <>
+            <NavigationDesktop />
+            <Block mt='medium-4'>
                 <Grid>
-                    {sections.map((section, index) => (
-                        <GridItem size='one-quarter' key={index}>
-                            <h4>{section.title}</h4>
-                            <Linklist links={section.links} />
-                        </GridItem>
-                    ))}
-                    {buttons && (
-                        <>
-                            <ExtraGridItem missing={3 - sections.length} />
-                            <GridItem size='one-quarter'>
-                                <Buttons />
-                            </GridItem>
-                        </>
-                    )}
+                    <GridItem size='one-half'>
+                        <a href={logoHref} className='hw-footer__logo-link'>
+                            <Logo logo={logo} title={logoTitle} />
+                        </a>
+                    </GridItem>
+                    <GridItem size='one-half'>
+                        <SoMe some={some} />
+                    </GridItem>
                 </Grid>
-            </nav>
-        )
-    }
-
-    function Hr() {
-        return <div className='hw-footer__hr' />
-    }
-
-    function Mobile() {
-        return (
-            <>
-                <NavigationMobile />
-                <a href={logoHref} className='hw-footer__logo-link'>
-                    <Logo logo={logo} title={logoTitle} />
-                </a>
-                <SoMe some={some} />
-                <Hr />
-                <Block mt='on'>
-                    <Copyright text={copyright} />
-                </Block>
-                <Block mt='on'>
-                    <ImportantLinks links={importantLinks} />
-                </Block>
-            </>
-        )
-    }
-
-    function Desktop() {
-        return (
-            <>
-                <NavigationDesktop />
-                <Block mt='medium-4'>
-                    <Grid>
-                        <GridItem size='one-half'>
-                            <a href={logoHref} className='hw-footer__logo-link'>
-                                <Logo logo={logo} title={logoTitle} />
-                            </a>
-                        </GridItem>
-                        <GridItem size='one-half'>
-                            <SoMe some={some} />
-                        </GridItem>
-                    </Grid>
-                </Block>
-                <Hr />
-                <Block mt='on'>
-                    <Copyright text={copyright} />
-                    <ImportantLinks links={importantLinks} />
-                </Block>
-            </>
-        )
-    }
+            </Block>
+            <Hr />
+            <Block mt='on'>
+                <Copyright text={copyright} />
+                <ImportantLinks links={importantLinks} />
+            </Block>
+        </>
+    )
 
     return (
         <footer className='hw-footer'>
@@ -267,3 +256,5 @@ Footer.defaultProps = {
     logo: 'posten',
     copyright: 'Posten Norge AS'
 }
+
+export default Footer
