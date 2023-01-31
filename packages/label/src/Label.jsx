@@ -1,1 +1,3 @@
-import '../dist/label.scss'
+import '../sass/label.scss'
+
+export default {}
