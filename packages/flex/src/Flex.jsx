@@ -1,15 +1,15 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import '../dist/flex.scss'
+import '../sass/flex.scss'
 
-export default function Flex({
+const Flex = ({
     gutterMobile,
     gutterDesktop,
     wrap,
     variableHeight,
     children,
     elementType
-}) {
+}) => {
     let classes = ['hw-flex']
     if (gutterMobile) classes.push(`hw-flex--gutter-${gutterMobile}-mobile`)
     if (gutterDesktop) classes.push(`hw-flex--gutter-${gutterDesktop}-desktop`)
@@ -36,3 +36,5 @@ Flex.propTypes = {
 Flex.defaultProps = {
     elementType: 'div'
 }
+
+export default Flex
