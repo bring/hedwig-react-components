@@ -1,9 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-export default function Copyright({ text }) {
-    return <span className='hw-copyright'>© {text}</span>
-}
+const Copyright = ({ text }) => <span className='hw-copyright'>© {text}</span>
 
 Copyright.propTypes = {
     /**
@@ -11,3 +9,5 @@ Copyright.propTypes = {
      */
     text: PropTypes.string.isRequired
 }
+
+export default Copyright
