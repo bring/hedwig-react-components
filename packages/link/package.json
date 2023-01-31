@@ -12,7 +12,7 @@
     "author": "Helle Hiorth-Schøyen <helle@solidsquare.no>",
     "homepage": "https://github.com/bring/hedwig-react-components#readme",
     "license": "ISC",
-    "source": "src/index.js",
+    "source": "src/index.ts",
     "main": "dist/index.js",
     "module": "dist/module.js",
     "files": [
@@ -21,8 +21,7 @@
     ],
     "scripts": {
         "prebuild": "rimraf dist",
-        "build": "babel src -d dist --root-mode=upward --ignore '**/*.stories.js'",
-        "build:parcel": "npm run prebuild && parcel build"
+        "build": "parcel build"
     },
     "repository": {
         "type": "git",
