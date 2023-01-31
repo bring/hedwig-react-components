@@ -12,17 +12,15 @@
     "author": "Helle Hiorth-Schøyen <helle@solidsquare.no>",
     "homepage": "https://github.com/bring/hedwig-react-components#readme",
     "license": "ISC",
-    "source": "src/index.js",
+    "source": "src/index.ts",
     "main": "dist/index.js",
     "module": "dist/module.js",
     "files": [
         "dist"
     ],
     "scripts": {
-        "prebuild": "rimraf dist && npm run sass",
-        "sass": "sass sass/dropdown.scss:dist/dropdown.scss --style compressed --no-source-map",
-        "build": "babel src -d dist --root-mode=upward --ignore '**/*.stories.js'",
-        "build:parcel": "npm run prebuild && parcel build"
+        "prebuild": "rimraf dist",
+        "build": "parcel build"
     },
     "dependencies": {
         "@posten-hedwig/core": "^0.0.9",
