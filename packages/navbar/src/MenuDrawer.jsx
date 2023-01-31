@@ -2,17 +2,12 @@ import React, { useContext } from 'react'
 import { NavbarContext } from './NavbarContext'
 import { Flex } from '@posten-hedwig/flex'
 import { Block } from '@posten-hedwig/block'
-import '../dist/menu-drawer.scss'
+import '../sass/menu-drawer.scss'
 import Selector from './Selector'
 import { Accordion, AccordionItem } from '@posten-hedwig/accordion'
 import { Linklist } from '@posten-hedwig/linklist'
 
-export default function MenuDrawer({
-    featuredLinks,
-    loginLink,
-    sections,
-    selectorItems
-}) {
+const MenuDrawer = ({ featuredLinks, loginLink, sections, selectorItems }) => {
     const { menuOpen, desktop } = useContext(NavbarContext)
 
     const style = {
@@ -22,52 +17,45 @@ export default function MenuDrawer({
         visibility: 'visible'
     }
 
-    function Desktop() {
-        return (
-            <div className='hw-navbar__drawer-desktop'>
-                {featuredLinks && (
-                    <Flex wrap='fourths' gutterDesktop='large' elementType='ul'>
-                        {featuredLinks.map((link) => (
-                            <li key={link.props.children}>{link}</li>
-                        ))}
-                    </Flex>
-                )}
-                <Flex gutterDesktop='large' wrap='fourths'>
-                    {sections.map((section) => (
-                        <Block key={section.title}>
-                            <h5>{section.title}</h5>
-                            <Linklist links={section.links} />
-                        </Block>
+    const Desktop = () => (
+        <div className='hw-navbar__drawer-desktop'>
+            {featuredLinks && (
+                <Flex wrap='fourths' gutterDesktop='large' elementType='ul'>
+                    {featuredLinks.map((link) => (
+                        <li key={link.props.children}>{link}</li>
                     ))}
                 </Flex>
-            </div>
-        )
-    }
-
-    function Mobile() {
-        return (
-            <div className='hw-navbar__drawer-mobile'>
-                {selectorItems && (
-                    <Selector items={selectorItems} desktop={false} />
-                )}
-                {(featuredLinks || loginLink) && (
-                    <Block mt='medium-2'>
-                        <Linklist links={featuredLinks} />
+            )}
+            <Flex gutterDesktop='large' wrap='fourths'>
+                {sections.map((section) => (
+                    <Block key={section.title}>
+                        <h5>{section.title}</h5>
+                        <Linklist links={section.links} />
                     </Block>
-                )}
-                <Accordion>
-                    {sections.map((section) => (
-                        <AccordionItem
-                            title={section.title}
-                            key={section.title}
-                        >
-                            <Linklist links={section.links} />
-                        </AccordionItem>
-                    ))}
-                </Accordion>
-            </div>
-        )
-    }
+                ))}
+            </Flex>
+        </div>
+    )
+
+    const Mobile = () => (
+        <div className='hw-navbar__drawer-mobile'>
+            {selectorItems && (
+                <Selector items={selectorItems} desktop={false} />
+            )}
+            {(featuredLinks || loginLink) && (
+                <Block mt='medium-2'>
+                    <Linklist links={featuredLinks} />
+                </Block>
+            )}
+            <Accordion>
+                {sections.map((section) => (
+                    <AccordionItem title={section.title} key={section.title}>
+                        <Linklist links={section.links} />
+                    </AccordionItem>
+                ))}
+            </Accordion>
+        </div>
+    )
 
     return (
         menuOpen && (
@@ -80,3 +68,5 @@ export default function MenuDrawer({
         )
     )
 }
+
+export default MenuDrawer

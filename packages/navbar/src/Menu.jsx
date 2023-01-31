@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import MenuButton from './MenuButton'
 import MenuDrawer from './MenuDrawer'
 
-export default function Menu({
+const Menu = ({
     sections,
     openName,
     openTitle,
@@ -11,20 +11,20 @@ export default function Menu({
     closeTitle,
     featuredLinks,
     selectorItems
-}) {
-    return (
-        <>
-            <MenuButton
-                openName={openName}
-                openTitle={openTitle}
-                closeName={closeName}
-                closeTitle={closeTitle}
-            />
-            <MenuDrawer
-                featuredLinks={featuredLinks}
-                sections={sections}
-                selectorItems={selectorItems}
-            />
-        </>
-    )
-}
+}) => (
+    <>
+        <MenuButton
+            openName={openName}
+            openTitle={openTitle}
+            closeName={closeName}
+            closeTitle={closeTitle}
+        />
+        <MenuDrawer
+            featuredLinks={featuredLinks}
+            sections={sections}
+            selectorItems={selectorItems}
+        />
+    </>
+)
+
+export default Menu

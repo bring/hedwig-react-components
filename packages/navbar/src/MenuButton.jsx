@@ -5,14 +5,9 @@ import { NavbarContext } from './NavbarContext'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/pro-regular-svg-icons'
 import { faTimes } from '@fortawesome/pro-light-svg-icons'
-import '../dist/menu-button.scss'
+import '../sass/menu-button.scss'
 
-export default function MenuButton({
-    openName,
-    openTitle,
-    closeName,
-    closeTitle
-}) {
+const MenuButton = ({ openName, openTitle, closeName, closeTitle }) => {
     const { menuOpen, setMenuOpen, desktop } = useContext(NavbarContext)
     const [labelWidth, setLabelWidth] = useState()
 
@@ -30,27 +25,23 @@ export default function MenuButton({
         })
     }
 
-    function CloseLabel() {
-        return (
-            <span
-                className='hw-navbar__menu-button-label-close'
-                style={{ width: labelWidth }}
-            >
-                {closeName}
-            </span>
-        )
-    }
+    const CloseLabel = () => (
+        <span
+            className='hw-navbar__menu-button-label-close'
+            style={{ width: labelWidth }}
+        >
+            {closeName}
+        </span>
+    )
 
-    function OpenLabel() {
-        return (
-            <span
-                className='hw-navbar__menu-button-label-menu'
-                style={{ width: labelWidth }}
-            >
-                {openName}
-            </span>
-        )
-    }
+    const OpenLabel = () => (
+        <span
+            className='hw-navbar__menu-button-label-menu'
+            style={{ width: labelWidth }}
+        >
+            {openName}
+        </span>
+    )
 
     useEffect(() => {
         if (desktop && !labelWidth) {
@@ -62,17 +53,15 @@ export default function MenuButton({
         }
     }, [desktop, labelWidth])
 
-    function Icon({ icon, title }) {
-        return (
-            <span className='fa-stack hw-navbar__menu-button-toggle'>
-                <FontAwesomeIcon
-                    icon={icon}
-                    className='fa-fw fa-stack-2x'
-                    title={title}
-                />
-            </span>
-        )
-    }
+    const Icon = ({ icon, title }) => (
+        <span className='fa-stack hw-navbar__menu-button-toggle'>
+            <FontAwesomeIcon
+                icon={icon}
+                className='fa-fw fa-stack-2x'
+                title={title}
+            />
+        </span>
+    )
 
     return (
         <button
@@ -103,3 +92,5 @@ MenuButton.propTypes = {
     closeName: PropTypes.string.isRequired,
     closeTitle: PropTypes.string.isRequired
 }
+
+export default MenuButton

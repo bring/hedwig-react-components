@@ -6,7 +6,7 @@ const NavbarProvider = ({ children }) => {
     const [desktop, setDesktop] = useState()
     const [menuOpen, setMenuOpen] = useState(false)
 
-    function handleWindowSizeChange() {
+    const handleWindowSizeChange = () => {
         setDesktop(window.innerWidth >= 940)
     }
 

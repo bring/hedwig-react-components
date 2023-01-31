@@ -25,10 +25,8 @@
         "url": "git+https://github.com/bring/hedwig-react-components/tree/master/packages/navbar"
     },
     "scripts": {
-        "prebuild": "rimraf dist && npm run sass",
-        "sass": "sass sass/navbar.scss:dist/navbar.scss sass/menu-button.scss:dist/menu-button.scss sass/search-button.scss:dist/search-button.scss sass/menu-drawer.scss:dist/menu-drawer.scss sass/selector.scss:dist/selector.scss --style compressed --no-source-map",
-        "build": "babel src -d dist --root-mode=upward --ignore '**/*.stories.js'",
-        "build:parcel": "npm run prebuild && parcel build"
+        "prebuild": "rimraf dist",
+        "build": "parcel build"
     },
     "bugs": {
         "url": "https://github.com/bring/hedwig-react-components/issues"
