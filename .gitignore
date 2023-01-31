@@ -3,3 +3,4 @@ dist
 storybook-static
 lerna-debug.log
 .parcel-cache
+.DS_Store
