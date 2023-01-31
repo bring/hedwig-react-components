@@ -256,3 +256,5 @@ Footer.defaultProps = {
     logo: 'posten',
     copyright: 'Posten Norge AS'
 }
+
+export default Footer
