@@ -33,7 +33,6 @@ const Template = (args) => (
 
 export const Default = Template.bind({})
 
-//Default dropdown
 const TemplateDark = (args) => <DarkBadge {...args}>Dark Badge</DarkBadge>
 
 export const darkBadge = TemplateDark.bind({})
