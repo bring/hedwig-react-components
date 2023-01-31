@@ -1,8 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import '../dist/grid.scss'
+import '../sass/grid.scss'
 
-export default function Grid({ align, gutter, valign, children }) {
+const Grid = ({ align, gutter, valign, children }) => {
     const classes = ['hw-grid']
     if (['center', 'right'].includes(align)) classes.push('hw-grid--' + align)
     if (gutter == 'none') gutter = 'full'
@@ -25,3 +25,5 @@ Grid.propTypes = {
     gutter: PropTypes.oneOf(['default', 'narrow', 'wide', 'none']),
     valign: PropTypes.oneOf(['top', 'middle', 'bottom'])
 }
+
+export default Grid
