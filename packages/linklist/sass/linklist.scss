@@ -9,6 +9,8 @@
   list-style: none;
   margin: 0;
   padding: 0;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
 
   & li {
     margin-bottom: var(--hw-spacing-small-2);
