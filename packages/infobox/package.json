@@ -28,6 +28,7 @@
     "dependencies": {
         "@fortawesome/pro-solid-svg-icons": "^6.2.0",
         "@fortawesome/react-fontawesome": "^0.2.0",
+        "@posten-hedwig/core": "^0.0.9",
         "prop-types": "15.8.1"
     },
     "peerDependencies": {
