@@ -22,7 +22,7 @@ Hedwig Buttons
 ## Usage
 
 ```bash
-npm install @hedwig-posten/PrimaryButton
+npm i @posten-hedwig/button
 ```
 
 ```jsx

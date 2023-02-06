@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import '../sass/block.scss'
+import '@posten-hedwig/core'
 
 const Block = ({ px, py, mt, mb, elementType, classList, children }) => {
     const classes = ['hw-block']

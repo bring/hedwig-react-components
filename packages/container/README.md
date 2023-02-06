@@ -1,6 +1,6 @@
 # Container
 
-The container limits the width of it's wrapped contents and applies default side gutters. Containers are “root” components.
+Containers are “root” components that limits the width of it's wrapped contents and applies default side gutters. Containers does not apply any styling to its content such as font-family etc.
 
 ## Usage
 

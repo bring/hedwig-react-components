@@ -25,5 +25,8 @@
     },
     "peerDependencies": {
         "react": ">=16.14.x"
+    },
+    "dependencies": {
+        "@posten-hedwig/core": "^0.0.9"
     }
 }

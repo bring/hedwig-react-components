@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import '../sass/grid.scss'
+import '@posten-hedwig/core'
 
 const Grid = ({ align, gutter, valign, children }) => {
     const classes = ['hw-grid']
