@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import '../sass/linklist.scss'
+import '@posten-hedwig/core'
 
 const Linklist = ({ links, small }) => {
     let classes = ['hw-linklist']
