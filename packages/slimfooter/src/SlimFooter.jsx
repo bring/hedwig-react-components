@@ -6,6 +6,7 @@ import { Grid, GridItem } from '@posten-hedwig/grid'
 import { Logo } from '@posten-hedwig/logo'
 import ImportantLinks from './ImportantLinks'
 import Copyright from './Copyright'
+import '@posten-hedwig/core'
 import '../sass/slimfooter.scss'
 
 const SlimFooter = ({
