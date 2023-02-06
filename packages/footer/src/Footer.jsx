@@ -10,6 +10,7 @@ import SoMe from './SoMe'
 import Copyright from './Copyright'
 import ImportantLinks from './ImportantLinks'
 import '../sass/footer.scss'
+import '@posten-hedwig/core'
 
 const Footer = ({
     logo,
