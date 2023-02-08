@@ -36,8 +36,7 @@
         "react": ">=16.14.x"
     },
     "dependencies": {
-        "@posten-hedwig/core": "^1.0.0-alpha.0",
-        "prop-types": "^15.8.1"
+        "@posten-hedwig/core": "^1.0.0-alpha.0"
     },
     "devDependencies": {
         "@parcel/transformer-svg-react": "^2.8.3"
