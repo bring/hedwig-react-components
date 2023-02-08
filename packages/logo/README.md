@@ -19,15 +19,9 @@ import { LogoPosten, LogoBring } from '@posten-hedwig/logo'
 ### 3 Render
 
 ```jsx
-<LogoPosten title='Posten Logo' />
+<LogoPosten />
 ```
 
 ```jsx
-<LogoBring title='Bring Logo' />
+<LogoBring />
 ```
-
-## API
-
-### Logo `title`
-
-This prop specifies the alt text for the Logo

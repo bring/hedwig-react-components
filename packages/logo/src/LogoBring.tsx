@@ -4,15 +4,6 @@ import LogoBringSvg from '../logos/logo-bring.svg'
 import '../sass/logo.scss'
 import '@posten-hedwig/core'
 
-const LogoBring = ({ title }) => (
-    <LogoBringSvg alt={title} className='hw-logo' />
-)
-
-LogoBring.propTypes = {
-    /**
-     * Title for logo
-     */
-    title: PropTypes.string.isRequired
-}
+const LogoBring = () => <LogoBringSvg className='hw-logo' />
 
 export default LogoBring

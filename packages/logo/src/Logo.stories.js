@@ -1,5 +1,6 @@
 import React from 'react'
 import Readme from './Readme.mdx'
+/** Nasty import */
 import { LogoBring, LogoPosten } from '../dist/index'
 import {
     Description,
@@ -27,18 +28,10 @@ export default {
     }
 }
 
-const TemplatePosten = (args) => <LogoPosten {...args} />
+const TemplatePosten = (args) => <LogoPosten />
 
 export const Posten = TemplatePosten.bind({})
 
-Posten.args = {
-    title: 'Posten logo'
-}
-
-const TemplateBring = (args) => <LogoBring {...args} />
+const TemplateBring = (args) => <LogoBring />
 
 export const Bring = TemplateBring.bind({})
-
-Bring.args = {
-    title: 'Bring logo'
-}

@@ -13,8 +13,9 @@
     "author": "Viggo Normann <v@iggo.no>",
     "homepage": "https://github.com/bring/hedwig-react-components#readme",
     "license": "ISC",
-    "source": "src/index.js",
+    "source": "src/index.ts",
     "main": "dist/index.js",
+    "types": "dist/types.d.ts",
     "module": "dist/module.js",
     "files": [
         "logos",
