@@ -15,6 +15,7 @@
     ],
     "source": "src/index.ts",
     "main": "dist/index.js",
+    "types": "dist/types.d.ts",
     "module": "dist/module.js",
     "directories": {
         "test": "__tests__"
@@ -23,11 +24,6 @@
         "test": "echo \"Error: run tests from root\" && exit 1",
         "prebuild": "rimraf dist",
         "build": "parcel build"
-    },
-    "dependencies": {
-        "css-vars-ponyfill": "^2.4.7",
-        "postcss": "^8.4.1",
-        "postcss-js": "^3.0.3"
     },
     "gitHead": "c6c503b48a69b8ecc180ca28f84791cc9cc6277b"
 }
