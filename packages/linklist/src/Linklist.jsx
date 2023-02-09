@@ -24,21 +24,3 @@ const LinkList = ({ small, children }) => {
     
     export default LinkList
     
-    //     links: PropTypes.arrayOf(
-    //         PropTypes.shape({
-    //             props: PropTypes.oneOfType([
-    //                 PropTypes.shape({
-    //                     href: PropTypes.string.isRequired,
-    //                     children: PropTypes.node.isRequired
-    //                 }),
-    //                 PropTypes.shape({
-    //                     to: PropTypes.oneOfType([
-    //                         PropTypes.string,
-    //                         PropTypes.object,
-    //                         PropTypes.func
-    //                     ]),
-    //                     children: PropTypes.node.isRequired
-    //                 })
-    //             ]).isRequired
-    //         })
-    //     ),
