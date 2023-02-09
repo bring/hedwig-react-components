@@ -28,10 +28,10 @@ export default {
     }
 }
 
-const TemplatePosten = (args) => <LogoPosten />
+const TemplatePosten = () => <LogoPosten />
 
 export const Posten = TemplatePosten.bind({})
 
-const TemplateBring = (args) => <LogoBring />
+const TemplateBring = () => <LogoBring />
 
 export const Bring = TemplateBring.bind({})
