@@ -24,6 +24,6 @@ npm install @hedwig-posten/Link
 import { Link } from '@posten-hedwig/link'
 …
 <>
-    <Link>I am a link</Link>
+    <Link href='#'>I am a link</Link>
 </>
 ```

@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import { Container } from '@posten-hedwig/container'
 import { Block } from '@posten-hedwig/block'
-import { Linklist } from '@posten-hedwig/linklist'
 import { Grid, GridItem } from '@posten-hedwig/grid'
 import { Accordion, AccordionItem } from '@posten-hedwig/accordion'
 import { Logo } from '@posten-hedwig/logo'
@@ -11,7 +10,6 @@ import Copyright from './Copyright'
 import ImportantLinks from './ImportantLinks'
 import '../sass/footer.scss'
 import '@posten-hedwig/core'
-
 const Footer = ({
     logo,
     logoHref,
@@ -49,7 +47,11 @@ const Footer = ({
                 <Accordion>
                     {sections.map((section, index) => (
                         <AccordionItem title={section.title} key={index}>
-                            <Linklist links={section.links} />
+                            <ul className='hw-footer-section'>
+                                {section.links.map((link, index) => (
+                                    <li key={index}>{link}</li>
+                                ))}
+                            </ul>
                         </AccordionItem>
                     ))}
                 </Accordion>
@@ -79,7 +81,11 @@ const Footer = ({
                 {sections.map((section, index) => (
                     <GridItem size='one-quarter' key={index}>
                         <h4>{section.title}</h4>
-                        <Linklist links={section.links} />
+                        <ul className='hw-footer-section'>
+                            {section.links.map((link, index) => (
+                                <li key={index}>{link}</li>
+                            ))}
+                        </ul>
                     </GridItem>
                 ))}
                 {buttons && (

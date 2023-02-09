@@ -71,12 +71,24 @@
         font-size: var(--hw-font-size-p);
         color: var(--hw-color-white);
     }
-    .hw-linklist {
+    .hw-footer-section {
+        margin: 0;
+        padding:0;
         margin-top: var(--hw-spacing-small-4);
+        list-style:none;
+
+        li {
+            margin-bottom: var(--hw-spacing-small-2)
+        }
+
+        li:last-of-type {
+            margin-bottom: 0;
+        }
 
         a {
             color: var(--hw-color-primary-lighter);
             font-size: var(--hw-font-size-p);
+            line-height: 1.7;
             text-decoration: none;
             border-bottom: none !important;
 

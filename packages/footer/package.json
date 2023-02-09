@@ -39,7 +39,6 @@
         "@posten-hedwig/container": "^2.0.0-alpha.0",
         "@posten-hedwig/core": "^1.0.0-alpha.0",
         "@posten-hedwig/grid": "^2.0.0-alpha.0",
-        "@posten-hedwig/linklist": "^2.0.0-alpha.0",
         "@posten-hedwig/logo": "^2.0.0-alpha.0",
         "prop-types": "^15.8.1"
     },

@@ -48,9 +48,18 @@
         }
 
         ul {
+            margin-top:0;
             margin-bottom: var(--hw-spacing-small-4);
             list-style: none;
             padding: 0;
+        }
+
+        ul li {
+            margin-bottom: var(--hw-spacing-small-2)
+        }
+
+        ul li:last-of-type {
+            margin-bottom:0;
         }
 
         ul li a {
@@ -82,7 +91,7 @@
         padding-left: var(--hw-spacing-small-3);
         padding-right: var(--hw-spacing-small-3);
 
-        .hw-linklist {
+        ul {
             margin-bottom: var(--hw-spacing-medium-4);
             li {
                 margin-bottom: var(--hw-spacing-small-4);
