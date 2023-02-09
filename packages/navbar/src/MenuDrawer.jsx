@@ -5,7 +5,6 @@ import { Block } from '@posten-hedwig/block'
 import '../sass/menu-drawer.scss'
 import Selector from './Selector'
 import { Accordion, AccordionItem } from '@posten-hedwig/accordion'
-import { LinkList } from '@posten-hedwig/linklist'
 
 const MenuDrawer = ({ featuredLinks, loginLink, sections, selectorItems }) => {
     const { menuOpen, desktop } = useContext(NavbarContext)
@@ -49,11 +48,10 @@ const MenuDrawer = ({ featuredLinks, loginLink, sections, selectorItems }) => {
             {(featuredLinks || loginLink) && (
                 <Block mt='medium-2'>
                     <ul>
-                    {featuredLinks.map((link) => (
-                        <li key={link.props.children}>{link}</li>
-                    ))}
+                        {featuredLinks.map((link) => (
+                            <li key={link.props.children}>{link}</li>
+                        ))}
                     </ul>
-                    {/* <LinkList links={featuredLinks} /> */}
                 </Block>
             )}
             <Accordion>
