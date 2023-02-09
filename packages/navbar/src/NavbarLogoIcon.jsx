@@ -1,20 +1,19 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import logoBring from '../icons/logo-bring.svg'
-import logoPosten from '../icons/logo-posten.svg'
+import { LogoBring, LogoPosten } from '@posten-hedwig/logo'
 
-const NavbarLogoIcon = ({ href, logo, title, ariaLabel }) => (
+const NavbarLogoIcon = ({ href, logo, ariaLabel }) => (
     <a
         href={href}
         className='hw-navbar__logo'
         style={{ zIndex: '300' }}
         aria-label={ariaLabel}
     >
-        <img
-            src={logo === 'posten' ? logoPosten : logoBring}
-            className='hw-navbar__logo-standard'
-            alt={title}
-        />
+        {logo === 'bring' ? (
+            <LogoBring className='hw-navbar__logo-standard' />
+        ) : (
+            <LogoPosten className='hw-navbar__logo-standard' />
+        )}
     </a>
 )
 

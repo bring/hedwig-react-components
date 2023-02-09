@@ -11,7 +11,6 @@ import '../sass/navbar.scss'
 const Navbar = ({
     logoHref,
     logo,
-    logoTitle,
     logoAriaLabel,
     flagship,
     skipToMainHref,
@@ -53,7 +52,6 @@ const Navbar = ({
                             <NavbarLogoFlagship
                                 href={logoHref}
                                 logo={logo}
-                                title={logoTitle}
                                 ariaLabel={logoAriaLabel}
                                 flagship={flagship}
                             />
@@ -61,7 +59,6 @@ const Navbar = ({
                             <NavbarLogoIcon
                                 href={logoHref}
                                 logo={logo}
-                                title={logoTitle}
                                 ariaLabel={logoAriaLabel}
                             />
                         )}
@@ -102,11 +99,6 @@ Navbar.propTypes = {
      * Specify the href for clicking on the logo
      */
     logoHref: PropTypes.string.isRequired,
-
-    /**
-     * Title for logo
-     */
-    logoTitle: PropTypes.string.isRequired,
 
     /**
      * Aria label for logo

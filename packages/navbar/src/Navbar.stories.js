@@ -64,7 +64,6 @@ const Default = (args) => <Navbar {...args} />
 
 export const navbarDefault = Default.bind({})
 navbarDefault.args = {
-    logoTitle: 'Posten Logo',
     logo: 'posten',
     logoHref: '#',
     logoAriaLabel: 'Go to homepage',
@@ -81,7 +80,6 @@ const TemplateMenu = (args) => (
 
 export const navbarMenu = TemplateMenu.bind({})
 navbarMenu.args = {
-    logoTitle: 'Posten Logo',
     logo: 'posten',
     logoHref: '#',
     logoAriaLabel: 'Go to homepage',
@@ -143,7 +141,6 @@ const TemplateSelector = (args) => (
 
 export const navbarSelector = TemplateSelector.bind({})
 navbarSelector.args = {
-    logoTitle: 'Bring Logo',
     logo: 'bring',
     logoHref: '#',
     logoAriaLabel: 'Go to homepage',
@@ -168,7 +165,6 @@ const TemplateFlagship = (args) => (
 )
 export const navbarFlagship = TemplateFlagship.bind({})
 navbarFlagship.args = {
-    logoTitle: 'Bring Logo',
     logo: 'bring',
     logoHref: '#',
     logoAriaLabel: 'Go to homepage',
