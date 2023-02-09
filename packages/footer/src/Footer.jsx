@@ -4,7 +4,7 @@ import { Container } from '@posten-hedwig/container'
 import { Block } from '@posten-hedwig/block'
 import { Grid, GridItem } from '@posten-hedwig/grid'
 import { Accordion, AccordionItem } from '@posten-hedwig/accordion'
-import { Logo } from '@posten-hedwig/logo'
+import { LogoBring, LogoPosten } from '@posten-hedwig/logo'
 import SoMe from './SoMe'
 import Copyright from './Copyright'
 import ImportantLinks from './ImportantLinks'
@@ -102,12 +102,22 @@ const Footer = ({
 
     const Hr = () => <div className='hw-footer__hr' />
 
+    const LogoLink = () => (
+        <>
+            <a
+                href={logoHref}
+                aria-label={logoTitle}
+                className='hw-footer__logo-link'
+            >
+                {logo === 'bring' ? <LogoBring /> : <LogoPosten />}
+            </a>
+        </>
+    )
+
     const Mobile = () => (
         <>
             <NavigationMobile />
-            <a href={logoHref} className='hw-footer__logo-link'>
-                <Logo logo={logo} title={logoTitle} />
-            </a>
+            <LogoLink />
             <SoMe some={some} />
             <Hr />
             <Block mt='on'>
@@ -125,9 +135,7 @@ const Footer = ({
             <Block mt='medium-4'>
                 <Grid>
                     <GridItem size='one-half'>
-                        <a href={logoHref} className='hw-footer__logo-link'>
-                            <Logo logo={logo} title={logoTitle} />
-                        </a>
+                        <LogoLink />
                     </GridItem>
                     <GridItem size='one-half'>
                         <SoMe some={some} />
