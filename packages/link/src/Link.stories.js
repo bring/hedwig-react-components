@@ -1,20 +1,3 @@
-// import React from 'react'
-// import Link from './Link'
-
-// export default {
-//     title: 'Components/Link/Default',
-//     component: Link
-// }
-
-// const Template = (args) => <Link {...args}>This is a link</Link>
-
-// export const input = Template.bind({})
-// input.args = {
-//     href: '#'
-// }
-
-// input.storyName = 'Default'
-
 import React from 'react'
 import Readme from './Readme.mdx'
 import { Link, SimpleLink, SolidLink, InvertedLink } from './index'
@@ -49,6 +32,10 @@ const Template = (args) => (
 )
 
 export const Default = Template.bind({})
+
+Default.args = {
+    href: '#'
+}
 
 const SimpleTemplate = (args) => (
     <SimpleLink {...args}>

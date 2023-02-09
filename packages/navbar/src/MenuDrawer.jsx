@@ -5,7 +5,7 @@ import { Block } from '@posten-hedwig/block'
 import '../sass/menu-drawer.scss'
 import Selector from './Selector'
 import { Accordion, AccordionItem } from '@posten-hedwig/accordion'
-import { Linklist } from '@posten-hedwig/linklist'
+import { LinkList } from '@posten-hedwig/linklist'
 
 const MenuDrawer = ({ featuredLinks, loginLink, sections, selectorItems }) => {
     const { menuOpen, desktop } = useContext(NavbarContext)
@@ -30,7 +30,11 @@ const MenuDrawer = ({ featuredLinks, loginLink, sections, selectorItems }) => {
                 {sections.map((section) => (
                     <Block key={section.title}>
                         <h5>{section.title}</h5>
-                        <Linklist links={section.links} />
+                        <ul>
+                            {section.links.map((link, index) => (
+                                <li key={index}>{link}</li>
+                            ))}
+                        </ul>
                     </Block>
                 ))}
             </Flex>
@@ -44,13 +48,22 @@ const MenuDrawer = ({ featuredLinks, loginLink, sections, selectorItems }) => {
             )}
             {(featuredLinks || loginLink) && (
                 <Block mt='medium-2'>
-                    <Linklist links={featuredLinks} />
+                    <ul>
+                    {featuredLinks.map((link) => (
+                        <li key={link.props.children}>{link}</li>
+                    ))}
+                    </ul>
+                    {/* <LinkList links={featuredLinks} /> */}
                 </Block>
             )}
             <Accordion>
                 {sections.map((section) => (
                     <AccordionItem title={section.title} key={section.title}>
-                        <Linklist links={section.links} />
+                        <ul>
+                            {section.links.map((link, index) => (
+                                <li key={index}>{link}</li>
+                            ))}
+                        </ul>
                     </AccordionItem>
                 ))}
             </Accordion>

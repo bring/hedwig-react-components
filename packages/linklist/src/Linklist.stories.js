@@ -1,30 +1,40 @@
 import React from 'react'
-import { BrowserRouter, Link as ReactLink } from 'react-router-dom'
-import Linklist from './Linklist'
+import Readme from './Readme.mdx'
+import { LinkList, LinkListItem } from './index'
 import { Link } from '@posten-hedwig/link'
+import {
+    Description,
+    Primary,
+    ArgsTable,
+    Stories,
+    PRIMARY_STORY
+} from '@storybook/addon-docs'
 
 export default {
-    title: 'Components/LinkList/Default',
-    component: Linklist
+    title: 'Components/LinkList',
+    component: LinkList,
+    parameters: {
+        docs: {
+            page: () => (
+                <>
+                    <Readme />
+                    <Description />
+                    <Primary />
+                    <ArgsTable story={PRIMARY_STORY} />
+                    <Stories />
+                </>
+            )
+        }
+    }
 }
 
 const Template = (args) => (
-    <BrowserRouter>
-        <Linklist {...args} />
-    </BrowserRouter>
+    <LinkList {...args}>
+        <LinkListItem><a href="#">A link</a></LinkListItem>
+        <LinkListItem><a href="#">Another link</a></LinkListItem>
+    </LinkList>
 )
 
-const links = [
-    <Link href='https://www.bring.no'>Bring</Link>,
-    <Link href='https://www.posten.no'>Posten</Link>,
-    <Link href='https://www.mybring.no'>Mybring</Link>,
-    <a href='https://www.bring.se'>Bring Sverige</a>,
-    <ReactLink to='/invoice'>Invoice</ReactLink>
-]
+export const Default = Template.bind({})
 
-export const input = Template.bind({})
-input.args = {
-    links
-}
 
-input.storyName = 'Default'

@@ -39,12 +39,10 @@
         "@posten-hedwig/block": "^2.0.0-alpha.0",
         "@posten-hedwig/core": "^1.0.0-alpha.0",
         "@posten-hedwig/flex": "^2.0.0-alpha.0",
+        "@posten-hedwig/icon": "^2.0.0-alpha.0",
+        "@posten-hedwig/link": "^1.0.0-alpha.0",
         "@posten-hedwig/linklist": "^2.0.0-alpha.0",
         "prop-types": "15.8.1"
-    },
-    "devDependencies": {
-        "@posten-hedwig/icon": "^2.0.0-alpha.0",
-        "@posten-hedwig/link": "^1.0.0-alpha.0"
     },
     "peerDependencies": {
         "react": ">=16.14.x",
