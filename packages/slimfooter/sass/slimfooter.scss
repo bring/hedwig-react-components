@@ -9,16 +9,9 @@
     margin: 0 auto;
 
     &__logo-link {
-            position: relative;
-            height: 75px;
-            width: var(--hw-logo-width);
-            display: inline-block;
-
-            img {
-                visibility: visible;
-                opacity: 1;
-                display: block;
-            }
+        position: relative;
+        height: 75px;
+        display: inline-block;
     }
 
     .hw-slim-footer__importantlinks a {

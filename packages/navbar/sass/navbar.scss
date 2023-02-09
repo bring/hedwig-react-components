@@ -50,7 +50,6 @@
         .hw-logo {
             visibility: visible;
             opacity: 1;
-            width: var(--hw-logo-width);
             height: 100%;
             vertical-align: middle;
         }
@@ -411,12 +410,6 @@
 
     & .hw-navbar__logo--service {
         margin: 0;
-        & .hw-navbar__logo-standard {
-            width: var(--hw-logo-width-mobile);
-            @include mixins.small {
-                width: var(--hw-logo-width);
-            }
-        }
     }
 
     & .hw-navbar__top--service {
