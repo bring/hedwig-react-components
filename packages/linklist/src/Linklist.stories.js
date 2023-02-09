@@ -1,7 +1,6 @@
 import React from 'react'
 import Readme from './Readme.mdx'
 import { LinkList, LinkListItem } from './index'
-import { Link } from '@posten-hedwig/link'
 import {
     Description,
     Primary,
@@ -30,11 +29,13 @@ export default {
 
 const Template = (args) => (
     <LinkList {...args}>
-        <LinkListItem><a href="#">A link</a></LinkListItem>
-        <LinkListItem><a href="#">Another link</a></LinkListItem>
+        <LinkListItem>
+            <a href='#'>A link</a>
+        </LinkListItem>
+        <LinkListItem>
+            <a href='#'>Another link</a>
+        </LinkListItem>
     </LinkList>
 )
 
 export const Default = Template.bind({})
-
-
