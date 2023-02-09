@@ -3,4 +3,4 @@
     "transformers": {
       "*.svg": ["...", "@parcel/transformer-svg-react"]
     }
-  }
+}
