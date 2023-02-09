@@ -1,6 +1,7 @@
 import React from 'react'
 import Readme from './Readme.mdx'
-import { Logo } from './index'
+/** Nasty import */
+import { LogoBring, LogoPosten } from '../dist/index'
 import {
     Description,
     Primary,
@@ -11,7 +12,7 @@ import {
 
 export default {
     title: 'Components/Logo',
-    component: Logo,
+    component: LogoPosten,
     parameters: {
         docs: {
             page: () => (
@@ -27,24 +28,10 @@ export default {
     }
 }
 
-const TemplatePosten = (args) => <Logo {...args} />
+const TemplatePosten = () => <LogoPosten />
 
 export const Posten = TemplatePosten.bind({})
 
-Posten.args = {
-    logo: 'posten',
-    title: 'Posten logo'
-}
-
-const TemplateBring = (args) => (
-    <div className='hw-theme-bring'>
-        <Logo {...args} />
-    </div>
-)
+const TemplateBring = () => <LogoBring />
 
 export const Bring = TemplateBring.bind({})
-
-Bring.args = {
-    logo: 'bring',
-    title: 'Bring logo'
-}
