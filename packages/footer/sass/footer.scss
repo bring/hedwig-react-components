@@ -14,18 +14,9 @@
     margin: 0 auto;
 
     &__logo-link {
-            position: relative;
-            height: 75px;
-            width: var(--hw-logo-width);
-            display: inline-block;
-
-            img {
-                visibility: visible;
-                opacity: 1;
-                display: block;
-                height: 75px;
-                width: var(--hw-logo-width);
-            }
+        position: relative;
+        height: 75px;
+        display: inline-block;
     }
 
     /**

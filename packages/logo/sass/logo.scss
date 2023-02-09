@@ -1,4 +1,16 @@
+@use '../node_modules/@posten-hedwig/core/sass/mixins';
 .hw-logo {
     height: 75px;
-    width: var(--hw-logo-width);
+    &__bring {
+        width: 94.5px;
+        @include mixins.large {
+            width: 128px;
+        }
+    }
+    &__posten {
+        width: 118.42px;
+        @include mixins.large {
+            width: 158px;
+        }
+    }
 }

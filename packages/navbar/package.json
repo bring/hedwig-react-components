@@ -17,8 +17,7 @@
     "types": "dist/types.d.ts",
     "module": "dist/module.js",
     "files": [
-        "dist",
-        "icons"
+        "dist"
     ],
     "repository": {
         "type": "git",
@@ -41,6 +40,7 @@
         "@posten-hedwig/flex": "^2.0.0-alpha.0",
         "@posten-hedwig/icon": "^2.0.0-alpha.0",
         "@posten-hedwig/link": "^1.0.0-alpha.0",
+        "@posten-hedwig/logo": "^2.0.0-alpha.0",
         "prop-types": "15.8.1"
     },
     "peerDependencies": {
