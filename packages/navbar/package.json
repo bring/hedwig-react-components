@@ -17,8 +17,7 @@
     "types": "dist/types.d.ts",
     "module": "dist/module.js",
     "files": [
-        "dist",
-        "icons"
+        "dist"
     ],
     "repository": {
         "type": "git",
