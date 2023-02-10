@@ -18,7 +18,6 @@ const NavbarLogoFlagship = ({ href, logo, ariaLabel, flagship }) => (
 NavbarLogoFlagship.propTypes = {
     href: PropTypes.string.isRequired,
     logo: PropTypes.oneOf(['bring', 'posten']).isRequired,
-    title: PropTypes.string.isRequired,
     ariaLabel: PropTypes.string,
     flagship: PropTypes.string.isRequired
 }
