@@ -20,7 +20,6 @@ const NavbarLogoIcon = ({ href, logo, ariaLabel }) => (
 NavbarLogoIcon.propTypes = {
     href: PropTypes.string.isRequired,
     logo: PropTypes.oneOf(['bring', 'posten']).isRequired,
-    title: PropTypes.string.isRequired,
     ariaLabel: PropTypes.string.isRequired
 }
 
