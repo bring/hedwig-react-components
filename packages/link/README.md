@@ -17,7 +17,7 @@ Hedwig Links
 ## Usage
 
 ```bash
-npm install @hedwig-posten/Link
+npm i @posten-hedwig/link
 ```
 
 ```jsx
