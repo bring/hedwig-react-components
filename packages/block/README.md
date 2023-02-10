@@ -13,7 +13,7 @@ Block
 ## Usage
 
 ```bash
-npm install @hedwig-posten/block
+npm install @posten-hedwig/block
 ```
 
 ```jsx

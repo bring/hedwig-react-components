@@ -24,7 +24,7 @@ const Navbar = ({
     menuFeaturedLinks,
     children
 }) => {
-    const [desktop, setDesktop] = useState()
+    const [desktop, setDesktop] = useState(false)
 
     const handleWindowSizeChange = () => {
         setDesktop(window.innerWidth >= 940)
