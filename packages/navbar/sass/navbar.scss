@@ -7,6 +7,7 @@
     background: var(--hw-color-white);
     height: var(--hw-navbar-height-mobile);
     font-family: var(--hw-font-primary-regular);
+    text-align: left;
     -webkit-font-smoothing: antialiased;
 
     @include mixins.large {
