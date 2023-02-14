@@ -8,8 +8,10 @@ import { LogoBring, LogoPosten } from '@posten-hedwig/logo'
 import SoMe from './SoMe'
 import Copyright from './Copyright'
 import ImportantLinks from './ImportantLinks'
+import Desktop from './Desktop'
 import '../sass/footer.scss'
 import '@posten-hedwig/core'
+
 const Footer = ({
     logo,
     logoHref,
@@ -20,7 +22,7 @@ const Footer = ({
     buttons,
     some
 }) => {
-    const [desktop, setDesktop] = useState()
+    const [desktop, setDesktop] = useState(false)
 
     const handleWindowSizeChange = () => {
         setDesktop(window.innerWidth >= 940)
@@ -59,50 +61,9 @@ const Footer = ({
         </nav>
     )
 
-    /**
-     * Add an extra grid item to push buttons to the right
-     * if less than three sections are present
-     */
-    const ExtraGridItem = ({ missing }) => {
-        if ([1, 2, 3].includes(missing)) {
-            const sizes = {
-                1: 'one-quarter',
-                2: 'one-half',
-                3: 'three-quarters'
-            }
-            return <GridItem size={sizes[missing]} />
-        }
-        return null
-    }
-
-    const NavigationDesktop = () => (
-        <nav>
-            <Grid>
-                {sections.map((section, index) => (
-                    <GridItem size='one-quarter' key={index}>
-                        <h4>{section.title}</h4>
-                        <ul className='hw-footer-section'>
-                            {section.links.map((link, index) => (
-                                <li key={index}>{link}</li>
-                            ))}
-                        </ul>
-                    </GridItem>
-                ))}
-                {buttons && (
-                    <>
-                        <ExtraGridItem missing={3 - sections.length} />
-                        <GridItem size='one-quarter'>
-                            <Buttons />
-                        </GridItem>
-                    </>
-                )}
-            </Grid>
-        </nav>
-    )
-
     const Hr = () => <div className='hw-footer__hr' />
 
-    const LogoLink = () => (
+    const LogoLink = ({ logoHref, logoTitle, logo }) => (
         <>
             <a
                 href={logoHref}
@@ -117,34 +78,13 @@ const Footer = ({
     const Mobile = () => (
         <>
             <NavigationMobile />
-            <LogoLink />
+            <LogoLink logoHref={logoHref} logoTitle={logoTitle} logo={logo} />
             <SoMe some={some} />
             <Hr />
             <Block mt='on'>
                 <Copyright text={copyright} />
             </Block>
             <Block mt='on'>
-                <ImportantLinks links={importantLinks} />
-            </Block>
-        </>
-    )
-
-    const Desktop = () => (
-        <>
-            <NavigationDesktop />
-            <Block mt='medium-4'>
-                <Grid>
-                    <GridItem size='one-half'>
-                        <LogoLink />
-                    </GridItem>
-                    <GridItem size='one-half'>
-                        <SoMe some={some} />
-                    </GridItem>
-                </Grid>
-            </Block>
-            <Hr />
-            <Block mt='on'>
-                <Copyright text={copyright} />
                 <ImportantLinks links={importantLinks} />
             </Block>
         </>
