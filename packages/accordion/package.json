@@ -1,6 +1,6 @@
 {
     "name": "@posten-hedwig/accordion",
-    "version": "2.1.0-alpha.0",
+    "version": "2.1.1-alpha.0",
     "publishConfig": {
         "access": "public"
     },
@@ -32,7 +32,7 @@
     "dependencies": {
         "@fortawesome/pro-solid-svg-icons": "^6.2.0",
         "@fortawesome/react-fontawesome": "^0.2.0",
-        "@posten-hedwig/core": "^1.1.0-alpha.0",
+        "@posten-hedwig/core": "^1.1.1-alpha.0",
         "prop-types": "^15.8.1"
     },
     "peerDependencies": {
