@@ -5,6 +5,7 @@
     margin: 0;
     margin-left: calc(var(--hw-spacing-small-4) * -1);
     list-style: none;
+    text-align:left;
 }
 
 @include mixins.medium {
