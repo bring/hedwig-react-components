@@ -27,9 +27,7 @@ export default {
     }
 }
 
-const Template = (args) => (
-    <Link {...args}>This is a link</Link>
-)
+const Template = (args) => <Link {...args}>This is a link</Link>
 
 export const Default = Template.bind({})
 
@@ -50,7 +48,9 @@ Simple.args = {
     href: '#'
 }
 
-const SolidTemplate = (args) => <SolidLink {...args}>This is a solid link</SolidLink>
+const SolidTemplate = (args) => (
+    <SolidLink {...args}>This is a solid link</SolidLink>
+)
 
 export const Solid = SolidTemplate.bind({})
 Solid.args = {
@@ -65,4 +65,3 @@ export const Inverted = InvertedTemplate.bind({})
 Inverted.args = {
     href: '#'
 }
-

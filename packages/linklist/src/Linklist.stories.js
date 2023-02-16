@@ -33,7 +33,7 @@ const Template = (args) => (
             <a href='#'>A link</a>
         </LinkListItem>
         <LinkListItem>
-            <a href='#'>Another link</a>
+            <a href='#'>Another link in the list</a>
         </LinkListItem>
     </LinkList>
 )

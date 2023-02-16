@@ -33,21 +33,21 @@ export const Default = Template.bind({})
 
 const PaddingTemplate = (args) => (
     <>
-Colors are for illustration purposes. Padding is green, margin is orange
-<div className='hw-helpers-margin-highlighter'>
-    <Block {...args}>
-        <p className='hw-helpers-margin-highlighter-content'>
-            Block with padding 
-        </p>
-    </Block>
-</div>
-</>
+        Colors are for illustration purposes. Padding is green, margin is orange
+        <div className='hw-helpers-margin-highlighter'>
+            <Block {...args}>
+                <p className='hw-helpers-margin-highlighter-content'>
+                    Block with padding
+                </p>
+            </Block>
+        </div>
+    </>
 )
 
 export const WithPadding = PaddingTemplate.bind({})
 WithPadding.args = {
-    py:'responsive',
-    px:'responsive'
+    py: 'responsive',
+    px: 'responsive'
 }
 
 WithPadding.parameters = {

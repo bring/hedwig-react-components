@@ -37,6 +37,7 @@ export default {
 const Template = (args) => <Icon {...args} />
 
 export const Default = Template.bind({})
+
 Default.args = {
     icon: adresser,
     title: 'List of addresses',

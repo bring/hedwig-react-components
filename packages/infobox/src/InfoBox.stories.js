@@ -16,5 +16,5 @@ const Template = (args) => (
 
 export const Default = Template.bind({})
 Default.args = {
-    title: 'So, an Info Box'
+    title: 'So, just an Info Box'
 }

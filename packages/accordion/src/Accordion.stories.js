@@ -44,7 +44,7 @@ const item2 = () => (
     >
         <p>
             I vårt Adressesøk kan du finne hvilket hentested som er knyttet til
-            adressen din. I søket får du listet opp alle adressene inkludert
+            din adressen. I søket får du listet opp alle adressene inkludert
             husnummer og tilhørende postnummer. Holder du markøren over adressen
             vil du se hentested (for pakker og store sendinger). Du kan ved å
             klikke på husnummeret gå til kartløsningen, som vil vise deg mer
