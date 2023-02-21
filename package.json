@@ -43,7 +43,9 @@
   },
   "scripts": {
     "storybook": "rm -rf node_modules/.cache/storybook && start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "nuke": "lerna clean --yes && rm -rf node_modules && rm -rf packages/*/.parcel-cache",
+    "init": "npm install && lerna bootstrap && lerna run build"
   },
   "engines": {
     "node": ">= 16.13.0",
