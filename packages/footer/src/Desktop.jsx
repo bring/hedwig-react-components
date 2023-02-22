@@ -1,16 +1,21 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import { Grid, GridItem } from '@posten-hedwig/grid'
+import { Block } from '@posten-hedwig/block'
+import SoMe from './SoMe'
+import Copyright from './Copyright'
+import ImportantLinks from './ImportantLinks'
+import LogoLink from './LogoLink'
+import Buttons from './Buttons'
 
 const Desktop = ({
-    sections,
-    buttons,
-    some,
-    copyright,
-    importantLinks,
+    logo,
     logoHref,
     logoTitle,
-    logo
+    sections,
+    importantLinks,
+    copyright,
+    buttons,
+    some
 }) => {
     /**
      * Add an extra grid item to push buttons to the right
@@ -27,25 +32,6 @@ const Desktop = ({
         }
         return null
     }
-
-    const Buttons = () =>
-        buttons.map((button, index) => (
-            <Block mb='small-2' classList='hw-footer__button' key={index}>
-                {button}
-            </Block>
-        ))
-
-    const Hr = () => <div className='hw-footer__hr' />
-
-    const LogoLink = () => (
-        <a
-            href={logoHref}
-            aria-label={logoTitle}
-            className='hw-footer__logo-link'
-        >
-            {logo === 'bring' ? <LogoBring /> : <LogoPosten />}
-        </a>
-    )
 
     const Navigation = () => (
         <nav>
@@ -64,7 +50,7 @@ const Desktop = ({
                     <>
                         <ExtraGridItem missing={3 - sections.length} />
                         <GridItem size='one-quarter'>
-                            <Buttons />
+                            <Buttons buttons={buttons} />
                         </GridItem>
                     </>
                 )}
@@ -78,14 +64,18 @@ const Desktop = ({
             <Block mt='medium-4'>
                 <Grid>
                     <GridItem size='one-half'>
-                        <LogoLink />
+                        <LogoLink
+                            logoHref={logoHref}
+                            logoTitle={logoTitle}
+                            logo={logo}
+                        />
                     </GridItem>
                     <GridItem size='one-half'>
                         <SoMe some={some} />
                     </GridItem>
                 </Grid>
             </Block>
-            <Hr />
+            <div className='hw-footer__hr' />
             <Block mt='on'>
                 <Copyright text={copyright} />
                 <ImportantLinks links={importantLinks} />
