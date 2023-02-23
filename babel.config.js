@@ -8,7 +8,7 @@ module.exports = (api) => {
                     targets: ['last 2 versions']
                 }
             ],
-            '@babel/preset-react'
+            '@babel/react'
         ],
         plugins: [
             'babel-plugin-transform-scss'
