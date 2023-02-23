@@ -1,13 +1,9 @@
 module.exports = {
     roots: ['<rootDir>/src'],
-    transform: {
-        '^.+\\.js$': 'babel-jest'
-    },
     testRegex: '(/src/.*.(test|spec)).(js?|ts?)$',
-    moduleFileExtensions: ['js', 'jsx'],
     moduleNameMapper: {
         '\\.(css|less)$': 'identity-obj-proxy'
-      },
+    },
     collectCoverage: false,
     verbose: true,
     transform: {
