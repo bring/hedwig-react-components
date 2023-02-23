@@ -21,6 +21,7 @@
         transform-origin: top;
         opacity: 0;
         transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        z-index: var(--z-index--navbar-drawer)
     }
 
     &__drawer-content {
