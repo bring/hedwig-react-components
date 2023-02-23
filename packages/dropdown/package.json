@@ -20,7 +20,9 @@
     ],
     "scripts": {
         "prebuild": "rimraf dist",
-        "build": "parcel build"
+        "build": "parcel build",
+        "test": "jest",
+        "coverage": "jest --coverage"
     },
     "dependencies": {
         "@posten-hedwig/core": "^0.0.9",
@@ -29,5 +31,13 @@
     },
     "peerDependencies": {
         "react": ">=16.14.x"
+    },
+    "devDependencies": {
+        "@testing-library/jest-dom": "^5.16.5",
+        "@testing-library/react": "^14.0.0",
+        "babel-jest": "^29.4.3",
+        "jest": "^29.4.3",
+        "jest-environment-jsdom": "^29.4.3",
+        "jest-transform-css": "^6.0.1"
     }
 }
