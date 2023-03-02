@@ -19,7 +19,7 @@ Hedwig Badge provides various style badges
 ## Usage
 
 ```bash
-npm install @hedwig-posten/badge
+npm install @posten-hedwig/badge
 ```
 
 ```jsx

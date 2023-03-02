@@ -1,6 +1,6 @@
 {
     "name": "@posten-hedwig/linklist",
-    "version": "1.0.8",
+    "version": "3.0.0",
     "publishConfig": {
         "access": "public"
     },
@@ -30,8 +30,8 @@
         "url": "https://github.com/bring/hedwig-react-components/issues"
     },
     "dependencies": {
-        "@posten-hedwig/core": "^0.0.9",
-        "@posten-hedwig/link": "^0.0.9",
+        "@posten-hedwig/core": "^2.0.0",
+        "@posten-hedwig/link": "^2.0.0",
         "prop-types": "^15.8.1"
     },
     "peerDependencies": {

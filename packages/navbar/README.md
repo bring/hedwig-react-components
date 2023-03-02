@@ -29,7 +29,9 @@ import { Navbar } from '@posten-hedwig/navbar'
     logoHref='#'
     logoTitle='Posten Logo'
     skipToMainHref='#content'
-    skipToMainTitle='Main content' />
+    skipToMainTitle='Main content'
+    menuOpenName="Menu"
+    menuOpenTitle="Open menu" />
 ```
 
 ## API

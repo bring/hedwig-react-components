@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 const ImportantLinks = ({ links }) => (
-    <span className='hw-footer__importantlinks'>
+    <span className='hw-slim-footer__importantlinks'>
         {links.map((link, index) => (
             <React.Fragment key={index}>{link}</React.Fragment>
         ))}

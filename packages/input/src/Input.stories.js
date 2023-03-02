@@ -45,7 +45,7 @@ const Email = (args) => <EmailInput {...args} />
 export const emailInput = Email.bind({})
 emailInput.args = {
     label: 'Email input',
-    placeholder: 'placeholder'
+    placeholder: 'a placeholder'
 }
 
 const Template = (args) => <PasswordInput {...args} />

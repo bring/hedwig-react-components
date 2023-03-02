@@ -3,9 +3,10 @@ import PropTypes from 'prop-types'
 import { Container } from '@posten-hedwig/container'
 import { Block } from '@posten-hedwig/block'
 import { Grid, GridItem } from '@posten-hedwig/grid'
-import { Logo } from '@posten-hedwig/logo'
+import { LogoBring, LogoPosten } from '@posten-hedwig/logo'
 import ImportantLinks from './ImportantLinks'
 import Copyright from './Copyright'
+import '@posten-hedwig/core'
 import '../sass/slimfooter.scss'
 
 const SlimFooter = ({
@@ -28,11 +29,21 @@ const SlimFooter = ({
             window.removeEventListener('resize', handleWindowSizeChange)
     }, [])
 
+    const LogoLink = () => (
+        <>
+            <a
+                href={logoHref}
+                aria-label={logoTitle}
+                className='hw-slim-footer__logo-link'
+            >
+                {logo === 'bring' ? <LogoBring /> : <LogoPosten />}
+            </a>
+        </>
+    )
+
     const Mobile = () => (
         <>
-            <a href={logoHref} className='hw-slim-footer__logo-link'>
-                <Logo logo={logo} title={logoTitle} />
-            </a>
+            <LogoLink />
             <Block mt='on'>
                 <Copyright text={copyright} />
             </Block>
@@ -45,9 +56,7 @@ const SlimFooter = ({
     const Desktop = () => (
         <Grid>
             <GridItem size='one-quarter'>
-                <a href={logoHref} className='hw-slim-footer__logo-link'>
-                    <Logo logo={logo} title={logoTitle} />
-                </a>
+                <LogoLink />
             </GridItem>
             <GridItem size='three-quarters'>
                 <div className='hw-slim-footer__element-float-right'>

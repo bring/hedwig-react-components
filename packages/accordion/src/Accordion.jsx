@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { ExpandedProvider } from './ExpandedContext'
 import '../sass/accordion.scss'
+import '@posten-hedwig/core'
 
 const Accordion = ({ children, allowMultiple }) => (
     <ul className='hw-accordion'>

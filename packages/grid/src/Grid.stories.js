@@ -55,7 +55,7 @@ const TemplateDefault = (args) => (
                 </GridItem>
                 <GridItem size='one-half'>
                     <p className='hw-helpers-margin-highlighter-content'>
-                        Item 5
+                        Item nr 5
                     </p>
                 </GridItem>
             </Grid>

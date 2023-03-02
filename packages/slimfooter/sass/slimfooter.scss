@@ -1,25 +1,20 @@
 @use '../node_modules/@posten-hedwig/core/sass/mixins';
 
 .hw-slim-footer {
+    -webkit-font-smoothing: antialiased;
+    font-family: var(--hw-font-primary-regular);
     background: var(--hw-color-primary-darker);
     padding-top: calc(var(--hw-spacing-large-1) + var(--hw-spacing-medium-2));
     padding-bottom: var(--hw-spacing-large-3);
     margin: 0 auto;
 
     &__logo-link {
-            position: relative;
-            height: 75px;
-            width: var(--hw-logo-width);
-            display: inline-block;
-
-            img {
-                visibility: visible;
-                opacity: 1;
-                display: block;
-            }
+        position: relative;
+        height: 75px;
+        display: inline-block;
     }
 
-    .hw-footer__importantlinks a {
+    .hw-slim-footer__importantlinks a {
         text-decoration: none;
         border-bottom: var(--hw-border-thickness) solid var(--hw-color-link-underline);
         font-size: var(--hw-font-size-smaller);

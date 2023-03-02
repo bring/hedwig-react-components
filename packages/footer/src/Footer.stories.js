@@ -68,7 +68,7 @@ const commonArgs = {
         {
             brand: 'instagram',
             onclick: () => {
-                alert('You clicked Instagram')
+                alert('You clicked Instagram icon')
             },
             ariaLabel: 'Check out our Instagram'
         }

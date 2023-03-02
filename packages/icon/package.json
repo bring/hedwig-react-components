@@ -1,6 +1,6 @@
 {
     "name": "@posten-hedwig/icon",
-    "version": "1.0.8",
+    "version": "3.0.0",
     "publishConfig": {
         "access": "public"
     },
@@ -32,7 +32,6 @@
         "url": "https://github.com/bring/hedwig-react-components/issues"
     },
     "dependencies": {
-        "@posten-hedwig/core": "^0.0.9",
         "prop-types": "^15.8.1"
     },
     "peerDependencies": {

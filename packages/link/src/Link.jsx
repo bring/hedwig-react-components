@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import BaseLink from './BaseLink'
+import '@posten-hedwig/core'
 
 const Link = ({ href, title, size, children }) => (
     <BaseLink href={href} size={size} title={title}>

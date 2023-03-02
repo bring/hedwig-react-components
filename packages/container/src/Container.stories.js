@@ -33,7 +33,8 @@ const TemplateDefault = (args) => (
         <div className='hw-helpers-margin-highlighter'>
             <Container {...args}>
                 <p className='hw-helpers-margin-highlighter-content'>
-                    Default container
+                    Default container, containers does not apply any styling to
+                    its content
                 </p>
             </Container>
         </div>

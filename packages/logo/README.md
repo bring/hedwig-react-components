@@ -13,22 +13,15 @@ npm install @posten-hedwig/logo
 ### 2 Import
 
 ```js
-import { Logo } from '@posten-hedwig/logo'
+import { LogoPosten, LogoBring } from '@posten-hedwig/logo'
 ```
 
 ### 3 Render
 
 ```jsx
-<Logo logo='posten' title='Posten Logo' />
+<LogoPosten />
 ```
 
-## API
-
-### Logo `logo`
-
-This prop specifies which logo to use. 'posten' and 'bring' are available.
-Default: 'posten'
-
-### Logo `title`
-
-This prop specifies the alt text for the Logo
+```jsx
+<LogoBring />
+```

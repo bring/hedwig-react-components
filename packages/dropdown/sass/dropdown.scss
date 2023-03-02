@@ -16,6 +16,8 @@ select.hw-dropdown {
     padding: var(--hw-spacing-small-4);
     transition: border-color 0.3s ease, max-height 0.3s ease,
         transform 0.3s ease;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
 
     &:hover,
     &:active {

@@ -13,6 +13,7 @@ const Template = (args) => (
             <div>Text 2</div>
             <div>Text 3</div>
             <div>Text 4</div>
+            <div>Text 5</div>
         </Flex>
     </>
 )
