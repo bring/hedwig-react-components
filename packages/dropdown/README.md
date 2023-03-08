@@ -22,7 +22,6 @@ import { Dropdown } from '@posten-hedwig/dropdown'
   label="Label"
   onChange={() => {}}
   placeholder: 'Please select'
-  aria
   options={[
     {
       label: 'Option 1',
