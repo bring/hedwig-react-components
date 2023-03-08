@@ -33,6 +33,7 @@ const TemplateDefault = (args) => <Dropdown {...args} />
 export const defaultDropdown = TemplateDefault.bind({})
 defaultDropdown.args = {
     label: 'Label',
+    placeholder: 'Please select',
     options: [
         { label: 'Option 1', value: '1' },
         { label: 'Option 2', value: '2' },
@@ -47,6 +48,7 @@ export const whiteDropdown = TemplateWhite.bind({})
 whiteDropdown.args = {
     label: 'White dropdown',
     variant: 'white',
+    placeholder: 'Please select',
     options: [
         { label: 'Option 1', value: '1' },
         { label: 'Option 2', value: '2' },
@@ -62,6 +64,7 @@ export const lineDropdown = TemplateLine.bind({})
 lineDropdown.args = {
     label: 'Label',
     variant: 'line',
+    placeholder: 'Please select',
     options: [
         { label: 'Option 1', value: '1' },
         { label: 'Option 2', value: '2' },
