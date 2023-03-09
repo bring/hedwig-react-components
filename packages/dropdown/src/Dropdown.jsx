@@ -9,7 +9,7 @@ const Dropdown = ({
     name,
     variant,
     id,
-    selected,
+    defaultSelected,
     onChange,
     options,
     errorMessage,
@@ -33,9 +33,9 @@ const Dropdown = ({
             </option>
         ))
     }
-    if(placeholder) {
+    if (placeholder && !defaultSelected) {
         items.unshift(
-            <option value='' disabled selected hidden>
+            <option key='00' value='' disabled hidden>
                 {placeholder}
             </option>
         )
@@ -48,9 +48,9 @@ const Dropdown = ({
                 name={name}
                 className={`hw-dropdown ${variation}`}
                 id={id}
-                value={selected}
+                defaultValue={defaultSelected}
                 data-hw-dropdown={id}
-                onChange={onChange}
+                onChange={(val) => onChange(val.target.value)}
                 aria-controls={ariaControls}
             >
                 {items}
@@ -68,7 +68,8 @@ Dropdown.defaultProps = {
     variant: '',
     options: [],
     errorMessage: '',
-    placeholder: ''
+    placeholder: '',
+    defaultSelected: ''
 }
 
 Dropdown.propTypes = {
@@ -78,7 +79,8 @@ Dropdown.propTypes = {
     errorMessage: PropTypes.string,
     onChange: PropTypes.func,
     ariaControls: PropTypes.string,
-    placeholder: PropTypes.string
+    placeholder: PropTypes.string,
+    defaultSelected: PropTypes.string
 }
 
 export default Dropdown
