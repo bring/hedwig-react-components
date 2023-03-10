@@ -19,6 +19,8 @@ jobs:
       - name: Lerna build
         run: npx lerna run build
       - name: Build Storybook
+        env:
+          NODE_OPTIONS: --openssl-legacy-provider
         run: npm run build-storybook
       - name: GH Pages
         uses: JamesIves/github-pages-deploy-action@v4
