@@ -1,0 +1,22 @@
+name: Build Storybook
+
+on:
+  pull_request:
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out latest code from Github
+        uses: actions/checkout@v3
+      - run: npm ci
+      - name: Lerna Bootstrap
+        env:
+          NPM_TOKEN: ${{ secrets.FONT_AWESOME_TOKEN }}
+        run: npx lerna bootstrap
+      - name: Lerna build
+        run: npx lerna run build
+      - name: Build Storybook
+        env:
+          NODE_OPTIONS: --openssl-legacy-provider
+        run: npm run build-storybook
