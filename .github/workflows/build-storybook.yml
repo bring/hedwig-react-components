@@ -1,12 +1,10 @@
-name: Build and deploy Storybook to Github Pages
+name: Build Storybook
 
 on:
-  push:
-    branches:
-      - master
+  pull_request:
 
 jobs:
-  build-and-deploy:
+  build-storybook:
     runs-on: ubuntu-latest
     steps:
       - name: Check out latest code from Github
@@ -22,7 +20,3 @@ jobs:
         env:
           NODE_OPTIONS: --openssl-legacy-provider
         run: npm run build-storybook
-      - name: GH Pages
-        uses: JamesIves/github-pages-deploy-action@v4
-        with:
-          folder: storybook-static
