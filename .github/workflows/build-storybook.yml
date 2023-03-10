@@ -4,7 +4,7 @@ on:
   pull_request:
 
 jobs:
-  build-and-deploy:
+  build-storybook:
     runs-on: ubuntu-latest
     steps:
       - name: Check out latest code from Github
