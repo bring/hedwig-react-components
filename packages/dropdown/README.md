@@ -21,6 +21,7 @@ import { Dropdown } from '@posten-hedwig/dropdown'
 <Dropdown
   label="Label"
   onChange={() => {}}
+  placeholder: 'Please select'
   options={[
     {
       label: 'Option 1',

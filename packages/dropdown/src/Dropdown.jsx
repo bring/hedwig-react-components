@@ -9,11 +9,12 @@ const Dropdown = ({
     name,
     variant,
     id,
-    selected,
+    defaultSelected,
     onChange,
     options,
     errorMessage,
-    ariaControls
+    ariaControls,
+    placeholder
 }) => {
     let variation = variant ? 'hw-dropdown--' + variant : ''
     let labelVariation = variant === 'line' ? 'hw-label--line' : ''
@@ -23,6 +24,7 @@ const Dropdown = ({
     }
 
     var items = ''
+
     if (options) {
         items = options.map((item, index) => (
             <option value={item.value} key={index}>
@@ -30,6 +32,13 @@ const Dropdown = ({
                 {item.label}{' '}
             </option>
         ))
+    }
+    if (placeholder && !defaultSelected) {
+        items.unshift(
+            <option key='00' value='' disabled hidden>
+                {placeholder}
+            </option>
+        )
     }
 
     return (
@@ -39,9 +48,9 @@ const Dropdown = ({
                 name={name}
                 className={`hw-dropdown ${variation}`}
                 id={id}
-                value={selected}
+                defaultValue={defaultSelected}
                 data-hw-dropdown={id}
-                onChange={onChange}
+                onChange={(val) => onChange(val.target.value)}
                 aria-controls={ariaControls}
             >
                 {items}
@@ -58,7 +67,9 @@ const Dropdown = ({
 Dropdown.defaultProps = {
     variant: '',
     options: [],
-    errorMessage: ''
+    errorMessage: '',
+    placeholder: '',
+    defaultSelected: ''
 }
 
 Dropdown.propTypes = {
@@ -67,7 +78,9 @@ Dropdown.propTypes = {
     variant: PropTypes.oneOf(['', 'white', 'line']),
     errorMessage: PropTypes.string,
     onChange: PropTypes.func,
-    ariaControls: PropTypes.string
+    ariaControls: PropTypes.string,
+    placeholder: PropTypes.string,
+    defaultSelected: PropTypes.string
 }
 
 export default Dropdown
