@@ -1,6 +1,6 @@
 {
     "name": "@posten-hedwig/flex",
-    "version": "3.0.0",
+    "version": "3.0.1",
     "publishConfig": {
         "access": "public"
     },
@@ -30,7 +30,7 @@
         "url": "https://github.com/bring/hedwig-react-components/issues"
     },
     "dependencies": {
-        "@posten-hedwig/core": "^2.0.0",
+        "@posten-hedwig/core": "^2.0.1",
         "prop-types": "^15.8.1"
     },
     "peerDependencies": {

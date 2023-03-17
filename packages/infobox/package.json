@@ -1,6 +1,6 @@
 {
     "name": "@posten-hedwig/infobox",
-    "version": "3.0.0",
+    "version": "3.0.1",
     "publishConfig": {
         "access": "public"
     },
@@ -28,7 +28,7 @@
     "dependencies": {
         "@fortawesome/pro-solid-svg-icons": "^6.2.0",
         "@fortawesome/react-fontawesome": "^0.2.0",
-        "@posten-hedwig/core": "^2.0.0",
+        "@posten-hedwig/core": "^2.0.1",
         "prop-types": "15.8.1"
     },
     "peerDependencies": {

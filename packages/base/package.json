@@ -1,7 +1,7 @@
 {
     "name": "@posten-hedwig/base",
     "description": "Provides sanitize and some general styling for <html> and <body>",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "private": false,
     "publishConfig": {
         "access": "public"
