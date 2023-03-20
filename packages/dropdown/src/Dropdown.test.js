@@ -3,6 +3,9 @@ import { render, fireEvent } from '@testing-library/react'
 import '@testing-library/jest-dom/extend-expect'
 import Dropdown from './Dropdown'
 
+///TODO: Dropdown is not building properly after these tests was added, 
+
+
 describe('Dropdown component', () => {
     it('renders label and select element with options', () => {
         const options = [
