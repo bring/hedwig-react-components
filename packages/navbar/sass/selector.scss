@@ -6,7 +6,7 @@
     margin-right: auto;
     margin-left: 8%;
     padding-left: var(--hwc-spacing-medium-3);
-    line-height: var(--hwc-navbar-height-mobile);
+    line-height: var(--hwc-navbar-height);
     z-index: var(--z-index--navbar-drawer-foreground);
     cursor: pointer;
     transition: color 0.1s ease;
@@ -32,8 +32,6 @@
 
     @include mixins.large {
         display: inline-block;
-        height: var(--hwc-navbar-height-desktop);
-        line-height: var(--hwc-navbar-height-desktop);
     }
 
     &__mobile {

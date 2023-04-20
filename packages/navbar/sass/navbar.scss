@@ -4,15 +4,12 @@
  */
 .hwc-navbar {
     position: relative;
+
     background: var(--hwc-color-white);
-    height: var(--hwc-navbar-height-mobile);
+    height: var(--hwc-navbar-height);
     font-family: var(--hwc-font-primary-regular);
     text-align: left;
     -webkit-font-smoothing: antialiased;
-
-    @include mixins.large {
-        height: var(--hwc-navbar-height-desktop);
-    }
 
     /**
    * Elements
@@ -20,6 +17,7 @@
 
     &__content {
         width: 100%;
+        height: 100%;
         margin: 0 auto;
         align-items: center;
         display: flex;
@@ -30,6 +28,7 @@
         display: flex;
         align-items: center;
         width: 100%;
+        height: 100%;
         justify-content: space-between;
         padding-left: var(--hwc-spacing-medium-3);
         padding-right: var(--hwc-spacing-medium-3);
@@ -42,7 +41,7 @@
 
     &__logo {
         position: relative;
-        height: var(--hwc-navbar-height-mobile);
+        height: var(--hwc-navbar-height);
         padding: 9px;
         margin: 0 auto;
         transform: translateY(0);
@@ -85,7 +84,6 @@
         @include mixins.large {
             position: relative;
             margin: 0;
-            height: var(--hwc-navbar-height-desktop);
             padding: 0;
         }
     }
@@ -103,12 +101,9 @@
 
         &:active,
         &:focus {
-            top: var(--hwc-navbar-height-mobile);
+            top: var(--hwc-navbar-height);
             background-color: var(--hwc-color-white);
             opacity: 1;
-            @include mixins.large {
-                top: var(--hwc-navbar-height-desktop);
-            }
         }
     }
 
@@ -124,7 +119,7 @@
         text-decoration: none;
         transition: color 0.1s ease;
         font-size: var(--hwc-font-size-small);
-        line-height: var(--hwc-navbar-height-mobile);
+        line-height: var(--hwc-navbar-height);
 
         @include mixins.large {
             display: inline-block;
@@ -138,9 +133,6 @@
     }
 
     @include mixins.large {
-        &__item {
-            line-height: var(--hwc-navbar-height-desktop);
-        }
         &__icon {
             margin-left: var(--hwc-spacing-small-2);
         }
@@ -157,14 +149,11 @@
     &__item,
     &__search-button,
     &__menu-button {
-        height: var(--hwc-navbar-height-mobile);
+        height: var(--hwc-navbar-height);
         color: inherit;
         background-color: transparent;
         &:hover {
             color: var(--hwc-color-link-hover);
-        }
-        @include mixins.large {
-            height: var(--hwc-navbar-height-desktop);
         }
     }
 
@@ -176,7 +165,7 @@
         top: 0;
         bottom: 0;
         z-index: var(--z-index--navbar-search);
-        height: var(--hwc-navbar-height-mobile);
+        height: var(--hwc-navbar-height);
         transition: all var(--hwc-transition-time-debug)
             var(--hwc-transition-easing-out);
 
@@ -195,11 +184,11 @@
 
         .hwc-search,
         input {
-            height: var(--hwc-navbar-height-desktop);
+            height: var(--hwc-navbar-height);
 
             .hwc-search__suggestions {
                 top: calc(
-                    var(--hwc-navbar-height-desktop) + var(--hwc-spacing-small-2)
+                    var(--hwc-navbar-height) + var(--hwc-spacing-small-2)
                 );
                 left: var(--hwc-spacing-medium-2);
                 right: var(--hwc-spacing-medium-2);
@@ -225,8 +214,6 @@
         }
 
         @include mixins.large {
-            height: var(--hwc-navbar-height-desktop);
-
             .hwc-search__input {
                 margin-left: var(--hwc-spacing-medium-4);
             }
@@ -236,8 +223,6 @@
 
             .hwc-search,
             input {
-                height: var(--hwc-navbar-height-desktop);
-
                 .hwc-search__suggestions {
                     max-width: var(--hwc-navbar-search-max-width);
                     left: var(--hwc-spacing-medium-4);
@@ -290,9 +275,7 @@
         position: absolute;
         right: 30px;
         width: 11px;
-        height: var(--hwc-navbar-height-desktop);
         top: 0px;
-
         border: 0;
         font-size: var(--hwc-font-size-small);
         line-height: 1;

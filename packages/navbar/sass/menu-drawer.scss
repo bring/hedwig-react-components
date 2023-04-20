@@ -25,7 +25,7 @@
     }
 
     &__drawer-content {
-        margin-top: var(--hwc-navbar-height-mobile);
+        margin-top: var(--hwc-navbar-height);
         padding-top: var(--hwc-spacing-small-4);
         padding-left: var(--hwc-spacing-small-4);
         padding-right: var(--hwc-spacing-small-4);
@@ -76,7 +76,6 @@
         }
 
         @include mixins.large {
-            margin-top: var(--hwc-navbar-height-mobile);
             padding-left: var(--hwc-spacing-medium-2);
             padding-right: var(--hwc-spacing-medium-2);
         }
