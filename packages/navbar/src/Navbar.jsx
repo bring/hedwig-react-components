@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { NavbarProvider, NavbarContext } from './NavbarContext'
 import NavbarLogoIcon from './NavbarLogoIcon'
 import NavbarLogoFlagship from './NavbarLogoFlagship'
+import NavbarSearch from './NavbarSearch'
 import Selector from './Selector'
 import Menu from './Menu'
 import '@posten-hedwig/core'
@@ -22,6 +23,7 @@ const Navbar = ({
     menuCloseName,
     menuCloseTitle,
     menuFeaturedLinks,
+    search,
     children
 }) => {
     const [desktop, setDesktop] = useState(false)
@@ -67,6 +69,14 @@ const Navbar = ({
                         )}
                         <nav className='hwc-navbar__menu'>
                             {children}
+                            {search && (
+                                <NavbarSearch
+                                    text={search.initiateButtonText}
+                                    ariaLabel={search.initiateButtonAriaLabel}
+                                    placeholder={search.placeholder}
+                                    flagship={flagship}
+                                />
+                            )}
                             {menuOpenName &&
                                 menuOpenTitle &&
                                 menuCloseName &&
@@ -198,7 +208,16 @@ Navbar.propTypes = {
                 })
             ]).isRequired
         })
-    )
+    ),
+    /**
+     * Specify
+     */
+    search: PropTypes.exact({
+        placeholder: PropTypes.string,
+        initiateButtonText: PropTypes.string.isRequired,
+        initiateButtonAriaLabel: PropTypes.string.isRequired,
+        submitButtonText: PropTypes.string.isRequired
+    })
 }
 
 export default Navbar

@@ -5,6 +5,7 @@ const NavbarContext = createContext([{}, () => {}])
 const NavbarProvider = ({ children }) => {
     const [desktop, setDesktop] = useState()
     const [menuOpen, setMenuOpen] = useState(false)
+    const [isSearching, setIsSearching] = useState(false)
 
     const handleWindowSizeChange = () => {
         setDesktop(window.innerWidth >= 940)
@@ -18,7 +19,15 @@ const NavbarProvider = ({ children }) => {
     }, [])
 
     return (
-        <NavbarContext.Provider value={{ desktop, menuOpen, setMenuOpen }}>
+        <NavbarContext.Provider
+            value={{
+                desktop,
+                menuOpen,
+                setMenuOpen,
+                isSearching,
+                setIsSearching
+            }}
+        >
             {children}
         </NavbarContext.Provider>
     )

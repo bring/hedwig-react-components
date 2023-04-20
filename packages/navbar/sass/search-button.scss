@@ -15,6 +15,11 @@
     height: 54px;
     transition: color 0.1s ease;
 
+    &__flagship {
+        position: relative;
+        left: auto;
+        top: auto;
+    }
     & .hwc-navbar__search-text {
         display: none;
     }

@@ -5,16 +5,19 @@ import { faSearch } from '@fortawesome/pro-regular-svg-icons'
 import { NavbarContext } from './NavbarContext'
 import '../sass/search-button.scss'
 
-const NavbarSearchButton = ({ text, ariaLabel }) => {
-    const [state, setState] = useContext(NavbarContext)
+const NavbarSearchButton = ({ text, ariaLabel, flagship }) => {
+    const { setIsSearching } = useContext(NavbarContext)
 
     const handleClick = () => {
-        setState((state) => ({ ...state, isSearching: true }))
+        setIsSearching(true)
     }
 
+    const classname =
+        'hwc-navbar__search-button' +
+        (flagship ? ' hwc-navbar__search-button__flagship' : '')
     return (
         <button
-            className='hwc-navbar__search-button'
+            className={classname}
             onClick={handleClick}
             aria-label={ariaLabel || text}
         >

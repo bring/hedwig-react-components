@@ -172,3 +172,23 @@ navbarFlagship.args = {
     skipToMainHref: '#content',
     skipToMainTitle: 'Go to main content'
 }
+
+const TemplateSearch = (args) => <Navbar {...args} />
+export const navbarSearch = TemplateSearch.bind({})
+navbarSearch.args = {
+    logo: 'posten',
+    logoHref: '#',
+    logoAriaLabel: 'Go to homepage',
+    skipToMainHref: '#content',
+    skipToMainTitle: 'Go to main content',
+    search: {
+        placeholder: 'Search for things',
+        initiateButtonText: 'Search',
+        initiateButtonAriaLabel: 'Search',
+        submitButtonText: 'Search'
+    },
+    menuOpenName: 'Menu',
+    menuOpenTitle: 'Open menu',
+    menuCloseName: 'Close',
+    menuCloseTitle: 'Close menu'
+}
