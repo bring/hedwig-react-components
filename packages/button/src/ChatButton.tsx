@@ -5,7 +5,7 @@ import { faCommentsAlt } from '@fortawesome/pro-solid-svg-icons'
 
 type ChatButtonProps = { fixed?: boolean } & Pick<
     BaseButtonProps,
-    'onClick' | 'disabled' | "ariaControls"
+    'onClick' | 'disabled' | 'ariaControls'
 >
 const ChatButton: React.FC<ChatButtonProps> = ({
     fixed = false,

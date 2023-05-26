@@ -5,7 +5,9 @@ interface ExtandedContextState {
     open?: string
     hasSetInitialExpanded: boolean
 }
-type SetExpandedState = React.Dispatch<React.SetStateAction<ExtandedContextState>>
+type SetExpandedState = React.Dispatch<
+    React.SetStateAction<ExtandedContextState>
+>
 
 const ExpandedContext = createContext<[ExtandedContextState, SetExpandedState]>(
     [{ hasSetInitialExpanded: false }, () => {}]

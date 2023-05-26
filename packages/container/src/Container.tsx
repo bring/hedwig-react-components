@@ -20,8 +20,14 @@ interface ContainerProps {
 
     children: React.ReactNode
 }
-const Container: React.FC<ContainerProps> = ({ as: ContainerComponent, slim, pt, pb, children }) => {
-    let classes = ['hw-container']
+const Container: React.FC<ContainerProps> = ({
+    as: ContainerComponent,
+    slim,
+    pt,
+    pb,
+    children
+}) => {
+    const classes = ['hw-container']
     if (slim) {
         classes.push('hw-container--slim')
     }
@@ -32,7 +38,11 @@ const Container: React.FC<ContainerProps> = ({ as: ContainerComponent, slim, pt,
         classes.push('hw-container--pb')
     }
 
-    return <ContainerComponent className={classes.join(' ')}>{children}</ContainerComponent>
+    return (
+        <ContainerComponent className={classes.join(' ')}>
+            {children}
+        </ContainerComponent>
+    )
 }
 
 export default Container

@@ -8,7 +8,11 @@ interface AccordionItemProps {
     title: string
     children: React.ReactNode
 }
-const AccordionItem: React.FC<AccordionItemProps> = ({ title, children, expanded = false }) => {
+const AccordionItem: React.FC<AccordionItemProps> = ({
+    title,
+    children,
+    expanded = false
+}) => {
     // State coming from the surrounding Accordion
     const [expandedState, setExpandedState] = useContext(ExpandedContext)
 

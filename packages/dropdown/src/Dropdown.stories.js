@@ -29,7 +29,9 @@ export default {
 
 //Default dropdown
 const TemplateDefault = (args) => <Dropdown {...args} />
-const onChangeFunction = (val) => { alert('selected value '+val)}
+const onChangeFunction = (val) => {
+    alert('selected value ' + val)
+}
 
 export const defaultDropdown = TemplateDefault.bind({})
 defaultDropdown.args = {

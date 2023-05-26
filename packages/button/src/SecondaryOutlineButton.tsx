@@ -24,5 +24,4 @@ const SecondaryOutlineButton: React.FC<SecondaryOutlineButtonProps> = ({
     </BaseButton>
 )
 
-
 export default SecondaryOutlineButton

@@ -1,10 +1,11 @@
 {
-    "parser": "babel-eslint",
+    "parser": "@typescript-eslint/parser",
     "extends": [
-      "react-app",
+      "plugin:@typescript-eslint/recommended",
       "prettier",
       "plugin:prettier/recommended"
     ],
+    "root": true,
     "env": {
       "node": true
     },
@@ -20,8 +21,9 @@
         "version": "16"
       }
     },
-    "plugins": ["prefer-arrow-functions"],
+    "plugins": ["@typescript-eslint", "prefer-arrow-functions"],
     "rules": {
+      "@typescript-eslint/no-empty-function": 0,
       "space-before-function-paren": 0,
       "react/prop-types": 0,
       "react/jsx-handler-names": 0,

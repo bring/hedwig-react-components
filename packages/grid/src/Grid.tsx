@@ -20,10 +20,10 @@ const Grid: React.FC<GridProps> = ({
 }) => {
     const classes = ['hw-grid']
     if (['center', 'right'].includes(align)) classes.push('hw-grid--' + align)
-    
+
     // This does not make any sense typewise, but kept for now just in case
     if (gutter === 'none') classes.push('hw-grid--' + 'full')
-    
+
     if (['narrow', 'wide', 'full'].includes(gutter))
         classes.push('hw-grid--' + gutter)
     if (['middle', 'bottom'].includes(valign))
