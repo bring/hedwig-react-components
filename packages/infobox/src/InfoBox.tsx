@@ -5,7 +5,18 @@ import { faInfoSquare } from '@fortawesome/pro-solid-svg-icons'
 import '../sass/infobox.scss'
 import '@posten-hedwig/core'
 
-const InfoBox = ({ title, titleElement, icon, children }) => (
+interface InfoBoxProps {
+    title: React.ReactNode
+    titleElement?: 'h2' | 'h3' | 'h4' | 'h5'
+    icon?: boolean
+    children: React.ReactNode
+}
+const InfoBox: React.FC<InfoBoxProps> = ({
+    title,
+    titleElement = 'h3',
+    icon = true,
+    children
+}) => (
     <div className='hw-info-box'>
         {icon && (
             <FontAwesomeIcon
@@ -28,16 +39,5 @@ const InfoBox = ({ title, titleElement, icon, children }) => (
         </div>
     </div>
 )
-
-InfoBox.propTypes = {
-    title: PropTypes.string.isRequired,
-    titleElement: PropTypes.oneOf(['h3', 'h4', 'h5']),
-    icon: PropTypes.bool
-}
-
-InfoBox.defaultProps = {
-    icon: true,
-    titleElement: 'h3'
-}
 
 export default InfoBox
