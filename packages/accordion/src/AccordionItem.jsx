@@ -78,7 +78,6 @@ const AccordionItem = ({ title, children, expanded }) => {
                     className='hw-accordion__icon'
                     rotation={showExpanded() ? 90 : 0}
                 />
-                <div className='hw-accordion__icon' />
             </button>
             <div id={id} className='hw-accordion__contents' ref={contentRef}>
                 {showExpanded() && children}
