@@ -1,21 +1,25 @@
 import React, { createRef, useContext, useEffect, useState } from 'react'
-import PropTypes from 'prop-types'
 import { ExpandedContext } from './ExpandedContext'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronRight } from '@fortawesome/pro-solid-svg-icons'
 
-const AccordionItem = ({ title, children, expanded }) => {
+interface AccordionItemProps {
+    expanded?: boolean
+    title: string
+    children: React.ReactNode
+}
+const AccordionItem: React.FC<AccordionItemProps> = ({ title, children, expanded = false }) => {
     // State coming from the surrounding Accordion
     const [expandedState, setExpandedState] = useContext(ExpandedContext)
 
     // Local states
-    const [triggerHeight, setTriggerHeight] = useState()
-    const [contentHeight, setContentHeight] = useState()
+    const [triggerHeight, setTriggerHeight] = useState(0)
+    const [contentHeight, setContentHeight] = useState(0)
     const [isExpanded, setIsExpanded] = useState(expanded)
     const [id] = useState('item-' + Math.floor(Math.random() * 10000))
 
-    const trigger = createRef()
-    const contentRef = createRef()
+    const trigger = createRef<HTMLButtonElement>()
+    const contentRef = createRef<HTMLDivElement>()
 
     useEffect(() => {
         if (
@@ -29,9 +33,9 @@ const AccordionItem = ({ title, children, expanded }) => {
                 hasSetInitialExpanded: true
             }))
         }
-        setTriggerHeight(trigger.current.offsetHeight)
+        setTriggerHeight(trigger.current?.offsetHeight || 0)
         if (showExpanded()) {
-            setContentHeight(contentRef.current.offsetHeight)
+            setContentHeight(contentRef.current?.offsetHeight || 0)
         }
     }, [isExpanded, expandedState.open])
 
@@ -41,7 +45,7 @@ const AccordionItem = ({ title, children, expanded }) => {
         } else {
             setExpandedState((expandedState) => ({
                 ...expandedState,
-                open: expandedState.open === title ? null : title
+                open: expandedState.open === title ? undefined : title
             }))
         }
     }
@@ -51,7 +55,7 @@ const AccordionItem = ({ title, children, expanded }) => {
      * otherwise expandedState keeps track of which item is expanded
      */
     const showExpanded = () =>
-        expandedState.allowMultiple ? isExpanded : expandedState === title
+        expandedState.allowMultiple ? isExpanded : expandedState.open === title
 
     return (
         <li
@@ -76,7 +80,7 @@ const AccordionItem = ({ title, children, expanded }) => {
                 <FontAwesomeIcon
                     icon={faChevronRight}
                     className='hw-accordion__icon'
-                    rotation={showExpanded() ? 90 : 0}
+                    rotation={showExpanded() ? 90 : undefined}
                 />
             </button>
             <div id={id} className='hw-accordion__contents' ref={contentRef}>
@@ -84,15 +88,6 @@ const AccordionItem = ({ title, children, expanded }) => {
             </div>
         </li>
     )
-}
-
-AccordionItem.propTypes = {
-    expanded: PropTypes.bool,
-    title: PropTypes.string.isRequired
-}
-
-AccordionItem.defaultProps = {
-    expanded: false
 }
 
 export default AccordionItem

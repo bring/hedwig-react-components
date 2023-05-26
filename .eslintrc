@@ -1,6 +1,7 @@
 {
     "parser": "babel-eslint",
     "extends": [
+      "react-app",
       "prettier",
       "plugin:prettier/recommended"
     ],
