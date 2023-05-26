@@ -1,19 +1,36 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import '../sass/button.scss'
 import '@posten-hedwig/core'
 
-const BaseButton = ({
+export interface BaseButtonProps {
+    variant?:
+        | 'chat'
+        | 'chat-fixed'
+        | 'primary'
+        | 'secondary'
+        | 'outline-primary'
+        | 'outline-secondary'
+        | 'outline-white'
+    type?: 'button' | 'submit'
+    size?: 'small' | 'medium' | 'large' | 'full' | 'mobile-full'
+    onClick?: () => void
+    disabled?: boolean
+    ariaControls?: string
+    href?: string
+    children: React.ReactNode
+}
+
+const BaseButton: React.FC<BaseButtonProps> = ({
     variant,
-    type,
+    type = 'button',
     size,
     onClick,
     href,
-    disabled,
+    disabled = false,
     ariaControls,
     children
 }) => {
-    const buttonVariant = variant !== '' ? 'hw-button--' + variant : ''
+    const buttonVariant = variant ? 'hw-button--' + variant : ''
     const buttonSize = size ? 'hw-button--' + size : ''
 
     if (href) {
@@ -22,7 +39,10 @@ const BaseButton = ({
                 href={href}
                 className={`hw-button ${buttonVariant} ${buttonSize}`}
                 onClick={onClick}
-                disabled={disabled}
+
+                // `disabled` is not a valid attribute on an anchor tag
+                // there should be no need to disable links anyways
+                // disabled={disabled}
             >
                 {children}
             </a>
@@ -40,31 +60,6 @@ const BaseButton = ({
             </button>
         )
     }
-}
-
-BaseButton.defaultProps = {
-    variant: '',
-    type: 'button',
-    disabled: false
-}
-
-BaseButton.propTypes = {
-    variant: PropTypes.oneOf([
-        '',
-        'chat',
-        'chat-fixed',
-        'primary',
-        'secondary',
-        'outline-primary',
-        'outline-secondary',
-        'outline-white'
-    ]),
-    type: PropTypes.oneOf(['button', 'submit']),
-    size: PropTypes.oneOf(['small', 'medium', 'large', 'full', 'mobile-full']),
-    onClick: PropTypes.func,
-    disabled: PropTypes.bool,
-    ariaControls: PropTypes.string,
-    href: PropTypes.string
 }
 
 export default BaseButton
