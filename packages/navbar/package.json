@@ -1,6 +1,6 @@
 {
     "name": "@posten-hedwig/navbar",
-    "version": "3.0.1",
+    "version": "3.0.2",
     "publishConfig": {
         "access": "public"
     },
@@ -34,7 +34,7 @@
         "@fortawesome/pro-light-svg-icons": "^6.1.1",
         "@fortawesome/pro-regular-svg-icons": "^6.1.1",
         "@fortawesome/react-fontawesome": "^0.1.18",
-        "@posten-hedwig/accordion": "^3.0.1",
+        "@posten-hedwig/accordion": "^3.0.2",
         "@posten-hedwig/block": "^3.0.1",
         "@posten-hedwig/core": "^2.0.1",
         "@posten-hedwig/flex": "^3.0.1",
@@ -47,5 +47,5 @@
         "react": ">=16.14.x",
         "react-dom": ">=16.14.x"
     },
-    "gitHead": "c6c503b48a69b8ecc180ca28f84791cc9cc6277b"
+    "gitHead": "cf3e96e888715c14829856066515962a768ed019"
 }
