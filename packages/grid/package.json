@@ -14,6 +14,7 @@
     "license": "ISC",
     "source": "src/index.ts",
     "main": "dist/index.js",
+    "types": "dist/types.d.ts",
     "module": "dist/module.js",
     "files": [
         "dist"
@@ -30,8 +31,7 @@
         "url": "https://github.com/bring/hedwig-react-components/issues"
     },
     "dependencies": {
-        "@posten-hedwig/core": "^2.0.1",
-        "prop-types": "^15.8.1"
+        "@posten-hedwig/core": "^2.0.1"
     },
     "peerDependencies": {
         "react": ">=16.14.x"

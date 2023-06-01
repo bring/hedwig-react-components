@@ -10,6 +10,7 @@
     "license": "ISC",
     "source": "src/index.ts",
     "main": "dist/index.js",
+    "types": "dist/types.d.ts",
     "module": "dist/module.js",
     "files": [
         "dist"
@@ -26,10 +27,10 @@
         "url": "https://github.com/bring/hedwig-react-components/issues"
     },
     "dependencies": {
-        "@fortawesome/pro-solid-svg-icons": "^6.2.0",
+        "@fortawesome/fontawesome-svg-core": "^6.4.0",
+        "@fortawesome/pro-solid-svg-icons": "^6.4.0",
         "@fortawesome/react-fontawesome": "^0.2.0",
-        "@posten-hedwig/core": "^2.0.1",
-        "prop-types": "15.8.1"
+        "@posten-hedwig/core": "^2.0.1"
     },
     "peerDependencies": {
         "react": ">=16.14.x",

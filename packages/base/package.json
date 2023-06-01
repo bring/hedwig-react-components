@@ -12,6 +12,7 @@
     ],
     "source": "src/index.ts",
     "main": "dist/index.js",
+    "types": "dist/types.d.ts",
     "module": "dist/module.js",
     "scripts": {
         "prebuild": "rimraf dist",

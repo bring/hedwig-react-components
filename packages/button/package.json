@@ -11,16 +11,17 @@
     ],
     "source": "src/index.ts",
     "main": "dist/index.js",
+    "types": "dist/types.d.ts",
     "module": "dist/module.js",
     "scripts": {
         "prebuild": "rimraf dist",
         "build": "parcel build"
     },
     "dependencies": {
-        "@fortawesome/pro-solid-svg-icons": "^6.1.1",
-        "@fortawesome/react-fontawesome": "^0.1.18",
-        "@posten-hedwig/core": "^2.0.1",
-        "prop-types": "^15.8.1"
+        "@fortawesome/fontawesome-svg-core": "^6.4.0",
+        "@fortawesome/pro-solid-svg-icons": "^6.4.0",
+        "@fortawesome/react-fontawesome": "^0.2.0",
+        "@posten-hedwig/core": "^2.0.1"
     },
     "peerDependencies": {
         "react": ">=16.14.x"

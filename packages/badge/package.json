@@ -10,14 +10,14 @@
     ],
     "source": "src/index.ts",
     "main": "dist/index.js",
+    "types": "dist/types.d.ts",
     "module": "dist/module.js",
     "scripts": {
         "prebuild": "rimraf dist",
         "build": "parcel build"
     },
     "dependencies": {
-        "@posten-hedwig/core": "^2.0.1",
-        "prop-types": "^15.8.1"
+        "@posten-hedwig/core": "^2.0.1"
     },
     "peerDependencies": {
         "react": ">=16.14.x"
