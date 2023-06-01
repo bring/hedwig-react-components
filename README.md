@@ -23,23 +23,36 @@ export NPM_TOKEN=[FONT-AWESOME-LICENCE-KEY]
 ### Adding new packages to hedwig-react-components
 
 To create a new package in hedwig-react-components run the following command
-´´´
+```
 lerna create <package-name>
-´´´
+```
 
 ### Adding a package to another
 
 Use 'lerna add' to add an external or internal package to another
 
 Add package-1 to package-2
-´´´
+```
 lerna add package-1 --scope package-2
-´´´
+```
 
 Add package-3 to all packages
-´´´
+```
 lerna add package-3
-´´´
+```
+
+### Publishing
+We use lerna to publish our packages
+
+List all packages that has changes since last release
+```
+lerna changed
+```
+
+To bump version numbers and publish packages that have changed since last release
+```
+lerna publish
+```
 
 ## Available NPM modules
 
