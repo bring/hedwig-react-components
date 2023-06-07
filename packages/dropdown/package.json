@@ -1,6 +1,6 @@
 {
     "name": "@posten-hedwig/dropdown",
-    "version": "3.0.2",
+    "version": "4.0.0",
     "publishConfig": {
         "access": "public"
     },
@@ -25,8 +25,8 @@
         "coverage": "jest --coverage"
     },
     "dependencies": {
-        "@posten-hedwig/core": "^2.0.1",
-        "@posten-hedwig/label": "^3.0.1",
+        "@posten-hedwig/core": "^3.0.0",
+        "@posten-hedwig/label": "^4.0.0",
         "prop-types": "^15.8.1"
     },
     "peerDependencies": {

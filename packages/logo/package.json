@@ -1,6 +1,6 @@
 {
     "name": "@posten-hedwig/logo",
-    "version": "3.0.1",
+    "version": "4.0.0",
     "publishConfig": {
         "access": "public"
     },
@@ -36,7 +36,7 @@
         "react": ">=16.14.x"
     },
     "dependencies": {
-        "@posten-hedwig/core": "^2.0.1"
+        "@posten-hedwig/core": "^3.0.0"
     },
     "devDependencies": {
         "@parcel/transformer-svg-react": "^2.8.3"
