@@ -3,7 +3,7 @@ import '@posten-hedwig/core'
 import '../sass/container.scss'
 
 interface ContainerProps {
-    as: keyof JSX.IntrinsicElements
+    as?: keyof JSX.IntrinsicElements
 
     /**
      * Makes the container slim
@@ -21,7 +21,7 @@ interface ContainerProps {
     children: React.ReactNode
 }
 const Container: React.FC<ContainerProps> = ({
-    as: ContainerComponent,
+    as: ContainerComponent = 'div',
     slim,
     pt,
     pb,
