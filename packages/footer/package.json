@@ -1,6 +1,6 @@
 {
     "name": "@posten-hedwig/footer",
-    "version": "4.0.0",
+    "version": "4.0.1",
     "publishConfig": {
         "access": "public"
     },
@@ -36,7 +36,7 @@
         "@posten-hedwig/accordion": "^4.0.0",
         "@posten-hedwig/block": "^4.0.0",
         "@posten-hedwig/button": "^4.0.0",
-        "@posten-hedwig/container": "^4.0.0",
+        "@posten-hedwig/container": "^4.0.1",
         "@posten-hedwig/core": "^3.0.0",
         "@posten-hedwig/grid": "^4.0.0",
         "@posten-hedwig/logo": "^4.0.0",
