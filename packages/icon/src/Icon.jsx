@@ -3,9 +3,9 @@ import PropTypes from 'prop-types'
 import '../sass/icon.scss'
 
 const Icon = ({ icon, title, size }) => {
-    let classes = ['hw-icon']
+    let classes = ['hwc-icon']
     if (size) {
-        classes.push('hw-icon--size-' + size)
+        classes.push('hwc-icon--size-' + size)
     }
     return <img className={classes.join(' ')} src={icon} alt={title}></img>
 }

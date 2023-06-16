@@ -17,7 +17,7 @@ const MenuDrawer = ({ featuredLinks, loginLink, sections, selectorItems }) => {
     }
 
     const Desktop = () => (
-        <div className='hw-navbar__drawer-desktop'>
+        <div className='hwc-navbar__drawer-desktop'>
             {featuredLinks && (
                 <Flex wrap='fourths' gutterDesktop='large' elementType='ul'>
                     {featuredLinks.map((link) => (
@@ -41,7 +41,7 @@ const MenuDrawer = ({ featuredLinks, loginLink, sections, selectorItems }) => {
     )
 
     const Mobile = () => (
-        <div className='hw-navbar__drawer-mobile'>
+        <div className='hwc-navbar__drawer-mobile'>
             {selectorItems && (
                 <Selector items={selectorItems} desktop={false} />
             )}
@@ -70,8 +70,8 @@ const MenuDrawer = ({ featuredLinks, loginLink, sections, selectorItems }) => {
 
     return (
         menuOpen && (
-            <section className='hw-navbar__drawer' style={style}>
-                <div className='hw-navbar__drawer-content'>
+            <section className='hwc-navbar__drawer' style={style}>
+                <div className='hwc-navbar__drawer-content'>
                     {desktop && <Desktop />}
                     {!desktop && <Mobile />}
                 </div>

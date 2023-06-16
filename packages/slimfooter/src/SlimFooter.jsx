@@ -34,7 +34,7 @@ const SlimFooter = ({
             <a
                 href={logoHref}
                 aria-label={logoTitle}
-                className='hw-slim-footer__logo-link'
+                className='hwc-slim-footer__logo-link'
             >
                 {logo === 'bring' ? <LogoBring /> : <LogoPosten />}
             </a>
@@ -59,7 +59,7 @@ const SlimFooter = ({
                 <LogoLink />
             </GridItem>
             <GridItem size='three-quarters'>
-                <div className='hw-slim-footer__element-float-right'>
+                <div className='hwc-slim-footer__element-float-right'>
                     <Copyright text={copyright} />
                     <ImportantLinks links={importantLinks} />
                 </div>
@@ -68,7 +68,7 @@ const SlimFooter = ({
     )
 
     return (
-        <footer className='hw-slim-footer'>
+        <footer className='hwc-slim-footer'>
             <Container>{desktop ? <Desktop /> : <Mobile />}</Container>
         </footer>
     )

@@ -4,8 +4,8 @@ import '../sass/linklist.scss'
 import '@posten-hedwig/core'
 
 const LinkList = ({ small, children }) => {
-    let classes = ['hw-linklist']
-    if (small) classes.push('hw-linklist--small')
+    let classes = ['hwc-linklist']
+    if (small) classes.push('hwc-linklist--small')
     return <ul className={classes.join(' ')}>{children}</ul>
 }
 

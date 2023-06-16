@@ -31,30 +31,30 @@ export default {
 const TemplateDefault = (args) => (
     <>
         Colors are for illustration purposes. Padding is green, margin is orange
-        <div className='hw-helpers-margin-highlighter'>
+        <div className='hwc-helpers-margin-highlighter'>
             <Grid {...args}>
                 <GridItem size='one-half'>
-                    <p className='hw-helpers-margin-highlighter-content'>
+                    <p className='hwc-helpers-margin-highlighter-content'>
                         Item 1
                     </p>
                 </GridItem>
                 <GridItem size='one-half'>
-                    <p className='hw-helpers-margin-highlighter-content'>
+                    <p className='hwc-helpers-margin-highlighter-content'>
                         Item 2
                     </p>
                 </GridItem>
                 <GridItem size='one-half'>
-                    <p className='hw-helpers-margin-highlighter-content'>
+                    <p className='hwc-helpers-margin-highlighter-content'>
                         Item 3
                     </p>
                 </GridItem>
                 <GridItem size='one-half'>
-                    <p className='hw-helpers-margin-highlighter-content'>
+                    <p className='hwc-helpers-margin-highlighter-content'>
                         Item 4
                     </p>
                 </GridItem>
                 <GridItem size='one-half'>
-                    <p className='hw-helpers-margin-highlighter-content'>
+                    <p className='hwc-helpers-margin-highlighter-content'>
                         Item nr 5
                     </p>
                 </GridItem>

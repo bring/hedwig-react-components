@@ -3,7 +3,7 @@ import { Block } from '@posten-hedwig/block'
 
 const Buttons = ({ buttons }) =>
     buttons.map((button, index) => (
-        <Block mb='small-2' classList='hw-footer__button' key={index}>
+        <Block mb='small-2' classList='hwc-footer__button' key={index}>
             {button}
         </Block>
     ))

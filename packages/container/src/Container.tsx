@@ -27,15 +27,15 @@ const Container: React.FC<ContainerProps> = ({
     pb,
     children
 }) => {
-    const classes = ['hw-container']
+    const classes = ['hwc-container']
     if (slim) {
-        classes.push('hw-container--slim')
+        classes.push('hwc-container--slim')
     }
     if (pt) {
-        classes.push('hw-container--pt')
+        classes.push('hwc-container--pt')
     }
     if (pb) {
-        classes.push('hw-container--pb')
+        classes.push('hwc-container--pb')
     }
 
     return (

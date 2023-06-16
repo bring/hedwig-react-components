@@ -45,7 +45,7 @@ Posten.args = {
 }
 
 const TemplateBring = (args) => (
-    <div className='hw-theme-bring'>
+    <div className='hwc-theme-bring'>
         <SlimFooter {...args} />
     </div>
 )

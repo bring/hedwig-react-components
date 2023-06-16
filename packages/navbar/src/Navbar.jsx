@@ -38,14 +38,14 @@ const Navbar = ({
     }, [])
 
     const SkipToMain = () => (
-        <a href={skipToMainHref} className='hw-navbar__skip-to-content'>
+        <a href={skipToMainHref} className='hwc-navbar__skip-to-content'>
             {skipToMainTitle}
         </a>
     )
     return (
-        <header className='hw-navbar'>
-            <div className='hw-navbar__content'>
-                <div className='hw-navbar__top'>
+        <header className='hwc-navbar'>
+            <div className='hwc-navbar__content'>
+                <div className='hwc-navbar__top'>
                     <NavbarProvider>
                         <SkipToMain />
                         {flagship ? (
@@ -65,7 +65,7 @@ const Navbar = ({
                         {desktop && selectorItems && (
                             <Selector items={selectorItems} desktop={desktop} />
                         )}
-                        <nav className='hw-navbar__menu'>
+                        <nav className='hwc-navbar__menu'>
                             {children}
                             {menuOpenName &&
                                 menuOpenTitle &&

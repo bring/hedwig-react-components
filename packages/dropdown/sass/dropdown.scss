@@ -1,19 +1,19 @@
-select.hw-dropdown {
+select.hwc-dropdown {
     position: relative;
-    height: var(--hw-input-field-height);
-    font-family: var(--hw-font-primary-regular);
+    height: var(--hwc-input-field-height);
+    font-family: var(--hwc-font-primary-regular);
 
     border: none;
-    border-radius: var(--hw-border-radius);
+    border-radius: var(--hwc-border-radius);
     display: flex;
     width: 100%;
-    height: var(--hw-input-field-height);
-    font-size: var(--hw-font-size-small);
+    height: var(--hwc-input-field-height);
+    font-size: var(--hwc-font-size-small);
     cursor: pointer;
-    color: var(--hw-color-black);
-    background-color: var(--hw-color-gray-light-fill);
+    color: var(--hwc-color-black);
+    background-color: var(--hwc-color-gray-light-fill);
     -webkit-appearance: none;
-    padding: var(--hw-spacing-small-4);
+    padding: var(--hwc-spacing-small-4);
     transition: border-color 0.3s ease, max-height 0.3s ease,
         transform 0.3s ease;
     -moz-osx-font-smoothing: grayscale;
@@ -21,18 +21,18 @@ select.hw-dropdown {
 
     &:hover,
     &:active {
-        border-color: var(--hw-color-gray-dark);
+        border-color: var(--hwc-color-gray-dark);
     }
 
     background-image:
       /* Cut off the sharp ends of the arrow */ linear-gradient(
             45deg,
             transparent 74%,
-            var(--hw-color-gray-light-fill) 0%
+            var(--hwc-color-gray-light-fill) 0%
         ),
         linear-gradient(
             135deg,
-            var(--hw-color-gray-light-fill) 26%,
+            var(--hwc-color-gray-light-fill) 26%,
             transparent 26%
         ),
         /* Draw the arrow */
@@ -40,15 +40,15 @@ select.hw-dropdown {
                 135deg,
                 transparent 0,
                 transparent 72%,
-                var(--hw-color-gray-light-fill) 73%,
-                var(--hw-color-gray-light-fill) 100%
+                var(--hwc-color-gray-light-fill) 73%,
+                var(--hwc-color-gray-light-fill) 100%
             ),
         linear-gradient(
             45deg,
-            var(--hw-color-gray-light-fill) 0,
-            var(--hw-color-gray-light-fill) 28%,
-            var(--hw-color-gray-dark) 29%,
-            var(--hw-color-gray-dark) 37%,
+            var(--hwc-color-gray-light-fill) 0,
+            var(--hwc-color-gray-light-fill) 28%,
+            var(--hwc-color-gray-dark) 29%,
+            var(--hwc-color-gray-dark) 37%,
             transparent 38%,
             transparent 100%
         ),
@@ -56,13 +56,13 @@ select.hw-dropdown {
             135deg,
             transparent 0,
             transparent 62%,
-            var(--hw-color-gray-dark) 63%,
-            var(--hw-color-gray-dark) 71%,
-            var(--hw-color-gray-light-fill) 72%,
-            var(--hw-color-gray-light-fill) 100%
+            var(--hwc-color-gray-dark) 63%,
+            var(--hwc-color-gray-dark) 71%,
+            var(--hwc-color-gray-light-fill) 72%,
+            var(--hwc-color-gray-light-fill) 100%
         );
-    background-size: var(--hw-spacing-small-4) var(--hw-spacing-small-4);
-    background-position: calc(100% - var(--hw-spacing-small-4)) 45%;
+    background-size: var(--hwc-spacing-small-4) var(--hwc-spacing-small-4);
+    background-position: calc(100% - var(--hwc-spacing-small-4)) 45%;
     background-repeat: no-repeat;
 
     /* Remove default down-arrow for IE */
@@ -71,7 +71,7 @@ select.hw-dropdown {
     }
     /* Color the selected option with the correct color for IE */
     &::-ms-value {
-        color: var(--hw-color-gray-dark);
+        color: var(--hwc-color-gray-dark);
         background: none;
     }
 
@@ -84,36 +84,36 @@ select.hw-dropdown {
 
     &--line {
         background-color: transparent;
-        border-bottom: var(--hw-border-thickness) solid
-            var(--hw-color-gray-normal);
+        border-bottom: var(--hwc-border-thickness) solid
+            var(--hwc-color-gray-normal);
         padding-left: 0px;
-        padding-top: var(--hw-spacing-small-1);
-        padding-bottom: var(--hw-spacing-small-3);
+        padding-top: var(--hwc-spacing-small-1);
+        padding-bottom: var(--hwc-spacing-small-3);
         height: calc(
-            var(--hw-input-field-height) - var(--hw-spacing-small-4) -
-                var(--hw-spacing-small-4) + var(--hw-spacing-small-1) +
-                var(--hw-spacing-small-3)
+            var(--hwc-input-field-height) - var(--hwc-spacing-small-4) -
+                var(--hwc-spacing-small-4) + var(--hwc-spacing-small-1) +
+                var(--hwc-spacing-small-3)
         );
         border-radius: 0px;
 
 
         &:focus {
-            border-bottom: var(--hw-border-thickness) solid
-                var(--hw-color-primary-dark);
+            border-bottom: var(--hwc-border-thickness) solid
+                var(--hwc-color-primary-dark);
         }
 
         &[disabled],
         &:disabled,
         &[disabled='disabled'] {
             background: transparent;
-            padding: var(--hw-spacing-small-4);
+            padding: var(--hwc-spacing-small-4);
         }
     }
 
     &--white {
-        background-color: var(--hw-color-white);
+        background-color: var(--hwc-color-white);
         /* Place the arrow, created below */
-        //      background-position: calc(100% - var(--hw-spacing-small-4)) 45%;
+        //      background-position: calc(100% - var(--hwc-spacing-small-4)) 45%;
     }
 
     &--line,
@@ -122,23 +122,23 @@ select.hw-dropdown {
         /* Cut off the sharp ends of the arrow */ linear-gradient(
                 45deg,
                 transparent 74%,
-                var(--hw-color-white) 0%
+                var(--hwc-color-white) 0%
             ),
-            linear-gradient(135deg, var(--hw-color-white) 26%, transparent 26%),
+            linear-gradient(135deg, var(--hwc-color-white) 26%, transparent 26%),
             /* Draw the arrow */
                 linear-gradient(
                     135deg,
                     transparent 0,
                     transparent 72%,
-                    var(--hw-color-white) 73%,
-                    var(--hw-color-white) 100%
+                    var(--hwc-color-white) 73%,
+                    var(--hwc-color-white) 100%
                 ),
             linear-gradient(
                 45deg,
-                var(--hw-color-white) 0,
-                var(--hw-color-white) 28%,
-                var(--hw-color-gray-dark) 29%,
-                var(--hw-color-gray-dark) 37%,
+                var(--hwc-color-white) 0,
+                var(--hwc-color-white) 28%,
+                var(--hwc-color-gray-dark) 29%,
+                var(--hwc-color-gray-dark) 37%,
                 transparent 38%,
                 transparent 100%
             ),
@@ -146,12 +146,12 @@ select.hw-dropdown {
                 135deg,
                 transparent 0,
                 transparent 62%,
-                var(--hw-color-gray-dark) 63%,
-                var(--hw-color-gray-dark) 71%,
-                var(--hw-color-white) 72%,
-                var(--hw-color-white) 100%
+                var(--hwc-color-gray-dark) 63%,
+                var(--hwc-color-gray-dark) 71%,
+                var(--hwc-color-white) 72%,
+                var(--hwc-color-white) 100%
             );
-        background-size: var(--hw-spacing-small-4) var(--hw-spacing-small-4);
+        background-size: var(--hwc-spacing-small-4) var(--hwc-spacing-small-4);
         background-repeat: no-repeat;
     }
 }

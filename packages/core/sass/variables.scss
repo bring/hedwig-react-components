@@ -5,36 +5,36 @@
      * NOTE: This is in PX because we want them to specific.
      */
 
-    --hw-spacing-small-1: 4px;
-    --hw-spacing-small-2: 8px;
-    --hw-spacing-small-3: 12px;
-    --hw-spacing-small-4: 16px;
-    --hw-spacing-medium-1: 20px;
-    --hw-spacing-medium-2: 24px;
-    --hw-spacing-medium-3: 32px;
-    --hw-spacing-medium-4: 40px;
-    --hw-spacing-large-1: 48px;
-    --hw-spacing-large-2: 64px;
-    --hw-spacing-large-3: 80px;
-    --hw-spacing-large-4: 120px;
-    --hw-spacing-large-5: 160px;
+    --hwc-spacing-small-1: 4px;
+    --hwc-spacing-small-2: 8px;
+    --hwc-spacing-small-3: 12px;
+    --hwc-spacing-small-4: 16px;
+    --hwc-spacing-medium-1: 20px;
+    --hwc-spacing-medium-2: 24px;
+    --hwc-spacing-medium-3: 32px;
+    --hwc-spacing-medium-4: 40px;
+    --hwc-spacing-large-1: 48px;
+    --hwc-spacing-large-2: 64px;
+    --hwc-spacing-large-3: 80px;
+    --hwc-spacing-large-4: 120px;
+    --hwc-spacing-large-5: 160px;
 
     /**
     * Shared colors
     */
 
-    --hw-color-gray-dark: #6e6e6e;
-    --hw-color-gray-normal: #d6d6d6;
-    --hw-color-gray-light-stroke: #e4e4e4;
-    --hw-color-gray-light-fill: #f2f2f2;
+    --hwc-color-gray-dark: #6e6e6e;
+    --hwc-color-gray-normal: #d6d6d6;
+    --hwc-color-gray-light-stroke: #e4e4e4;
+    --hwc-color-gray-light-fill: #f2f2f2;
 
-    --hw-color-white: #fff;
-    --hw-color-black: #000;
-    --hw-color-black-hover: #1E1E1E;
+    --hwc-color-white: #fff;
+    --hwc-color-black: #000;
+    --hwc-color-black-hover: #1E1E1E;
 
-    --hw-color-alert-green: #7BC144;
-    --hw-color-alert-yellow: #fdbb2f;
-    --hw-color-alert-red: #e32d22;
+    --hwc-color-alert-green: #7BC144;
+    --hwc-color-alert-yellow: #fdbb2f;
+    --hwc-color-alert-red: #e32d22;
 
 
 
@@ -42,149 +42,149 @@
     * Colors with opacity
     */
 
-    --hw-color-opaque-black-20: rgba(0,0,0, 0.20); /* #000000 */
-    --hw-color-opaque-black-10: rgba(0,0,0, 0.10);
-    --hw-color-opaque-black-7: rgba(0,0,0, 0.07);
-    --hw-color-opaque-white: rgba(255, 255, 255, 0.50);
+    --hwc-color-opaque-black-20: rgba(0,0,0, 0.20); /* #000000 */
+    --hwc-color-opaque-black-10: rgba(0,0,0, 0.10);
+    --hwc-color-opaque-black-7: rgba(0,0,0, 0.07);
+    --hwc-color-opaque-white: rgba(255, 255, 255, 0.50);
 
 
     /**
     * Width limitations
     */
 
-    --hw-width-slim: 590px;
-    --hw-width-default: 690px; /* Max default width (articles) */
-    --hw-width-wide: 1200px; /* Default site width, used in footer etc */
-    --hw-width-narrow: 300px; /* Narrow column for centered contents */
+    --hwc-width-slim: 590px;
+    --hwc-width-default: 690px; /* Max default width (articles) */
+    --hwc-width-wide: 1200px; /* Default site width, used in footer etc */
+    --hwc-width-narrow: 300px; /* Narrow column for centered contents */
 
     /**
     * Fonts
     */
 
-    --hw-font-primary-light: 'Posten Sans Light', sans-serif;
-    --hw-font-primary-regular: 'Posten Sans Regular', sans-serif;
-    --hw-font-primary-medium: 'Posten Sans Medium', sans-serif;
-    --hw-font-primary-bold: 'Posten Sans Bold', sans-serif;
+    --hwc-font-primary-light: 'Posten Sans Light', sans-serif;
+    --hwc-font-primary-regular: 'Posten Sans Regular', sans-serif;
+    --hwc-font-primary-medium: 'Posten Sans Medium', sans-serif;
+    --hwc-font-primary-bold: 'Posten Sans Bold', sans-serif;
 
     /**
     * Font sizes
     * NOTE: To achieve fluid font sizes on h-tags we used the calculation described here:
     * https://css-tricks.com/snippets/css/fluid-typography/
     */
-    --hw-font-size-max-view-port: 1200;
-    --hw-font-size-min-view-port: 300;
-    --hw-font-size-min-view-port-px: 300px;
+    --hwc-font-size-max-view-port: 1200;
+    --hwc-font-size-min-view-port: 300;
+    --hwc-font-size-min-view-port-px: 300px;
 
 
 
-    --hw-font-size-max-h1-large: 72; /* 80 */
-    --hw-font-size-max-h1-large-px: 72px;
-    --hw-font-size-min-h1-large: 40;
-    --hw-font-size-min-h1-large-px: 40px;
-    --hw-h1-large-line-height: 1.111;
+    --hwc-font-size-max-h1-large: 72; /* 80 */
+    --hwc-font-size-max-h1-large-px: 72px;
+    --hwc-font-size-min-h1-large: 40;
+    --hwc-font-size-min-h1-large-px: 40px;
+    --hwc-h1-large-line-height: 1.111;
 
-    --hw-font-size-max-h1: 48; /* 48 */
-    --hw-font-size-max-h1-px: 48px;
-    --hw-font-size-min-h1: 32;
-    --hw-font-size-min-h1-px: 32px;
-    --hw-h1-line-height: 1.1667;
+    --hwc-font-size-max-h1: 48; /* 48 */
+    --hwc-font-size-max-h1-px: 48px;
+    --hwc-font-size-min-h1: 32;
+    --hwc-font-size-min-h1-px: 32px;
+    --hwc-h1-line-height: 1.1667;
 
-    --hw-font-size-max-h2: 32; /* 44 */
-    --hw-font-size-max-h2-px: 32px;
-    --hw-font-size-min-h2: 28;
-    --hw-font-size-min-h2-px: 28px;
-    --hw-h2-line-height: 1.25;
+    --hwc-font-size-max-h2: 32; /* 44 */
+    --hwc-font-size-max-h2-px: 32px;
+    --hwc-font-size-min-h2: 28;
+    --hwc-font-size-min-h2-px: 28px;
+    --hwc-h2-line-height: 1.25;
 
-    --hw-font-size-max-h3: 24; /* 28 */
-    --hw-font-size-max-h3-px: 24px;
-    --hw-font-size-min-h3: 22;
-    --hw-font-size-min-h3-px: 22px;
-    --hw-h3-line-height: 1.333;
+    --hwc-font-size-max-h3: 24; /* 28 */
+    --hwc-font-size-max-h3-px: 24px;
+    --hwc-font-size-min-h3: 22;
+    --hwc-font-size-min-h3-px: 22px;
+    --hwc-h3-line-height: 1.333;
 
-    --hw-font-size-max-h4: 20; /* 22 */
-    --hw-font-size-max-h4-px: 20px;
-    --hw-font-size-min-h4: 18;
-    --hw-font-size-min-h4-px: 18px;
-    --hw-h4-line-height: 1.4;
+    --hwc-font-size-max-h4: 20; /* 22 */
+    --hwc-font-size-max-h4-px: 20px;
+    --hwc-font-size-min-h4: 18;
+    --hwc-font-size-min-h4-px: 18px;
+    --hwc-h4-line-height: 1.4;
 
-    --hw-font-size-max-h5: 18; /* 20 */
-    --hw-font-size-max-h5-px: 18px;
-    --hw-font-size-min-h5: 16;
-    --hw-font-size-min-h5-px: 16px;
-    --hw-h5-line-height: 1.444;
+    --hwc-font-size-max-h5: 18; /* 20 */
+    --hwc-font-size-max-h5-px: 18px;
+    --hwc-font-size-min-h5: 16;
+    --hwc-font-size-min-h5-px: 16px;
+    --hwc-h5-line-height: 1.444;
 
-    --hw-font-size-max-h6: 16; /* 18 */
-    --hw-font-size-max-h6-px: 16px;
-    --hw-font-size-min-h6: 14;
-    --hw-font-size-min-h6-px: 14px;
-    --hw-h6-line-height: 1.5;
+    --hwc-font-size-max-h6: 16; /* 18 */
+    --hwc-font-size-max-h6-px: 16px;
+    --hwc-font-size-min-h6: 14;
+    --hwc-font-size-min-h6-px: 14px;
+    --hwc-h6-line-height: 1.5;
 
-    --hw-font-size-max-caption: 13;
-    --hw-font-size-max-caption-px: 13px;
-    --hw-font-size-min-caption: 12;
-    --hw-font-size-min-caption-px: 12px;
-    --hw-caption-line-height: 1.5;
+    --hwc-font-size-max-caption: 13;
+    --hwc-font-size-max-caption-px: 13px;
+    --hwc-font-size-min-caption: 12;
+    --hwc-font-size-min-caption-px: 12px;
+    --hwc-caption-line-height: 1.5;
 
-    --hw-font-size-max-p: 20; /* 22 */
-    --hw-font-size-max-p-px: 20px;
-    --hw-font-size-min-p: 18;
-    --hw-font-size-min-p-px: 18px;
-    --hw-p-line-height: 1.4;
+    --hwc-font-size-max-p: 20; /* 22 */
+    --hwc-font-size-max-p-px: 20px;
+    --hwc-font-size-min-p: 18;
+    --hwc-font-size-min-p-px: 18px;
+    --hwc-p-line-height: 1.4;
 
-    --hw-font-size-max-lead: 20; /* 22 */
-    --hw-font-size-max-lead-px: 20px;
-    --hw-font-size-min-lead: 18;
-    --hw-font-size-min-lead-px: 18px;
-    --hw-lead-line-height: 1.4;
+    --hwc-font-size-max-lead: 20; /* 22 */
+    --hwc-font-size-max-lead-px: 20px;
+    --hwc-font-size-min-lead: 18;
+    --hwc-font-size-min-lead-px: 18px;
+    --hwc-lead-line-height: 1.4;
 
-    --hw-font-size-max-small: 18; /* 20 */
-    --hw-font-size-max-small-px: 18px;
-    --hw-font-size-min-small: 16;
-    --hw-font-size-min-small-px: 16px;
-    --hw-small-line-height: 1.444;
+    --hwc-font-size-max-small: 18; /* 20 */
+    --hwc-font-size-max-small-px: 18px;
+    --hwc-font-size-min-small: 16;
+    --hwc-font-size-min-small-px: 16px;
+    --hwc-small-line-height: 1.444;
 
-    --hw-font-size-max-smaller: 17; /* 18 */
-    --hw-font-size-max-smaller-px: 17px;
-    --hw-font-size-min-smaller: 16;
-    --hw-font-size-min-smaller-px: 16px;
-    --hw-smaller-line-height: 1.450;
+    --hwc-font-size-max-smaller: 17; /* 18 */
+    --hwc-font-size-max-smaller-px: 17px;
+    --hwc-font-size-min-smaller: 16;
+    --hwc-font-size-min-smaller-px: 16px;
+    --hwc-smaller-line-height: 1.450;
 
-    --hw-font-size-max-technical: 16; /* 17 */
-    --hw-font-size-max-technical-px: 16px;
-    --hw-font-size-min-technical: 15;
-    --hw-font-size-min-technical-px: 15px;
-    --hw-technical-line-height: 1.47;
+    --hwc-font-size-max-technical: 16; /* 17 */
+    --hwc-font-size-max-technical-px: 16px;
+    --hwc-font-size-min-technical: 15;
+    --hwc-font-size-min-technical-px: 15px;
+    --hwc-technical-line-height: 1.47;
 
-    --hw-font-size-max-smallest: 12; /* 13 */
-    --hw-font-size-max-smallest-px: 12px;
-    --hw-font-size-min-smallest: 11;
-    --hw-font-size-min-smallest-px: 11px;
-    --hw-smallest-line-height: 1.5;
+    --hwc-font-size-max-smallest: 12; /* 13 */
+    --hwc-font-size-max-smallest-px: 12px;
+    --hwc-font-size-min-smallest: 11;
+    --hwc-font-size-min-smallest-px: 11px;
+    --hwc-smallest-line-height: 1.5;
 
-    --hw-font-size-max-card-title: 28; /* 28 */
-    --hw-font-size-max-card-title-px: 28px;
-    --hw-font-size-min-card-title: 26;
-    --hw-font-size-min-card-title-px: 26px;
-    --hw-card-title-line-height: 1.25;
+    --hwc-font-size-max-card-title: 28; /* 28 */
+    --hwc-font-size-max-card-title-px: 28px;
+    --hwc-font-size-min-card-title: 26;
+    --hwc-font-size-min-card-title-px: 26px;
+    --hwc-card-title-line-height: 1.25;
 
-    --hw-font-size-h1-large: calc(var(--hw-font-size-min-h1-px) + (var(--hw-font-size-max-h1-large) - var(--hw-font-size-min-h1-large)) * ((100vw - var(--hw-font-size-min-view-port-px)) / (var(--hw-font-size-max-view-port) - var(--hw-font-size-min-view-port))));
-    --hw-font-size-h1: calc(var(--hw-font-size-min-h1-px) + (var(--hw-font-size-max-h1) - var(--hw-font-size-min-h1)) * ((100vw - var(--hw-font-size-min-view-port-px)) / (var(--hw-font-size-max-view-port) - var(--hw-font-size-min-view-port))));
-    --hw-font-size-h2: calc(var(--hw-font-size-min-h2-px) + (var(--hw-font-size-max-h2) - var(--hw-font-size-min-h2)) * ((100vw - var(--hw-font-size-min-view-port-px)) / (var(--hw-font-size-max-view-port) - var(--hw-font-size-min-view-port))));
-    --hw-font-size-h3: calc(var(--hw-font-size-min-h3-px) + (var(--hw-font-size-max-h3) - var(--hw-font-size-min-h3)) * ((100vw - var(--hw-font-size-min-view-port-px)) / (var(--hw-font-size-max-view-port) - var(--hw-font-size-min-view-port))));
-    --hw-font-size-h4: calc(var(--hw-font-size-min-h4-px) + (var(--hw-font-size-max-h4) - var(--hw-font-size-min-h4)) * ((100vw - var(--hw-font-size-min-view-port-px)) / (var(--hw-font-size-max-view-port) - var(--hw-font-size-min-view-port))));
-    --hw-font-size-h5: calc(var(--hw-font-size-min-h5-px) + (var(--hw-font-size-max-h5) - var(--hw-font-size-min-h5)) * ((100vw - var(--hw-font-size-min-view-port-px)) / (var(--hw-font-size-max-view-port) - var(--hw-font-size-min-view-port))));
-    --hw-font-size-h6: calc(var(--hw-font-size-min-h6-px) + (var(--hw-font-size-max-h6) - var(--hw-font-size-min-h6)) * ((100vw - var(--hw-font-size-min-view-port-px)) / (var(--hw-font-size-max-view-port) - var(--hw-font-size-min-view-port))));
+    --hwc-font-size-h1-large: calc(var(--hwc-font-size-min-h1-px) + (var(--hwc-font-size-max-h1-large) - var(--hwc-font-size-min-h1-large)) * ((100vw - var(--hwc-font-size-min-view-port-px)) / (var(--hwc-font-size-max-view-port) - var(--hwc-font-size-min-view-port))));
+    --hwc-font-size-h1: calc(var(--hwc-font-size-min-h1-px) + (var(--hwc-font-size-max-h1) - var(--hwc-font-size-min-h1)) * ((100vw - var(--hwc-font-size-min-view-port-px)) / (var(--hwc-font-size-max-view-port) - var(--hwc-font-size-min-view-port))));
+    --hwc-font-size-h2: calc(var(--hwc-font-size-min-h2-px) + (var(--hwc-font-size-max-h2) - var(--hwc-font-size-min-h2)) * ((100vw - var(--hwc-font-size-min-view-port-px)) / (var(--hwc-font-size-max-view-port) - var(--hwc-font-size-min-view-port))));
+    --hwc-font-size-h3: calc(var(--hwc-font-size-min-h3-px) + (var(--hwc-font-size-max-h3) - var(--hwc-font-size-min-h3)) * ((100vw - var(--hwc-font-size-min-view-port-px)) / (var(--hwc-font-size-max-view-port) - var(--hwc-font-size-min-view-port))));
+    --hwc-font-size-h4: calc(var(--hwc-font-size-min-h4-px) + (var(--hwc-font-size-max-h4) - var(--hwc-font-size-min-h4)) * ((100vw - var(--hwc-font-size-min-view-port-px)) / (var(--hwc-font-size-max-view-port) - var(--hwc-font-size-min-view-port))));
+    --hwc-font-size-h5: calc(var(--hwc-font-size-min-h5-px) + (var(--hwc-font-size-max-h5) - var(--hwc-font-size-min-h5)) * ((100vw - var(--hwc-font-size-min-view-port-px)) / (var(--hwc-font-size-max-view-port) - var(--hwc-font-size-min-view-port))));
+    --hwc-font-size-h6: calc(var(--hwc-font-size-min-h6-px) + (var(--hwc-font-size-max-h6) - var(--hwc-font-size-min-h6)) * ((100vw - var(--hwc-font-size-min-view-port-px)) / (var(--hwc-font-size-max-view-port) - var(--hwc-font-size-min-view-port))));
 
 
-    --hw-font-size-caption: calc(var(--hw-font-size-min-caption-px) + (var(--hw-font-size-max-caption) - var(--hw-font-size-min-caption)) * ((100vw - var(--hw-font-size-min-view-port-px)) / (var(--hw-font-size-max-view-port) - var(--hw-font-size-min-view-port))));
-    --hw-font-size-p: calc(var(--hw-font-size-min-p-px) + (var(--hw-font-size-max-p) - var(--hw-font-size-min-p)) * ((100vw - var(--hw-font-size-min-view-port-px)) / (var(--hw-font-size-max-view-port) - var(--hw-font-size-min-view-port))));
-    --hw-font-size-lead: calc(var(--hw-font-size-min-lead-px) + (var(--hw-font-size-max-lead) - var(--hw-font-size-min-lead)) * ((100vw - var(--hw-font-size-min-view-port-px)) / (var(--hw-font-size-max-view-port) - var(--hw-font-size-min-view-port))));
-    --hw-font-size-technical: calc(var(--hw-font-size-min-technical-px) + (var(--hw-font-size-max-technical) - var(--hw-font-size-min-technical)) * ((100vw - var(--hw-font-size-min-view-port-px)) / (var(--hw-font-size-max-view-port) - var(--hw-font-size-min-view-port))));
+    --hwc-font-size-caption: calc(var(--hwc-font-size-min-caption-px) + (var(--hwc-font-size-max-caption) - var(--hwc-font-size-min-caption)) * ((100vw - var(--hwc-font-size-min-view-port-px)) / (var(--hwc-font-size-max-view-port) - var(--hwc-font-size-min-view-port))));
+    --hwc-font-size-p: calc(var(--hwc-font-size-min-p-px) + (var(--hwc-font-size-max-p) - var(--hwc-font-size-min-p)) * ((100vw - var(--hwc-font-size-min-view-port-px)) / (var(--hwc-font-size-max-view-port) - var(--hwc-font-size-min-view-port))));
+    --hwc-font-size-lead: calc(var(--hwc-font-size-min-lead-px) + (var(--hwc-font-size-max-lead) - var(--hwc-font-size-min-lead)) * ((100vw - var(--hwc-font-size-min-view-port-px)) / (var(--hwc-font-size-max-view-port) - var(--hwc-font-size-min-view-port))));
+    --hwc-font-size-technical: calc(var(--hwc-font-size-min-technical-px) + (var(--hwc-font-size-max-technical) - var(--hwc-font-size-min-technical)) * ((100vw - var(--hwc-font-size-min-view-port-px)) / (var(--hwc-font-size-max-view-port) - var(--hwc-font-size-min-view-port))));
 
-    --hw-font-size-small: calc(var(--hw-font-size-min-small-px) + (var(--hw-font-size-max-small) - var(--hw-font-size-min-small)) * ((100vw - var(--hw-font-size-min-view-port-px)) / (var(--hw-font-size-max-view-port) - var(--hw-font-size-min-view-port))));
-    --hw-font-size-smaller: calc(var(--hw-font-size-min-smaller-px) + (var(--hw-font-size-max-smaller) - var(--hw-font-size-min-smaller)) * ((100vw - var(--hw-font-size-min-view-port-px)) / (var(--hw-font-size-max-view-port) - var(--hw-font-size-min-view-port))));
-    --hw-font-size-smallest: calc(var(--hw-font-size-min-smallest-px) + (var(--hw-font-size-max-smallest) - var(--hw-font-size-min-smallest)) * ((100vw - var(--hw-font-size-min-view-port-px)) / (var(--hw-font-size-max-view-port) - var(--hw-font-size-min-view-port))));
-    --hw-font-size-card-title: calc(var(--hw-font-size-min-card-title-px) + (var(--hw-font-size-max-card-title) - var(--hw-font-size-min-card-title)) * ((100vw - var(--hw-font-size-min-view-port-px)) / (var(--hw-font-size-max-view-port) - var(--hw-font-size-min-view-port))));
+    --hwc-font-size-small: calc(var(--hwc-font-size-min-small-px) + (var(--hwc-font-size-max-small) - var(--hwc-font-size-min-small)) * ((100vw - var(--hwc-font-size-min-view-port-px)) / (var(--hwc-font-size-max-view-port) - var(--hwc-font-size-min-view-port))));
+    --hwc-font-size-smaller: calc(var(--hwc-font-size-min-smaller-px) + (var(--hwc-font-size-max-smaller) - var(--hwc-font-size-min-smaller)) * ((100vw - var(--hwc-font-size-min-view-port-px)) / (var(--hwc-font-size-max-view-port) - var(--hwc-font-size-min-view-port))));
+    --hwc-font-size-smallest: calc(var(--hwc-font-size-min-smallest-px) + (var(--hwc-font-size-max-smallest) - var(--hwc-font-size-min-smallest)) * ((100vw - var(--hwc-font-size-min-view-port-px)) / (var(--hwc-font-size-max-view-port) - var(--hwc-font-size-min-view-port))));
+    --hwc-font-size-card-title: calc(var(--hwc-font-size-min-card-title-px) + (var(--hwc-font-size-max-card-title) - var(--hwc-font-size-min-card-title)) * ((100vw - var(--hwc-font-size-min-view-port-px)) / (var(--hwc-font-size-max-view-port) - var(--hwc-font-size-min-view-port))));
 
 
     /*
@@ -205,17 +205,17 @@
     */
 
     /* Borders */
-    --hw-border-thickness: 1px;
-    --hw-border-thickness-thick: 2px;
-    --hw-border-radius: 2px;
+    --hwc-border-thickness: 1px;
+    --hwc-border-thickness-thick: 2px;
+    --hwc-border-radius: 2px;
 
     /* Fixed sizes */
-    --hw-navbar-height-mobile: 90px;
-    --hw-navbar-height-desktop: 112px;
-    --hw-input-field-height: 58px;
-    --hw-navbar-search-max-width: 530px;
+    --hwc-navbar-height-mobile: 90px;
+    --hwc-navbar-height-desktop: 112px;
+    --hwc-input-field-height: 58px;
+    --hwc-navbar-search-max-width: 530px;
     @media(--large) {
-        --hw-navbar-search-max-width: 70%;
+        --hwc-navbar-search-max-width: 70%;
     }
 
 
@@ -223,13 +223,13 @@
     /**
     * Transitions
     */
-    --hw-transition-time-quick: 0.130s;
-    --hw-transition-time-normal: 0.300s;
-    --hw-transition-time-slow: 0.700s;
+    --hwc-transition-time-quick: 0.130s;
+    --hwc-transition-time-normal: 0.300s;
+    --hwc-transition-time-slow: 0.700s;
 
-    --hw-transition-easing-normal: ease;
-    --hw-transition-easing-in: ease-in;
-    --hw-transition-easing-out: ease-out;
+    --hwc-transition-easing-normal: ease;
+    --hwc-transition-easing-in: ease-in;
+    --hwc-transition-easing-out: ease-out;
 
 
     /**

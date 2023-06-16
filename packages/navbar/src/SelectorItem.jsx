@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 const SelectorItem = ({ link, selected }) => {
-    let classes = ['hw-navbar__selector-item']
+    let classes = ['hwc-navbar__selector-item']
     if (selected) {
         classes.push(classes[0] + '__selected')
     }

@@ -134,7 +134,7 @@ navbarMenu.args = {
 
 // Navbar with Search button and Selector items
 const TemplateSelector = (args) => (
-    <div className='hw-theme-bring'>
+    <div className='hwc-theme-bring'>
         <Navbar {...args} />
     </div>
 )
@@ -159,7 +159,7 @@ navbarSelector.args = {
 
 // Navbar with Flagship
 const TemplateFlagship = (args) => (
-    <div className='hw-theme-bring'>
+    <div className='hwc-theme-bring'>
         <Navbar {...args} />
     </div>
 )

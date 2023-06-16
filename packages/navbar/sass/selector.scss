@@ -1,54 +1,54 @@
 @use '../node_modules/@posten-hedwig/core/sass/mixins';
 
-.hw-navbar__selector {
+.hwc-navbar__selector {
     position: relative;
     vertical-align: baseline;
     margin-right: auto;
     margin-left: 8%;
-    padding-left: var(--hw-spacing-medium-3);
-    line-height: var(--hw-navbar-height-mobile);
+    padding-left: var(--hwc-spacing-medium-3);
+    line-height: var(--hwc-navbar-height-mobile);
     z-index: var(--z-index--navbar-drawer-foreground);
     cursor: pointer;
     transition: color 0.1s ease;
 
-    .hw-navbar__selector-item {
+    .hwc-navbar__selector-item {
         a {
             border: none;
             background: transparent;
-            padding: var(--hw-spacing-small-4) var(--hw-spacing-small-2);
-            font-size: var(--hw-font-size-small);
-            margin-right: var(--hw-spacing-small-2);
-            color: var(--hw-color-black);
+            padding: var(--hwc-spacing-small-4) var(--hwc-spacing-small-2);
+            font-size: var(--hwc-font-size-small);
+            margin-right: var(--hwc-spacing-small-2);
+            color: var(--hwc-color-black);
 
             &:hover {
-                color: var(--hw-color-link-hover);
+                color: var(--hwc-color-link-hover);
             }
         }
 
-        &.hw-navbar__selector-item__selected a {
-            border-bottom: var(--hw-border-thickness-thick) solid var(--hw-color-primary) !important;
+        &.hwc-navbar__selector-item__selected a {
+            border-bottom: var(--hwc-border-thickness-thick) solid var(--hwc-color-primary) !important;
         }
     }
 
     @include mixins.large {
         display: inline-block;
-        height: var(--hw-navbar-height-desktop);
-        line-height: var(--hw-navbar-height-desktop);
+        height: var(--hwc-navbar-height-desktop);
+        line-height: var(--hwc-navbar-height-desktop);
     }
 
     &__mobile {
         display: block;
-        border-bottom: var(--hw-border-thickness) solid var(--hw-color-gray-light-stroke);
-        width: calc(100% + var(--hw-spacing-small-3) + var(--hw-spacing-small-3) + var(--hw-spacing-small-4) + var(--hw-spacing-small-4));
-        margin-left: calc(var(--hw-spacing-small-3) * -1 + var(--hw-spacing-small-4) * -1);
+        border-bottom: var(--hwc-border-thickness) solid var(--hwc-color-gray-light-stroke);
+        width: calc(100% + var(--hwc-spacing-small-3) + var(--hwc-spacing-small-3) + var(--hwc-spacing-small-4) + var(--hwc-spacing-small-4));
+        margin-left: calc(var(--hwc-spacing-small-3) * -1 + var(--hwc-spacing-small-4) * -1);
         margin-top: 0;
-        margin-bottom: var(--hw-spacing-medium-4);
+        margin-bottom: var(--hwc-spacing-medium-4);
         padding: 0;
-        padding-bottom: var(--hw-spacing-small-4);
+        padding-bottom: var(--hwc-spacing-small-4);
         line-height: 1;
 
-        .hw-navbar__selector-item:first-of-type a {
-            margin-left: calc(var(--hw-spacing-small-3) + var(--hw-spacing-small-4));
+        .hwc-navbar__selector-item:first-of-type a {
+            margin-left: calc(var(--hwc-spacing-small-3) + var(--hwc-spacing-small-4));
         }
         @include mixins.medium {
             border-bottom: 0px;

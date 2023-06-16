@@ -5,8 +5,8 @@ import '../sass/selector.scss'
 
 const Selector = ({ items, desktop }) => (
     <div
-        className={`hw-navbar__selector${
-            !desktop ? ' hw-navbar__selector__mobile' : ''
+        className={`hwc-navbar__selector${
+            !desktop ? ' hwc-navbar__selector__mobile' : ''
         }`}
     >
         {items.map(({ link, selected }) => (

@@ -14,14 +14,14 @@ const NavbarSearchButton = ({ text, ariaLabel }) => {
 
     return (
         <button
-            className='hw-navbar__search-button'
+            className='hwc-navbar__search-button'
             onClick={handleClick}
             aria-label={ariaLabel || text}
         >
-            <span className='hw-navbar__search-text'>{text}</span>
+            <span className='hwc-navbar__search-text'>{text}</span>
             <FontAwesomeIcon
                 icon={faSearch}
-                className='hw-navbar__icon'
+                className='hwc-navbar__icon'
                 size='2x'
             />
         </button>
