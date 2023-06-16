@@ -30,7 +30,7 @@ const Footer = ({
     }, [])
 
     return (
-        <footer className='hw-footer'>
+        <footer className='hwc-footer'>
             <Container>
                 {desktop ? (
                     <Desktop

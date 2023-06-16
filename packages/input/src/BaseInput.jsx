@@ -21,20 +21,20 @@ const BaseInput = ({
     readOnly,
     ref
 }) => {
-    let variation = variant !== '' ? 'hw-input--' + variant : ''
-    let labelVariation = variant === 'line' ? 'hw-label--line' : ''
+    let variation = variant !== '' ? 'hwc-input--' + variant : ''
+    let labelVariation = variant === 'line' ? 'hwc-label--line' : ''
     if (errorMessage !== '') {
-        variation += ' hw-input--error'
-        labelVariation += ' hw-label--error'
+        variation += ' hwc-input--error'
+        labelVariation += ' hwc-label--error'
     }
 
     return (
-        <label className={'hw-label ' + labelVariation}>
+        <label className={'hwc-label ' + labelVariation}>
             {label}
             <input
                 name={name}
                 id={id}
-                className={'hw-input ' + variation}
+                className={'hwc-input ' + variation}
                 type={type}
                 min={min}
                 max={max}
@@ -47,7 +47,7 @@ const BaseInput = ({
                 ref={ref}
             />
             {errorMessage && (
-                <div className='hw-error hw-error--align-left hw-error--indented'>
+                <div className='hwc-error hwc-error--align-left hwc-error--indented'>
                     {errorMessage}
                 </div>
             )}

@@ -34,9 +34,9 @@ export const Default = Template.bind({})
 const PaddingTemplate = (args) => (
     <>
         Colors are for illustration purposes. Padding is green, margin is orange
-        <div className='hw-helpers-margin-highlighter'>
+        <div className='hwc-helpers-margin-highlighter'>
             <Block {...args}>
-                <p className='hw-helpers-margin-highlighter-content'>
+                <p className='hwc-helpers-margin-highlighter-content'>
                     Block with padding
                 </p>
             </Block>

@@ -1,15 +1,15 @@
 @use '../node_modules/@posten-hedwig/core/sass/mixins';
-.hw-navbar__menu-button {
+.hwc-navbar__menu-button {
     z-index: var(--z-index--navbar-drawer-foreground);
     position: absolute;
     right: 0;
     top: 0;
     display: flex;
     align-items: center;
-    padding-left: var(--hw-spacing-medium-2);
-    padding-right: var(--hw-spacing-medium-2);
+    padding-left: var(--hwc-spacing-medium-2);
+    padding-right: var(--hwc-spacing-medium-2);
     border: 0;
-    font-size: var(--hw-font-size-small);
+    font-size: var(--hwc-font-size-small);
     transition: color 0.1s ease;
     height: 44px;
 
@@ -25,16 +25,16 @@
 
         &-label-menu,
         &-label-close {
-            padding-right: var(--hw-spacing-small-4);
+            padding-right: var(--hwc-spacing-small-4);
             word-break: normal;
         }
     }
 
-    .hw-navbar__icon {
+    .hwc-navbar__icon {
         transform: scale(0.9, 0.9);
     }
 
-    .hw-navbar__times {
+    .hwc-navbar__times {
         transform: scale(0.8, 0.8) translateY(1px);
     }
     &-toggle {
@@ -47,14 +47,14 @@
 }
 
 @include mixins.large {
-    .hw-navbar .hw-navbar__menu-button-label-menu {
+    .hwc-navbar .hwc-navbar__menu-button-label-menu {
         display: inline;
     }
-    .hw-navbar--active {
-        & .hw-navbar__menu-button-label-close {
+    .hwc-navbar--active {
+        & .hwc-navbar__menu-button-label-close {
             display: inline;
         }
-        & .hw-navbar__menu-button-label-menu {
+        & .hwc-navbar__menu-button-label-menu {
             display: none;
         }
     }

@@ -3,55 +3,55 @@
 * Colors
 */
 
-    --hw-color-primary: #e32d22;
-    --hw-color-primary-dark: #980000;
-    --hw-color-primary-darker: #4a1011;
-    --hw-color-primary-light: #ff8a5f;
-    --hw-color-primary-lighter: #fff5f0;
+    --hwc-color-primary: #e32d22;
+    --hwc-color-primary-dark: #980000;
+    --hwc-color-primary-darker: #4a1011;
+    --hwc-color-primary-light: #ff8a5f;
+    --hwc-color-primary-lighter: #fff5f0;
 
     /**
 * Opaque
 */
-    --hw-color-opaque-primary: rgba(227, 45, 34, 0.85); /* #e32d22 */
+    --hwc-color-opaque-primary: rgba(227, 45, 34, 0.85); /* #e32d22 */
 
     /**
  * Link Colors
  */
 
-    --hw-color-link: var(--hw-color-black);
-    --hw-color-link-underline: var(--hw-color-primary);
-    --hw-color-link-hover: var(--hw-color-primary);
-    --hw-color-link-underline-hover: var(--hw-color-primary);
+    --hwc-color-link: var(--hwc-color-black);
+    --hwc-color-link-underline: var(--hwc-color-primary);
+    --hwc-color-link-hover: var(--hwc-color-primary);
+    --hwc-color-link-underline-hover: var(--hwc-color-primary);
 
     /**
  * Component colors
  */
-    --hw-color-input-accent: var(--hw-color-primary-darker);
-    --hw-color-checkbox-accent: var(--hw-color-primary);
+    --hwc-color-input-accent: var(--hwc-color-primary-darker);
+    --hwc-color-checkbox-accent: var(--hwc-color-primary);
 
     /**
  * Button Colors
  */
-    --hw-color-button-primary-hover: #d62722;
-    --hw-color-button-primary-light-hover: #ff7d55;
+    --hwc-color-button-primary-hover: #d62722;
+    --hwc-color-button-primary-light-hover: #ff7d55;
 
     /**
 * Color mappings
 */
 
-    --hw-color-button-text: var(--hw-color-white);
+    --hwc-color-button-text: var(--hwc-color-white);
 
     /**
 * Font families
 */
-    --hw-h1-large-font-family: var(--hw-font-primary-bold);
-    --hw-h1-font-family: var(--hw-font-primary-bold);
-    --hw-h2-font-family: var(--hw-font-primary-medium);
-    --hw-h3-font-family: var(--hw-font-primary-medium);
-    --hw-h4-font-family: var(--hw-font-primary-regular);
-    --hw-h5-font-family: var(--hw-font-primary-regular);
-    --hw-h6-font-family: var(--hw-font-primary-regular);
-    --hw-caption-font-family: var(--hw-font-primary-regular);
-    --hw-technical-font-family: var(--hw-font-primary-regular);
-    --hw-card-title-font-family: var(--hw-font-primary-regular);
+    --hwc-h1-large-font-family: var(--hwc-font-primary-bold);
+    --hwc-h1-font-family: var(--hwc-font-primary-bold);
+    --hwc-h2-font-family: var(--hwc-font-primary-medium);
+    --hwc-h3-font-family: var(--hwc-font-primary-medium);
+    --hwc-h4-font-family: var(--hwc-font-primary-regular);
+    --hwc-h5-font-family: var(--hwc-font-primary-regular);
+    --hwc-h6-font-family: var(--hwc-font-primary-regular);
+    --hwc-caption-font-family: var(--hwc-font-primary-regular);
+    --hwc-technical-font-family: var(--hwc-font-primary-regular);
+    --hwc-card-title-font-family: var(--hwc-font-primary-regular);
 }

@@ -30,14 +30,14 @@ const BaseButton: React.FC<BaseButtonProps> = ({
     ariaControls,
     children
 }) => {
-    const buttonVariant = variant ? 'hw-button--' + variant : ''
-    const buttonSize = size ? 'hw-button--' + size : ''
+    const buttonVariant = variant ? 'hwc-button--' + variant : ''
+    const buttonSize = size ? 'hwc-button--' + size : ''
 
     if (href) {
         return (
             <a
                 href={href}
-                className={`hw-button ${buttonVariant} ${buttonSize}`}
+                className={`hwc-button ${buttonVariant} ${buttonSize}`}
                 onClick={onClick}
 
                 // `disabled` is not a valid attribute on an anchor tag
@@ -51,7 +51,7 @@ const BaseButton: React.FC<BaseButtonProps> = ({
         return (
             <button
                 type={type}
-                className={`hw-button ${buttonVariant} ${buttonSize}`}
+                className={`hwc-button ${buttonVariant} ${buttonSize}`}
                 onClick={onClick}
                 disabled={disabled}
                 aria-controls={ariaControls}

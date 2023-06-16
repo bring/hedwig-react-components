@@ -42,26 +42,26 @@ const GridItem: React.FC<GridItemProps> = ({
     xlargeSize,
     children
 }) => {
-    const classes = ['hw-grid__item']
+    const classes = ['hwc-grid__item']
 
     if (size) {
-        classes.push('hw-' + size)
+        classes.push('hwc-' + size)
     }
 
     if (smallSize) {
-        classes.push('hw-small--' + smallSize)
+        classes.push('hwc-small--' + smallSize)
     }
 
     if (mediumSize) {
-        classes.push('hw-medium--' + mediumSize)
+        classes.push('hwc-medium--' + mediumSize)
     }
 
     if (largeSize) {
-        classes.push('hw-large--' + largeSize)
+        classes.push('hwc-large--' + largeSize)
     }
 
     if (xlargeSize) {
-        classes.push('hw-xlarge--' + xlargeSize)
+        classes.push('hwc-xlarge--' + xlargeSize)
     }
 
     return <div className={classes.join(' ')}>{children}</div>

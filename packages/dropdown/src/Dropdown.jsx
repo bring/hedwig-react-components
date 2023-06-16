@@ -16,11 +16,11 @@ const Dropdown = ({
     ariaControls,
     placeholder
 }) => {
-    let variation = variant ? 'hw-dropdown--' + variant : ''
-    let labelVariation = variant === 'line' ? 'hw-label--line' : ''
+    let variation = variant ? 'hwc-dropdown--' + variant : ''
+    let labelVariation = variant === 'line' ? 'hwc-label--line' : ''
     if (errorMessage !== '') {
-        variation += ' hw-input--error'
-        labelVariation += ' hw-label--error'
+        variation += ' hwc-input--error'
+        labelVariation += ' hwc-label--error'
     }
 
     var items = ''
@@ -42,21 +42,21 @@ const Dropdown = ({
     }
 
     return (
-        <label className={`hw-label ${labelVariation}`}>
+        <label className={`hwc-label ${labelVariation}`}>
             {label}
             <select
                 name={name}
-                className={`hw-dropdown ${variation}`}
+                className={`hwc-dropdown ${variation}`}
                 id={id}
                 defaultValue={defaultSelected}
-                data-hw-dropdown={id}
+                data-hwc-dropdown={id}
                 onChange={(val) => onChange(val.target.value)}
                 aria-controls={ariaControls}
             >
                 {items}
             </select>
             {errorMessage && (
-                <div className='hw-error hw-error--align-left hw-error--indented'>
+                <div className='hwc-error hwc-error--align-left hwc-error--indented'>
                     {errorMessage}
                 </div>
             )}

@@ -51,11 +51,11 @@ const Block: React.FC<BlockProps> = ({
     classList,
     children
 }) => {
-    const classes = ['hw-block']
-    if (px) classes.push(px === 'on' ? 'hw-block--px' : 'hw-block--px-' + px)
-    if (py) classes.push(py === 'on' ? 'hw-block--py' : 'hw-block--py-' + py)
-    if (mt) classes.push(mt === 'on' ? 'hw-block--mt' : 'hw-block--mt-' + mt)
-    if (mb) classes.push(mb === 'on' ? 'hw-block--mb' : 'hw-block--mb-' + mb)
+    const classes = ['hwc-block']
+    if (px) classes.push(px === 'on' ? 'hwc-block--px' : 'hwc-block--px-' + px)
+    if (py) classes.push(py === 'on' ? 'hwc-block--py' : 'hwc-block--py-' + py)
+    if (mt) classes.push(mt === 'on' ? 'hwc-block--mt' : 'hwc-block--mt-' + mt)
+    if (mb) classes.push(mb === 'on' ? 'hwc-block--mb' : 'hwc-block--mb-' + mb)
     if (classList) classes.push(classList)
 
     return React.createElement(

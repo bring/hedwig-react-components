@@ -39,7 +39,7 @@ const Desktop = ({
                 {sections.map((section, index) => (
                     <GridItem size='one-quarter' key={index}>
                         <h4>{section.title}</h4>
-                        <ul className='hw-footer-section'>
+                        <ul className='hwc-footer-section'>
                             {section.links.map((link, index) => (
                                 <li key={index}>{link}</li>
                             ))}
@@ -75,7 +75,7 @@ const Desktop = ({
                     </GridItem>
                 </Grid>
             </Block>
-            <div className='hw-footer__hr' />
+            <div className='hwc-footer__hr' />
             <Block mt='on'>
                 <Copyright text={copyright} />
                 <ImportantLinks links={importantLinks} />

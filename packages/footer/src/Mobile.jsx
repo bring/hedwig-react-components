@@ -24,7 +24,7 @@ const Mobile = ({
                 <Accordion>
                     {sections.map((section, index) => (
                         <AccordionItem title={section.title} key={index}>
-                            <ul className='hw-footer-section'>
+                            <ul className='hwc-footer-section'>
                                 {section.links.map((link, index) => (
                                     <li key={index}>{link}</li>
                                 ))}
@@ -41,7 +41,7 @@ const Mobile = ({
             <Navigation />
             <LogoLink logoHref={logoHref} logoTitle={logoTitle} logo={logo} />
             <SoMe some={some} />
-            <div className='hw-footer__hr' />
+            <div className='hwc-footer__hr' />
             <Block mt='on'>
                 <Copyright text={copyright} />
             </Block>

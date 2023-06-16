@@ -18,16 +18,16 @@ const Grid: React.FC<GridProps> = ({
     valign = 'top',
     children
 }) => {
-    const classes = ['hw-grid']
-    if (['center', 'right'].includes(align)) classes.push('hw-grid--' + align)
+    const classes = ['hwc-grid']
+    if (['center', 'right'].includes(align)) classes.push('hwc-grid--' + align)
 
     // This does not make any sense typewise, but kept for now just in case
-    if (gutter === 'none') classes.push('hw-grid--' + 'full')
+    if (gutter === 'none') classes.push('hwc-grid--' + 'full')
 
     if (['narrow', 'wide', 'full'].includes(gutter))
-        classes.push('hw-grid--' + gutter)
+        classes.push('hwc-grid--' + gutter)
     if (['middle', 'bottom'].includes(valign))
-        classes.push('hw-grid--' + valign)
+        classes.push('hwc-grid--' + valign)
 
     return <div className={classes.join(' ')}>{children}</div>
 }

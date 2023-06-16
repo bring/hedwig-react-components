@@ -2,16 +2,16 @@
 /**
  * Block
  */
-.hw-navbar {
+.hwc-navbar {
     position: relative;
-    background: var(--hw-color-white);
-    height: var(--hw-navbar-height-mobile);
-    font-family: var(--hw-font-primary-regular);
+    background: var(--hwc-color-white);
+    height: var(--hwc-navbar-height-mobile);
+    font-family: var(--hwc-font-primary-regular);
     text-align: left;
     -webkit-font-smoothing: antialiased;
 
     @include mixins.large {
-        height: var(--hw-navbar-height-desktop);
+        height: var(--hwc-navbar-height-desktop);
     }
 
     /**
@@ -31,24 +31,24 @@
         align-items: center;
         width: 100%;
         justify-content: space-between;
-        padding-left: var(--hw-spacing-medium-3);
-        padding-right: var(--hw-spacing-medium-3);
+        padding-left: var(--hwc-spacing-medium-3);
+        padding-right: var(--hwc-spacing-medium-3);
 
         @include mixins.xlarge {
-            padding-left: var(--hw-spacing-medium-3);
-            padding-right: var(--hw-spacing-medium-3);
+            padding-left: var(--hwc-spacing-medium-3);
+            padding-right: var(--hwc-spacing-medium-3);
         }
     }
 
     &__logo {
         position: relative;
-        height: var(--hw-navbar-height-mobile);
+        height: var(--hwc-navbar-height-mobile);
         padding: 9px;
         margin: 0 auto;
         transform: translateY(0);
         opacity: 1;
 
-        .hw-logo {
+        .hwc-logo {
             visibility: visible;
             opacity: 1;
             height: 100%;
@@ -56,36 +56,36 @@
         }
 
         &-flagship {
-            font-size: var(--hw-font-size-max-h3-px);
-            font-family: var(--hw-font-primary-medium);
-            color: var(--hw-color-primary-darker);
+            font-size: var(--hwc-font-size-max-h3-px);
+            font-family: var(--hwc-font-primary-medium);
+            color: var(--hwc-color-primary-darker);
             height: 45px;
             top: 6px;
-            margin-left: var(--hw-spacing-medium-1);
-            border-left: 1px solid var(--hw-color-gray-normal);
-            padding-left: var(--hw-spacing-medium-1);
+            margin-left: var(--hwc-spacing-medium-1);
+            border-left: 1px solid var(--hwc-color-gray-normal);
+            padding-left: var(--hwc-spacing-medium-1);
             display: inline-block;
             position: relative;
             line-height: 45px;
             text-transform: capitalize;
             @include mixins.small {
-                font-size: var(--hw-font-size-max-h2-px);
+                font-size: var(--hwc-font-size-max-h2-px);
                 height: 60px;
                 line-height: 60px;
                 top: 13px;
-                margin-left: var(--hw-spacing-medium-2);
-                padding-left: var(--hw-spacing-medium-2);
+                margin-left: var(--hwc-spacing-medium-2);
+                padding-left: var(--hwc-spacing-medium-2);
             }
         }
 
         &-internal-service {
-            font-size: var(--hw-font-size-h3-title);
+            font-size: var(--hwc-font-size-h3-title);
         }
 
         @include mixins.large {
             position: relative;
             margin: 0;
-            height: var(--hw-navbar-height-desktop);
+            height: var(--hwc-navbar-height-desktop);
             padding: 0;
         }
     }
@@ -94,20 +94,20 @@
         top: -50px;
         left: 0;
         opacity: 0;
-        padding: var(--hw-spacing-small-3);
+        padding: var(--hwc-spacing-small-3);
         position: absolute;
-        outline-offset: calc(-1 * var(--hw-spacing-small-3));
-        font-size: var(--hw-font-size-small);
+        outline-offset: calc(-1 * var(--hwc-spacing-small-3));
+        font-size: var(--hwc-font-size-small);
         z-index: var(--z-index--navbar);
-        color: var(--hw-color-primary);
+        color: var(--hwc-color-primary);
 
         &:active,
         &:focus {
-            top: var(--hw-navbar-height-mobile);
-            background-color: var(--hw-color-white);
+            top: var(--hwc-navbar-height-mobile);
+            background-color: var(--hwc-color-white);
             opacity: 1;
             @include mixins.large {
-                top: var(--hw-navbar-height-desktop);
+                top: var(--hwc-navbar-height-desktop);
             }
         }
     }
@@ -123,8 +123,8 @@
         cursor: pointer;
         text-decoration: none;
         transition: color 0.1s ease;
-        font-size: var(--hw-font-size-small);
-        line-height: var(--hw-navbar-height-mobile);
+        font-size: var(--hwc-font-size-small);
+        line-height: var(--hwc-navbar-height-mobile);
 
         @include mixins.large {
             display: inline-block;
@@ -133,38 +133,38 @@
 
     &__icon {
         vertical-align: middle;
-        width: calc(var(--hw-spacing-small-3) * 2);
-        height: calc(var(--hw-spacing-small-3) * 2);
+        width: calc(var(--hwc-spacing-small-3) * 2);
+        height: calc(var(--hwc-spacing-small-3) * 2);
     }
 
     @include mixins.large {
         &__item {
-            line-height: var(--hw-navbar-height-desktop);
+            line-height: var(--hwc-navbar-height-desktop);
         }
         &__icon {
-            margin-left: var(--hw-spacing-small-2);
+            margin-left: var(--hwc-spacing-small-2);
         }
         &__item,
         &__menu-button,
         &__search-button {
-            padding-left: var(--hw-spacing-medium-3);
+            padding-left: var(--hwc-spacing-medium-3);
         }
     }
 
-    & .hw-navbar__item,
-    & .hw-navbar__search-button,
-    & .hw-navbar__menu-button,
+    & .hwc-navbar__item,
+    & .hwc-navbar__search-button,
+    & .hwc-navbar__menu-button,
     &__item,
     &__search-button,
     &__menu-button {
-        height: var(--hw-navbar-height-mobile);
+        height: var(--hwc-navbar-height-mobile);
         color: inherit;
         background-color: transparent;
         &:hover {
-            color: var(--hw-color-link-hover);
+            color: var(--hwc-color-link-hover);
         }
         @include mixins.large {
-            height: var(--hw-navbar-height-desktop);
+            height: var(--hwc-navbar-height-desktop);
         }
     }
 
@@ -176,91 +176,91 @@
         top: 0;
         bottom: 0;
         z-index: var(--z-index--navbar-search);
-        height: var(--hw-navbar-height-mobile);
-        transition: all var(--hw-transition-time-debug)
-            var(--hw-transition-easing-out);
+        height: var(--hwc-navbar-height-mobile);
+        transition: all var(--hwc-transition-time-debug)
+            var(--hwc-transition-easing-out);
 
-        .hw-search__inner {
-            background: var(--hw-color-white);
-            border-radius: var(--hw-border-radius);
+        .hwc-search__inner {
+            background: var(--hwc-color-white);
+            border-radius: var(--hwc-border-radius);
 
             form {
                 position: absolute;
                 width: calc(
-                    100% - var(--hw-spacing-medium-2) -
-                        var(--hw-spacing-medium-2)
+                    100% - var(--hwc-spacing-medium-2) -
+                        var(--hwc-spacing-medium-2)
                 );
             }
         }
 
-        .hw-search,
+        .hwc-search,
         input {
-            height: var(--hw-navbar-height-desktop);
+            height: var(--hwc-navbar-height-desktop);
 
-            .hw-search__suggestions {
+            .hwc-search__suggestions {
                 top: calc(
-                    var(--hw-navbar-height-desktop) + var(--hw-spacing-small-2)
+                    var(--hwc-navbar-height-desktop) + var(--hwc-spacing-small-2)
                 );
-                left: var(--hw-spacing-medium-2);
-                right: var(--hw-spacing-medium-2);
+                left: var(--hwc-spacing-medium-2);
+                right: var(--hwc-spacing-medium-2);
                 width: calc(
-                    100% - var(--hw-spacing-medium-2) -
-                        var(--hw-spacing-medium-2)
+                    100% - var(--hwc-spacing-medium-2) -
+                        var(--hwc-spacing-medium-2)
                 );
             }
 
-            .hw-search__button-inside {
+            .hwc-search__button-inside {
                 display: none;
             }
         }
 
-        .hw-search__icon {
-            margin-left: var(--hw-spacing-small-3);
+        .hwc-search__icon {
+            margin-left: var(--hwc-spacing-small-3);
             margin-top: 1px;
-            width: var(--hw-spacing-medium-2);
-            height: var(--hw-spacing-medium-2);
+            width: var(--hwc-spacing-medium-2);
+            height: var(--hwc-spacing-medium-2);
         }
-        .hw-search__input {
+        .hwc-search__input {
             margin-left: 18px;
         }
 
         @include mixins.large {
-            height: var(--hw-navbar-height-desktop);
+            height: var(--hwc-navbar-height-desktop);
 
-            .hw-search__input {
-                margin-left: var(--hw-spacing-medium-4);
+            .hwc-search__input {
+                margin-left: var(--hwc-spacing-medium-4);
             }
-            .hw-search__icon {
-                margin-left: calc(var(--hw-spacing-medium-4) - 2px);
+            .hwc-search__icon {
+                margin-left: calc(var(--hwc-spacing-medium-4) - 2px);
             }
 
-            .hw-search,
+            .hwc-search,
             input {
-                height: var(--hw-navbar-height-desktop);
+                height: var(--hwc-navbar-height-desktop);
 
-                .hw-search__suggestions {
-                    max-width: var(--hw-navbar-search-max-width);
-                    left: var(--hw-spacing-medium-4);
+                .hwc-search__suggestions {
+                    max-width: var(--hwc-navbar-search-max-width);
+                    left: var(--hwc-spacing-medium-4);
                 }
 
-                .hw-search__button-inside {
+                .hwc-search__button-inside {
                     display: block;
                     left: calc(
-                        var(--hw-spacing-medium-4) +
-                            var(--hw-navbar-search-max-width) -
-                            var(--hw-spacing-small-4) -
-                            var(--hw-spacing-small-3)
+                        var(--hwc-spacing-medium-4) +
+                            var(--hwc-navbar-search-max-width) -
+                            var(--hwc-spacing-small-4) -
+                            var(--hwc-spacing-small-3)
                     );
                     width: 18px;
                 }
             }
             input {
                 width: calc(
-                    var(--hw-navbar-search-max-width) -
-                        var(--hw-spacing-medium-4)
+                    var(--hwc-navbar-search-max-width) -
+                        var(--hwc-spacing-medium-4)
                 );
             }
-            .hw-search__inner {
+            .hwc-search__inner {
                 form {
                     width: 100%;
                 }
@@ -270,18 +270,18 @@
 
     &__overlay {
         visibility: hidden;
-        background: var(--hw-color-gray-normal);
+        background: var(--hwc-color-gray-normal);
         position: fixed;
         top: 0;
         right: 0;
         bottom: 0;
         left: 0;
         opacity: 1;
-        transition: opacity var(--hw-transition-time-normal)
-            var(--hw-transition-easing-normal);
+        transition: opacity var(--hwc-transition-time-normal)
+            var(--hwc-transition-easing-normal);
 
         @include mixins.large {
-            background: var(--hw-color-black);
+            background: var(--hwc-color-black);
             opacity: 0.3;
         }
     }
@@ -290,14 +290,14 @@
         position: absolute;
         right: 30px;
         width: 11px;
-        height: var(--hw-navbar-height-desktop);
+        height: var(--hwc-navbar-height-desktop);
         top: 0px;
 
         border: 0;
-        font-size: var(--hw-font-size-small);
+        font-size: var(--hwc-font-size-small);
         line-height: 1;
         z-index: 401;
-        color: var(--hw-color-black);
+        color: var(--hwc-color-black);
         background-color: transparent;
 
         @include mixins.large {
@@ -324,21 +324,21 @@
   */
 
     &--searching {
-        .hw-navbar__search {
+        .hwc-navbar__search {
             display: block;
             z-index: var(--z-index--navbar-search-foreground);
         }
 
-        .hw-search__input {
+        .hwc-search__input {
             animation-name: fadein;
-            animation-duration: var(--hw-transition-time-slow);
+            animation-duration: var(--hwc-transition-time-slow);
         }
-        .hw-search__suggestions {
+        .hwc-search__suggestions {
             animation-name: fadeinupdelayed;
-            animation-duration: var(--hw-transition-time-slow);
+            animation-duration: var(--hwc-transition-time-slow);
         }
 
-        .hw-navbar__overlay {
+        .hwc-navbar__overlay {
             visibility: visible;
             z-index: var(--z-index--navbar-search);
         }
@@ -353,7 +353,7 @@
         top: 0;
         left: 0;
         right: 0;
-        background-color: var(--hw-color-white);
+        background-color: var(--hwc-color-white);
         z-index: var(--z-index--navbar);
     }
 
@@ -363,7 +363,7 @@
         /**
      * Logo while the menu is open
      */
-        & .hw-navbar__logo {
+        & .hwc-navbar__logo {
             z-index: var(--z-index--navbar-drawer-foreground);
             background: transparent !important;
 
@@ -373,11 +373,11 @@
             }
         }
 
-        & .hw-navbar__bars {
+        & .hwc-navbar__bars {
             opacity: 0;
         }
 
-        & .hw-navbar__times {
+        & .hwc-navbar__times {
             opacity: 1;
         }
     }
@@ -405,19 +405,19 @@
         margin-bottom: 0;
     }
 
-    & .hw-navbar__logo--service {
+    & .hwc-navbar__logo--service {
         margin: 0;
     }
 
-    & .hw-navbar__top--service {
-        padding-left: var(--hw-spacing-small-4);
+    & .hwc-navbar__top--service {
+        padding-left: var(--hwc-spacing-small-4);
         @include mixins.small {
-            padding-left: var(--hw-spacing-medium-3);
+            padding-left: var(--hwc-spacing-medium-3);
         }
     }
 }
 
-.hw--searching {
+.hwc--searching {
     display: none;
     @include mixins.large {
         display: block;

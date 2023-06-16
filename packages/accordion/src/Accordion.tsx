@@ -15,7 +15,7 @@ const Accordion: React.FC<AccordionProps> = ({
     children,
     allowMultiple = true
 }) => (
-    <ul className='hw-accordion'>
+    <ul className='hwc-accordion'>
         <ExpandedProvider allowMultiple={allowMultiple}>
             {children}
         </ExpandedProvider>

@@ -4,13 +4,13 @@ import '@posten-hedwig/core'
 import '../sass/link.scss'
 
 const BaseLink = ({ href, title, size, type, children }) => {
-    let modifier = type != '' ? ' hw-link--' + type : ''
+    let modifier = type != '' ? ' hwc-link--' + type : ''
     if (size != '') {
-        modifier += ' hw-link--' + size
+        modifier += ' hwc-link--' + size
     }
 
     return (
-        <a href={href} title={title} className={'hw-link' + modifier}>
+        <a href={href} title={title} className={'hwc-link' + modifier}>
             {children}
         </a>
     )

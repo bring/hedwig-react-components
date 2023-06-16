@@ -4,7 +4,7 @@ import '../sass/logo.scss'
 import '@posten-hedwig/core'
 
 const LogoPosten: React.FC = () => (
-    <LogoPostenSvg className='hw-logo hw-logo__posten' />
+    <LogoPostenSvg className='hwc-logo hwc-logo__posten' />
 )
 
 export default LogoPosten

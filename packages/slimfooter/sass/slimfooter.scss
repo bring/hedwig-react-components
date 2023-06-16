@@ -1,11 +1,11 @@
 @use '../node_modules/@posten-hedwig/core/sass/mixins';
 
-.hw-slim-footer {
+.hwc-slim-footer {
     -webkit-font-smoothing: antialiased;
-    font-family: var(--hw-font-primary-regular);
-    background: var(--hw-color-primary-darker);
-    padding-top: calc(var(--hw-spacing-large-1) + var(--hw-spacing-medium-2));
-    padding-bottom: var(--hw-spacing-large-3);
+    font-family: var(--hwc-font-primary-regular);
+    background: var(--hwc-color-primary-darker);
+    padding-top: calc(var(--hwc-spacing-large-1) + var(--hwc-spacing-medium-2));
+    padding-bottom: var(--hwc-spacing-large-3);
     margin: 0 auto;
 
     &__logo-link {
@@ -14,16 +14,16 @@
         display: inline-block;
     }
 
-    .hw-slim-footer__importantlinks a {
+    .hwc-slim-footer__importantlinks a {
         text-decoration: none;
-        border-bottom: var(--hw-border-thickness) solid var(--hw-color-link-underline);
-        font-size: var(--hw-font-size-smaller);
-        color: var(--hw-color-primary-lighter);
+        border-bottom: var(--hwc-border-thickness) solid var(--hwc-color-link-underline);
+        font-size: var(--hwc-font-size-smaller);
+        color: var(--hwc-color-primary-lighter);
         transition: all 0.1s ease;
         cursor: pointer;
         margin-right: 3px;
-        margin-left: var(--hw-spacing-medium-2);
-        padding-bottom: var(--hw-spacing-small-1);
+        margin-left: var(--hwc-spacing-medium-2);
+        padding-bottom: var(--hwc-spacing-small-1);
         &:last-of-type {
             margin-right: 0;
         }
@@ -31,26 +31,26 @@
             margin-left: 0;
         }
         @include mixins.large {
-            margin-left: var(--hw-spacing-medium-3);
+            margin-left: var(--hwc-spacing-medium-3);
             &:first-of-type {
-                margin-left: var(--hw-spacing-medium-3);
+                margin-left: var(--hwc-spacing-medium-3);
             }
         }
         &:hover {
-            color: var(--hw-color-primary-light);
-            border-bottom-color: var(--hw-color-primary-light);
-            text-decoration-color: var(--hw-color-primary-light);
+            color: var(--hwc-color-primary-light);
+            border-bottom-color: var(--hwc-color-primary-light);
+            text-decoration-color: var(--hwc-color-primary-light);
         }
     }
 
-    .hw-copyright {
-        color: var(--hw-color-primary-lighter);
-        text-decoration-color: var(--hw-color-primary);
-        font-size: var(--hw-font-size-smaller);
+    .hwc-copyright {
+        color: var(--hwc-color-primary-lighter);
+        text-decoration-color: var(--hwc-color-primary);
+        font-size: var(--hwc-font-size-smaller);
     }
 
-    .hw-slim-footer__element-float-right {
-        margin-top: var(--hw-spacing-medium-2);
+    .hwc-slim-footer__element-float-right {
+        margin-top: var(--hwc-spacing-medium-2);
         float: right;
     }
 }

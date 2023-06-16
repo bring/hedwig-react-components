@@ -12,8 +12,8 @@ interface BaseBadgeProps {
 }
 const BaseBadge: React.FC<BaseBadgeProps> = ({ variant, size, children }) => (
     <span
-        className={`hw-badge ${size ? 'hw-badge--' + size : ''} ${
-            variant ? 'hw-badge--' + variant : ''
+        className={`hwc-badge ${size ? 'hwc-badge--' + size : ''} ${
+            variant ? 'hwc-badge--' + variant : ''
         }`}
     >
         {children}

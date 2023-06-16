@@ -30,9 +30,9 @@ export default {
 const TemplateDefault = (args) => (
     <>
         Colors are for illustration purposes. Padding is green, margin is orange
-        <div className='hw-helpers-margin-highlighter'>
+        <div className='hwc-helpers-margin-highlighter'>
             <Container {...args}>
-                <p className='hw-helpers-margin-highlighter-content'>
+                <p className='hwc-helpers-margin-highlighter-content'>
                     Default container, containers does not apply any styling to
                     its content
                 </p>
@@ -48,9 +48,9 @@ containerDefault.storyName = 'Default'
 const TemplateSlim = (args) => (
     <>
         Colors are for illustration purposes. Padding is green, margin is orange
-        <div className='hw-helpers-margin-highlighter'>
+        <div className='hwc-helpers-margin-highlighter'>
             <Container {...args}>
-                <p className='hw-helpers-margin-highlighter-content'>
+                <p className='hwc-helpers-margin-highlighter-content'>
                     Slim container
                 </p>
             </Container>
@@ -76,9 +76,9 @@ containerSlim.parameters = {
 const TemplatePt = (args) => (
     <>
         Colors are for illustration purposes. Padding is green, margin is orange
-        <div className='hw-helpers-margin-highlighter'>
+        <div className='hwc-helpers-margin-highlighter'>
             <Container {...args}>
-                <p className='hw-helpers-margin-highlighter-content'>
+                <p className='hwc-helpers-margin-highlighter-content'>
                     Container with padding top
                 </p>
             </Container>
@@ -104,9 +104,9 @@ containerPt.parameters = {
 const TemplatePb = (args) => (
     <>
         Colors are for illustration purposes. Padding is green, margin is orange
-        <div className='hw-helpers-margin-highlighter'>
+        <div className='hwc-helpers-margin-highlighter'>
             <Container {...args}>
-                <p className='hw-helpers-margin-highlighter-content'>
+                <p className='hwc-helpers-margin-highlighter-content'>
                     Container with padding bottom
                 </p>
             </Container>

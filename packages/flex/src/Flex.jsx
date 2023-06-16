@@ -11,11 +11,11 @@ const Flex = ({
     children,
     elementType
 }) => {
-    let classes = ['hw-flex']
-    if (gutterMobile) classes.push(`hw-flex--gutter-${gutterMobile}-mobile`)
-    if (gutterDesktop) classes.push(`hw-flex--gutter-${gutterDesktop}-desktop`)
-    if (wrap) classes.push(`hw-flex--${wrap}`)
-    if (variableHeight) classes.push('hw-flex--variable-height')
+    let classes = ['hwc-flex']
+    if (gutterMobile) classes.push(`hwc-flex--gutter-${gutterMobile}-mobile`)
+    if (gutterDesktop) classes.push(`hwc-flex--gutter-${gutterDesktop}-desktop`)
+    if (wrap) classes.push(`hwc-flex--${wrap}`)
+    if (variableHeight) classes.push('hwc-flex--variable-height')
 
     return React.createElement(
         elementType,

@@ -64,8 +64,8 @@ const AccordionItem: React.FC<AccordionItemProps> = ({
     return (
         <li
             className={
-                'hw-accordion__item' +
-                (showExpanded() ? ' hw-accordion__item--expanded' : '')
+                'hwc-accordion__item' +
+                (showExpanded() ? ' hwc-accordion__item--expanded' : '')
             }
             style={{
                 height: showExpanded()
@@ -74,7 +74,7 @@ const AccordionItem: React.FC<AccordionItemProps> = ({
             }}
         >
             <button
-                className='hw-accordion__trigger'
+                className='hwc-accordion__trigger'
                 onClick={toggleItem}
                 ref={trigger}
                 aria-controls={id}
@@ -83,11 +83,11 @@ const AccordionItem: React.FC<AccordionItemProps> = ({
                 {title}
                 <FontAwesomeIcon
                     icon={faChevronRight}
-                    className='hw-accordion__icon'
+                    className='hwc-accordion__icon'
                     rotation={showExpanded() ? 90 : undefined}
                 />
             </button>
-            <div id={id} className='hw-accordion__contents' ref={contentRef}>
+            <div id={id} className='hwc-accordion__contents' ref={contentRef}>
                 {showExpanded() && children}
             </div>
         </li>

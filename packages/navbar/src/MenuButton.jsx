@@ -27,7 +27,7 @@ const MenuButton = ({ openName, openTitle, closeName, closeTitle }) => {
 
     const CloseLabel = () => (
         <span
-            className='hw-navbar__menu-button-label-close'
+            className='hwc-navbar__menu-button-label-close'
             style={{ width: labelWidth }}
         >
             {closeName}
@@ -36,7 +36,7 @@ const MenuButton = ({ openName, openTitle, closeName, closeTitle }) => {
 
     const OpenLabel = () => (
         <span
-            className='hw-navbar__menu-button-label-menu'
+            className='hwc-navbar__menu-button-label-menu'
             style={{ width: labelWidth }}
         >
             {openName}
@@ -54,7 +54,7 @@ const MenuButton = ({ openName, openTitle, closeName, closeTitle }) => {
     }, [desktop, labelWidth])
 
     const Icon = ({ icon, title }) => (
-        <span className='fa-stack hw-navbar__menu-button-toggle'>
+        <span className='fa-stack hwc-navbar__menu-button-toggle'>
             <FontAwesomeIcon
                 icon={icon}
                 className='fa-fw fa-stack-2x'
@@ -65,7 +65,7 @@ const MenuButton = ({ openName, openTitle, closeName, closeTitle }) => {
 
     return (
         <button
-            className='hw-navbar__menu-button'
+            className='hwc-navbar__menu-button'
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label={menuOpen ? closeTitle : openTitle}
             ref={buttonRef}

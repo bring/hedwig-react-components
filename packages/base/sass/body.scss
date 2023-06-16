@@ -1,11 +1,11 @@
 /* apply a natural box layout model to all elements, but allowing components to change */
 html {
     box-sizing: border-box;
-    font-family: var(--hw-font-primary-regular);
-    font-size: var(--hw-font-size-p);
+    font-family: var(--hwc-font-primary-regular);
+    font-size: var(--hwc-font-size-p);
     font-weight: 400;
-    fill: var(--hw-color-black);
-    color: var(--hw-color-black);
+    fill: var(--hwc-color-black);
+    color: var(--hwc-color-black);
     line-height: 1.4;
     cursor: auto;
 }
@@ -19,10 +19,10 @@ html {
 body {
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
-    font-family: var(--hw-font-primary-regular);
-    background: var(--hw-color-white);
-    fill: var(--hw-color-black);
-    color: var(--hw-color-black);
+    font-family: var(--hwc-font-primary-regular);
+    background: var(--hwc-color-white);
+    fill: var(--hwc-color-black);
+    color: var(--hwc-color-black);
     display: flex;
     flex-direction: column;
     min-height: 100vh;

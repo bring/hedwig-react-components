@@ -23,10 +23,10 @@ const SoMe = ({ some }) => {
     }
 
     return (
-        <div className='hw-some'>
+        <div className='hwc-some'>
             {some.map((item, i) => (
                 <a
-                    className='hw-some__button'
+                    className='hwc-some__button'
                     href={item.href || '#'}
                     aria-label={item.ariaLabel}
                     onClick={item.onclick}

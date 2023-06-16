@@ -16,20 +16,20 @@ const InfoBox: React.FC<InfoBoxProps> = ({
     icon = true,
     children
 }) => (
-    <div className='hw-info-box'>
+    <div className='hwc-info-box'>
         {icon && (
             <FontAwesomeIcon
                 icon={faInfoSquare}
-                className='hw-info-box__icon'
+                className='hwc-info-box__icon'
                 size='lg'
             />
         )}
-        <div className='hw-info-box__body'>
+        <div className='hwc-info-box__body'>
             {title &&
                 React.createElement(
                     titleElement,
                     {
-                        className: 'hw-h3 hw-info-box__title'
+                        className: 'hwc-h3 hwc-info-box__title'
                     },
                     title
                 )}
