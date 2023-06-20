@@ -16,7 +16,7 @@
     border: var(--hwc-border-thickness) solid transparent;
     border-radius: var(--hwc-border-radius);
     transition: border var(--hwc-transition-time-quick);
-    transition: border var(--hwc-transition-time-normal) var(--hw-transition-easing-normal);
+    transition: border var(--hwc-transition-time-normal) var(--hwc-transition-easing-normal);
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     box-sizing: border-box;
