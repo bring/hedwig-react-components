@@ -30,9 +30,7 @@
         width: 100%;
         height: 100%;
         justify-content: space-between;
-        padding-left: var(--hwc-spacing-medium-3);
-        padding-right: var(--hwc-spacing-medium-3);
-
+        padding: 0;
         @include mixins.xlarge {
             padding-left: var(--hwc-spacing-medium-3);
             padding-right: var(--hwc-spacing-medium-3);
@@ -42,7 +40,7 @@
     &__logo {
         position: relative;
         height: var(--hwc-navbar-height);
-        padding: 9px;
+        padding-left: var(--hwc-spacing-medium-2);
         margin: 0 auto;
         transform: translateY(0);
         opacity: 1;
@@ -55,7 +53,7 @@
         }
 
         &-flagship {
-            font-size: var(--hwc-font-size-max-h3-px);
+            font-size: 24px;
             font-family: var(--hwc-font-primary-medium);
             color: var(--hwc-color-primary-darker);
             height: 45px;
@@ -68,10 +66,9 @@
             line-height: 45px;
             text-transform: capitalize;
             @include mixins.small {
-                font-size: var(--hwc-font-size-max-h2-px);
-                height: 60px;
-                line-height: 60px;
-                top: 13px;
+                top: 10px;
+            }
+            @include mixins.medium {
                 margin-left: var(--hwc-spacing-medium-2);
                 padding-left: var(--hwc-spacing-medium-2);
             }
@@ -157,7 +154,7 @@
         }
     }
 
-    &__search {
+    &__search_old {
         display: none;
         position: absolute;
         left: 0;

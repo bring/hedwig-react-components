@@ -13,11 +13,11 @@ const NavbarSearchField = ({ id, placeholder }) => {
             <input
                 id={id}
                 placeholder={placeholder}
-                className='hw-navbar__search-field'
+                className='hwc-navbar__search-field'
             />
             <FontAwesomeIcon
                 icon={faSearch}
-                className='hw-navbar__search-icon'
+                className='hwc-navbar__search-icon'
             />
         </>
     )

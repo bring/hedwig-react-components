@@ -1,0 +1,69 @@
+.hwc-navbar__search {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: var(--z-index--navbar-search);
+    height: var(--hwc-navbar-height);
+    transition: all var(--hwc-transition-time-debug)
+        var(--hwc-transition-easing-out);
+    background: white;
+    padding-left: var(--hwc-spacing-medium-4);
+    padding-right: var(--hwc-spacing-medium-4);
+    padding-top: var(--hwc-spacing-medium-4);
+    display: flex;
+    
+
+    &__field {
+        color: var(--hwc-color-gray-dark);
+        position: relative;
+        display: block;
+        width: 100%;
+        height: var(--hwc-input-field-height);
+        padding: var(--hwc-spacing-small-4);
+        font-family: var(--hwc-font-primary-regular);
+        font-size: var(--hwc-font-size-small);
+        line-height: normal;
+        border: var(--hwc-border-thickness) solid transparent;
+    
+        transition: border var(--hwc-transition-time-quick);
+        transition: border var(--hwc-transition-time-normal) var(--hwc-transition-easing-normal);
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-font-smoothing: antialiased;
+        box-sizing: border-box;
+        background: transparent;
+    
+        border-bottom: var(--hwc-border-thickness) solid var(--hwc-color-primary-darker);
+        padding-left: 0px;
+        padding-top: var(--hwc-spacing-small-1);
+        padding-bottom: var(--hwc-spacing-small-3);
+        height: calc(var(--hwc-input-field-height) - var(--hwc-spacing-small-4)  - var(--hwc-spacing-small-4) + var(--hwc-spacing-small-1) +  var(--hwc-spacing-small-3));
+        border-radius: 0px;    
+    }
+
+    &__submit {
+        padding: 0;
+        margin: 0;
+        line-height: 1.4;
+        border: 0;
+        background-color: var(--hwc-color-primary);
+        color: var(--hwc-color-white);
+        min-width: 44px;
+        height: 44px;
+        border-radius: var(--hwc-border-radius);
+        margin-left: var(--hwc-spacing-small-2);
+    }
+
+    &__close {
+        padding: 0;
+        margin: 0;
+        line-height: 1.4;
+        border: 0;
+        background-color: transparent;
+        color: var(--hwc-color-black);
+        min-width: 44px;
+        height: 44px;
+        margin-left: var(--hwc-spacing-small-2);
+    }
+}

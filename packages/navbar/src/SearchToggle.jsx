@@ -1,17 +1,27 @@
 import React, { useContext } from 'react'
 import PropTypes from 'prop-types'
 import { NavbarContext } from './NavbarContext'
-import NavbarSearchButton from './NavbarSearchButton'
-import NavbarSearchField from './NavbarSearchField'
+import InitiateSearchButton from './InitiateSearchButton'
+import Search from './Search'
 
-const NavbarSearch = ({ text, ariaLabel, placeholder, flagship }) => {
+const SearchToggle = ({
+    text,
+    ariaLabel,
+    placeholder,
+    flagship,
+    exitButtonAriaLabel
+}) => {
     const { isSearching } = useContext(NavbarContext)
 
     return (
         <>
-            {isSearching && <NavbarSearchField placeholder={placeholder} />}
-            {!isSearching && (
-                <NavbarSearchButton
+            {isSearching ? (
+                <Search
+                    placeholder={placeholder}
+                    exitButtonAriaLabel={exitButtonAriaLabel}
+                />
+            ) : (
+                <InitiateSearchButton
                     text={text}
                     ariaLabel={ariaLabel}
                     flagship={flagship}
@@ -21,10 +31,10 @@ const NavbarSearch = ({ text, ariaLabel, placeholder, flagship }) => {
     )
 }
 
-NavbarSearch.propTypes = {
+SearchToggle.propTypes = {
     text: PropTypes.string.isRequired,
     ariaLabel: PropTypes.string,
     placeholder: PropTypes.string.isRequired
 }
 
-export default NavbarSearch
+export default SearchToggle

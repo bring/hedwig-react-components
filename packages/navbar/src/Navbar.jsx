@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { NavbarProvider, NavbarContext } from './NavbarContext'
 import NavbarLogoIcon from './NavbarLogoIcon'
 import NavbarLogoFlagship from './NavbarLogoFlagship'
-import NavbarSearch from './NavbarSearch'
+import SearchToggle from './SearchToggle'
 import Selector from './Selector'
 import Menu from './Menu'
 import '@posten-hedwig/core'
@@ -44,10 +44,14 @@ const Navbar = ({
             {skipToMainTitle}
         </a>
     )
+
+    const topClassName =
+        'hwc-navbar__top' + (flagship ? ' hwc-navbar__top-flagship' : '')
+
     return (
         <header className='hwc-navbar'>
             <div className='hwc-navbar__content'>
-                <div className='hwc-navbar__top'>
+                <div className={topClassName}>
                     <NavbarProvider>
                         <SkipToMain />
                         {flagship ? (
@@ -70,10 +74,13 @@ const Navbar = ({
                         <nav className='hwc-navbar__menu'>
                             {children}
                             {search && (
-                                <NavbarSearch
+                                <SearchToggle
                                     text={search.initiateButtonText}
                                     ariaLabel={search.initiateButtonAriaLabel}
                                     placeholder={search.placeholder}
+                                    exitButtonAriaLabel={
+                                        search.exitButtonAriaLabel
+                                    }
                                     flagship={flagship}
                                 />
                             )}
@@ -216,8 +223,13 @@ Navbar.propTypes = {
         placeholder: PropTypes.string,
         initiateButtonText: PropTypes.string.isRequired,
         initiateButtonAriaLabel: PropTypes.string.isRequired,
-        submitButtonText: PropTypes.string.isRequired
+        submitButtonText: PropTypes.string.isRequired,
+        exitButtonAriaLabel: PropTypes.string.isRequired
     })
+}
+
+Navbar.defaultProps = {
+    logo: 'posten'
 }
 
 export default Navbar

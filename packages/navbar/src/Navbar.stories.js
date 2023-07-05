@@ -185,10 +185,12 @@ navbarSearch.args = {
         placeholder: 'Search for things',
         initiateButtonText: 'Search',
         initiateButtonAriaLabel: 'Search',
-        submitButtonText: 'Search'
+        submitButtonText: 'Search',
+        exitButtonAriaLabel: 'Exit search'
     },
     menuOpenName: 'Menu',
     menuOpenTitle: 'Open menu',
     menuCloseName: 'Close',
-    menuCloseTitle: 'Close menu'
+    menuCloseTitle: 'Close menu',
+    flagship: 'SNDB'
 }
