@@ -49,7 +49,7 @@
     "typescript": "4.9.4"
   },
   "scripts": {
-    "storybook": "rm -rf node_modules/.cache/storybook && start-storybook -p 6006",
+    "storybook": "rm -rf node_modules/.cache/storybook && rm -rf packages/*/.parcel-cache && start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "test": "lerna run test",
     "nuke": "lerna clean --yes && rm -rf node_modules && rm -rf packages/*/.parcel-cache",
