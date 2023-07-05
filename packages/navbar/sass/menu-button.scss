@@ -1,7 +1,7 @@
 @use '../node_modules/@posten-hedwig/core/sass/mixins';
 .hwc-navbar__menu-button {
     z-index: var(--z-index--navbar-drawer-foreground);
-    position: absolute;
+    position: relative;
     right: 0;
     top: 0;
     display: flex;
