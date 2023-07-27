@@ -14,6 +14,7 @@ export interface BaseButtonProps {
     type?: 'button' | 'submit'
     size?: 'small' | 'medium' | 'large' | 'full' | 'mobile-full'
     onClick?: () => void
+    ariaLabel?: string
     disabled?: boolean
     ariaControls?: string
     href?: string
@@ -25,6 +26,7 @@ const BaseButton: React.FC<BaseButtonProps> = ({
     type = 'button',
     size,
     onClick,
+    ariaLabel,
     href,
     disabled = false,
     ariaControls,
@@ -54,6 +56,7 @@ const BaseButton: React.FC<BaseButtonProps> = ({
                 className={`hwc-button ${buttonVariant} ${buttonSize}`}
                 onClick={onClick}
                 disabled={disabled}
+                aria-label={ariaLabel}
                 aria-controls={ariaControls}
             >
                 {children}
