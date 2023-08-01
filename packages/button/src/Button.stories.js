@@ -90,5 +90,6 @@ const ChatTemplate = (args) => <ChatButton {...args} />
 export const Chat = ChatTemplate.bind({})
 Chat.args = {
     disabled: false,
+    ariaLabel: "I am a chat button",
     onClick: () => alert('This is an onclick test')
 }
