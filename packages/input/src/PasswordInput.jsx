@@ -10,7 +10,8 @@ const PasswordInput = ({
     variant,
     disabled,
     errorMessage,
-    onChange
+    onChange,
+    required
 }) => (
     <BaseInput
         name={name}
@@ -22,6 +23,7 @@ const PasswordInput = ({
         disabled={disabled}
         onChange={onChange}
         errorMessage={errorMessage}
+        required={required}
     />
 )
 
@@ -38,7 +40,8 @@ PasswordInput.propTypes = {
     onChange: PropTypes.func,
     errorMessage: PropTypes.string,
     placeholder: PropTypes.string,
-    label: PropTypes.string
+    label: PropTypes.string,
+    required:PropTypes.bool
 }
 
 export default PasswordInput

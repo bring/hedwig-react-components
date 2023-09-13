@@ -13,6 +13,7 @@ const EmailInput = ({
     variant,
     onChange,
     readOnly,
+    required,
     ref
 }) => (
     <BaseInput
@@ -27,6 +28,7 @@ const EmailInput = ({
         onChange={onChange}
         errorMessage={errorMessage}
         readOnly={readOnly}
+        required={required}
     />
 )
 
@@ -44,7 +46,8 @@ EmailInput.propTypes = {
     onChange: PropTypes.func,
     errorMessage: PropTypes.string,
     placeholder: PropTypes.string,
-    label: PropTypes.string
+    label: PropTypes.string,
+    required: PropTypes.bool
 }
 
 export default EmailInput

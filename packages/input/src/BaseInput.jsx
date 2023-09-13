@@ -19,6 +19,7 @@ const BaseInput = ({
     errorMessage,
     onChange,
     readOnly,
+    required,
     ref
 }) => {
     let variation = variant !== '' ? 'hwc-input--' + variant : ''
@@ -45,6 +46,7 @@ const BaseInput = ({
                 onChange={onChange}
                 readOnly={readOnly}
                 ref={ref}
+                required={required}
             />
             {errorMessage && (
                 <div className='hwc-error hwc-error--align-left hwc-error--indented'>
@@ -59,7 +61,8 @@ BaseInput.defaultProps = {
     disabled: false,
     type: 'text',
     errorMessage: '',
-    variant: ''
+    variant: '',
+    required: false
 }
 
 BaseInput.propTypes = {
@@ -73,7 +76,8 @@ BaseInput.propTypes = {
     placeholder: PropTypes.string,
     label: PropTypes.string,
     disabled: PropTypes.bool,
-    readOnly: PropTypes.bool
+    readOnly: PropTypes.bool,
+    required: PropTypes.bool
 }
 
 export default BaseInput

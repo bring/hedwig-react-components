@@ -14,7 +14,8 @@ const NumberInput = ({
     disabled,
     errorMessage,
     onChange,
-    readOnly
+    readOnly,
+    required
 }) => (
     <BaseInput
         name={name}
@@ -30,6 +31,7 @@ const NumberInput = ({
         onChange={onChange}
         errorMessage={errorMessage}
         readOnly={readOnly}
+        required={required}
     />
 )
 
@@ -48,7 +50,8 @@ NumberInput.propTypes = {
     placeholder: PropTypes.string,
     label: PropTypes.string,
     min: PropTypes.number,
-    max: PropTypes.number
+    max: PropTypes.number,
+    required: PropTypes.bool
 }
 
 export default NumberInput
