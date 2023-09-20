@@ -1,5 +1,5 @@
 import React from 'react'
-import '../dist/typography.css'
+//import '../dist/typography.css'
 
 export default {
     title: 'Base/Typography/HeadingsBring'
