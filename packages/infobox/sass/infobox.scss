@@ -1,4 +1,5 @@
 @use '../node_modules/@posten-hedwig/core/sass/mixins';
+@use '../node_modules/@posten-hedwig/typography/sass/typography';
 
 .hwc-info-box {
     background-color: var(--hwc-color-primary-lighter);

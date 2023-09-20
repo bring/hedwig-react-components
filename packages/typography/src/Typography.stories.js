@@ -1,5 +1,5 @@
 import React from 'react'
-import '../sass/typography.scss'
+import { Typography } from './index'
 
 export default {
     title: 'Base/Typography'

@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faInfoSquare } from '@fortawesome/pro-solid-svg-icons'
 import '../sass/infobox.scss'
 import '@posten-hedwig/core'
+import '@posten-hedwig/typography'
 
 interface InfoBoxProps {
     title: React.ReactNode
