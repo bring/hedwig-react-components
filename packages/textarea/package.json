@@ -1,0 +1,32 @@
+{
+  "name": "@posten-hedwig/textarea",
+  "version": "1.0.0",
+  "description": "Hedwig style textarea",
+  "keywords": [
+    "Hedwig",
+    "textarea"
+  ],
+  "author": "Helle Hiorth-Schøyen <helle@solidsquare.no>",
+  "homepage": "https://github.com/bring/hedwig-react-components#readme",
+  "license": "ISC",
+  "source": "src/index.ts",
+  "main": "dist/index.js",
+  "types": "dist/types.d.ts",
+  "module": "dist/module.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bring/hedwig-react-components.git"
+  },
+  "scripts": {
+    "test": "node ./__tests__/@posten-hedwig/textarea.test.js"
+  },
+  "bugs": {
+    "url": "https://github.com/bring/hedwig-react-components/issues"
+  },
+  "dependencies": {
+    "@posten-hedwig/core": "^3.1.0"
+  }
+}
