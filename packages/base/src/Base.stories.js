@@ -27,9 +27,9 @@ export default {
 }
 
 const Template = (args) => <div {...args}>
-<p>
-            Some text with hedwig font
-        </p>
+    <p>
+        Some text with hedwig font
+    </p>
 
 </div>
 
