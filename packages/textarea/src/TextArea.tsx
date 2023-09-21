@@ -9,15 +9,15 @@ interface TextAreaProps {
     name: string
     label: string
     variant?: TextAreaVariant
-    rows: number
-    cols: number
-    maxLength: number
-    placeholder: string
-    onChange:() => void
-    disabled: boolean
-    readOnly: boolean
-    required: boolean
-    errorMessage: string
+    rows?: number
+    cols?: number
+    maxLength?: number
+    placeholder?: string
+    onChange?:() => void
+    disabled?: boolean
+    readOnly?: boolean
+    required?: boolean
+    errorMessage?: string
 }
 
 const TextArea: React.FC<TextAreaProps> = ({ id, name, label, variant, rows, cols, maxLength, placeholder, onChange, disabled, errorMessage, readOnly, required }) => {
@@ -44,6 +44,7 @@ const TextArea: React.FC<TextAreaProps> = ({ id, name, label, variant, rows, col
                 onChange={onChange}
                 disabled={disabled}
                 readOnly={readOnly}
+                required={required}
             >
             </textarea>
             {errorMessage && (
