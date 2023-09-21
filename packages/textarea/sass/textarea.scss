@@ -1,0 +1,123 @@
+
+.hwc-textarea {
+    font-size: var(--hwc-font-size-small);
+    padding: var(--hwc-spacing-small-4);
+    border: none;
+    border-bottom: var(--hwc-border-thickness) solid transparent;
+    border-radius: var(--hwc-border-radius);
+    background-color: var(--hwc-color-gray-light-fill);
+    display: block;
+    width: 100%;
+    transition: border var(--hwc-transition-time-normal) var(--hwc-transition-easing-normal);
+    position: relative;
+    -webkit-appearance: none;
+
+    
+
+    &::placeholder,
+    &::-webkit-input-placeholder {
+      color: var(--hwc-color-gray-dark);
+      opacity: 1;
+    }
+    &::-ms-input-placeholder {
+      color: var(--hwc-color-gray-dark);
+      opacity: 1;
+    }
+    &:-ms-input-placeholder {
+      color: var(--hwc-color-gray-dark);
+      opacity: 1;
+    }
+  
+    &:hover {
+  
+    }
+  
+    &:focus {
+      outline: 0;
+      border-bottom: var(--hwc-border-thickness) solid var(--hwc-color-input-accent);
+  
+      &::placeholder,
+      &::-webkit-input-placeholder {
+        color: var(--hwc-color-gray-dark);
+        opacity: 1;
+      }
+      &::-ms-input-placeholder {
+        color: var(--hwc-color-gray-dark);
+        opacity: 1;
+      }
+      &:-ms-input-placeholder {
+        color: var(--hwc-color-gray-dark);
+        opacity: 1;
+      }
+    }
+  
+    &:disabled {
+      color: var(--hwc-color-gray-normal);
+      user-select: none;
+      cursor: not-allowed !important;
+    }
+  
+    &::-webkit-resizer {
+      /* Should be moved 2 px up and to the left. Have not found any good way to do this. Consider this a challenge :) */;
+    }
+  
+  
+    /**
+     * Modifiers
+     */
+  
+    &--line {
+      background: transparent;
+      border: var(--hwc-border-thickness) solid var(--hwc-color-gray-normal);
+      border-radius: var(--hwc-border-radius);
+      height: auto;
+  
+      &:focus {
+        border: var(--hwc-border-thickness) solid var(--hwc-color-input-accent);
+      }
+  
+      &.hwc-textarea--error,
+      &.hwc-textarea--error:focus {
+        position: relative;
+        border: var(--hwc-border-thickness-thick) solid var(--hwc-color-alert-yellow);
+      }
+  
+      &.hwc-textarea--error + .hwc-error {
+        padding-left: var(--hwc-spacing-small-4) !important;
+      }
+    }
+
+    &--white {
+        background-color:var(--hwc-color-white);
+      }
+  
+  
+    &--error,
+    &--error:focus {
+      position: relative;
+      border-bottom: var(--hwc-border-thickness-thick) solid var(--hwc-color-alert-yellow);
+  
+  
+      /* This will NOT work, as textareas cannot be styled using :before and :after. This does not work with elements that cannot have other elements inside of them. Like textareas and img */;
+  
+      &::before {
+        background: var(--hwc-color-alert-yellow);
+        color: var(--hwc-color-white);
+        position: absolute;
+        content: '!';
+        width: 24px;
+        height: 24px;
+        line-height: 24px;
+        border-radius: 50%;
+        bottom: 12px;
+        right: 12px;
+        text-align: center;
+        z-index: 1000;
+      }
+    }
+  
+    &--error + .hwc-error:before {
+      top: -38px;
+    }
+  }
+  
