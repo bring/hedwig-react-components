@@ -1,9 +1,9 @@
 {
   "name": "@posten-hedwig/textarea",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "publishConfig": {
     "access": "public"
-},
+  },
   "description": "Hedwig style textarea",
   "keywords": [
     "Hedwig",
@@ -20,15 +20,11 @@
     "sass"
   ],
   "scripts": {
-    "prebuild": "rimraf dist",
-    "build": "parcel build"
+    "test": "node ./__tests__/@posten-hedwig/textarea.test.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/bring/hedwig-react-components.git"
-  },
-  "scripts": {
-    "test": "node ./__tests__/@posten-hedwig/textarea.test.js"
   },
   "bugs": {
     "url": "https://github.com/bring/hedwig-react-components/issues"
