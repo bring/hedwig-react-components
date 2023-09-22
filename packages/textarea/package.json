@@ -20,8 +20,9 @@
     "sass"
   ],
   "scripts": {
-    "test": "node ./__tests__/@posten-hedwig/textarea.test.js"
-  },
+    "prebuild": "rimraf dist",
+    "build": "parcel build"
+},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/bring/hedwig-react-components.git"
