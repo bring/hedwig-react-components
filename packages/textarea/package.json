@@ -31,6 +31,7 @@
     "url": "https://github.com/bring/hedwig-react-components/issues"
   },
   "dependencies": {
-    "@posten-hedwig/core": "^3.1.0"
+    "@posten-hedwig/core": "^3.1.0",
+    "react": "^18.2.0"
   }
 }
