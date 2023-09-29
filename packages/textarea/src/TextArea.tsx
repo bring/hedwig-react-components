@@ -1,4 +1,4 @@
-import React, { ChangeEventHandler } from 'react'
+import React from 'react'
 import '@posten-hedwig/core'
 import '../sass/textarea.scss'
 
@@ -13,22 +13,34 @@ interface TextAreaProps {
     cols?: number
     maxLength?: number
     placeholder?: string
-    onChange?:() => void
+    onChange?: () => void
     disabled?: boolean
     readOnly?: boolean
     required?: boolean
     errorMessage?: string
 }
 
-const TextArea: React.FC<TextAreaProps> = ({ id, name, label, variant, rows, cols, maxLength, placeholder, onChange, disabled, errorMessage, readOnly, required }) => {
-
+const TextArea: React.FC<TextAreaProps> = ({
+    id,
+    name,
+    label,
+    variant,
+    rows,
+    cols,
+    maxLength,
+    placeholder,
+    onChange,
+    disabled,
+    errorMessage,
+    readOnly,
+    required
+}) => {
     let labelVariant = variant === 'line' ? 'hwc-label--line' : ''
     let variation = variant ? 'hwc-textarea--' + variant : ''
     if (errorMessage) {
         labelVariant += ' hwc-label--error'
         variation += ' hwc-textarea--error'
     }
-
 
     return (
         <label className={'hwc-label ' + labelVariant}>
@@ -45,8 +57,7 @@ const TextArea: React.FC<TextAreaProps> = ({ id, name, label, variant, rows, col
                 disabled={disabled}
                 readOnly={readOnly}
                 required={required}
-            >
-            </textarea>
+            ></textarea>
             {errorMessage && (
                 <div className='hw-error hw-error--align-left'>
                     {errorMessage}

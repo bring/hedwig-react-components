@@ -1,36 +1,39 @@
 {
-  "name": "@posten-hedwig/textarea",
-  "version": "2.0.2",
-  "publishConfig": {
-    "access": "public"
-  },
-  "description": "Hedwig style textarea",
-  "keywords": [
-    "Hedwig",
-    "textarea"
-  ],
-  "author": "Helle Hiorth-Schøyen <helle@solidsquare.no>",
-  "homepage": "https://github.com/bring/hedwig-react-components#readme",
-  "license": "ISC",
-  "source": "src/index.ts",
-  "main": "dist/index.js",
-  "module": "dist/module.js",
-  "files": [
-    "dist",
-    "sass"
-  ],
-  "scripts": {
-    "prebuild": "rimraf dist",
-    "build": "parcel build"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/bring/hedwig-react-components.git"
-  },
-  "bugs": {
-    "url": "https://github.com/bring/hedwig-react-components/issues"
-  },
-  "dependencies": {
-    "@posten-hedwig/core": "^3.1.0"
-  }
+    "name": "@posten-hedwig/textarea",
+    "version": "2.0.2",
+    "publishConfig": {
+        "access": "public"
+    },
+    "description": "Hedwig style textarea",
+    "keywords": [
+        "Hedwig",
+        "textarea"
+    ],
+    "author": "Helle Hiorth-Schøyen <helle@solidsquare.no>",
+    "homepage": "https://github.com/bring/hedwig-react-components#readme",
+    "license": "ISC",
+    "source": "src/index.ts",
+    "main": "dist/index.js",
+    "module": "dist/module.js",
+    "files": [
+        "dist",
+        "sass"
+    ],
+    "scripts": {
+        "prebuild": "rimraf dist",
+        "build": "parcel build"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/bring/hedwig-react-components.git"
+    },
+    "bugs": {
+        "url": "https://github.com/bring/hedwig-react-components/issues"
+    },
+    "dependencies": {
+        "@posten-hedwig/core": "^3.1.0"
+    },
+    "peerDependencies": {
+        "react": ">=16.14.x"
+    }
 }
