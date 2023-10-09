@@ -1,6 +1,6 @@
 {
   "name": "@posten-hedwig/textarea",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "publishConfig": {
     "access": "public"
   },
@@ -32,7 +32,7 @@
     "url": "https://github.com/bring/hedwig-react-components/issues"
   },
   "dependencies": {
-    "@posten-hedwig/core": "^3.1.0"
+    "@posten-hedwig/core": "^3.1.1"
   },
   "peerDependencies": {
     "react": ">=16.14.x"
