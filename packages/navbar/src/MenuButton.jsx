@@ -18,7 +18,7 @@ const MenuButton = ({ openName, openTitle, closeName, closeTitle }) => {
         container.style.cssText =
             'display:inline-block;position:absolute;visibility:hidden;'
         buttonRef.current.appendChild(container)
-        ReactDOM.render(element, container, () => {
+        ReactDOM.createRoot(element, container, () => {
             callback(container.offsetWidth)
             ReactDOM.unmountComponentAtNode(container)
             container.parentNode.removeChild(container)
