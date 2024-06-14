@@ -1,3 +1,7 @@
+# ⚠️ DEPRECATED
+
+The new Hedwig Design System is now stable and can be found [here](https://github.com/bring/hedwig-design-system). This repository will be minimally maintained.
+
 # Hedwig React Components
 
 ## Development
